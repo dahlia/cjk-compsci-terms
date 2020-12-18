@@ -1,8 +1,14 @@
+all: public_html/studies.html
+
+clean:
+	rm -rf .venv public_html
+
 .venv: requirements.txt
 	if [ ! -d .venv ]; then \
 	  python3 -m venv .venv; \
 	fi; \
 	.venv/bin/pip install -U pip setuptools; \
+	.venv/bin/pip install -U "$$(grep -i '^pyyaml\b' requirements.txt)"; \
 	.venv/bin/pip install -U -r requirements.txt
 
 public_html/style.css: style.css
@@ -19,5 +25,3 @@ public_html/studies.html: public_html/style.css .venv studies.yaml build.py
 		.venv/bin/python build.py studies.yaml; \
 		echo '</body></html>'; \
 	} > public_html/studies.html
-
-all: public_html/studies.html
