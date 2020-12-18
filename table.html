@@ -1,0 +1,103 @@
+{% macro cell(th_if, attrs={}, class={}) -%}
+  {%- with class_ = (class|dictselect|xmlattr ~ ' ' ~
+                     attrs.get('class', ''))|trim,
+           attrs_ = dict(attrs) %}
+    {% do attrs_.update(class=class_ or none) %}
+    {%- if th_if -%} <th {{ attrs_|xmlattr }}>
+    {%- else -%} <td {{ attrs_|xmlattr }}>
+    {%- endif -%}
+  {%- endwith -%}
+  {{- caller() -}}
+  {%- if th_if -%} </th>
+  {%- else -%} </td>
+  {%- endif -%}
+{%- endmacro %}
+
+{% macro word_span(word, locale, table) -%}
+  {%- if (word|selectattr('read')|list +
+          word|selectattr('loan')|list)|length -%}
+    <ruby class="term" lang="{{ word.locale|replace('_', '-') }}">
+      {%- for term in word -%}
+        {{- ' ' if term.space -}}
+        {%- if term.loan -%}
+          {{- term.term -}}
+          <rt>{{ term.loan }}</rt>
+        {%- elif term.read_as is callable -%}
+          {%- for char, read in term.read_as(word.locale, locale, table) -%}
+            {{- char -}}
+            <rt>{{ read }}</rt>
+          {%- endfor -%}
+        {%- else -%}
+          {{- term.term -}}
+          <rt></rt>
+        {%- endif %}
+      {%- endfor %}
+    </ruby>
+  {%- else -%}
+    <span class="term" lang="{{ locale|replace('_', '-') }}">
+      {%- for term in word -%}
+        {{- ' ' if term.space -}}
+        {{- term.term -}}
+      {%- endfor %}
+    </span>
+  {%- endif -%}
+{%- endmacro %}
+
+<table class="terms" lang="{{ locale|string|replace('_', '-') }}">
+  <thead>
+    <tr>
+      {% for lang in locales.values() %}
+        {% call cell(loop.first, {
+             'colspan': lang|length - 1 if lang is mapping,
+             'rowspan': 2 if lang is not mapping,
+           }) %}
+          {{- (lang._ if lang is mapping else lang).get_display_name(locale) }}
+        {% endcall %}
+      {% endfor %}
+    </tr>
+    <tr>
+      {% for locales in locales.values() if locales is mapping %}
+        {% for localecode, l in locales.items() if localecode != '_' %}
+          <td>{{ l|territory_name(locale) }}</td>
+        {% endfor %}
+      {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    {% for translation in table %}
+      {% for tr_idx in range(translation.max_words) %}
+        {% with cognate_groups = translation.cognate_groups|list %}
+          <tr {% if tr_idx < 1 %} class="group-head" {% endif %}>
+            {% for lval in locales.values() %}
+              {% with locales_loop = loop,
+                      lmap = lval if lval is mapping else {lval|string: lval} %}
+                {% for lcode, lobj in lmap.items() if lcode != '_' %}
+                  {% with words = translation.get(lobj, []) %}
+                    {% if tr_idx < words|length %}
+                      {% with word = words[tr_idx] %}
+                        {% call cell(locales_loop.first, {
+                             'rowspan': translation.max_words - tr_idx
+                               if (translation.max_words > words|length and
+                                   tr_idx + 1 >= words|length),
+                             'class': ('cognate-group-' ~
+                                       (cognate_groups.index(word.id) + 1))
+                               if word.id in cognate_groups,
+                           }) %}
+                           {{ word_span(word, locale, table) }}
+                           {% if word.locale.language != 'en' %}
+                             ({{ word.romanize() }})
+                           {% endif %}
+                        {% endcall %}
+                      {% endwith %}
+                    {% endif %}
+                  {% endwith %}
+                {% endfor %}
+              {% endwith %}
+            {% endfor %}
+          </tr>
+        {% endwith %}
+      {% endfor %}
+    {% endfor %}
+  </tbody>
+</table>
+{# vim: set ft=jinja: #}

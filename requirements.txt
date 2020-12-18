@@ -1,0 +1,13 @@
+Babel >= 2.9.0, < 3.0.0
+commonmark >= 0.9.1, < 1.0.0
+dragonmapper >= 0.2.6, < 0.3.0
+hangul-romanize >= 0.1.0, < 0.2.0
+hanja >= 0.13.2, < 1.0.0
+Jinja2 >= 2.11.2, < 3.0.0
+MarkupSafe >= 1.1.1, < 2.0.0
+mypy >= 0.790, < 1
+opencc-py >= 1.1.0, < 2.0.0
+pinyin_jyutping_sentence >= 0.9, < 1.0
+pykakasi >= 2.0.4, < 2.1.0
+PyYAML >= 5.1.2, < 6.0.0
+romkan >= 0.2.1, < 0.3.0

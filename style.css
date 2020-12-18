@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100&family=Noto+Sans+JP:wght@100&family=Noto+Sans+KR:wght@100&family=Noto+Sans+SC:wght@100&family=Noto+Sans+TC:wght@100&display=swap');
+
+.term {
+  font-weight: 100;
+}
+
+.term:lang(en) {
+  font-family: 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+.term:lang(ko) {
+  font-family:
+    'Noto Sans CJK KR',
+    NotoSansCJKkr,
+    'Noto Sans KR',
+    'Noto Sans CJK',
+    NotoSansCJK,
+    sans-serif;
+}
+
+.term:lang(zh-Hans), .term:lang(zh-CN) {
+  font-family:
+    'Noto Sans CJK SC',
+    NotoSansCJKsc,
+    'Noto Sans SC',
+    'Noto Sans CJK',
+    NotoSansCJK,
+    'PingFang SC',
+    'Hiragino Sans GB',
+    'Microsoft YaHei',
+    sans-serif;
+}
+
+.term:lang(zh-Hant), .term:lang(zh-TW) {
+  font-family:
+    'Noto Sans CJK TC',
+    NotoSansCJKtc,
+    'Noto Sans TC',
+    'Noto Sans CJK',
+    NotoSansCJK,
+    'STKaitiTC-Black',
+    'PingFang TC',
+    'Hiragino Sans CNS',
+    'Microsoft JhengHei',
+    sans-serif;
+}
+
+.term:lang(zh-HK) {
+  font-family:
+    'Noto Sans CJK HK',
+    NotoSansCJKhk,
+    'Noto Sans HK',
+    'Noto Sans CJK',
+    NotoSansCJK,
+    'PingFang TC',
+    'Hiragino Sans CNS',
+    'Microsoft JhengHei',
+    sans-serif;
+}
+
+.term:lang(ja) {
+  font-family:
+    'Noto Sans CJK JP',
+    NotoSansCJKjp,
+    'Noto Sans JP',
+    'Noto Sans CJK',
+    NotoSansCJK,
+    'Hiragino Sans',
+    'Hiragino Kaku Gothic Pro',
+    'Yu Gothic',
+    YuGothic,
+    Meiryo,
+    sans-serif;
+}
+
+rt {
+  user-select: none;
+}
+
+table.terms {
+  --border-color: rgb(162, 169, 177);
+  --header-color: rgb(234, 236, 240);
+  width: 100%;
+  border: 2px solid var(--border-color);
+  border-collapse: collapse;
+  font-family: sans-serif;
+}
+
+table.terms > thead {
+  background-color: var(--header-color);
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+table.terms > tbody {
+  vertical-align: top;
+}
+
+table.terms th {
+  font-weight: normal;
+}
+
+table.terms > thead td[rowspan],
+table.terms > thead td[colspan],
+table.terms > thead td:first-child,
+table.terms > tbody td {
+  border-left: 1px solid var(--border-color);
+}
+
+table.terms th,
+table.terms td {
+  padding: .5em;
+}
+
+table.terms > tbody > tr.group-head {
+  border-top: 1px solid var(--border-color);
+}
+
+table.terms .term {
+  font-size: x-large;
+}
+
+.cognate-group-1, .cognate-group-2, .cognate-group-3 {
+  --offset: 0%;
+  --height: 100%;
+  background-clip: padding-box;
+  background-image:
+    linear-gradient(
+      to bottom,
+      var(--color) 0 .5rem,
+      transparent .5rem 100%
+    ),
+    linear-gradient(
+      to top,
+      transparent 0 var(--offset),
+      var(--color) var(--offset) calc(var(--offset) + .5rem),
+      transparent .5rem 100%
+    ),
+    linear-gradient(
+      to right,
+      var(--color) .5rem,
+      transparent .5rem calc(100% - .5rem),
+      var(--color) calc(100% - .5rem)
+    );
+  background-size: auto, auto, 100% var(--height);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+}
+
+.cognate-group-1[rowspan="2"],
+.cognate-group-2[rowspan="2"],
+.cognate-group-3[rowspan="2"] {
+  --offset: 49.9985858798%;
+  --height: 50%;
+}
+
+.cognate-group-1 {
+  --color: #ffc0c0;
+}
+
+.cognate-group-2 {
+  --color: #c0ffc0;
+}
+
+.cognate-group-3 {
+  --color: #c0c0ff;
+}

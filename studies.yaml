@@ -1,0 +1,63 @@
+- en:
+    "computer science":
+    - term:   computer
+    - term:   science
+  ja:
+    "computer 科學":
+    - { term: コンピュータ, loan: computer }
+    - { term: 科学,   read: "か がく",       correspond: science }
+    計算機科學:
+    - { term: 計算機, read: "けい さん き",  correspond: science }
+    - { term: 科学,   read: "か がく",       correspond: science }
+  ko:
+    "computer 科學":
+    - { term: 컴퓨터, loan: computer } 
+    - { term: 科學,   read: "과 학",         correspond: science }
+    電算學:
+    - { term: 電算,   read: "전 산",         correspond: computer }
+    - { term: 學,     read: 학, space: no }
+  zh-CN:
+    計算機科學:
+    - { term: 计算机, read: "jì suàn jī",    correspond: computer }
+    - { term: 科学,   read: "kē xué",        correspond: science }
+  zh-HK:
+    電腦科學:
+    - { term: 電腦,   read: "din6 nou5",     correspond: computer }
+    - { term: 科學,   read: "fo1 hok6",      correspond: science }
+  zh-TW:
+    電腦科學:
+    - { term: 電腦,   read: "ㄉㄧㄢˋ ㄋㄠˇ", correspond: computer }
+    - { term: 科學,   read: "ㄎㄜ ㄒㄩㄝˊ",  correspond: science }
+- en:
+    cryptography:
+    - term:   crypto
+    - { term: graphy, space: no }
+    cryptology:
+    - term:   crypto
+    - { term: logy,   space: no,         correspond: study }
+  ko:
+    暗號學:
+    - { term: 暗號, read: "암 호",       correspond: crypto }
+    - { term: 學,   read: 학,            correspond: study, space: no }
+    暗號理論:
+    - { term: 暗號, read: "암 호",       correspond: crypto }
+    - { term: 理論, read: "이 론",       correspond: theory }
+  ja:
+    暗號學:
+    - { term: 暗号, read: "あん ごう",   correspond: crypto }
+    - { term: 学,   read: がく,          corresponds: study, space: no }
+    暗號理論:
+    - { term: 暗号, read: "あん ごう",   correspond: crypto }
+    - { term: 理論, read: "り ろん",     correspond: theory }
+  zh-CN:
+    密碼學:
+    - { term: 密码, read: "mì mǎ",       correspond: crypto }
+    - { term: 学,   read: xué,           correspond: study, space: no }
+  zh-HK:
+    密碼學:
+    - { term: 密碼, read: "mat6 maa5",   correspond: crypto }
+    - { term: 學,   read: hok6,          correspond: study, space: no }
+  zh-TW:
+    密碼學:
+    - { term: 密碼, read: "ㄇㄧˋ ㄇㄚˇ", correspond: crypto }
+    - { term: 學,   read: ㄒㄩㄝˊ,       correspond: study, space: no }
