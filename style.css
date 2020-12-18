@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100&family=Noto+Sans+JP:wght@100&family=Noto+Sans+KR:wght@100&family=Noto+Sans+SC:wght@100&family=Noto+Sans+TC:wght@100&display=swap');
+@import url(https://cdn.jsdelivr.net/gh/yeun/open-color@v1.7.0/open-color.css);
 
 .term {
   font-weight: 100;
@@ -149,19 +150,24 @@ table.terms .term {
 
 .cognate-group-1[rowspan="2"],
 .cognate-group-2[rowspan="2"],
-.cognate-group-3[rowspan="2"] {
+.cognate-group-3[rowspan="2"],
+.cognate-group-4[rowspan="2"] {
   --offset: 49.9985858798%;
   --height: 50%;
 }
 
 .cognate-group-1 {
-  --color: #ffc0c0;
+  --color: var(--oc-red-1);
 }
 
 .cognate-group-2 {
-  --color: #c0ffc0;
+  --color: var(--oc-indigo-1);
 }
 
 .cognate-group-3 {
-  --color: #c0c0ff;
+  --color: var(--oc-green-1);
+}
+
+.cognate-group-4 {
+  --color: var(--oc-orange-1);
 }

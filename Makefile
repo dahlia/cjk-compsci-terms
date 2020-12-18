@@ -6,7 +6,7 @@
 	.venv/bin/pip install -U -r requirements.txt
 
 public_html/style.css: style.css
-	mkdir public_html
+	mkdir -p public_html
 	cp style.css public_html/style.css
 
 public_html/studies.html: public_html/style.css .venv studies.yaml build.py
