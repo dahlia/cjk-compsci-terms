@@ -122,7 +122,10 @@ table.terms .term {
   font-size: x-large;
 }
 
-.cognate-group-1, .cognate-group-2, .cognate-group-3 {
+.cognate-group-1,
+.cognate-group-2,
+.cognate-group-3,
+.cognate-group-4 {
   --offset: 0%;
   --height: 100%;
   background-clip: padding-box;
@@ -170,4 +173,52 @@ table.terms .term {
 
 .cognate-group-4 {
   --color: var(--oc-orange-1);
+}
+
+.hover-correspond-1 .term:not(.correspond-1),
+.hover-correspond-2 .term:not(.correspond-2),
+.hover-correspond-3 .term:not(.correspond-3),
+.hover-correspond-4 .term:not(.correspond-4),
+.hover-correspond-5 .term:not(.correspond-5) {
+  opacity: 0.5;
+}
+
+.correspond-1 {
+  text-decoration: underline wavy var(--oc-indigo-4);
+}
+
+.hover-correspond-1 .correspond-1 {
+  text-decoration-color: var(--oc-indigo-9);
+}
+
+.correspond-2 {
+  text-decoration: underline double var(--oc-red-4);
+}
+
+.hover-correspond-2 .correspond-2 {
+  text-decoration-color: var(--oc-red-9);
+}
+
+.correspond-3 {
+  text-decoration: underline dotted var(--oc-orange-5);
+}
+
+.hover-correspond-3 .correspond-3 {
+  text-decoration-style: solid;
+}
+
+.correspond-4 {
+  text-decoration: underline solid var(--oc-green-3) 0.2rem;
+}
+
+.hover-correspond-4 .correspond-4 {
+  text-decoration-color: var(--oc-green-6);
+}
+
+.correspond-5 {
+  text-decoration: underline wavy var(--oc-pink-3);
+}
+
+.hover-correspond-5 .correspond-5 {
+  text-decoration-color: var(--oc-pink-8);
 }

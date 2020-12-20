@@ -7,7 +7,7 @@
     - { term: コンピュータ, loan: computer }
     - { term: 科学,   read: "か がく",       correspond: science }
     計算機科學:
-    - { term: 計算機, read: "けい さん き",  correspond: science }
+    - { term: 計算機, read: "けい さん き",  correspond: computer }
     - { term: 科学,   read: "か がく",       correspond: science }
   ko:
     "computer 科學":
@@ -45,7 +45,7 @@
   ja:
     暗號學:
     - { term: 暗号, read: "あん ごう",   correspond: crypto }
-    - { term: 学,   read: がく,          corresponds: study, space: no }
+    - { term: 学,   read: がく,          correspond: study, space: no }
     暗號理論:
     - { term: 暗号, read: "あん ごう",   correspond: crypto }
     - { term: 理論, read: "り ろん",     correspond: theory }

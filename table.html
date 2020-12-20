@@ -13,34 +13,38 @@
   {%- endif -%}
 {%- endmacro %}
 
-{% macro word_span(word, locale, table) -%}
-  {%- if (word|selectattr('read')|list +
-          word|selectattr('loan')|list)|length -%}
-    <ruby class="term" lang="{{ word.locale|replace('_', '-') }}">
-      {%- for term in word -%}
-        {{- ' ' if term.space -}}
-        {%- if term.loan -%}
+{% macro word_span(word, locale, table, correspondences) -%}
+  {%- for term in word -%}
+    {%- with classes =
+          'term ' +
+          ('correspond-' ~ (correspondences.index(term.correspond) + 1)
+          if term.correspond in correspondences
+          else '') -%}
+      {%- if (word|selectattr('read')|list +
+              word|selectattr('loan')|list)|length -%}
+        <ruby class="{{ classes }}" lang="{{ word.locale|replace('_', '-') }}">
+          {{- ' ' if term.space -}}
+          {%- if term.loan -%}
+            {{- term.term -}}
+            <rt>{{ term.loan }}</rt>
+          {%- elif term.read_as is callable -%}
+            {%- for char, read in term.read_as(word.locale, locale, table) -%}
+              {{- char -}}
+              <rt>{{ read }}</rt>
+            {%- endfor -%}
+          {%- else -%}
+            {{- term.term -}}
+            <rt></rt>
+          {%- endif -%}
+        </ruby>
+      {%- else -%}
+        <span class="{{ classes }}" lang="{{ locale|replace('_', '-') }}">
+          {{- ' ' if term.space -}}
           {{- term.term -}}
-          <rt>{{ term.loan }}</rt>
-        {%- elif term.read_as is callable -%}
-          {%- for char, read in term.read_as(word.locale, locale, table) -%}
-            {{- char -}}
-            <rt>{{ read }}</rt>
-          {%- endfor -%}
-        {%- else -%}
-          {{- term.term -}}
-          <rt></rt>
-        {%- endif %}
-      {%- endfor %}
-    </ruby>
-  {%- else -%}
-    <span class="term" lang="{{ locale|replace('_', '-') }}">
-      {%- for term in word -%}
-        {{- ' ' if term.space -}}
-        {{- term.term -}}
-      {%- endfor %}
-    </span>
-  {%- endif -%}
+        </span>
+      {%- endif -%}
+    {%- endwith -%}
+  {%- endfor %}
 {%- endmacro %}
 
 <table class="terms" lang="{{ locale|string|replace('_', '-') }}">
@@ -83,7 +87,12 @@
                                        (cognate_groups.index(word.id) + 1))
                                if word.id in cognate_groups,
                            }) %}
-                           {{ word_span(word, locale, table) }}
+                           {{ word_span(
+                             word,
+                             locale,
+                             table,
+                             translation.correspondences
+                           ) }}
                            {% if word.locale.language != 'en' %}
                              ({{ word.romanize() }})
                            {% endif %}

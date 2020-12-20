@@ -222,6 +222,18 @@ class Translation(Mapping[Locale, Sequence[Word]]):
                 del cognate_groups[word_id]
         return cognate_groups
 
+    @functools.cached_property
+    def correspondences(self) -> Sequence[str]:
+        count_map: Dict[str, int] = {}
+        for words in self.values():
+            for word in words:
+                for term in word:
+                    count_map[term.correspond] = \
+                        count_map.get(term.correspond, 0) + 1
+        counts: List[Tuple[str, int]] = list(count_map.items())
+        counts.sort(key=lambda pair: pair[1], reverse=True)
+        return [k for k, v in counts if v > 1]
+
 
 class Table(Sequence[Translation]):
     def __init__(self, translations: Iterable[Translation]):
@@ -402,14 +414,14 @@ def render_table(locale: Locale, table: Table) -> str:
 
 
 def main():
-    if len(sys.argv) < 2:
+    if len(sys.argv) < 3:
         print('error: too few arguments', file=sys.stderr)
-        print('usage:', os.path.basename(sys.argv[0]), 'FILE', file=sys.stderr)
+        print('usage:', os.path.basename(sys.argv[0]), 'LANG', 'FILE',
+              file=sys.stderr)
         raise SystemExit(1)
-    table = load_table(sys.argv[1])
-    lc_ctype = locale.getlocale()
-    lc = Locale.parse('en' if lc_ctype[0] == 'C' else lc_ctype[0])
-    print(render_table(lc, table))
+    locale = Locale.parse(sys.argv[1])
+    table = load_table(sys.argv[2])
+    print(render_table(locale, table))
 
 
 if __name__ == '__main__':
