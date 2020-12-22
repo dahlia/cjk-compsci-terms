@@ -80,8 +80,8 @@ rt {
 }
 
 table.terms {
-  --border-color: rgb(162, 169, 177);
-  --header-color: rgb(234, 236, 240);
+  --border-color: var(--oc-gray-6);
+  --header-color: var(--oc-gray-2);
   width: 100%;
   border: 2px solid var(--border-color);
   border-collapse: collapse;
@@ -200,19 +200,19 @@ table.terms .term {
 }
 
 .correspond-3 {
-  text-decoration: underline dotted var(--oc-orange-5);
-}
-
-.hover-correspond-3 .correspond-3 {
-  text-decoration-style: solid;
-}
-
-.correspond-4 {
   text-decoration: underline solid var(--oc-green-3) 0.2rem;
 }
 
-.hover-correspond-4 .correspond-4 {
+.hover-correspond-3 .correspond-3 {
   text-decoration-color: var(--oc-green-6);
+}
+
+.correspond-4 {
+  text-decoration: underline dotted var(--oc-orange-5);
+}
+
+.hover-correspond-4 .correspond-4 {
+  text-decoration-style: solid;
 }
 
 .correspond-5 {
