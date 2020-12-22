@@ -1,3 +1,4 @@
+# Computer science
 - en:
     "computer science":
     - term:   computer
@@ -28,6 +29,68 @@
     電腦科學:
     - { term: 電腦,   read: "ㄉㄧㄢˋ ㄋㄠˇ", correspond: computer }
     - { term: 科學,   read: "ㄎㄜ ㄒㄩㄝˊ",  correspond: science }
+
+# Software engineering
+- en:
+    "software engineering":
+    - term:   software
+    - term:   engineering
+  ja:
+    "software 工學":
+    - { term: ソフトウェア, loan: software }
+    - { term: 工学,         read: "こう がく",     correspond: engineering }
+  ko:
+    "software 工學":
+    - { term: 소프트웨어,   loan: software }
+    - { term: 工學,         read: "공 학",         correspond: engineering }
+  zh-CN:
+    軟件工程:
+    - { term: 软件,         read: "ruǎn jiàn",     correspond: software }
+    - { term: 工程,         read: "gōng chéng",    correspond: engineering }
+  zh-HK:
+    軟件工程:
+    - { term: 軟件,         read: "jyun5 gin2",    correspond: software }
+    - { term: 工程,         read: "gung1 cing4",   correspond: engineering }
+  zh-TW:
+    軟體工程:
+    - { term: 軟體,         read: "ㄖㄨㄢˇ ㄊㄧˇ", correspond: software }
+    - { term: 工程,         read: "ㄍㄨㄥ ㄔㄥˊ",  correspond: engineering }
+
+# Computer security
+- en:
+    "computer security":
+    - term: computer
+    - term: security
+    "information technology security":
+    - term: information
+    - term: technology
+    - term: security
+  ja:
+    コンピュータセキュリティ:
+    - { term: コンピュータ, loan: computer }
+    - { term: セキュリティ, loan: security }
+  ko:
+    "컴퓨터 保安":
+    - { term: 컴퓨터,       loan: computer }
+    - { term: 保安,         read: "보 안",         correspond: security }
+    情報技術保安:
+    - { term: 情報,         read: "정 보",         correspond: information }
+    - { term: 技術,         read: "기 술",         correspond: technology }
+    - { term: 保安,         read: "보 안",         correspond: security }
+  zh-CN:
+    计算机安全:
+    - { term: 计算机,       read: "jì suàn jī",    correspond: computer }
+    - { term: 安全,         read: "ān quán",       correspond: security }
+  zh-HK:
+    電腦保安:
+    - { term: 電腦,         read: "din6 nou5",     correspond: computer }
+    - { term: 保安,         read: "bou2 on1",      correspond: security }
+  zh-TW:
+    電腦安全:
+    - { term: 電腦,         read: "ㄉㄧㄢˋ ㄋㄠˇ", correspond: computer }
+    - { term: 安全,         read: "ㄢ ㄑㄩㄢˊ",    correspond: security }
+
+# Cryptography
 - en:
     cryptography:
     - term:   crypto
