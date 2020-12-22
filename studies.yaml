@@ -124,3 +124,5 @@
     密碼學:
     - { term: 密碼, read: "ㄇㄧˋ ㄇㄚˇ", correspond: crypto }
     - { term: 學,   read: ㄒㄩㄝˊ,       correspond: study, space: no }
+
+# vim: set et sw=2 ts=2 sts=2 ft=yaml:
