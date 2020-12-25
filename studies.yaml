@@ -56,6 +56,38 @@
     - { term: 計算, read: "ㄐㄧˋ ㄙㄨㄢˋ", correspond: computation }
     - { term: 科學, read: "ㄎㄜ ㄒㄩㄝˊ",  correspond: science }
 
+# Computer engineering
+- en:
+    "computer engineering":
+    - term:   computer
+    - term:   engineering
+  ja:
+    計算機工學:
+    - { term: 計算機,       read: "けい さん き",  correspond: computer }
+    - { term: 工学,         read: "こう がく",     correspond: engineering }
+    "computer 工學":
+    - { term: コンピュータ, loan: computer }
+    - { term: 工学,         read: "こう がく",     correspond: engineering }
+  ko:
+    "computer 工學":
+    - { term: 컴퓨터,       loan: computer }
+    - { term: 工學,         read: "공 학",         correspond: engineering }
+  zh-CN:
+    計算機工程:
+    - { term: 计算机,       read: "jì suàn jī",    correspond: computer }
+    - { term: 工程,         read: "gōng chéng",    correspond: engineering }
+  zh-HK:
+    電腦工程:
+    - { term: 電腦,         read: "din6 nou5",     correspond: computer }
+    - { term: 工程,         read: "gung1 cing4",   correspond: engineering }
+    計算機工程:
+    - { term: 計算機,       read: "gai3 syun3 gei1",  correspond: computer }
+    - { term: 工程,         read: "gung1 cing4",   correspond: engineering }
+  zh-TW:
+    電腦工程:
+    - { term: 電腦,         read: "ㄉㄧㄢˋ ㄋㄠˇ", correspond: computer }
+    - { term: 工程,         read: "ㄍㄨㄥ ㄔㄥˊ",  correspond: engineering }
+
 # Software engineering
 - en:
     "software engineering":
