@@ -12,7 +12,7 @@
     - { term: 科学,   read: "か がく",       correspond: science }
   ko:
     "computer 科學":
-    - { term: 컴퓨터, loan: computer } 
+    - { term: 컴퓨터, loan: computer }
     - { term: 科學,   read: "과 학",         correspond: science }
     電算學:
     - { term: 電算,   read: "전 산",         correspond: computer }
@@ -29,6 +29,32 @@
     電腦科學:
     - { term: 電腦,   read: "ㄉㄧㄢˋ ㄋㄠˇ", correspond: computer }
     - { term: 科學,   read: "ㄎㄜ ㄒㄩㄝˊ",  correspond: science }
+
+# Computational science
+- en:
+    "computational science":
+    - { term: computational, correspond: computation }
+    - term:   science
+  ja:
+    計算科學:
+    - { term: 計算, read: "けい さん",     correspond: computation }
+    - { term: 科学, read: "か がく",       correspond: science }
+  ko:
+    計算科學:
+    - { term: 計算, read: "계 산",         correspond: computation }
+    - { term: 科學, read: "과 학",         correspond: science }
+  zh-CN:
+    計算科學:
+    - { term: 计算, read: "jì suàn",       correspond: computation }
+    - { term: 科学, read: "kē xué",        correspond: science }
+  zh-HK:
+    計算科學:
+    - { term: 計算, read: "gai3 syun3",    correspond: computation }
+    - { term: 科學, read: "fo1 hok6",      correspond: science }
+  zh-TW:
+    計算科學:
+    - { term: 計算, read: "ㄐㄧˋ ㄙㄨㄢˋ", correspond: computation }
+    - { term: 科學, read: "ㄎㄜ ㄒㄩㄝˊ",  correspond: science }
 
 # Software engineering
 - en:
@@ -55,6 +81,32 @@
     軟體工程:
     - { term: 軟體,         read: "ㄖㄨㄢˇ ㄊㄧˇ", correspond: software }
     - { term: 工程,         read: "ㄍㄨㄥ ㄔㄥˊ",  correspond: engineering }
+
+# Artificial intelligence
+- en:
+    "artificial intelligence":
+    - term: artificial
+    - term: intelligence
+  ja:
+    人工知能:
+    - { term: 人工, read: "じん こう", correspond: artificial }
+    - { term: 知能, read: "ち のう", correspond: intelligence }
+  ko:
+    人工知能:
+    - { term: 人工, read: "인 공", correspond: artificial }
+    - { term: 知能, read: "지 능", correspond: intelligence }
+  zh-CN:
+    人工智能:
+    - { term: 人工, read: "rén gōng", correspond: artificial }
+    - { term: 智能, read: "zhì néng", correspond: intelligence }
+  zh-HK:
+    人工智能:
+    - { term: 人工, read: "jan4 gung1", correspond: artificial }
+    - { term: 智能, read: "zi3 nang4", correspond: intelligence }
+  zh-TW:
+    人工智能:
+    - { term: 人工, read: "ㄖㄣˊ ㄍㄨㄥ", correspond: artificial }
+    - { term: 智能, read: "ㄓˋ ㄋㄥˊ", correspond: intelligence }
 
 # Computer security
 - en:
