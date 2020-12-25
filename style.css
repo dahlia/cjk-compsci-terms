@@ -122,6 +122,12 @@ table.terms .term {
   font-size: x-large;
 }
 
+table.terms .romanization {
+  display: block;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+
 .cognate-group-1,
 .cognate-group-2,
 .cognate-group-3,

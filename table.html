@@ -93,7 +93,8 @@
                              translation.correspondences
                            ) }}
                            {% if word.locale.language != 'en' %}
-                             ({{ word.romanize() }})
+                             <span class="romanization">(
+                               {{- word.romanize() }})</span>
                            {% endif %}
                         {% endcall %}
                       {% endwith %}
