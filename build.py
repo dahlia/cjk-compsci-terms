@@ -19,6 +19,7 @@ from typing import (
     Mapping,
     Optional,
     Sequence,
+    Set,
     Tuple,
     Type,
     Union,
@@ -34,9 +35,10 @@ from jinja2.environment import Environment
 from jinja2.filters import contextfilter
 from jinja2.loaders import FileSystemLoader
 from jinja2.utils import select_autoescape
+from lazy_import import lazy_module  # type: ignore
+from markdown import markdown
 from markupsafe import Markup
 from opencc import OpenCC  # type: ignore
-from pinyin_jyutping_sentence import pinyin, jyutping  # type: ignore
 from pykakasi import kakasi
 from romkan import to_roma  # type: ignore
 from yaml import load
@@ -44,6 +46,9 @@ try:
     from yaml import CLoader as Loader
 except ImportError:
     from yaml import Loader  # type: ignore
+
+
+pinyin_jyutping_sentence = lazy_module('pinyin_jyutping_sentence')
 
 
 class Spacing(enum.Enum):
@@ -100,11 +105,11 @@ class EasternTerm(Term):
         ),
         Locale.parse('ko'): lambda t, n: zip(t, translate(n, 'substitution')),
         Locale.parse('zh_CN'): lambda t, n:
-            zip(t, pinyin(n, False, True).split()),
+            zip(t, pinyin_jyutping_sentence.pinyin(n, False, True).split()),
         Locale.parse('zh_HK'): lambda t, n:
-            zip(t, jyutping(n, True, True).split()),
+            zip(t, pinyin_jyutping_sentence.jyutping(n, True, True).split()),
         Locale.parse('zh_TW'): lambda t, n:
-            zip(t, pinyin(n, False, True).split()),
+            zip(t, pinyin_jyutping_sentence.pinyin(n, False, True).split()),
     }
 
     def normalize(self, locale: Locale) -> str:
@@ -278,8 +283,8 @@ class Table(Sequence[Translation]):
 spaceless_languages: AbstractSet[str] = {'ja', 'zh'}
 
 
-def load_table(path: os.PathLike) -> Table:
-    with open(path) as f:
+def load_table(path: Union[str, os.PathLike]) -> Table:
+    with open(os.fspath(path)) as f:
         data = load(f, Loader=Loader)
     table: List[Translation] = []
     assert isinstance(data, Sequence)
@@ -413,6 +418,30 @@ def render_table(locale: Locale, table: Table) -> str:
     )
 
 
+def render_doc(path: Union[str, os.PathLike], locale: Locale) -> str:
+    extensions: Set[str] = {
+        'abbr',
+        'def_list',
+        'footnotes',
+        'sane_lists',
+        'tables',
+        'toc',
+    }
+    if locale.language in ('en', 'ko'):
+        extensions.add('smarty')
+    with open(os.fspath(path)) as f:
+        html: str = markdown(
+            f.read(),
+            output_format='html',
+            extensions=list(extensions),
+        )
+    return re.sub(
+        r'<p><a href="([^">\n]+?\.ya?ml)">.*?</a></p>',
+        lambda m: render_table(locale, load_table(m.group(1))),
+        html
+    )
+
+
 def main():
     if len(sys.argv) < 3:
         print('error: too few arguments', file=sys.stderr)
@@ -420,8 +449,8 @@ def main():
               file=sys.stderr)
         raise SystemExit(1)
     locale = Locale.parse(sys.argv[1])
-    table = load_table(sys.argv[2])
-    print(render_table(locale, table))
+    doc_path = sys.argv[2]
+    print(render_doc(doc_path, locale))
 
 
 if __name__ == '__main__':

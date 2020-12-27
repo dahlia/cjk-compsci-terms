@@ -1,4 +1,4 @@
-all: public_html/studies.html public_html/style.css public_html/script.js
+all: public_html/index.html public_html/style.css public_html/script.js
 
 clean:
 	rm -rf .venv public_html
@@ -19,7 +19,7 @@ public_html/script.js: script.js
 	mkdir -p public_html
 	cp script.js public_html/script.js
 
-public_html/studies.html: .venv studies.yaml build.py table.html
+public_html/index.html: .venv README.md studies.yaml build.py table.html
 	mkdir -p public_html
 	{ \
 		echo '<!DOCTYPE html><html><head>'; \
@@ -27,7 +27,7 @@ public_html/studies.html: .venv studies.yaml build.py table.html
 		echo '<link rel="preconnect" href="https://fonts.gstatic.com">'; \
 		echo '<link rel="stylesheet" type="text/css" href="style.css">'; \
 		echo '<script src="script.js" defer></script>'; \
-		echo '</head><body>'; \
-		.venv/bin/python build.py en studies.yaml; \
+		echo '</head><body lang="en">'; \
+		.venv/bin/python build.py en README.md; \
 		echo '</body></html>'; \
-	} > public_html/studies.html
+	} > public_html/index.html
