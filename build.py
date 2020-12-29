@@ -36,6 +36,7 @@ from jinja2.filters import contextfilter
 from jinja2.loaders import FileSystemLoader
 from jinja2.utils import select_autoescape
 from lazy_import import lazy_module  # type: ignore
+from lxml.html import document_fromstring  # type: ignore
 from markdown import markdown
 from markupsafe import Markup
 from opencc import OpenCC  # type: ignore
@@ -442,15 +443,28 @@ def render_doc(path: Union[str, os.PathLike], locale: Locale) -> str:
     )
 
 
+page_template = template_env.get_template('layout.html')
+
+def render_page(doc_path: Union[str, os.PathLike], locale: Locale) -> str:
+    doc = render_doc(doc_path, locale)
+    title = document_fromstring(
+        f'<html><body>{doc}</body></html>'
+    ).xpath('/html/body/h1')[0].text_content()
+    return page_template.render(locale=locale, doc=Markup(doc), title=title)
+
+
 def main():
     if len(sys.argv) < 3:
         print('error: too few arguments', file=sys.stderr)
-        print('usage:', os.path.basename(sys.argv[0]), 'LANG', 'FILE',
-              file=sys.stderr)
+        print('usage:', os.path.basename(sys.argv[0]), 'LANG', file=sys.stderr)
         raise SystemExit(1)
     locale = Locale.parse(sys.argv[1])
-    doc_path = sys.argv[2]
-    print(render_doc(doc_path, locale))
+    doc_filename = \
+        'README.md' \
+        if str(locale) == 'en' \
+        else f'{str(locale).replace("_", "-")}.md'
+    doc_path = os.path.join(os.path.dirname(__file__), doc_filename)
+    print(render_page(doc_path, locale))
 
 
 if __name__ == '__main__':

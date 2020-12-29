@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{{ title }}</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body lang="{{ locale|string|replace('_', '-') }}">
+  {{- doc -}}
+</body>
+</html>
+{# vim: set et sw=2 ts=2 sts=2 ft=jinja: #}
