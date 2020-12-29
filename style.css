@@ -3,6 +3,8 @@
 
 .term {
   font-weight: 100;
+  text-decoration-skip-ink: none;
+  text-decoration-skip: none;
 }
 
 .term:lang(en) {
@@ -101,6 +103,10 @@ p:lang(en) {
 p:lang(ja), p:lang(ko), p:lang(zh) {
   line-height: 160%;
   text-align: justify;
+}
+
+p:lang(ko), h1:lang(ko), h2:lang(ko) {
+  letter-spacing: -0.1rem;
 }
 
 .footnote {
@@ -231,7 +237,9 @@ table.terms .romanization {
 }
 
 .correspond-1 {
-  text-decoration: underline wavy var(--oc-indigo-4);
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--oc-indigo-4);
 }
 
 .hover-correspond-1 .correspond-1 {
@@ -239,7 +247,9 @@ table.terms .romanization {
 }
 
 .correspond-2 {
-  text-decoration: underline double var(--oc-red-4);
+  text-decoration: underline;
+  text-decoration-style: double;
+  text-decoration-color: var(--oc-red-4);
 }
 
 .hover-correspond-2 .correspond-2 {
@@ -247,7 +257,9 @@ table.terms .romanization {
 }
 
 .correspond-3 {
-  text-decoration: underline solid var(--oc-green-3) 0.2rem;
+  text-decoration: underline;
+  text-decoration-color: var(--oc-green-3);
+  text-decoration-thickness: 0.2rem;
 }
 
 .hover-correspond-3 .correspond-3 {
@@ -255,7 +267,9 @@ table.terms .romanization {
 }
 
 .correspond-4 {
-  text-decoration: underline dotted var(--oc-orange-5);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: var(--oc-orange-5);
 }
 
 .hover-correspond-4 .correspond-4 {
@@ -263,7 +277,9 @@ table.terms .romanization {
 }
 
 .correspond-5 {
-  text-decoration: underline wavy var(--oc-pink-3);
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--oc-pink-3);
 }
 
 .hover-correspond-5 .correspond-5 {
