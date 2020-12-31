@@ -13,13 +13,13 @@
   {%- endif -%}
 {%- endmacro %}
 
-{% macro word_span(word, locale, table, correspondences) -%}
+{% macro word_span(word, locale, translation, table) -%}
   {%- for term in word -%}
-    {%- with classes =
-          'term ' +
-          ('correspond-' ~ (correspondences.index(term.correspond) + 1)
-          if term.correspond in correspondences
-          else '') -%}
+    {%- with classes = 'term ' + (
+          'correspond-' ~ (translation.correspondences.index(term.correspond)+1)
+          if term.correspond in translation.correspondences
+          else ''
+        ) -%}
       {{- ' ' if term.space -}}
       {%- if (word|selectattr('read')|list +
               word|selectattr('loan')|list)|length -%}
@@ -28,7 +28,11 @@
             {{- term.term -}}
             <rt>{{ term.loan }}</rt>
           {%- elif term.read_as is callable -%}
-            {%- for char, read in term.read_as(word.locale, locale, table) -%}
+            {%- for char, read in term.read_as(word.locale,
+                                               locale,
+                                               word.id,
+                                               translation,
+                                               table) -%}
               {{- char -}}
               <rt>{{ read }}</rt>
             {%- endfor -%}
@@ -86,12 +90,7 @@
                                        (cognate_groups.index(word.id) + 1))
                                if word.id in cognate_groups,
                            }) %}
-                           {{ word_span(
-                             word,
-                             locale,
-                             table,
-                             translation.correspondences
-                           ) }}
+                           {{ word_span(word, locale, translation, table) }}
                            {% if word.locale.language != 'en' %}
                              <span class="romanization">(
                                {{- word.romanize() }})</span>

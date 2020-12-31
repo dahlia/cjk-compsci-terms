@@ -120,11 +120,11 @@
     - term: artificial
     - term: intelligence
   ja:
-    人工知能:
+    人工智能:
     - { term: 人工, read: "じん こう", correspond: artificial }
     - { term: 知能, read: "ち のう", correspond: intelligence }
   ko:
-    人工知能:
+    人工智能:
     - { term: 人工, read: "인 공", correspond: artificial }
     - { term: 知能, read: "지 능", correspond: intelligence }
   zh-CN:

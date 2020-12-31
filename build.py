@@ -124,19 +124,29 @@ class EasternTerm(Term):
     def read_as(self,
                 from_: Locale,
                 to: Locale,
+                word_id: str,
+                translation: Translation,
                 table: Table) -> Iterable[Tuple[str, Union[str, Markup]]]:
         if from_ == to:
             return zip(self.term, self.read.split())
+        same_cls = type(self)
+        target_words: Sequence[Word] = translation.get(to, [])
+        for target_word in target_words:
+            if target_word.id == word_id:
+                for target_term in target_word:
+                    if target_term.correspond == self.correspond and \
+                       isinstance(target_term, same_cls):
+                        return zip(self.term, target_term.read.split())
         terms_table: Mapping[str, Term] = table.terms_table.get(to, {})
         term_id = self.normalize(from_)
         correspond = terms_table.get(term_id)
-        if isinstance(correspond, type(self)):
+        if isinstance(correspond, same_cls):
             return zip(self.term, correspond.read.split())
         reader = self.readers.get(to)
         term = self.normalize(from_)
         if callable(reader):
             return reader(self.term, term)
-        return self.read_as(from_, from_, table)
+        return self.read_as(from_, from_, word_id, translation, table)
 
 
 
@@ -444,6 +454,7 @@ def render_doc(path: Union[str, os.PathLike], locale: Locale) -> str:
 
 
 page_template = template_env.get_template('layout.html')
+
 
 def render_page(doc_path: Union[str, os.PathLike], locale: Locale) -> str:
     doc = render_doc(doc_path, locale)
