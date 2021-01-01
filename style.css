@@ -167,14 +167,34 @@ table.terms {
   width: calc(100% - 2rem);
   margin: 1rem;
   border: 2px solid var(--border-color);
-  border-collapse: collapse;
+  border-top: none;
+  border-bottom-width: 1px;
+  border-spacing: 0;
   font-family: sans-serif;
 }
 
 table.terms > thead {
   background-color: var(--header-color);
   text-align: center;
+}
+
+table.terms > thead > tr:first-child > td,
+table.terms > thead > tr:first-child > th {
+  border-top: 2px solid var(--border-color);
+}
+
+table.terms > thead td[rowspan],
+table.terms > thead th[rowspan],
+table.terms > thead > tr:last-child > td,
+table.terms > thead > tr:last-child > th {
   border-bottom: 1px solid var(--border-color);
+}
+
+@-moz-document url-prefix() {
+  table.terms > thead {
+    position: sticky;
+    top: 0;
+  }
 }
 
 table.terms > thead .native-name {
@@ -202,8 +222,11 @@ table.terms td {
   padding: .5em;
 }
 
-table.terms > tbody > tr.group-head {
-  border-top: 1px solid var(--border-color);
+table.terms > tbody td[rowspan],
+table.terms > tbody th[rowspan],
+table.terms > tbody > tr.group-foot > td,
+table.terms > tbody > tr.group-foot > th {
+  border-bottom: 1px solid var(--border-color);
 }
 
 table.terms .term {

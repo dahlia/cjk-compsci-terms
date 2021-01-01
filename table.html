@@ -92,7 +92,12 @@
     {% for translation in table %}
       {% for tr_idx in range(translation.max_words) %}
         {% with cognate_groups = translation.cognate_groups|list %}
-          <tr {% if tr_idx < 1 %} class="group-head" {% endif %}>
+          <tr class="
+                {% if tr_idx < 1 %} group-head {% endif %}
+                {% if tr_idx + 1 >= translation.max_words %}
+                  group-foot
+                {% endif %}
+              ">
             {% for lval in locales.values() %}
               {% with locales_loop = loop,
                       lmap = lval if lval is mapping else {lval|string: lval} %}
