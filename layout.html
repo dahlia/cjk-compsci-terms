@@ -18,7 +18,8 @@
           <a href="{{ href }}"
              hreflang="{{ l }}"
              rel="{% if lang==locale %}canonical{% else %}alternate{% endif %}"
-             lang="{{ l }}">
+             lang="{{ l }}"
+             title="{{ lang.get_display_name(locale) }}">
             {{- lang.get_display_name(lang) -}}
           </a>
         {% endwith %}

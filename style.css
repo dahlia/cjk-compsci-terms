@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100&family=Noto+Sans+JP:wght@100&family=Noto+Sans+KR:wght@100&family=Noto+Sans+SC:wght@100&family=Noto+Sans+TC:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100&family=Noto+Sans+JP:wght@100&family=Noto+Sans+KR:wght@100&family=Noto+Sans+SC:wght@100&family=Noto+Sans+TC:wght@100&family=Noto+Serif+KR&display=swap');
 @import url(https://cdn.jsdelivr.net/gh/yeun/open-color@v1.7.0/open-color.css);
 
 .term {
@@ -77,7 +77,16 @@
     sans-serif;
 }
 
-body > *:not(table.terms) {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body > *:not(table.terms, header) {
   margin-left: auto;
   margin-right: auto;
   max-width: 55rem;
@@ -88,10 +97,28 @@ body > *:not(table.terms) {
   color: var(--oc-gray-9);
 }
 
-body > header > nav > a[rel=canonical] {
+body > header {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: var(--oc-gray-9);
+  color: var(--oc-gray-1);
+  text-align: right;
+}
+
+body > header > nav > a {
   text-decoration: none;
+  color: var(--oc-gray-3);
+  margin-left: 0.3rem;
+}
+
+body > header > nav > a[rel=alternate]:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+body > header > nav > a[rel=canonical] {
   font-weight: bolder;
-  color: var(--oc-gray-9);
+  color: var(--oc-gray-0);
   cursor: default;
 }
 
@@ -113,8 +140,8 @@ p:lang(ja), p:lang(ko), p:lang(zh) {
   text-align: justify;
 }
 
-p:lang(ko), h1:lang(ko), h2:lang(ko) {
-  letter-spacing: -0.1rem;
+h1:lang(ko), h2:lang(ko), p:lang(ko), nav :lang(ko) {
+  font-family: 'Noto Serif KR', serif;
 }
 
 .footnote {
@@ -137,7 +164,8 @@ rt {
 table.terms {
   --border-color: var(--oc-gray-6);
   --header-color: var(--oc-gray-2);
-  width: 100%;
+  width: calc(100% - 2rem);
+  margin: 1rem;
   border: 2px solid var(--border-color);
   border-collapse: collapse;
   font-family: sans-serif;
