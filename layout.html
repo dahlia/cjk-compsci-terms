@@ -11,6 +11,20 @@
   <script src="script.js" defer></script>
 </head>
 <body lang="{{ locale|string|replace('_', '-') }}">
+  <header>
+    <nav>
+      {% for lang, href in lang_hrefs %}
+        {% with l = lang|string|replace('_', '-') %}
+          <a href="{{ href }}"
+             hreflang="{{ l }}"
+             rel="{% if lang==locale %}canonical{% else %}alternate{% endif %}"
+             lang="{{ l }}">
+            {{- lang.get_display_name(lang) -}}
+          </a>
+        {% endwith %}
+      {% endfor %}
+    </nav>
+  </header>
   {{- doc -}}
 </body>
 </html>

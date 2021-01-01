@@ -85,6 +85,14 @@ body > *:not(table.terms) {
 
 :root {
   font-family: serif;
+  color: var(--oc-gray-9);
+}
+
+body > header > nav > a[rel=canonical] {
+  text-decoration: none;
+  font-weight: bolder;
+  color: var(--oc-gray-9);
+  cursor: default;
 }
 
 h1 {

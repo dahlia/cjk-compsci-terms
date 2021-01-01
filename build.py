@@ -26,6 +26,7 @@ from typing import (
     Union,
     overload,
 )
+import urllib.parse
 
 from babel.core import Locale, UnknownLocaleError  # type: ignore
 from dragonmapper.transcriptions import zhuyin_to_pinyin  # type: ignore
@@ -475,35 +476,56 @@ page_template = template_env.get_template('layout.html')
 def render_page(
     doc_path: Union[str, os.PathLike],
     locale: Locale,
-    base_href: Optional[str] = None
+    base_href: Optional[str] = None,
+    lang_hrefs: Optional[Mapping[Locale, str]] = None,
 ) -> str:
     doc = render_doc(doc_path, locale)
     title = document_fromstring(
         f'<html><body>{doc}</body></html>'
     ).xpath('/html/body/h1')[0].text_content()
+    absolute_base = base_href and base_href.startswith(('http:', 'https:'))
+    lang_href_pairs: List[Tuple[Locale, str]] = [
+        (l, urllib.parse.urljoin(base_href, h)
+            if base_href is not None and absolute_base
+            else h)
+        for l, h in ([] if lang_hrefs is None else lang_hrefs.items())
+    ]
+    lang_href_pairs.sort(key=lambda pair: str(pair[0]))
     return page_template.render(
         locale=locale,
         doc=Markup(doc),
         title=title,
         base_href=base_href,
+        lang_hrefs=lang_href_pairs,
     )
 
 
 def main():
-    def parse_locale(locale: str):
+    def parse_locale(locale: str) -> Locale:
         try:
-            return Locale.parse(locale)
+            return Locale.parse(locale.replace('-', '_'))
         except UnknownLocaleError as e:
             raise ValueError(str(e)) from e
+    def parse_lang_href(pair: str) -> Tuple[Locale, str]:
+        locale, href = pair.split(':', 1)
+        return parse_locale(locale), href
     parser = argparse.ArgumentParser()
-    parser.add_argument('lang', type=parse_locale)
+    parser.add_argument('locale', metavar='LANG', type=parse_locale)
     parser.add_argument('file')
     parser.add_argument('--base-href')
+    parser.add_argument(
+        '-l', '--lang',
+        metavar='LANG:HREF',
+        action='append',
+        type=parse_lang_href,
+        dest='lang_hrefs',
+    )
     args = parser.parse_args()
     if not os.path.isfile(args.file):
         parser.error(f'no such file: {args.file}')
         return
-    print(render_page(args.file, args.lang, args.base_href))
+    lang_hrefs: Dict[Locale, str] = dict(args.lang_hrefs)
+    print(render_page(args.file, args.locale, args.base_href, lang_hrefs))
 
 
 if __name__ == '__main__':

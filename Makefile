@@ -2,13 +2,14 @@ OBJ = public_html
 VENV = .venv
 
 LANGS = $(patsubst %.md,%,$(patsubst README.md,en.md,$(wildcard *.md)))
+LANG_HREFS = $(patsubst %:en/,%:./,$(foreach f,$(LANGS),$(f):$(f)/))
 TABLES = $(wildcard *.yaml)
 TEMPLATES = $(wildcard *.html)
 OBJ_FILES = \
-	$(patsubst public_html/en/%,public_html/%,\
-		$(patsubst %,public_html/%/index.html,$(LANGS))) \
-	$(patsubst %,public_html/%,$(wildcard *.css)) \
-	$(patsubst %,public_html/%,$(wildcard *.js))
+	$(patsubst $(OBJ)/en/%,$(OBJ)/%,$(LANGS:%=$(OBJ)/%/index.html)) \
+	$(patsubst %,$(OBJ)/%,$(wildcard *.css)) \
+	$(patsubst %,$(OBJ)/%,$(wildcard *.js)) \
+	$(OBJ)/.nojekyll
 
 all: $(OBJ_FILES)
 
@@ -26,6 +27,9 @@ $(VENV)/: requirements.txt
 $(OBJ)/:
 	mkdir -p $(OBJ)
 
+$(OBJ)/.nojekyll:
+	touch $(OBJ)/.nojekyll
+
 $(OBJ)/%.css: %.css | $(OBJ)/
 	cp $< $@
 
@@ -33,12 +37,15 @@ $(OBJ)/%.js: %.js | $(OBJ)/
 	cp $< $@
 
 $(OBJ)/index.html: README.md $(VENV)/ build.py $(TABLES) $(TEMPLATES) | $(OBJ)/
-	$(VENV)/bin/python build.py en $< > $@
+	$(VENV)/bin/python build.py \
+		$(if $(URL_BASE),--base-href=$(URL_BASE),) \
+		$(LANG_HREFS:%=--lang=%$(if $(URL_BASE),,index.html)) en $< > $@
 
 $(OBJ)/%/index.html: %.md $(VENV)/ build.py $(TABLES) $(TEMPLATES) | $(OBJ)/
 	mkdir -p $(dir $@)
 	$(VENV)/bin/python build.py \
-		--base-href=../ \
-		$(subst -,_,$(basename $(notdir $<))) \
+		--base-href=$(or $(URL_BASE),../) \
+		$(LANG_HREFS:%=--lang=%$(if $(URL_BASE),,index.html)) \
+		$(basename $(notdir $<)) \
 		$< \
 		> $@
