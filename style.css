@@ -177,6 +177,11 @@ table.terms > thead {
   border-bottom: 1px solid var(--border-color);
 }
 
+table.terms > thead .native-name {
+  color: var(--oc-gray-7);
+  font-size: smaller;
+}
+
 table.terms > tbody {
   vertical-align: top;
 }

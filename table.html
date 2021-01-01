@@ -57,15 +57,33 @@
         {% call cell(loop.first, {
              'colspan': lang|length - 1 if lang is mapping,
              'rowspan': 2 if lang is not mapping,
-           }) %}
-          {{- (lang._ if lang is mapping else lang).get_display_name(locale) }}
+           }) -%}
+          {%- with lang_ = lang._ if lang is mapping else lang -%}
+            {{- lang_.get_display_name(locale) }}
+            {% if lang_.get_display_name(locale) != lang_.get_display_name() %}
+              <span class="native-name">
+                (<span lang="{{ lang_.language|lower }}">
+                  {{- lang_.get_display_name() -}}
+                <span>)
+              </span>
+            {% endif %}
+          {% endwith %}
         {% endcall %}
       {% endfor %}
     </tr>
     <tr>
       {% for locales in locales.values() if locales is mapping %}
         {% for localecode, l in locales.items() if localecode != '_' %}
-          <td>{{ l|territory_name(locale) }}</td>
+          <td>
+            {{ l|territory_name(locale) }}
+            {% if l|territory_name(locale) != l|territory_name(l) %}
+              <span class="native-name">
+                (<span lang="{{ l|string|replace('_', '-') }}">
+                  {{- l|territory_name(l) -}}
+                <span>)
+              </span>
+            {% endif %}
+          </td>
         {% endfor %}
       {% endfor %}
     </tr>
