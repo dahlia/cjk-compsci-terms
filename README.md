@@ -1,5 +1,5 @@
-CJK computer science terms comparison table
-===========================================
+CJK computer science terms comparison
+=====================================
 
 Greater China, Japan, and Korea, the so-called [Sinosphere]
 (<span lang="zh-Hant">漢字文化圈</span>[^1]),
@@ -11,7 +11,7 @@ As a result, Sinosphere countries share a lot of words,
 but to some extent they have their own parts.
 And this is no different in computer science translations.
 
-This page contains a comparison table of how computer science terms,
+This page contains comparison tables of how computer science terms,
 mostly derived from English, are translated and called in
 different regions of Sinosphere.
 

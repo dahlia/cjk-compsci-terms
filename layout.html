@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>{{ title }}</title>
+  {% if base_href -%}
+    <base href="{{ base_href }}">
+  {%- endif %}
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="script.js" defer></script>

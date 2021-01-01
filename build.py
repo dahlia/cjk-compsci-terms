@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import argparse
 import dataclasses
 import enum
 import functools
@@ -26,7 +27,7 @@ from typing import (
     overload,
 )
 
-from babel.core import Locale  # type: ignore
+from babel.core import Locale, UnknownLocaleError  # type: ignore
 from dragonmapper.transcriptions import zhuyin_to_pinyin  # type: ignore
 from hangul_romanize import Transliter  # type: ignore
 from hangul_romanize.rule import academic  # type: ignore
@@ -38,6 +39,8 @@ from jinja2.utils import select_autoescape
 from lazy_import import lazy_module  # type: ignore
 from lxml.html import document_fromstring  # type: ignore
 from markdown import markdown
+from markdown.extensions import Extension
+from markdown.inlinepatterns import SimpleTextInlineProcessor  # type: ignore
 from markupsafe import Markup
 from opencc import OpenCC  # type: ignore
 from pykakasi import kakasi
@@ -357,6 +360,8 @@ territory_names: Mapping[Tuple[str, Locale], str] = {
     ('HK', Locale.parse('ja')): '香港',
     ('HK', Locale.parse('ko')): '홍콩',
     ('HK', Locale.parse('zh_CN')): '香港',
+    ('HK', Locale.parse('zh_Hans')): '香港',
+    ('HK', Locale.parse('zh_Hant')): '香港',
     ('HK', Locale.parse('zh_HK')): '香港',
     ('HK', Locale.parse('zh_TW')): '香港',
 }
@@ -429,8 +434,17 @@ def render_table(locale: Locale, table: Table) -> str:
     )
 
 
+class IgnoreLineFeedExtension(Extension):
+    def extendMarkdown(self, md):
+        md.inlinePatterns.register(
+            SimpleTextInlineProcessor(r'()\n+'),
+            'linefeed',
+            40
+        )
+
+
 def render_doc(path: Union[str, os.PathLike], locale: Locale) -> str:
-    extensions: Set[str] = {
+    extensions: Set[Union[str, Extension]] = {
         'abbr',
         'def_list',
         'footnotes',
@@ -438,7 +452,9 @@ def render_doc(path: Union[str, os.PathLike], locale: Locale) -> str:
         'tables',
         'toc',
     }
-    if locale.language in ('en', 'ko'):
+    if locale.language in ('ja', 'zh'):
+        extensions.add(IgnoreLineFeedExtension())
+    else:
         extensions.add('smarty')
     with open(os.fspath(path)) as f:
         html: str = markdown(
@@ -456,26 +472,38 @@ def render_doc(path: Union[str, os.PathLike], locale: Locale) -> str:
 page_template = template_env.get_template('layout.html')
 
 
-def render_page(doc_path: Union[str, os.PathLike], locale: Locale) -> str:
+def render_page(
+    doc_path: Union[str, os.PathLike],
+    locale: Locale,
+    base_href: Optional[str] = None
+) -> str:
     doc = render_doc(doc_path, locale)
     title = document_fromstring(
         f'<html><body>{doc}</body></html>'
     ).xpath('/html/body/h1')[0].text_content()
-    return page_template.render(locale=locale, doc=Markup(doc), title=title)
+    return page_template.render(
+        locale=locale,
+        doc=Markup(doc),
+        title=title,
+        base_href=base_href,
+    )
 
 
 def main():
-    if len(sys.argv) < 3:
-        print('error: too few arguments', file=sys.stderr)
-        print('usage:', os.path.basename(sys.argv[0]), 'LANG', file=sys.stderr)
-        raise SystemExit(1)
-    locale = Locale.parse(sys.argv[1])
-    doc_filename = \
-        'README.md' \
-        if str(locale) == 'en' \
-        else f'{str(locale).replace("_", "-")}.md'
-    doc_path = os.path.join(os.path.dirname(__file__), doc_filename)
-    print(render_page(doc_path, locale))
+    def parse_locale(locale: str):
+        try:
+            return Locale.parse(locale)
+        except UnknownLocaleError as e:
+            raise ValueError(str(e)) from e
+    parser = argparse.ArgumentParser()
+    parser.add_argument('lang', type=parse_locale)
+    parser.add_argument('file')
+    parser.add_argument('--base-href')
+    args = parser.parse_args()
+    if not os.path.isfile(args.file):
+        parser.error(f'no such file: {args.file}')
+        return
+    print(render_page(args.file, args.lang, args.base_href))
 
 
 if __name__ == '__main__':

@@ -1,24 +1,44 @@
-all: public_html/index.html public_html/style.css public_html/script.js
+OBJ = public_html
+VENV = .venv
+
+LANGS = $(patsubst %.md,%,$(patsubst README.md,en.md,$(wildcard *.md)))
+TABLES = $(wildcard *.yaml)
+TEMPLATES = $(wildcard *.html)
+OBJ_FILES = \
+	$(patsubst public_html/en/%,public_html/%,\
+		$(patsubst %,public_html/%/index.html,$(LANGS))) \
+	$(patsubst %,public_html/%,$(wildcard *.css)) \
+	$(patsubst %,public_html/%,$(wildcard *.js))
+
+all: $(OBJ_FILES)
 
 clean:
-	rm -rf .venv public_html
+	rm -rf $(OBJ_FILES) $(VENV) $(OBJ)
 
-.venv: requirements.txt
-	if [ ! -d .venv ]; then \
-	  python3 -m venv .venv; \
+$(VENV)/: requirements.txt
+	if [ ! -d $(VENV) ]; then \
+	  python3 -m venv $(VENV); \
 	fi; \
-	.venv/bin/pip install -U pip setuptools; \
-	.venv/bin/pip install -U "$$(grep -i '^pyyaml\b' requirements.txt)"; \
-	.venv/bin/pip install -U -r requirements.txt
+	$(VENV)/bin/pip install -U pip setuptools; \
+	$(VENV)/bin/pip install -U "$$(grep -i '^pyyaml\b' requirements.txt)"; \
+	$(VENV)/bin/pip install -U -r requirements.txt
 
-public_html/style.css: style.css
-	mkdir -p public_html
-	cp style.css public_html/style.css
+$(OBJ)/:
+	mkdir -p $(OBJ)
 
-public_html/script.js: script.js
-	mkdir -p public_html
-	cp script.js public_html/script.js
+$(OBJ)/%.css: %.css | $(OBJ)/
+	cp $< $@
 
-public_html/index.html: .venv README.md studies.yaml build.py table.html
-	mkdir -p public_html
-	.venv/bin/python build.py en README.md > public_html/index.html
+$(OBJ)/%.js: %.js | $(OBJ)/
+	cp $< $@
+
+$(OBJ)/index.html: README.md $(VENV)/ build.py $(TABLES) $(TEMPLATES) | $(OBJ)/
+	$(VENV)/bin/python build.py en $< > $@
+
+$(OBJ)/%/index.html: %.md $(VENV)/ build.py $(TABLES) $(TEMPLATES) | $(OBJ)/
+	mkdir -p $(dir $@)
+	$(VENV)/bin/python build.py \
+		--base-href=../ \
+		$(subst -,_,$(basename $(notdir $<))) \
+		$< \
+		> $@
