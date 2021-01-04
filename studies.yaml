@@ -37,24 +37,51 @@
     - term:   science
   ja:
     計算科學:
-    - { term: 計算, read: "けい さん",     correspond: computation }
-    - { term: 科学, read: "か がく",       correspond: science }
+    - { term: 計算, read: "けい さん",          correspond: computation }
+    - { term: 科学, read: "か がく",            correspond: science }
   ko:
     計算科學:
-    - { term: 計算, read: "계 산",         correspond: computation }
-    - { term: 科學, read: "과 학",         correspond: science }
+    - { term: 計算, read: "계 산",              correspond: computation }
+    - { term: 科學, read: "과 학",              correspond: science }
   zh-CN:
     計算科學:
-    - { term: 计算, read: "jì suàn",       correspond: computation }
-    - { term: 科学, read: "kē xué",        correspond: science }
+    - { term: 计算, read: "jì suàn",            correspond: computation }
+    - { term: 科学, read: "kē xué",             correspond: science }
   zh-HK:
-    計算科學:
-    - { term: 計算, read: "gai3 syun3",    correspond: computation }
-    - { term: 科學, read: "fo1 hok6",      correspond: science }
+    運算性科學:
+    - { term: 運算性, read: "wan6 syun3 sing3", correspond: computation }
+    - { term: 科學, read: "fo1 hok6",           correspond: science }
   zh-TW:
     計算科學:
+    - { term: 計算, read: "ㄐㄧˋ ㄙㄨㄢˋ",      correspond: computation }
+    - { term: 科學, read: "ㄎㄜ ㄒㄩㄝˊ",       correspond: science }
+
+# Theory of computation
+- en:
+    "theory of computation":
+    - term: theory
+    - term: of
+    - term: computation
+  ja:
+    計算理論:
+    - { term: 計算, read: "けい さん",     corrspond: computation }
+    - { term: 理論, read: "り ろん",       correspond: theory }
+  ko:
+    計算理論:
+    - { term: 計算, read: "계 산",         corrspond: computation }
+    - { term: 理論, read: "이 론",         correspond: theory }
+  zh-CN:
+    計算理論:
+    - { term: 计算, read: "jì suàn",       corrspond: computation }
+    - { term: 理论, read: "lǐ lùn",        correspond: theory }
+  zh-HK:
+    運算理論:
+    - { term: 運算, read: "wan6 syun3",    correspond: computation }
+    - { term: 理論, read: "lei5 leon6",    correspond: theory }
+  zh-TW:
+    計算理論:
     - { term: 計算, read: "ㄐㄧˋ ㄙㄨㄢˋ", correspond: computation }
-    - { term: 科學, read: "ㄎㄜ ㄒㄩㄝˊ",  correspond: science }
+    - { term: 理論, read: "ㄌㄧˇ ㄌㄨㄣˋ", correspond: theory }
 
 # Computer engineering
 - en:

@@ -1,0 +1,94 @@
+# Algorithm
+- en:
+    algorithm:
+    - term: algorithm
+  ja:
+    algorithm:
+    - { term: アルゴリズム, loan: algorithm }
+  ko:
+    algorithm:
+    - { term: 알고리즘,     loan: algorithm }
+  zh-CN:
+    算法:
+    - { term: 算,   read: suàn,            correspond: calculate }
+    - { term: 法,   read: fǎ,              correspond: method, space: no }
+  zh-HK:
+    演算法:
+    - { term: 演算, read: "jin2 syun3",    correspond: calculate }
+    - { term: 法,   read: faat3,           correspond: method, space: no }
+    算法:
+    - { term: 算,   read: syun3,           correspond: calculate }
+    - { term: 法,   read: faat3,           correspond: method, space: no }
+  zh-TW:
+    演算法:
+    - { term: 演算, read: "ㄧㄢˇ ㄙㄨㄢˋ", correspond: calculate }
+    - { term: 法,   read: ㄈㄚˇ,           correspond: method, space: no }
+
+# Turing completeness
+- en:
+    "Turing completeness":
+    - term: Turing
+    - term: completeness
+  ja:
+    "Turing 完全性":
+    - { term: チューリング,                        loan:       Turing }
+    - { term: 完全性, read: "かん ぜん せい",      correspond: completeness }
+  ko:
+    "Turing 完全性":
+    - { term: 튜링,                                loan:       Turing }
+    - { term: 完全性, read: "완 전 성",            correspond: completeness }
+  zh-CN:
+    "Turing 完備性":
+    - { term: 图灵,                                loan:       Turing }
+    - { term: 完备性, read: "wán bèi xìng",        correspond: completeness }
+  zh-HK:
+    "Turing 完整性":
+    - { term: 圖靈,                                loan:       Turing }
+    - { term: 完整性, read: "jyun4 zing2 sing3",   correspond: completeness }
+  zh-TW:
+    "Turing 完備性":
+    - { term: 圖靈,                                loan:       Turing }
+    - { term: 完備性, read: "ㄨㄢˊ ㄅㄟˋ ㄒㄧㄥˋ", correspond: completeness }
+
+# Decision problem
+- en:
+    "decision problem":
+    - term: decision
+    - term: problem
+  ja:
+    決定問題:
+    - { term: 決定,   read: "けっ てい",               correspond: decision }
+    - { term: 問題,   read: "もん だい",               correspond: problem }
+    判定問題:
+    - { term: 判定,   read: "はん てい",               correspond: decision }
+    - { term: 問題,   read: "もん だい",               correspond: problem }
+  ko:
+    決定問題:
+    - { term: 決定,   read: "결 정",                   correspond: decision }
+    - { term: 問題,   read: "문 제",                   correspond: problem }
+    判定問題:
+    - { term: 判定,   read: "판 정",                   correspond: decision }
+    - { term: 問題,   read: "문 제",                   correspond: problem }
+  zh-CN:
+    決定性問題:
+    - { term: 决定性, read: "jué dìng xìng",           correspond: decision }
+    - { term: 问题,   read: "wèn tí",                  correspond: problem }
+    判定問題:
+    - { term: 判定,   read: "pàn dìng",                correspond: decision }
+    - { term: 问题,   read: "wèn tí",                  correspond: problem }
+  zh-HK:
+    決定性問題:
+    - { term: 決定性, read: "kyut3 ding6 sing3",       correspond: decision }
+    - { term: 問題,   read: "man6 tai4",               correspond: problem }
+    判定問題:
+    - { term: 判定,   read: "pun3 ding6",              correspond: decision }
+    - { term: 問題,   read: "man6 tai4",               correspond: problem }
+  zh-TW:
+    決定性問題:
+    - { term: 決定性, read: "ㄐㄩㄝˊ ㄉㄧㄥˋ ㄒㄧㄥˋ", correspond: decision }
+    - { term: 問題,   read: "ㄨㄣˋ ㄊㄧˊ",             correspond: problem }
+    判定問題:
+    - { term: 判定,   read: "ㄆㄢˋ ㄉㄧㄥˋ",           correspond: decision }
+    - { term: 問題,   read: "ㄨㄣˋ ㄊㄧˊ",             correspond: problem }
+
+# vim: set et sw=2 ts=2 sts=2 ft=yaml:

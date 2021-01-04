@@ -165,7 +165,7 @@ table.terms {
   --border-color: var(--oc-gray-6);
   --header-color: var(--oc-gray-2);
   width: calc(100% - 2rem);
-  margin: 1rem;
+  margin: 1rem 1rem 3rem 1rem;
   border: 2px solid var(--border-color);
   border-top: none;
   border-bottom-width: 1px;

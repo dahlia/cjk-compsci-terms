@@ -22,7 +22,25 @@ different regions of Sinosphere.
 [Sinosphere]: https://en.wikipedia.org/wiki/Sinosphere
 
 
+Basic terms
+-----------
+
+[Show table.](basic.yaml)
+
+
 Fields of study
 ---------------
 
 [Show table.](studies.yaml)
+
+
+Computer programming
+--------------------
+
+[Show table.](programming.yaml)
+
+
+Theory of computation
+---------------------
+
+[Show table.](theory-comp.yaml)

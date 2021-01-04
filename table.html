@@ -34,7 +34,9 @@
                                                translation,
                                                table) -%}
               {{- char -}}
-              <rt>{{ read }}</rt>
+              {% if char != read or not loop.last %}
+                <rt>{{ read if char != read }}</rt>
+              {% endif %}
             {%- endfor -%}
           {%- else -%}
             {{- term.term -}}

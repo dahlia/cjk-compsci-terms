@@ -1,0 +1,77 @@
+# Computer
+- en:
+    computer:
+    - { term: comput, correspond: compute }
+    - { term: er,                                      space: no }
+  ja:
+    computer:
+    - { term: コンピュータ, loan: computer }
+  ko:
+    computer:
+    - { term: 컴퓨터,       loan: computer }
+  zh-CN:
+    電腦:
+    - { term: 电, correspond: electronic, read: diàn }
+    - { term: 脑, correspond: brain,      read: nǎo,   space: no }
+  zh-HK:
+    電腦:
+    - { term: 電, correspond: electronic, read: din6 }
+    - { term: 腦, correspond: brain,      read: nou5,  space: no }
+  zh-TW:
+    電腦:
+    - { term: 電, correspond: electronic, read: ㄉㄧㄢˋ }
+    - { term: 腦, correspond: brain,      read: ㄋㄠˇ, space: no }
+
+# Software
+- en:
+    software:
+    - { term: soft }
+    - { term: ware,                              space: no }
+  ja:
+    software:
+    - { term: ソフト,   loan: soft }
+    - { term: ウェア,   loan: ware,              space: no }
+  ko:
+    software:
+    - { term: 소프트,   loan: soft }
+    - { term: 웨어,     loan: ware,              space: no }
+  zh-CN:
+    軟件:
+    - { term: 软, correspond: soft, read: ruǎn }
+    - { term: 件, correspond: ware, read: jiàn,  space: no }
+  zh-HK:
+    軟件:
+    - { term: 軟, correspond: soft, read: jyun5 }
+    - { term: 件, correspond: ware, read: gin2,  space: no }
+  zh-TW:
+    軟體:
+    - { term: 軟, correspond: soft, read: ㄖㄨㄢˇ }
+    - { term: 體, correspond: ware, read: ㄊㄧˇ, space: no }
+
+# Hardware
+- en:
+    hardware:
+    - { term: hard }
+    - { term: ware,                              space: no }
+  ja:
+    hardware:
+    - { term: ハード,   loan: hard }
+    - { term: ウェア,   loan: ware,              space: no }
+  ko:
+    hardware:
+    - { term: 하드,     loan: hard }
+    - { term: 웨어,     loan: ware,              space: no }
+  zh-CN:
+    硬件:
+    - { term: 硬, correspond: hard, read: yìng }
+    - { term: 件, correspond: ware, read: jiàn,  space: no }
+  zh-HK:
+    硬件:
+    - { term: 硬, correspond: hard, read: ngaang6 }
+    - { term: 件, correspond: ware, read: gin2,  space: no }
+  zh-TW:
+    硬體:
+    - { term: 硬, correspond: hard, read: ㄧㄥˋ }
+    - { term: 體, correspond: ware, read: ㄊㄧˇ, space: no }
+
+# vim: set et sw=2 ts=2 sts=2 ft=yaml:

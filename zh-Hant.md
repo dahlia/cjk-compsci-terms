@@ -12,7 +12,25 @@
 [漢字文化圈]: https://zh.wikipedia.org/wiki/%E6%BC%A2%E5%AD%97%E6%96%87%E5%8C%96%E5%9C%88
 
 
+基本術語
+--------
+
+[顯示表](basic.yaml)
+
+
 研究領域
 --------
 
 [顯示表](studies.yaml)
+
+
+程式設計
+--------
+
+[顯示表](programming.yaml)
+
+
+計算理論
+--------
+
+[顯示表](theory-comp.yaml)

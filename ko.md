@@ -17,7 +17,25 @@
 [한자문화권]: https://ko.wikipedia.org/wiki/%ED%95%9C%EC%9E%90_%EB%AC%B8%ED%99%94%EA%B6%8C
 
 
+기본 용어
+---------
+
+[표 보기](basic.yaml)
+
+
 연구 분야
 ---------
 
 [표 보기](studies.yaml)
+
+
+프로그래밍
+----------
+
+[표 보기](programming.yaml)
+
+
+계산 이론
+---------
+
+[표 보기](theory-comp.yaml)

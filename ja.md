@@ -16,7 +16,25 @@
 [漢字文化圏]: https://ja.wikipedia.org/wiki/%E6%BC%A2%E5%AD%97%E6%96%87%E5%8C%96%E5%9C%8F
 
 
+基本用語
+--------
+
+[表示](basic.yaml)
+
+
 研究分野
 --------
 
 [表示](studies.yaml)
+
+
+プログラミング
+--------------
+
+[表示](programming.yaml)
+
+
+計算理論
+--------
+
+[表示](theory-comp.yaml)

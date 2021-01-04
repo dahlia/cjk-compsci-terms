@@ -29,6 +29,7 @@ from typing import (
 import urllib.parse
 
 from babel.core import Locale, UnknownLocaleError  # type: ignore
+from dragonmapper.hanzi import to_pinyin, to_zhuyin  # type: ignore
 from dragonmapper.transcriptions import zhuyin_to_pinyin  # type: ignore
 from hangul_romanize import Transliter  # type: ignore
 from hangul_romanize.rule import academic  # type: ignore
@@ -159,16 +160,29 @@ class WesternTerm(Term):
     loan: str
     locale: Locale
 
+    def romanize(self, locale: Locale) -> Markup:
+        r = super().romanize(locale)
+        return Markup(r.capitalize()) if self.loan[0].isupper() else r
+
 hangul_romanize_transliter = Transliter(academic)
 
 romanizers: Mapping[Locale, Callable[[str], Markup]] = {
     Locale.parse('ja'): lambda t: Markup(to_roma(t.replace(' ', ''))),
     Locale.parse('ko'): lambda t:
         Markup(hangul_romanize_transliter.translit(t.replace(' ', ''))),
+    Locale.parse('zh_CN'): lambda t:
+        Markup(to_pinyin(t).replace(' ', '')),
     Locale.parse('zh_HK'): lambda t:
-        Markup(re.sub(r'(\d) ?', r'<sup>\1</sup>', t)),
+        Markup(
+            re.sub(
+                r'(\d) ?',
+                r'<sup>\1</sup>',
+                t if re.match(r'^[A-Za-z0-9 ]+$', t)
+                else pinyin_jyutping_sentence.jyutping(t, True, True)
+            )
+        ),
     Locale.parse('zh_TW'): lambda t:
-        Markup(zhuyin_to_pinyin(t).replace(' ', '')),
+        Markup(zhuyin_to_pinyin(to_zhuyin(t)).replace(' ', '')),
 }
 
 
