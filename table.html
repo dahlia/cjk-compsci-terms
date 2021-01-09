@@ -30,6 +30,7 @@
           {%- elif term.read_as is callable -%}
             {%- for char, read in term.read_as(word.locale,
                                                locale,
+                                               word.get_previous_terms(term),
                                                word.id,
                                                translation,
                                                table) -%}

@@ -101,20 +101,32 @@ class EasternTerm(Term):
     readers: ClassVar[
         Mapping[
             Locale,
-            Callable[[str, str], Iterable[Tuple[str, Union[str, Markup]]]]
+            Callable[
+                [str, str, Sequence[str]],
+                Iterable[Tuple[str, Union[str, Markup]]]
+            ]
         ]
     ] = {
-        Locale.parse('ja'): lambda t, n: (
+        Locale.parse('ja'): lambda t, n, _: (
             (t[sum(len(x['orig']) for x in r[:i]):][:len(e['orig'])], e['hira'])
             for r in [kks.convert(n)]
             for i, e in enumerate(r)
         ),
-        Locale.parse('ko'): lambda t, n: zip(t, translate(n, 'substitution')),
-        Locale.parse('zh_CN'): lambda t, n:
+        Locale.parse('ko'): lambda t, n, p:
+            zip(
+                t,
+                # To prevent a non-spaced term from the "initial sound law"
+                # (which is adopted by South Korean orthography;
+                # <https://en.wikipedia.org/wiki/Dueum_beopchik>),
+                # prepend previous terms to the input, and strip them
+                # from the output:
+                translate(''.join(p) + n, 'substitution')[sum(map(len, p)):]
+            ),
+        Locale.parse('zh_CN'): lambda t, n, _:
             zip(t, pinyin_jyutping_sentence.pinyin(n, False, True).split()),
-        Locale.parse('zh_HK'): lambda t, n:
+        Locale.parse('zh_HK'): lambda t, n, _:
             zip(t, pinyin_jyutping_sentence.jyutping(n, True, True).split()),
-        Locale.parse('zh_TW'): lambda t, n:
+        Locale.parse('zh_TW'): lambda t, n, _:
             zip(t, pinyin_jyutping_sentence.pinyin(n, False, True).split()),
     }
 
@@ -129,6 +141,7 @@ class EasternTerm(Term):
     def read_as(self,
                 from_: Locale,
                 to: Locale,
+                previous_terms: Sequence[Term],
                 word_id: str,
                 translation: Translation,
                 table: Table) -> Iterable[Tuple[str, Union[str, Markup]]]:
@@ -150,9 +163,16 @@ class EasternTerm(Term):
         reader = self.readers.get(to)
         term = self.normalize(from_)
         if callable(reader):
-            return reader(self.term, term)
-        return self.read_as(from_, from_, word_id, translation, table)
-
+            previous = [t.normalize(from_) for t in previous_terms]
+            return reader(self.term, term, previous)
+        return self.read_as(
+            from_,
+            from_,
+            previous_terms,
+            word_id,
+            translation,
+            table
+        )
 
 
 @dataclasses.dataclass(frozen=True)
@@ -163,6 +183,7 @@ class WesternTerm(Term):
     def romanize(self, locale: Locale) -> Markup:
         r = super().romanize(locale)
         return Markup(r.capitalize()) if self.loan[0].isupper() else r
+
 
 hangul_romanize_transliter = Transliter(academic)
 
@@ -213,6 +234,16 @@ class Word(Sequence[Term]):
                 term.romanize(self.locale)
             for term in self
         ).strip()
+
+    def get_previous_terms(self, term: Term) -> Sequence[Term]:
+        prev_terms: List[Term] = []
+        for t in self:
+            if t.space:
+                prev_terms.clear()
+            if term == t:
+                return prev_terms
+            prev_terms.append(t)
+        raise ValueError('failed to find ' + repr(term))
 
     @overload
     def __getitem__(self, index: int) -> Term: ...
