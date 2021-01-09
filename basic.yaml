@@ -74,4 +74,78 @@
     - { term: 硬, correspond: hard, read: ㄧㄥˋ }
     - { term: 體, correspond: ware, read: ㄊㄧˇ, space: no }
 
+# Information
+- en:
+    information:
+    - term: information
+  ja:
+    情報:
+    - { term: 情報, correspond: information, read: "じょう ほう" }
+  ko:
+    情報:
+    - { term: 情報, correspond: information, read: "정 보" }
+  zh-CN:
+    信息:
+    - { term: 信息, correspond: information, read: "xìn xī" }
+  zh-HK:
+    資訊:
+    - { term: 資訊, correspond: information, read: "zi1 seon3" }
+    信息:
+    - { term: 信息, correspond: information, read: "seon3 sik1" }
+  zh-TW:
+    資訊:
+    - { term: 資訊, correspond: information, read: "ㄗ ㄒㄩㄣˋ" }
+
+# Data
+- en:
+    data:
+    - term: data
+  ja:
+    data:
+    - { term: データ, loan:       data }
+  ko:
+    data:
+    - { term: 데이터, loan:       data }
+    資料:
+    - { term: 資料,   correspond: data,     read: "자 료" }
+  zh-CN:
+    數據:
+    - { term: 数,     correspond: number,   read: shù }
+    - { term: 据,     correspond: evidence, read: jù,    space: no }
+  zh-HK:
+    資料:
+    - { term: 資料,   correspond: data,     read: "zi1 liu2" }
+    數據:
+    - { term: 數,     correspond: number,   read: sou3 }
+    - { term: 據,     correspond: evidence, read: geoi3, space: no }
+  zh-TW:
+    資料:
+    - { term: 資料,   correspond: data,     read: "ㄗ ㄌㄧㄠˋ" }
+
+- en:
+    network:
+    - term:   net
+    - { term: work, space: no }
+  ja:
+    network:
+    - { term: ネット, loan:   net }
+    - { term: ワーク, loan:   work, space: no }
+    net:
+    - { term: ネット, loan:   net }
+  ko:
+    network:
+    - { term: 네트,   loan:   net }
+    - { term: 워크,   loan:   work, space: no }
+  zh-CN:
+    網絡:
+    - { term: 网, correspond: net,  read: wǎng }
+    - { term: 络, correspond: tie,  read: luò, space: no }
+  zh-HK:
+    網絡:
+    - { term: 網, correspond: net,  read: mong5 }
+    - { term: 絡, correspond: tie,  read: lok3, space: no }
+  zh-TW:
+    網路:
+    - { term: 網, correspond: net,  read: ㄨㄤˇ }
+    - { term: 路, correspond: road, read: ㄌㄨˋ, space: no }
 # vim: set et sw=2 ts=2 sts=2 ft=yaml:
