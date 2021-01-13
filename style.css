@@ -131,6 +131,48 @@ h2 {
   font-weight: normal;
 }
 
+h2 > a.toc {
+  display: none;
+  font-family: sans-serif;
+  font-size: small;
+  font-weight: bolder;
+  vertical-align: super;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--oc-gray-6);
+}
+
+h2 > a.toc:before {
+  content: '\2191';
+  padding-right: .2rem;
+}
+
+h2:hover > a.toc {
+  display: inline;
+}
+
+#toc > div {
+  display: inline-block;
+  border: 1px solid var(--oc-gray-6);
+  background-color: var(--oc-gray-2);
+}
+
+#toc h2 {
+  margin: 0.5em;
+  text-align: center;
+  font-size: large;
+  font-weight: bolder;
+}
+
+#toc ul {
+  margin: 0;
+  font-size: medium;
+}
+
+#toc .toc > ul {
+  margin: 0.5em 1em 0.5em 0;
+}
+
 dt:lang(en), dt :lang(en), dt:lang(fr), dt :lang(fr) {
   font-style: italic;
 }

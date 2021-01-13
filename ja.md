@@ -16,6 +16,9 @@
 [漢字文化圏]: https://ja.wikipedia.org/wiki/%E6%BC%A2%E5%AD%97%E6%96%87%E5%8C%96%E5%9C%8F
 
 
+<!-- TOC: 目次 -->
+
+
 例言
 ----
 

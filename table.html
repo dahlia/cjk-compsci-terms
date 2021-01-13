@@ -53,7 +53,10 @@
   {%- endfor %}
 {%- endmacro %}
 
-<table class="terms" lang="{{ locale|string|replace('_', '-') }}">
+<table
+  class="terms"
+  lang="{{ locale|string|replace('_', '-') }}"
+  {% if source %} data-src="{{ source }}" {% endif %}>
   <thead>
     <tr>
       {% for lang in locales.values() %}

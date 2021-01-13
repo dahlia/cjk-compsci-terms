@@ -45,4 +45,12 @@ Array.from(document.querySelectorAll('*[class*="correspond-"]'))
     e.addEventListener('mouseout', offCorrespond);
   });
 
+const tocTitle = document.querySelector('#toc > h2').innerText.trim();
+
+Array.from(document.querySelectorAll(':not(#toc) > h2, h3'))
+  .forEach(h => {
+    h.innerHTML +=
+      ` <a class="toc" href="${location.pathname}#toc">${tocTitle}</a>`;
+  });
+
 // vim: set et sw=2 ts=2 sts=2 ft=javascript:

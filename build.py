@@ -40,8 +40,12 @@ from jinja2.loaders import FileSystemLoader
 from jinja2.utils import select_autoescape
 from lazy_import import lazy_module  # type: ignore
 from lxml.html import document_fromstring  # type: ignore
-from markdown import markdown
+from markdown import Markdown
 from markdown.extensions import Extension
+from markdown.extensions.toc import (  # type: ignore
+    TocExtension,
+    slugify_unicode
+)
 from markdown.inlinepatterns import SimpleTextInlineProcessor  # type: ignore
 from markupsafe import Markup
 from opencc import OpenCC  # type: ignore
@@ -441,7 +445,11 @@ template_env.filters.update(
 table_template = template_env.get_template('table.html')
 
 
-def render_table(locale: Locale, table: Table) -> str:
+def render_table(
+    locale: Locale,
+    table: Table,
+    source: Optional[str] = None,
+) -> str:
     supported_locale_map: Mapping[str, AbstractSet[Locale]] = {
         locale.language: {
             l for l in table.supported_locales
@@ -476,7 +484,8 @@ def render_table(locale: Locale, table: Table) -> str:
     return table_template.render(
         locale=locale,
         locales=locales,
-        table=table
+        table=table,
+        source=source,
     )
 
 
@@ -496,23 +505,30 @@ def render_doc(path: Union[str, os.PathLike], locale: Locale) -> str:
         'footnotes',
         'sane_lists',
         'tables',
-        'toc',
+        TocExtension(slugify=slugify_unicode),
     }
     if locale.language in ('ja', 'zh'):
         extensions.add(IgnoreLineFeedExtension())
     else:
         extensions.add('smarty')
+    md = Markdown(
+        output_format='html',
+        extensions=list(extensions),
+    )
     with open(os.fspath(path)) as f:
-        html: str = markdown(
-            f.read(),
-            output_format='html',
-            extensions=list(extensions),
-        )
-    return re.sub(
-        r'<p><a href="([^">\n]+?\.ya?ml)">.*?</a></p>',
-        lambda m: render_table(locale, load_table(m.group(1))),
+        html: str = md.convert(f.read())
+    toc: str = getattr(md, "toc")
+    html = re.sub(
+        r'<!--\s*TOC\s*:\s*(.+?)\s*-->',
+        lambda m: f'<div id="toc"><div><h2>{m.group(1)}</h2>{toc}</div></div>',
         html
     )
+    html = re.sub(
+        r'<p><a href="([^">\n]+?\.ya?ml)">.*?</a></p>',
+        lambda m: render_table(locale, load_table(m.group(1)), m.group(1)),
+        html
+    )
+    return html
 
 
 page_template = template_env.get_template('layout.html')
