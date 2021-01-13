@@ -131,16 +131,58 @@ h2 {
   font-weight: normal;
 }
 
-p:lang(en) {
+dt:lang(en), dt :lang(en), dt:lang(fr), dt :lang(fr) {
+  font-style: italic;
+}
+
+dt:lang(ja), dt:lang(ko), dt:lang(zh) {
+  font-weight: bolder;
+}
+
+dt:lang(ja) :not(:lang(ja)),
+dt:lang(ko) :not(:lang(ko)),
+dt:lang(zh) :not(:lang(zh)) {
+  font-weight: normal;
+}
+
+dd {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+dd > p {
+  margin-top: 0;
+}
+
+p:lang(en), li:lang(en) {
   line-height: 130%;
 }
 
-p:lang(ja), p:lang(ko), p:lang(zh) {
+h1:lang(en), h1:lang(ja), h1:lang(zh),
+h2:lang(en), h2:lang(ja), h2:lang(zh),
+p:lang(en),  p:lang(ja),  p:lang(zh),
+q:lang(en),  q:lang(ja),  q:lang(zh),
+dl:lang(en), dl:lang(ja), dl:lang(zh),
+li:lang(en), li:lang(ja), li:lang(zh),
+span:lang(en), span:lang(ja), span:lang(zh), span:lang(fr),
+nav :lang(en), nav :lang(ja), nav :lang(zh) {
+  font-family: serif;
+}
+
+p:lang(ja), p:lang(ko), p:lang(zh),
+li:lang(ja), li:lang(ko), li:lang(zh) {
   line-height: 160%;
   text-align: justify;
 }
 
-h1:lang(ko), h2:lang(ko), p:lang(ko), nav :lang(ko) {
+h1:lang(ko),
+h2:lang(ko),
+p:lang(ko),
+q:lang(ko),
+dl:lang(ko),
+li:lang(ko),
+span:lang(ko),
+nav :lang(ko) {
   font-family: 'Noto Serif KR', serif;
 }
 
@@ -234,6 +276,7 @@ table.terms .term {
 }
 
 table.terms .romanization {
+  font-family: sans-serif;
   display: block;
   word-break: keep-all;
   white-space: nowrap;
