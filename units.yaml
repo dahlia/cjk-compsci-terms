@@ -1,0 +1,93 @@
+# Bit
+- en:
+    bit:
+    - term:   bit
+  ja:
+    bit:
+    - { term: ビット, loan: bit }
+  ko:
+    bit:
+    - { term: 비트,   loan: bit }
+  zh-CN:
+    bit:
+    - { term: 比特,   loan: bit }
+  zh-HK:
+    位元:
+    - { term: 位元,   read: "wai6 jyun4" }
+  zh-TW:
+    位元:
+    - { term: 位元,   read: "ㄨㄟˋ ㄩㄢˊ" }
+
+# Byte
+- en:
+    byte:
+    - term:   byte
+  ja:
+    byte:
+    - { term: バイト, loan:       byte }
+  ko:
+    byte:
+    - { term: 바이트, loan:       byte }
+  zh-CN:
+    字節:
+    - { term: 字,     correspond: word,    read: zì }
+    - { term: 节,     correspond: segment, read: jié,   space: no }
+  zh-HK:
+    位元組:
+    - { term: 位元,   correspond: bit,     read: "wai6 jyun4" }
+    - { term: 組,     correspond: group,   read: zou2,  space: no }
+  zh-TW:
+    位元組:
+    - { term: 位元,   correspond: bit,     read: "ㄨㄟˋ ㄩㄢˊ" }
+    - { term: 組,     correspond: group,   read: ㄗㄨˇ, space: no }
+
+# Octet
+- en:
+    octet:
+    - term:   octet
+  ja:
+    octet:
+    - { term: オクテット, loan:   octet }
+  ko:
+    octet:
+    - { term: 옥텟,       loan:   octet }
+  zh-CN:
+    八字節:
+    - { term: 八,     correspond: eight, read: bā }
+    - { term: 字节,   correspond: byte,  read: "zì jié",            space: no }
+  zh-HK:
+    八位元組:
+    - { term: 八,     correspond: eight, read: baat3 }
+    - { term: 位元組, correspond: byte,  read: "wai6 jyun4 zou2",   space: no }
+  zh-TW:
+    八位元組:
+    - { term: 八,     correspond: eight, read: ㄅㄚ }
+    - { term: 位元組, correspond: byte,  read: "ㄨㄟˋ ㄩㄢˊ ㄗㄨˇ", space: no }
+
+# Word
+- en:
+    word:
+    - term: word
+  ja:
+    word:
+    - { term: ワード,   loan: word }
+  ko:
+    word:
+    - { term: 워드,     loan: word }
+  zh-CN:
+    字:
+    - { term: 字, correspond: word,      read: zì }
+  zh-HK:
+    字:
+    - { term: 字, correspond: word,      read: zi6 }
+    字組:
+    - { term: 字, correspond: character, read: zi6 }
+    - { term: 組, correspond: group,     read: zou2 }
+  zh-TW:
+    字:
+    - { term: 字, correspond: word,      read: ㄗˋ }
+    字組:
+    - { term: 字, correspond: character, read: ㄗˋ }
+    - { term: 組, correspond: group,     read: ㄗㄨˇ }
+
+# vim: set et sw=2 ts=2 sts=2 ft=yaml:
