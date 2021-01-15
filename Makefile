@@ -1,5 +1,6 @@
 OBJ = public_html
 VENV = .venv
+PYTHON = python3
 
 LANGS = $(patsubst %.md,%,$(patsubst README.md,en.md,$(wildcard *.md)))
 LANG_HREFS = $(patsubst %:en/,%:./,$(foreach f,$(LANGS),$(f):$(f)/))
@@ -18,9 +19,14 @@ clean:
 
 $(VENV)/: requirements.txt
 	if [ ! -d $(VENV) ]; then \
-	  python3 -m venv $(VENV); \
+		if ! $(PYTHON) -m venv $(VENV); then \
+			virtualenv -p $(PYTHON) venv; \
+			curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py; \
+			$(VENV)/bin/python get-pip.py; \
+			rm get-pip.py; \
+		fi; \
 	fi; \
-	$(VENV)/bin/pip install -U pip setuptools; \
+	$(VENV)/bin/pip install -U setuptools; \
 	$(VENV)/bin/pip install -U "$$(grep -i '^pyyaml\b' requirements.txt)"; \
 	$(VENV)/bin/pip install -U -r requirements.txt
 
