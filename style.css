@@ -173,14 +173,23 @@ h2:hover > a.toc {
   margin: 0.5em 1em 0.5em 0;
 }
 
+h3:lang(en), h3:lang(fr) {
+  font-weight: normal;
+}
+
+h3:lang(en), h3 :lang(en), h3:lang(fr), h3 :lang(fr),
 dt:lang(en), dt :lang(en), dt:lang(fr), dt :lang(fr) {
   font-style: italic;
 }
 
+h3:lang(ja), h3:lang(ko), h3:lang(zh),
 dt:lang(ja), dt:lang(ko), dt:lang(zh) {
   font-weight: bolder;
 }
 
+h3:lang(ja) :not(:lang(ja)),
+h3:lang(ko) :not(:lang(ko)),
+h3:lang(zh) :not(:lang(zh)),
 dt:lang(ja) :not(:lang(ja)),
 dt:lang(ko) :not(:lang(ko)),
 dt:lang(zh) :not(:lang(zh)) {
@@ -194,6 +203,11 @@ dd {
 
 dd > p {
   margin-top: 0;
+}
+
+h3[id] + p, h3[id] + p + p, h3[id] + p + p + p,
+h3[id] + p + dl {
+  padding-left: 1rem;
 }
 
 p:lang(en), li:lang(en) {

@@ -2,7 +2,8 @@ CJK computer science terms comparison
 =====================================
 
 Greater China, Japan, and Korea, the so-called [Sinosphere]
-(<span lang="zh-Hant">漢字文化圈</span>[^1]),
+(<span lang="zh-Hant">漢字文化圈</span>;
+literally: "Chinese character cultural sphere"),
 have burrowed many concepts through Sinoxenic vocabularies from the West
 since the modern era.  Some of them have their own translations,
 but some have imported translations from neighboring countries.
@@ -17,8 +18,6 @@ different regions of Sinosphere.
 
 *[CJK]: Chinese, Japanese, and Korean languages
 
-[^1]: Literally, "Chinese character cultural sphere."
-
 [Sinosphere]: https://en.wikipedia.org/wiki/Sinosphere
 
 
@@ -28,54 +27,56 @@ different regions of Sinosphere.
 Introduction
 ------------
 
-Cognates
-:   Cognates are words that are derived from one side or share a common
-    etymology.
+### Cognates
 
-    For example, the English word <q>computer</q> and the Korean word
-    <q lang="ko">컴퓨터</q>, the Japanese word <q lang="ja">計算科学</q> (keisan
-    kagaku) and the Chinese word <q lang="zh">計算科學</q> (jìsuàn kēxué), that
-    are both meaning computational science, are cognates.
+Cognates are words that are derived from one side or share a common
+etymology.
 
-    Cognates are indicated by the same colored border.
+For example, the English word <q>computer</q> and the Korean word
+<q lang="ko">컴퓨터</q>, the Japanese word <q lang="ja">計算科学</q> (keisan
+kagaku) and the Chinese word <q lang="zh">計算科學</q> (jìsuàn kēxué), that
+are both meaning computational science, are cognates.
 
-<span lang="fr">Calque</span> (loan translation)
-:   Calque is a word or phrase borrowed from another language by literal
-    word-for-word or root-for-root translation.
+Cognates are indicated by the same colored border.
 
-    For example, the Chinese word <q lang="zh">軟件</q> is a translation of the
-    English word <q>software</q>, which translates the English words <q>soft</q>
-    → <q lang="zh">軟</q> (ruǎn; *soft* or *flexible*) and <q>ware</q> →
-    <q lang="zh">件</q> (jiàn; *clothes* or *item*) respectively.
+### <span lang="fr">Calque</span> (loan translation)
 
-    Matching words/roots between languages in this way are underlined
-    with the same color & shape.
+Calque is a word or phrase borrowed from another language by literal
+word-for-word or root-for-root translation.
 
-Homophonic translations
-:   For a root transcribed from a foreign word,
-    the original word is displayed on the root.
+For example, the Chinese word <q lang="zh">軟件</q> is a translation of the
+English word <q>software</q>, which translates the English words <q>soft</q>
+→ <q lang="zh">軟</q> (ruǎn; *soft* or *flexible*) and <q>ware</q> →
+<q lang="zh">件</q> (jiàn; *clothes* or *item*) respectively.
 
-    For example, as the Japanese word <q lang="ja">コンピュータ</q> (konpyu-ta)
-    is a transcription of English word <q>computer</q>, it is displayed like:
-    <q lang="ja"><ruby>コンピュータ<rt lang="en">computer</rt></ruby></q>.
+Matching words/roots between languages in this way are underlined
+with the same color & shape.
 
-Romanized pronunciation
-:   The pronunciation of each word is shown in Latin letters in parentheses
-    below the word.  The transcription system for each language is as follows:
+### Homophonic translations
 
-    Mandarin (China & Taiwan)
-    :   [Hanyu Pinyin]
+For a root transcribed from a foreign word,
+the original word is displayed on the root.
 
-    Cantonese (Hong Kong)
-    :   [Jyutping]
+For example, as the Japanese word <q lang="ja">コンピュータ</q> (konpyu-ta)
+is a transcription of English word <q>computer</q>, it is displayed like:
+<q lang="ja"><ruby>コンピュータ<rt lang="en">computer</rt></ruby></q>.
 
-    Japanese
-    :   [Hepburn romanization]
+### Romanized pronunciation
 
-    Korean
-    :   [Revised Romanization of Korean][RR]
+The pronunciation of each word is shown in Latin letters in parentheses
+below the word.  The transcription system for each language is as follows:
 
-*[Jyutping]: Linguistic Society of Hong Kong Cantonese Romanization Scheme
+Mandarin (China & Taiwan)
+:   [Hanyu Pinyin]
+
+Cantonese (Hong Kong)
+:   [Jyutping] (Linguistic Society of Hong Kong Cantonese Romanization Scheme)
+
+Japanese
+:   [Hepburn romanization]
+
+Korean
+:   [Revised Romanization of Korean][RR]
 
 [Hanyu Pinyin]: https://en.wikipedia.org/wiki/Pinyin
 [Jyutping]: https://en.wikipedia.org/wiki/Jyutping
