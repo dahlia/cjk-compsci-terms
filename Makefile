@@ -12,9 +12,10 @@ LANG_HREFS = $(patsubst %:en/,%:./,$(foreach f,$(LANGS),$(f):$(f)/))
 TABLES = $(wildcard *.yaml)
 TEMPLATES = $(wildcard *.html)
 OBJ_FILES = \
-	$(patsubst $(OBJ)/en/%,$(OBJ)/%,$(LANGS:%=$(OBJ)/%/index.html)) \
 	$(patsubst %,$(OBJ)/%,$(wildcard *.css)) \
 	$(patsubst %,$(OBJ)/%,$(wildcard *.js)) \
+	$(patsubst %,$(OBJ)/%,$(wildcard *.svg)) \
+	$(patsubst $(OBJ)/en/%,$(OBJ)/%,$(LANGS:%=$(OBJ)/%/index.html)) \
 	$(OBJ)/.nojekyll
 
 all: $(OBJ_FILES)
@@ -42,6 +43,9 @@ $(OBJ)/:
 
 $(OBJ)/.nojekyll:
 	touch $(OBJ)/.nojekyll
+
+$(OBJ)/%.svg: %.svg | $(OBJ)/
+	cp $< $@
 
 $(OBJ)/%.css: %.css | $(OBJ)/
 	cp $< $@

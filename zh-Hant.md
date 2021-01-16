@@ -3,7 +3,7 @@
 
 [![GitHub](https://img.shields.io/github/stars/dahlia/cjk-compsci-terms?style=social)][GitHub]
 [![Netlify](https://api.netlify.com/api/v1/badges/2ae1a16c-e345-4863-90c0-080e520855a5/deploy-status)][Netlify]
-[![創用CC授權條款](https://i.creativecommons.org/l/by-sa/4.0/80x15.png)][CC BY-SA 4.0]
+[![創用CC授權條款](cc-by-sa.svg)][CC BY-SA 4.0]
 
 華人地區，日本和韓國是所謂的[漢字文化圈]，
 自近代以來就利用漢字的構詞能力翻譯和借鑒了各種西方概念。
