@@ -1,6 +1,8 @@
 CJK computer science terms comparison
 =====================================
 
+[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/80x15.png)][CC BY-SA 4.0]
+
 Greater China, Japan, and Korea, the so-called [Sinosphere]
 (<span lang="zh-Hant">漢字文化圈</span>;
 literally: "Chinese character cultural sphere"),
@@ -16,9 +18,13 @@ This page contains comparison tables of how computer science terms,
 mostly derived from English, are translated and called in
 different regions of Sinosphere.
 
+This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0
+International License][CC BY-SA 4.0].
+
 *[CJK]: Chinese, Japanese, and Korean languages
 
 [Sinosphere]: https://en.wikipedia.org/wiki/Sinosphere
+[CC BY-SA 4.0]: https://creativecommons.org/licenses/by-sa/4.0/
 
 
 <!-- TOC: Contents -->
