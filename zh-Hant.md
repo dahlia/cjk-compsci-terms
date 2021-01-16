@@ -81,28 +81,28 @@
 基本術語
 --------
 
-[顯示表](basic.yaml)
+[顯示表](tables/basic.yaml)
 
 
 單位
 ----
 
-[顯示表](units.yaml)
+[顯示表](tables/units.yaml)
 
 
 研究領域
 --------
 
-[顯示表](studies.yaml)
+[顯示表](tables/studies.yaml)
 
 
 程式設計
 --------
 
-[顯示表](programming.yaml)
+[顯示表](tables/programming.yaml)
 
 
 計算理論
 --------
 
-[顯示表](theory-comp.yaml)
+[顯示表](tables/theory-comp.yaml)

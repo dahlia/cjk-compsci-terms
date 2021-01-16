@@ -101,28 +101,28 @@ lang="ja"><ruby>情<rt lang="ko">정</rt>報<rt lang="ko">보</rt></ruby></q>.
 기본 용어
 ---------
 
-[표 보기](basic.yaml)
+[표 보기](tables/basic.yaml)
 
 
 단위
 ----
 
-[표 보기](units.yaml)
+[표 보기](tables/units.yaml)
 
 
 연구 분야
 ---------
 
-[표 보기](studies.yaml)
+[표 보기](tables/studies.yaml)
 
 
 프로그래밍
 ----------
 
-[표 보기](programming.yaml)
+[표 보기](tables/programming.yaml)
 
 
 계산 이론
 ---------
 
-[표 보기](theory-comp.yaml)
+[표 보기](tables/theory-comp.yaml)

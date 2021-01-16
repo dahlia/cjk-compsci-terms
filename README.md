@@ -97,28 +97,28 @@ Korean
 Basic terms
 -----------
 
-[Show table.](basic.yaml)
+[Show table.](tables/basic.yaml)
 
 
 Units
 -----
 
-[Show table.](units.yaml)
+[Show table.](tables/units.yaml)
 
 
 Fields of study
 ---------------
 
-[Show table.](studies.yaml)
+[Show table.](tables/studies.yaml)
 
 
 Computer programming
 --------------------
 
-[Show table.](programming.yaml)
+[Show table.](tables/programming.yaml)
 
 
 Theory of computation
 ---------------------
 
-[Show table.](theory-comp.yaml)
+[Show table.](tables/theory-comp.yaml)

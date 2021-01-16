@@ -98,28 +98,28 @@
 基本用語
 --------
 
-[表示](basic.yaml)
+[表示](tables/basic.yaml)
 
 
 単位
 ----
 
-[表示](units.yaml)
+[表示](tables/units.yaml)
 
 
 研究分野
 --------
 
-[表示](studies.yaml)
+[表示](tables/studies.yaml)
 
 
 プログラミング
 --------------
 
-[表示](programming.yaml)
+[表示](tables/programming.yaml)
 
 
 計算理論
 --------
 
-[表示](theory-comp.yaml)
+[表示](tables/theory-comp.yaml)

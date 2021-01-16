@@ -9,8 +9,8 @@ PYTHON = $(VENV)/bin/python
 endif
 LANGS = $(patsubst %.md,%,$(patsubst README.md,en.md,$(wildcard *.md)))
 LANG_HREFS = $(patsubst %:en/,%:./,$(foreach f,$(LANGS),$(f):$(f)/))
-TABLES = $(wildcard *.yaml)
-TEMPLATES = $(wildcard *.html)
+TABLES = $(wildcard tables/*.yaml)
+TEMPLATES = $(wildcard templates/*.html)
 OBJ_FILES = \
 	$(patsubst %,$(OBJ)/%,$(wildcard *.css)) \
 	$(patsubst %,$(OBJ)/%,$(wildcard *.js)) \

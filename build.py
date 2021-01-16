@@ -28,7 +28,7 @@ from typing import (
 import urllib.parse
 
 from babel.core import Locale, UnknownLocaleError  # type: ignore
-from cached_property import cached_property
+from cached_property import cached_property  # type: ignore
 from dragonmapper.hanzi import to_pinyin, to_zhuyin  # type: ignore
 from dragonmapper.transcriptions import zhuyin_to_pinyin  # type: ignore
 from hangul_romanize import Transliter  # type: ignore
@@ -425,7 +425,9 @@ def get_territory_name(territory: Union[Locale, str], language: Locale) -> str:
     )
 
 
-template_loader = FileSystemLoader(os.path.dirname(__file__))
+template_loader = FileSystemLoader(
+    os.path.join(os.path.dirname(__file__), 'templates')
+)
 template_env = Environment(
     loader=template_loader,
     autoescape=select_autoescape(['html']),
