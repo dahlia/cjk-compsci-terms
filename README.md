@@ -5,6 +5,12 @@ CJK computer science terms comparison
 [![Netlify](https://api.netlify.com/api/v1/badges/2ae1a16c-e345-4863-90c0-080e520855a5/deploy-status)][Netlify]
 [![Creative Commons License](cc-by-sa.svg)][CC BY-SA 4.0]
 
+<!-- hide -->
+*This repository contains the **source code** of the website.
+You can see the website from the following link:
+<https://cjk-compsci-terms.netlify.app/>.*
+<!-- /hide -->
+
 Greater China, Japan, and Korea, the so-called [Sinosphere]
 (<span lang="zh-Hant">漢字文化圈</span>;
 literally: "Chinese character cultural sphere"),
@@ -22,8 +28,6 @@ different regions of Sinosphere.
 
 This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0
 International License][CC BY-SA 4.0].
-
-*[CJK]: Chinese, Japanese, and Korean languages
 
 [Sinosphere]: https://en.wikipedia.org/wiki/Sinosphere
 [GitHub]: https://github.com/dahlia/cjk-compsci-terms
@@ -122,3 +126,6 @@ Theory of computation
 ---------------------
 
 [Show table.](tables/theory-comp.yaml)
+
+
+*[CJK]: Chinese, Japanese, and Korean languages

@@ -518,7 +518,15 @@ def render_doc(path: Union[str, os.PathLike], locale: Locale) -> str:
         extensions=list(extensions),
     )
     with open(os.fspath(path)) as f:
-        html: str = md.convert(f.read())
+        text: str = f.read()
+    text = re.sub(
+        r'<!--\s+hide\s+-->(.*?)<!--\s+/hide\s+-->',
+        '',
+        text,
+        0,
+        re.DOTALL
+    )
+    html: str = md.convert(text)
     toc: str = getattr(md, "toc")
     html = re.sub(
         r'<!--\s*TOC\s*:\s*(.+?)\s*-->',
