@@ -1,6 +1,8 @@
 CJK computer science terms comparison
 =====================================
 
+[![GitHub](https://img.shields.io/github/stars/dahlia/cjk-compsci-terms?style=social)][GitHub]
+[![Netlify](https://api.netlify.com/api/v1/badges/2ae1a16c-e345-4863-90c0-080e520855a5/deploy-status)][Netlify]
 [![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/80x15.png)][CC BY-SA 4.0]
 
 Greater China, Japan, and Korea, the so-called [Sinosphere]
@@ -24,6 +26,8 @@ International License][CC BY-SA 4.0].
 *[CJK]: Chinese, Japanese, and Korean languages
 
 [Sinosphere]: https://en.wikipedia.org/wiki/Sinosphere
+[GitHub]: https://github.com/dahlia/cjk-compsci-terms
+[Netlify]: https://app.netlify.com/sites/cjk-compsci-terms/deploys
 [CC BY-SA 4.0]: https://creativecommons.org/licenses/by-sa/4.0/
 
 

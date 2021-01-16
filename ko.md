@@ -1,6 +1,8 @@
 한·중·일 전산학 용어 대조
 =========================
 
+[![GitHub](https://img.shields.io/github/stars/dahlia/cjk-compsci-terms?style=social)][GitHub]
+[![Netlify](https://api.netlify.com/api/v1/badges/2ae1a16c-e345-4863-90c0-080e520855a5/deploy-status)][Netlify]
 [![크리에이티브 커먼즈 라이선스](https://i.creativecommons.org/l/by-sa/4.0/80x15.png)][CC BY-SA 4.0]
 
 한국·일본·중화권은 이른바 [한자문화권]으로 불리며,
@@ -20,6 +22,8 @@
 라이선스][CC BY-SA 4.0]에 따라 이용할 수 있습니다.
 
 [한자문화권]: https://ko.wikipedia.org/wiki/%ED%95%9C%EC%9E%90_%EB%AC%B8%ED%99%94%EA%B6%8C
+[GitHub]: https://github.com/dahlia/cjk-compsci-terms
+[Netlify]: https://app.netlify.com/sites/cjk-compsci-terms/deploys
 [CC BY-SA 4.0]: https://creativecommons.org/licenses/by-sa/4.0/
 
 

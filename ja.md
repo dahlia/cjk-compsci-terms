@@ -1,6 +1,8 @@
 日中韓のコンピュータ科学の用語対照
 ==================================
 
+[![GitHub](https://img.shields.io/github/stars/dahlia/cjk-compsci-terms?style=social)][GitHub]
+[![Netlify](https://api.netlify.com/api/v1/badges/2ae1a16c-e345-4863-90c0-080e520855a5/deploy-status)][Netlify]
 [![クリエイティブ・コモンズ・ライセンス](https://i.creativecommons.org/l/by-sa/4.0/80x15.png)][CC BY-SA 4.0]
 
 日本·中華圏·韓国はいわゆる[漢字文化圏]と呼ばれ、
@@ -19,6 +21,8 @@
 の下に提供されています。
 
 [漢字文化圏]: https://ja.wikipedia.org/wiki/%E6%BC%A2%E5%AD%97%E6%96%87%E5%8C%96%E5%9C%8F
+[GitHub]: https://github.com/dahlia/cjk-compsci-terms
+[Netlify]: https://app.netlify.com/sites/cjk-compsci-terms/deploys
 [CC BY-SA 4.0]: https://creativecommons.org/licenses/by-sa/4.0/
 
 
