@@ -1,5 +1,6 @@
 Babel >= 2.9.0, < 3.0.0
 commonmark >= 0.9.1, < 1.0.0
+cached-property >= 1.5.2, < 1.6.0
 dragonmapper >= 0.2.6, < 0.3.0
 hangul-romanize >= 0.1.0, < 0.2.0
 hanja >= 0.13.2, < 1.0.0

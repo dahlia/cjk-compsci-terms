@@ -3,7 +3,6 @@ from __future__ import annotations
 import argparse
 import dataclasses
 import enum
-import functools
 import locale
 import os
 import os.path
@@ -29,6 +28,7 @@ from typing import (
 import urllib.parse
 
 from babel.core import Locale, UnknownLocaleError  # type: ignore
+from cached_property import cached_property
 from dragonmapper.hanzi import to_pinyin, to_zhuyin  # type: ignore
 from dragonmapper.transcriptions import zhuyin_to_pinyin  # type: ignore
 from hangul_romanize import Transliter  # type: ignore
@@ -276,11 +276,11 @@ class Translation(Mapping[Locale, Sequence[Word]]):
     def __getitem__(self, key: Locale) -> Sequence[Word]:
         return self.translation[key]
 
-    @functools.cached_property
+    @cached_property
     def max_words(self) -> int:
         return max(len(ws) for ws in self.translation.values())
 
-    @functools.cached_property
+    @cached_property
     def cognate_groups(self) -> Mapping[str, Mapping[Locale, Word]]:
         cognate_groups: Dict[str, Dict[Locale, Word]] = {}
         for locale, words in self.translation.items():
@@ -291,7 +291,7 @@ class Translation(Mapping[Locale, Sequence[Word]]):
                 del cognate_groups[word_id]
         return cognate_groups
 
-    @functools.cached_property
+    @cached_property
     def correspondences(self) -> Sequence[str]:
         count_map: Dict[str, int] = {}
         for words in self.values():
@@ -308,11 +308,11 @@ class Table(Sequence[Translation]):
     def __init__(self, translations: Iterable[Translation]):
         self.translations = list(translations)
 
-    @functools.cached_property
+    @cached_property
     def supported_locales(self) -> AbstractSet[Locale]:
         return frozenset(locale for tr in self for locale in tr)
 
-    @functools.cached_property
+    @cached_property
     def terms_table(self) -> Mapping[Locale, Mapping[str, Term]]:
         table: Dict[Locale, Dict[str, Term]] = {}
         for translation in self:
