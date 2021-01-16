@@ -53,6 +53,7 @@
   {%- endfor %}
 {%- endmacro %}
 
+<div class="terms">
 <table
   class="terms"
   lang="{{ locale|string|replace('_', '-') }}"
@@ -137,4 +138,6 @@
     {% endfor %}
   </tbody>
 </table>
+</div>
+
 {# vim: set et sw=2 ts=2 sts=2 ft=jinja: #}

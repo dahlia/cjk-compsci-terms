@@ -86,10 +86,16 @@ body {
   margin: 0;
 }
 
-body > *:not(table.terms, header) {
+body > *:not(div.terms, header) {
   margin-left: auto;
   margin-right: auto;
   max-width: 55rem;
+}
+
+@media (max-width: 1023px) {
+  body > *:not(div.terms, header) {
+    max-width: calc(100% - 2rem);
+  }
 }
 
 :root {
@@ -259,6 +265,11 @@ rt {
   user-select: none;
 }
 
+div.terms {
+  max-width: 100%;
+  overflow: auto;
+}
+
 table.terms {
   --border-color: var(--oc-gray-6);
   --header-color: var(--oc-gray-2);
@@ -274,6 +285,15 @@ table.terms {
 table.terms > thead {
   background-color: var(--header-color);
   text-align: center;
+}
+
+@media (max-width: 1023px) {
+  table.terms {
+    font-size: smaller;
+  }
+  table.terms > thead {
+    font-size: x-small;
+  }
 }
 
 table.terms > thead > tr:first-child > td,
@@ -298,6 +318,12 @@ table.terms > thead > tr:last-child > th {
 table.terms > thead .native-name {
   color: var(--oc-gray-7);
   font-size: smaller;
+}
+
+@media (max-width: 1023px) {
+  table.terms > thead .native-name {
+    display: none;
+  }
 }
 
 table.terms > tbody {
@@ -328,7 +354,20 @@ table.terms > tbody > tr.group-foot > th {
 }
 
 table.terms .term {
-  font-size: x-large;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+
+@media (max-width: 1023px) {
+  table.terms .term {
+    font-size: smaller;
+  }
+}
+
+@media (min-width: 1024px) {
+  table.terms .term {
+    font-size: x-large;
+  }
 }
 
 table.terms .romanization {
@@ -336,6 +375,12 @@ table.terms .romanization {
   display: block;
   word-break: keep-all;
   white-space: nowrap;
+}
+
+@media (max-width: 1023px) {
+  table.terms .romanization {
+    font-size: x-small;
+  }
 }
 
 .cognate-group-1,
