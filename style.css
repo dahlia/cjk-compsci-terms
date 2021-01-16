@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100&family=Noto+Sans+JP:wght@100&family=Noto+Sans+KR:wght@100&family=Noto+Sans+SC:wght@100&family=Noto+Sans+TC:wght@100&family=Noto+Serif+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100&family=Noto+Sans+JP:wght@100&family=Noto+Sans+KR:wght@100&family=Noto+Sans+SC:wght@100&family=Noto+Sans+TC:wght@100&family=Noto+Serif+JP&family=Noto+Serif+KR&family=Noto+Serif+TC&display=swap');
 @import url(https://cdn.jsdelivr.net/gh/yeun/open-color@v1.7.0/open-color.css);
 
 .term {
@@ -220,21 +220,15 @@ p:lang(en), li:lang(en) {
   line-height: 130%;
 }
 
-h1:lang(en), h1:lang(ja), h1:lang(zh),
-h2:lang(en), h2:lang(ja), h2:lang(zh),
-p:lang(en),  p:lang(ja),  p:lang(zh),
-q:lang(en),  q:lang(ja),  q:lang(zh),
-dl:lang(en), dl:lang(ja), dl:lang(zh),
-li:lang(en), li:lang(ja), li:lang(zh),
-span:lang(en), span:lang(ja), span:lang(zh), span:lang(fr),
-nav :lang(en), nav :lang(ja), nav :lang(zh) {
+h1:lang(en),
+h2:lang(en),
+p:lang(en),
+q:lang(en),
+dl:lang(en),
+li:lang(en),
+span:lang(en), span:lang(fr),
+nav :lang(en) {
   font-family: serif;
-}
-
-p:lang(ja), p:lang(ko), p:lang(zh),
-li:lang(ja), li:lang(ko), li:lang(zh) {
-  line-height: 160%;
-  text-align: justify;
 }
 
 h1:lang(ko),
@@ -246,6 +240,34 @@ li:lang(ko),
 span:lang(ko),
 nav :lang(ko) {
   font-family: 'Noto Serif KR', serif;
+}
+
+h1:lang(ja),
+h2:lang(ja),
+p:lang(ja),
+q:lang(ja),
+dl:lang(ja),
+li:lang(ja),
+span:lang(ja),
+nav :lang(ja) {
+  font-family: 'Hiragino Mincho ProN', 'Noto Serif JP', serif;
+}
+
+h1:lang(zh),
+h2:lang(zh),
+p:lang(zh),
+q:lang(zh),
+dl:lang(zh),
+li:lang(zh),
+span:lang(zh),
+nav :lang(zh) {
+  font-family: 'Songti TC', 'Noto Serif TC', serif;
+}
+
+p:lang(ja), p:lang(ko), p:lang(zh),
+li:lang(ja), li:lang(ko), li:lang(zh) {
+  line-height: 160%;
+  text-align: justify;
 }
 
 .footnote {
