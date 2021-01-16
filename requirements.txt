@@ -3,7 +3,7 @@ commonmark >= 0.9.1, < 1.0.0
 cached-property >= 1.5.2, < 1.6.0
 dragonmapper >= 0.2.6, < 0.3.0
 hangul-romanize >= 0.1.0, < 0.2.0
-hanja >= 0.13.2, < 1.0.0
+git+git://github.com/dahlia/hanja.git@make-setup.py-independent
 Jinja2 >= 2.11.2, < 3.0.0
 lazy-import >= 0.2.2, < 0.3.0
 lxml >= 4.6.2, < 4.7.0

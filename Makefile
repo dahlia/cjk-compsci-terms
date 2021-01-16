@@ -34,7 +34,6 @@ $(VENV)/: requirements.txt
 			fi; \
 		fi; \
 		$(VENV)/bin/pip install -U setuptools; \
-		$(VENV)/bin/pip install -U "$$(grep -i '^pyyaml\b' requirements.txt)"; \
 		$(VENV)/bin/pip install -U -r requirements.txt; \
 	fi
 
