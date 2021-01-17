@@ -33,7 +33,7 @@ lint: yaml-schema mypy
 yaml-schema: $(YAJSV) table.schema.yaml $(TABLES)
 	$(YAJSV) -s table.schema.yaml $(TABLES)
 
-mypy: $(VENV) build.py
+mypy: $(VENV)/ build.py
 	$(PYTHON) -m mypy build.py
 
 $(VENV)/: requirements.txt
