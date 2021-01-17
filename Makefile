@@ -28,8 +28,13 @@ clean:
 	rmdir $(dir $(YAJSV)) || true
 	[ "$(VENV)" = "." ] || rm -rf $(VENV)
 
-lint: $(YAJSV) table.schema.yaml $(TABLES)
+lint: yaml-schema mypy
+
+yaml-schema: $(YAJSV) table.schema.yaml $(TABLES)
 	$(YAJSV) -s table.schema.yaml $(TABLES)
+
+mypy: $(VENV) build.py
+	$(PYTHON) -m mypy build.py
 
 $(VENV)/: requirements.txt
 	if [ "$(VENV)" != "." ]; then \
