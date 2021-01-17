@@ -1,6 +1,9 @@
 OBJ = public_html
 VENV = .venv
 PYTHON_INTERPRETER = python3
+YAJSV = bin/yajsv
+YAJSV_VERSION = 1.4.0
+YAJSV_DOWNLOAD_URL = https://github.com/neilpa/yajsv/releases/download/v$(YAJSV_VERSION)
 
 ifeq ($(VENV),.)
 PYTHON = $(PYTHON_INTERPRETER)
@@ -18,11 +21,15 @@ OBJ_FILES = \
 	$(patsubst $(OBJ)/en/%,$(OBJ)/%,$(LANGS:%=$(OBJ)/%/index.html)) \
 	$(OBJ)/.nojekyll
 
-all: $(OBJ_FILES)
+all: lint $(OBJ_FILES)
 
 clean:
-	rm -rf $(OBJ_FILES) $(OBJ)
+	rm -rf $(OBJ_FILES) $(OBJ) $(YAJSV)
+	rmdir $(dir $(YAJSV)) || true
 	[ "$(VENV)" = "." ] || rm -rf $(VENV)
+
+lint: $(YAJSV) table.schema.yaml $(TABLES)
+	$(YAJSV) -s table.schema.yaml $(TABLES)
 
 $(VENV)/: requirements.txt
 	if [ "$(VENV)" != "." ]; then \
@@ -37,6 +44,30 @@ $(VENV)/: requirements.txt
 		$(VENV)/bin/pip install -U setuptools; \
 		$(VENV)/bin/pip install -U -r requirements.txt; \
 	fi
+
+$(YAJSV):
+	mkdir -p $(dir $(YAJSV))
+	{ \
+		echo "#!$$(which sh)"; \
+		echo "echo 'yajsv was failed to be installed;' > /dev/stderr"; \
+		echo "echo 'lint was skipped...' > /dev/stderr"; \
+	} > $(YAJSV)
+	GOOS="$$(uname -s | tr '[:upper:]' '[:lower:]')"; \
+	case "$$(uname -m)" in \
+		x86_64) \
+			GOARCH=amd64; \
+			;; \
+		*) \
+			exit 0; \
+			;; \
+	esac; \
+	download_url=$(YAJSV_DOWNLOAD_URL)/yajsv.$$GOOS.$$GOARCH; \
+	if command -v curl > /dev/null; then \
+		curl -L -o $(YAJSV) $$download_url || exit 0; \
+	else \
+		wget -O $(YAJSV) $$download_url || exit 0; \
+	fi
+	chmod +x $(YAJSV)
 
 $(OBJ)/:
 	mkdir -p $(OBJ)

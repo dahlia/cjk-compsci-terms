@@ -71,7 +71,7 @@
   ja:
     debug:
     - { term: デ,     correspond: remove, loan: de }
-    - { term: バッグ, loan:       bug, s                       pace: no }
+    - { term: バッグ, loan:       bug,                        space: no }
   ko:
     debug:
     - { term: 디,     correspond: remove, loan: de }

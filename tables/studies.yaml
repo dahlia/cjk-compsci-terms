@@ -64,15 +64,15 @@
     - term: computation
   ja:
     計算理論:
-    - { term: 計算, read: "けい さん",     corrspond: computation }
+    - { term: 計算, read: "けい さん",     correspond: computation }
     - { term: 理論, read: "り ろん",       correspond: theory }
   ko:
     計算理論:
-    - { term: 計算, read: "계 산",         corrspond: computation }
+    - { term: 計算, read: "계 산",         correspond: computation }
     - { term: 理論, read: "이 론",         correspond: theory }
   zh-CN:
     計算理論:
-    - { term: 计算, read: "jì suàn",       corrspond: computation }
+    - { term: 计算, read: "jì suàn",       correspond: computation }
     - { term: 理论, read: "lǐ lùn",        correspond: theory }
   zh-HK:
     運算理論:

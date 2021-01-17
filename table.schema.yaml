@@ -1,0 +1,51 @@
+$schema: https://json-schema.org/draft/2019-09/schema
+$id: https://github.com/dahlia/cjk-compsci-terms/raw/main/table.schema.yaml
+title: CJK computer science terms
+description: |
+  The list of computer science terms and their translations in English & CJK
+type: array
+items:
+  $ref: "#/definitions/translation"
+
+definitions:
+  translation:
+    type: object
+    propertyNames:
+      $ref: "#/definitions/locale"
+    patternProperties:
+      "^[a-z]{2}(-[A-Z]{2}|-[A-Z][a-z]+)?$":
+        $ref: "#/definitions/wordMap"
+
+  locale:
+    type: string
+    # In order to prevent mistakes, accept only the main CJK locales rather than accept any valid locale codes:
+    enum: ["en", "ja", "ko", "zh-CN", "zh-HK", "zh-TW"]
+
+  wordMap:
+    propertyNames:
+      # TODO: Reject non-English/non-CJK characters
+      pattern: "^.+$"
+    patternProperties:
+      ".*":
+        $ref: "#/definitions/word"
+
+  word:
+    type: array
+    items:
+      $ref: "#/definitions/term"
+
+  term:
+    type: object
+    additionalProperties: false
+    properties:
+      term:       { type: string }
+      space:      { type: boolean }
+      correspond: { type: string }
+      read:       { type: string }
+      loan:       { type: string }
+    required: [ term ]
+    allOf:
+    - not:
+        type: object
+        required: [ read, loan ]
+
