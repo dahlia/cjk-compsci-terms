@@ -35,9 +35,7 @@
                                                translation,
                                                table) -%}
               {{- char -}}
-              {% if char != read or not loop.last %}
-                <rt>{{ read if char != read }}</rt>
-              {% endif %}
+              <rt>{{ read if char != read }}</rt>
             {%- endfor -%}
           {%- else -%}
             {{- term.term -}}
@@ -71,7 +69,7 @@
               <span class="native-name">
                 (<span lang="{{ lang_.language|lower }}">
                   {{- lang_.get_display_name() -}}
-                <span>)
+                </span>)
               </span>
             {% endif %}
           {% endwith %}
@@ -87,7 +85,7 @@
               <span class="native-name">
                 (<span lang="{{ l|string|replace('_', '-') }}">
                   {{- l|territory_name(l) -}}
-                <span>)
+                </span>)
               </span>
             {% endif %}
           </td>

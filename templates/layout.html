@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ locale|string|replace('_', '-') }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
@@ -12,7 +12,7 @@
   <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
   <script src="script.js" defer></script>
 </head>
-<body lang="{{ locale|string|replace('_', '-') }}">
+<body>
   <header>
     <nav>
       {% for lang, href in lang_hrefs %}
