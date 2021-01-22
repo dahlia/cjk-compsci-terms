@@ -28,10 +28,13 @@ clean:
 	rmdir $(dir $(YAJSV)) || true
 	[ "$(VENV)" = "." ] || rm -rf $(VENV)
 
-lint: yaml-schema mypy
+lint: yaml-schema mypy yamllint
 
 yaml-schema: $(YAJSV) table.schema.yaml $(TABLES)
 	$(YAJSV) -s table.schema.yaml $(TABLES)
+
+yamllint: $(VENV)/ $(TABLES) .yamllint
+	$(PYTHON) -m yamllint -c .yamllint --strict $(TABLES)
 
 mypy: $(VENV)/ build.py
 	$(PYTHON) -m mypy build.py

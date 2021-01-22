@@ -11,6 +11,9 @@ jobs:
         schema: table.schema.yaml
         documents: tables/*.yaml
     - uses: zbeekman/EditorConfig-Action@master
+    - uses: ibiqlik/action-yamllint@v3.0.0
+      with:
+        strict: yes
 
   build:
     runs-on: ubuntu-latest

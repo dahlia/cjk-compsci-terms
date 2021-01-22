@@ -1,0 +1,60 @@
+extends: default
+
+yaml-files:
+- tables/*.yaml
+- .github/workflows/*.yml
+
+rules:
+  braces:
+    forbid: no
+    min-spaces-inside: 1
+    max-spaces-inside: -1
+    min-spaces-inside-empty: 0
+    max-spaces-inside-empty: 0
+  brackets:
+    forbid: no
+    min-spaces-inside: 0
+    max-spaces-inside: -1
+    min-spaces-inside-empty: 0
+    max-spaces-inside-empty: 0
+  colons:
+    max-spaces-before: 0
+    max-spaces-after: -1
+  commas:
+    max-spaces-before: 0
+    min-spaces-after: 1
+    max-spaces-after: -1
+  comments:
+    require-starting-space: yes
+    min-spaces-from-content: 1
+  document-end: no
+  document-start: no
+  empty-lines:
+    max: 1
+    max-start: 0
+    max-end: 1
+  empty-values:
+    forbid-in-block-mappings: true
+    forbid-in-flow-mappings: true
+  hyphens:
+    max-spaces-after: 1
+  indentation:
+    spaces: 2
+    indent-sequences: no
+  key-duplicates: {}
+  line-length:
+    max: 80
+    allow-non-breakable-words: yes
+  new-lines:
+    type: unix
+  octal-values:
+    forbid-implicit-octal: yes
+    forbid-explicit-octal: no
+  quoted-strings:
+    quote-type: double
+    required: only-when-needed
+  trailing-spaces: {}
+  truthy:
+    allowed-values: ["yes", "no"]
+
+# vim: set et sw=2 ts=2 sts=2 ft=yaml:

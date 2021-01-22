@@ -1,178 +1,178 @@
 # Computer science
 - en:
-    "computer science":
+    computer science:
     - term:   computer
     - term:   science
   ja:
-    "computer 科學":
+    computer 科學:
     - { term: コンピュータ, loan: computer }
-    - { term: 科学,   read: "か がく",       correspond: science }
+    - { term: 科学,   read: か がく,       correspond: science }
     計算機科學:
-    - { term: 計算機, read: "けい さん き",  correspond: computer }
-    - { term: 科学,   read: "か がく",       correspond: science }
+    - { term: 計算機, read: けい さん き,  correspond: computer }
+    - { term: 科学,   read: か がく,       correspond: science }
   ko:
     "computer 科學":
     - { term: 컴퓨터, loan: computer }
-    - { term: 科學,   read: "과 학",         correspond: science }
+    - { term: 科學,   read: 과 학,         correspond: science }
     電算學:
-    - { term: 電算,   read: "전 산",         correspond: computer }
+    - { term: 電算,   read: 전 산,         correspond: computer }
     - { term: 學,     read: 학, space: no }
   zh-CN:
     計算機科學:
-    - { term: 计算机, read: "jì suàn jī",    correspond: computer }
-    - { term: 科学,   read: "kē xué",        correspond: science }
+    - { term: 计算机, read: jì suàn jī,    correspond: computer }
+    - { term: 科学,   read: kē xué,        correspond: science }
   zh-HK:
     電腦科學:
-    - { term: 電腦,   read: "din6 nou5",     correspond: computer }
-    - { term: 科學,   read: "fo1 hok6",      correspond: science }
+    - { term: 電腦,   read: din6 nou5,     correspond: computer }
+    - { term: 科學,   read: fo1 hok6,      correspond: science }
   zh-TW:
     電腦科學:
-    - { term: 電腦,   read: "ㄉㄧㄢˋ ㄋㄠˇ", correspond: computer }
-    - { term: 科學,   read: "ㄎㄜ ㄒㄩㄝˊ",  correspond: science }
+    - { term: 電腦,   read: ㄉㄧㄢˋ ㄋㄠˇ, correspond: computer }
+    - { term: 科學,   read: ㄎㄜ ㄒㄩㄝˊ,  correspond: science }
 
 # Computational science
 - en:
-    "computational science":
+    computational science:
     - { term: computational, correspond: computation }
     - term:   science
   ja:
     計算科學:
-    - { term: 計算, read: "けい さん",          correspond: computation }
-    - { term: 科学, read: "か がく",            correspond: science }
+    - { term: 計算, read: けい さん,          correspond: computation }
+    - { term: 科学, read: か がく,            correspond: science }
   ko:
     計算科學:
-    - { term: 計算, read: "계 산",              correspond: computation }
-    - { term: 科學, read: "과 학",              correspond: science }
+    - { term: 計算, read: 계 산,              correspond: computation }
+    - { term: 科學, read: 과 학,              correspond: science }
   zh-CN:
     計算科學:
-    - { term: 计算, read: "jì suàn",            correspond: computation }
-    - { term: 科学, read: "kē xué",             correspond: science }
+    - { term: 计算, read: jì suàn,            correspond: computation }
+    - { term: 科学, read: kē xué,             correspond: science }
   zh-HK:
     運算性科學:
-    - { term: 運算性, read: "wan6 syun3 sing3", correspond: computation }
-    - { term: 科學, read: "fo1 hok6",           correspond: science }
+    - { term: 運算性, read: wan6 syun3 sing3, correspond: computation }
+    - { term: 科學, read: fo1 hok6,           correspond: science }
   zh-TW:
     計算科學:
-    - { term: 計算, read: "ㄐㄧˋ ㄙㄨㄢˋ",      correspond: computation }
-    - { term: 科學, read: "ㄎㄜ ㄒㄩㄝˊ",       correspond: science }
+    - { term: 計算, read: ㄐㄧˋ ㄙㄨㄢˋ,      correspond: computation }
+    - { term: 科學, read: ㄎㄜ ㄒㄩㄝˊ,       correspond: science }
 
 # Theory of computation
 - en:
-    "theory of computation":
+    theory of computation:
     - term: theory
     - term: of
     - term: computation
   ja:
     計算理論:
-    - { term: 計算, read: "けい さん",     correspond: computation }
-    - { term: 理論, read: "り ろん",       correspond: theory }
+    - { term: 計算, read: けい さん,     correspond: computation }
+    - { term: 理論, read: り ろん,       correspond: theory }
   ko:
     計算理論:
-    - { term: 計算, read: "계 산",         correspond: computation }
-    - { term: 理論, read: "이 론",         correspond: theory }
+    - { term: 計算, read: 계 산,         correspond: computation }
+    - { term: 理論, read: 이 론,         correspond: theory }
   zh-CN:
     計算理論:
-    - { term: 计算, read: "jì suàn",       correspond: computation }
-    - { term: 理论, read: "lǐ lùn",        correspond: theory }
+    - { term: 计算, read: jì suàn,       correspond: computation }
+    - { term: 理论, read: lǐ lùn,        correspond: theory }
   zh-HK:
     運算理論:
-    - { term: 運算, read: "wan6 syun3",    correspond: computation }
-    - { term: 理論, read: "lei5 leon6",    correspond: theory }
+    - { term: 運算, read: wan6 syun3,    correspond: computation }
+    - { term: 理論, read: lei5 leon6,    correspond: theory }
   zh-TW:
     計算理論:
-    - { term: 計算, read: "ㄐㄧˋ ㄙㄨㄢˋ", correspond: computation }
-    - { term: 理論, read: "ㄌㄧˇ ㄌㄨㄣˋ", correspond: theory }
+    - { term: 計算, read: ㄐㄧˋ ㄙㄨㄢˋ, correspond: computation }
+    - { term: 理論, read: ㄌㄧˇ ㄌㄨㄣˋ, correspond: theory }
 
 # Computer engineering
 - en:
-    "computer engineering":
+    computer engineering:
     - term:   computer
     - term:   engineering
   ja:
     計算機工學:
-    - { term: 計算機,       read: "けい さん き",  correspond: computer }
-    - { term: 工学,         read: "こう がく",     correspond: engineering }
+    - { term: 計算機,       read: けい さん き,  correspond: computer }
+    - { term: 工学,         read: こう がく,     correspond: engineering }
     "computer 工學":
     - { term: コンピュータ, loan: computer }
-    - { term: 工学,         read: "こう がく",     correspond: engineering }
+    - { term: 工学,         read: こう がく,     correspond: engineering }
   ko:
     "computer 工學":
     - { term: 컴퓨터,       loan: computer }
-    - { term: 工學,         read: "공 학",         correspond: engineering }
+    - { term: 工學,         read: 공 학,         correspond: engineering }
   zh-CN:
     計算機工程:
-    - { term: 计算机,       read: "jì suàn jī",    correspond: computer }
-    - { term: 工程,         read: "gōng chéng",    correspond: engineering }
+    - { term: 计算机,       read: jì suàn jī,    correspond: computer }
+    - { term: 工程,         read: gōng chéng,    correspond: engineering }
   zh-HK:
     電腦工程:
-    - { term: 電腦,         read: "din6 nou5",     correspond: computer }
-    - { term: 工程,         read: "gung1 cing4",   correspond: engineering }
+    - { term: 電腦,         read: din6 nou5,     correspond: computer }
+    - { term: 工程,         read: gung1 cing4,   correspond: engineering }
     計算機工程:
-    - { term: 計算機,       read: "gai3 syun3 gei1",  correspond: computer }
-    - { term: 工程,         read: "gung1 cing4",   correspond: engineering }
+    - { term: 計算機,       read: gai3 syun3 gei1,  correspond: computer }
+    - { term: 工程,         read: gung1 cing4,   correspond: engineering }
   zh-TW:
     電腦工程:
-    - { term: 電腦,         read: "ㄉㄧㄢˋ ㄋㄠˇ", correspond: computer }
-    - { term: 工程,         read: "ㄍㄨㄥ ㄔㄥˊ",  correspond: engineering }
+    - { term: 電腦,         read: ㄉㄧㄢˋ ㄋㄠˇ, correspond: computer }
+    - { term: 工程,         read: ㄍㄨㄥ ㄔㄥˊ,  correspond: engineering }
 
 # Software engineering
 - en:
-    "software engineering":
+    software engineering:
     - term:   software
     - term:   engineering
   ja:
-    "software 工學":
+    software 工學:
     - { term: ソフトウェア, loan: software }
-    - { term: 工学,         read: "こう がく",     correspond: engineering }
+    - { term: 工学,         read: こう がく,     correspond: engineering }
   ko:
     "software 工學":
     - { term: 소프트웨어,   loan: software }
-    - { term: 工學,         read: "공 학",         correspond: engineering }
+    - { term: 工學,         read: 공 학,         correspond: engineering }
   zh-CN:
     軟件工程:
-    - { term: 软件,         read: "ruǎn jiàn",     correspond: software }
-    - { term: 工程,         read: "gōng chéng",    correspond: engineering }
+    - { term: 软件,         read: ruǎn jiàn,     correspond: software }
+    - { term: 工程,         read: gōng chéng,    correspond: engineering }
   zh-HK:
     軟件工程:
-    - { term: 軟件,         read: "jyun5 gin2",    correspond: software }
-    - { term: 工程,         read: "gung1 cing4",   correspond: engineering }
+    - { term: 軟件,         read: jyun5 gin2,    correspond: software }
+    - { term: 工程,         read: gung1 cing4,   correspond: engineering }
   zh-TW:
     軟體工程:
-    - { term: 軟體,         read: "ㄖㄨㄢˇ ㄊㄧˇ", correspond: software }
-    - { term: 工程,         read: "ㄍㄨㄥ ㄔㄥˊ",  correspond: engineering }
+    - { term: 軟體,         read: ㄖㄨㄢˇ ㄊㄧˇ, correspond: software }
+    - { term: 工程,         read: ㄍㄨㄥ ㄔㄥˊ,  correspond: engineering }
 
 # Artificial intelligence
 - en:
-    "artificial intelligence":
+    artificial intelligence:
     - term: artificial
     - term: intelligence
   ja:
     人工智能:
-    - { term: 人工, read: "じん こう", correspond: artificial }
-    - { term: 知能, read: "ち のう", correspond: intelligence }
+    - { term: 人工, read: じん こう,    correspond: artificial }
+    - { term: 知能, read: ち のう,      correspond: intelligence }
   ko:
     人工智能:
-    - { term: 人工, read: "인 공", correspond: artificial }
-    - { term: 知能, read: "지 능", correspond: intelligence }
+    - { term: 人工, read: 인 공,        correspond: artificial }
+    - { term: 知能, read: 지 능,        correspond: intelligence }
   zh-CN:
     人工智能:
-    - { term: 人工, read: "rén gōng", correspond: artificial }
-    - { term: 智能, read: "zhì néng", correspond: intelligence }
+    - { term: 人工, read: rén gōng,     correspond: artificial }
+    - { term: 智能, read: zhì néng,     correspond: intelligence }
   zh-HK:
     人工智能:
-    - { term: 人工, read: "jan4 gung1", correspond: artificial }
-    - { term: 智能, read: "zi3 nang4", correspond: intelligence }
+    - { term: 人工, read: jan4 gung1,   correspond: artificial }
+    - { term: 智能, read: zi3 nang4,    correspond: intelligence }
   zh-TW:
     人工智能:
-    - { term: 人工, read: "ㄖㄣˊ ㄍㄨㄥ", correspond: artificial }
-    - { term: 智能, read: "ㄓˋ ㄋㄥˊ", correspond: intelligence }
+    - { term: 人工, read: ㄖㄣˊ ㄍㄨㄥ, correspond: artificial }
+    - { term: 智能, read: ㄓˋ ㄋㄥˊ,    correspond: intelligence }
 
 # Computer security
 - en:
-    "computer security":
+    computer security:
     - term: computer
     - term: security
-    "information technology security":
+    information technology security:
     - term: information
     - term: technology
     - term: security
@@ -181,25 +181,25 @@
     - { term: コンピュータ, loan: computer }
     - { term: セキュリティ, loan: security }
   ko:
-    "컴퓨터 保安":
+    컴퓨터 保安:
     - { term: 컴퓨터,       loan: computer }
-    - { term: 保安,         read: "보 안",         correspond: security }
+    - { term: 保安,         read: 보 안,         correspond: security }
     情報技術保安:
-    - { term: 情報,         read: "정 보",         correspond: information }
-    - { term: 技術,         read: "기 술",         correspond: technology }
-    - { term: 保安,         read: "보 안",         correspond: security }
+    - { term: 情報,         read: 정 보,         correspond: information }
+    - { term: 技術,         read: 기 술,         correspond: technology }
+    - { term: 保安,         read: 보 안,         correspond: security }
   zh-CN:
     计算机安全:
-    - { term: 计算机,       read: "jì suàn jī",    correspond: computer }
-    - { term: 安全,         read: "ān quán",       correspond: security }
+    - { term: 计算机,       read: jì suàn jī,    correspond: computer }
+    - { term: 安全,         read: ān quán,       correspond: security }
   zh-HK:
     電腦保安:
-    - { term: 電腦,         read: "din6 nou5",     correspond: computer }
-    - { term: 保安,         read: "bou2 on1",      correspond: security }
+    - { term: 電腦,         read: din6 nou5,     correspond: computer }
+    - { term: 保安,         read: bou2 on1,      correspond: security }
   zh-TW:
     電腦安全:
-    - { term: 電腦,         read: "ㄉㄧㄢˋ ㄋㄠˇ", correspond: computer }
-    - { term: 安全,         read: "ㄢ ㄑㄩㄢˊ",    correspond: security }
+    - { term: 電腦,         read: ㄉㄧㄢˋ ㄋㄠˇ, correspond: computer }
+    - { term: 安全,         read: ㄢ ㄑㄩㄢˊ,    correspond: security }
 
 # Cryptography
 - en:
@@ -208,32 +208,32 @@
     - { term: graphy, space: no }
     cryptology:
     - term:   crypto
-    - { term: logy,   space: no,         correspond: study }
+    - { term: logy,   space: no,       correspond: study }
   ko:
     暗號學:
-    - { term: 暗號, read: "암 호",       correspond: crypto }
+    - { term: 暗號, read: 암 호,       correspond: crypto }
     - { term: 學,   read: 학,            correspond: study, space: no }
     暗號理論:
-    - { term: 暗號, read: "암 호",       correspond: crypto }
-    - { term: 理論, read: "이 론",       correspond: theory }
+    - { term: 暗號, read: 암 호,       correspond: crypto }
+    - { term: 理論, read: 이 론,       correspond: theory }
   ja:
     暗號學:
-    - { term: 暗号, read: "あん ごう",   correspond: crypto }
-    - { term: 学,   read: がく,          correspond: study, space: no }
+    - { term: 暗号, read: あん ごう,   correspond: crypto }
+    - { term: 学,   read: がく,        correspond: study, space: no }
     暗號理論:
-    - { term: 暗号, read: "あん ごう",   correspond: crypto }
-    - { term: 理論, read: "り ろん",     correspond: theory }
+    - { term: 暗号, read: あん ごう,   correspond: crypto }
+    - { term: 理論, read: り ろん,     correspond: theory }
   zh-CN:
     密碼學:
-    - { term: 密码, read: "mì mǎ",       correspond: crypto }
-    - { term: 学,   read: xué,           correspond: study, space: no }
+    - { term: 密码, read: mì mǎ,       correspond: crypto }
+    - { term: 学,   read: xué,         correspond: study, space: no }
   zh-HK:
     密碼學:
-    - { term: 密碼, read: "mat6 maa5",   correspond: crypto }
-    - { term: 學,   read: hok6,          correspond: study, space: no }
+    - { term: 密碼, read: mat6 maa5,   correspond: crypto }
+    - { term: 學,   read: hok6,        correspond: study, space: no }
   zh-TW:
     密碼學:
-    - { term: 密碼, read: "ㄇㄧˋ ㄇㄚˇ", correspond: crypto }
-    - { term: 學,   read: ㄒㄩㄝˊ,       correspond: study, space: no }
+    - { term: 密碼, read: ㄇㄧˋ ㄇㄚˇ, correspond: crypto }
+    - { term: 學,   read: ㄒㄩㄝˊ,     correspond: study, space: no }
 
 # vim: set et sw=2 ts=2 sts=2 ft=yaml:

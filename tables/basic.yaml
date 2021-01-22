@@ -80,21 +80,21 @@
     - term: information
   ja:
     情報:
-    - { term: 情報, correspond: information, read: "じょう ほう" }
+    - { term: 情報, correspond: information, read: じょう ほう }
   ko:
     情報:
-    - { term: 情報, correspond: information, read: "정 보" }
+    - { term: 情報, correspond: information, read: 정 보 }
   zh-CN:
     信息:
-    - { term: 信息, correspond: information, read: "xìn xī" }
+    - { term: 信息, correspond: information, read: xìn xī }
   zh-HK:
     資訊:
-    - { term: 資訊, correspond: information, read: "zi1 seon3" }
+    - { term: 資訊, correspond: information, read: zi1 seon3 }
     信息:
-    - { term: 信息, correspond: information, read: "seon3 sik1" }
+    - { term: 信息, correspond: information, read: seon3 sik1 }
   zh-TW:
     資訊:
-    - { term: 資訊, correspond: information, read: "ㄗ ㄒㄩㄣˋ" }
+    - { term: 資訊, correspond: information, read: ㄗ ㄒㄩㄣˋ }
 
 # Data
 - en:
@@ -107,20 +107,20 @@
     data:
     - { term: 데이터, loan:       data }
     資料:
-    - { term: 資料,   correspond: data,     read: "자 료" }
+    - { term: 資料,   correspond: data,     read: 자 료 }
   zh-CN:
     數據:
     - { term: 数,     correspond: number,   read: shù }
     - { term: 据,     correspond: evidence, read: jù,    space: no }
   zh-HK:
     資料:
-    - { term: 資料,   correspond: data,     read: "zi1 liu2" }
+    - { term: 資料,   correspond: data,     read: zi1 liu2 }
     數據:
     - { term: 數,     correspond: number,   read: sou3 }
     - { term: 據,     correspond: evidence, read: geoi3, space: no }
   zh-TW:
     資料:
-    - { term: 資料,   correspond: data,     read: "ㄗ ㄌㄧㄠˋ" }
+    - { term: 資料,   correspond: data,     read: ㄗ ㄌㄧㄠˋ }
 
 - en:
     network:
