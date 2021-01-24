@@ -7,8 +7,12 @@ CJK computer science terms comparison
 
 <!-- hide -->
 *This repository contains the **source code** of the website.
-You can see the website from the following link:
-<https://cjk-compsci-terms.netlify.app/>.*
+You can see the website from the following link:*
+
+ -  [English](https://cjk-compsci-terms.netlify.app/)
+ -  [中文 (繁體)](https://cjk-compsci-terms.netlify.app/zh-Hant/)
+ -  [日本語](https://cjk-compsci-terms.netlify.app/ja/)
+ -  [한국어](https://cjk-compsci-terms.netlify.app/ko/)
 <!-- /hide -->
 
 Greater China, Japan, and Korea, the so-called [Sinosphere]
