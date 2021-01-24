@@ -22,10 +22,40 @@
     - { term: 電, correspond: electronic, read: ㄉㄧㄢˋ }
     - { term: 腦, correspond: brain,      read: ㄋㄠˇ, space: no }
 
+# Smartphone
+- en:
+    smartphone:
+    - term:   smart
+    - { term: phone, correspond: telephone, space: no }
+  ja:
+    smartphone:
+    - { term: スマート, loan: smart }
+    - { term: フォン,   loan: phone, correspond: telephone }
+  ko:
+    smartphone:
+    - { term: 스마트,   loan: smart }
+    - { term: 폰,       loan: phone, correspond: telephone }
+  zh-CN:
+    智能手機:
+    - { term: 智能, correspond: smart,     read: zhì néng }
+    - { term: 手机, correspond: telephone, read: shǒu jī }
+  zh-HK:
+    智能電話:
+    - { term: 智能, correspond: smart,     read: zi3 nang4 }
+    - { term: 電話, correspond: telephone, read: din6 waa2 }
+    智能手機:
+    - { term: 智能, correspond: smart,     read: zi3 nang4 }
+    - { term: 手機, correspond: telephone, read: sau2 gei1 }
+  zh-TW:
+    智慧型手機:
+    - { term: 智慧, correspond: smart,     read: ㄓˋ ㄏㄨㄟˋ }
+    - { term: 型,   correspond: type,      read: ㄒㄧㄥˊ }
+    - { term: 手機, correspond: telephone, read: ㄕㄡˇ ㄐㄧ }
+
 # Software
 - en:
     software:
-    - { term: soft }
+    - term:   soft
     - { term: ware,                              space: no }
   ja:
     software:
@@ -122,6 +152,7 @@
     資料:
     - { term: 資料,   correspond: data,     read: ㄗ ㄌㄧㄠˋ }
 
+# Network
 - en:
     network:
     - term:   net
@@ -148,4 +179,39 @@
     網路:
     - { term: 網, correspond: net,  read: ㄨㄤˇ }
     - { term: 路, correspond: road, read: ㄌㄨˋ, space: no }
+
+# Application
+- en:
+    application:
+    - term: application
+    app:
+    - term: app
+  ja:
+    application:
+    - { term: アプリケーション, loan:       application }
+    app:
+    - { term: アプリ,           correspond: app }
+    應用:
+    - { term: 応用,             correspond: application, read: おう よう }
+  ko:
+    application:
+    - { term: 애플리케이션,     loan:       application }
+    app:
+    - { term: 앱,               loan:       app }
+    應用 program:
+    - { term: 應用,             correspond: application, read: 응 용 }
+    - { term: 프로그램,         loan:       program }
+  zh-CN:
+    應用程序:
+    - { term: 应用,             correspond: application, read: yìng yòng }
+    - { term: 程序,             correspond: program,     read: chéng xù }
+  zh-HK:
+    應用程式:
+    - { term: 應用,             correspond: application, read: jing3 jung6 }
+    - { term: 程式,             correspond: program,     read: cing4 zeoi6 }
+  zh-TW:
+    應用程式:
+    - { term: 應用,             correspond: application, read: ㄧㄥˋ ㄩㄥˋ }
+    - { term: 程式,             correspond: program,     read: ㄔㄥˊ ㄒㄩˋ }
+
 # vim: set et sw=2 ts=2 sts=2 ft=yaml:

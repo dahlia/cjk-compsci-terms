@@ -408,7 +408,8 @@ table.terms .romanization {
 .cognate-group-1,
 .cognate-group-2,
 .cognate-group-3,
-.cognate-group-4 {
+.cognate-group-4,
+.cognate-group-5 {
   --offset: 0%;
   --height: 100%;
   background-clip: padding-box;
@@ -437,9 +438,19 @@ table.terms .romanization {
 .cognate-group-1[rowspan="2"],
 .cognate-group-2[rowspan="2"],
 .cognate-group-3[rowspan="2"],
-.cognate-group-4[rowspan="2"] {
+.cognate-group-4[rowspan="2"],
+.cognate-group-5[rowspan="2"] {
   --offset: 49.9985858798%;
   --height: 50%;
+}
+
+.cognate-group-1[rowspan="3"],
+.cognate-group-2[rowspan="3"],
+.cognate-group-3[rowspan="3"],
+.cognate-group-4[rowspan="3"],
+.cognate-group-5[rowspan="3"] {
+  --offset: 66.66%;
+  --height: 33.33%;
 }
 
 .cognate-group-1 {
