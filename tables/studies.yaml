@@ -177,7 +177,7 @@
     - term: technology
     - term: security
   ja:
-    コンピュータセキュリティ:
+    computer security:
     - { term: コンピュータ, loan: computer }
     - { term: セキュリティ, loan: security }
   ko:
