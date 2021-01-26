@@ -156,6 +156,55 @@
     - { term: 流程, read: ㄌㄧㄡˊ ㄔㄥˊ, correspond: flow }
     - { term: 圖,   read: ㄊㄨˊ,         correspond: chart, space: no }
 
+# Conditional statement
+- en:
+    conditional statement:
+    - term: conditional
+    - term: statement
+  ja:
+    if文:
+    - { term: イフ,         loan: if }
+    - { term: 文,     correspond: statement, read: ぶん }
+  ko:
+    if文:
+    - { term: 이프,         loan: if }
+    - { term: 文,     correspond: statement,   read: 문, space: no }
+    條件文:
+    - { term: 條件,   correspond: conditional, read: 조 건 }
+    - { term: 文,     correspond: statement,   read: 문, space: no }
+  zh-CN:
+    條件陳述:
+    - { term: 条件,   correspond: conditional, read: tiáo jiàn }
+    - { term: 陈述,   correspond: statement,   read: chén shù }
+  zh-HK:
+    條件陳述式:
+    - { term: 條件,   correspond: conditional, read: tiu4 gin2 }
+    - { term: 陳述式, correspond: statement,   read: can4 seot6 sik1 }
+  zh-TW:
+    條件陳述:
+    - { term: 條件,   correspond: conditional, read: ㄊㄧㄠˊ ㄐㄧㄢˋ }
+    - { term: 陳述式, correspond: statement,   read: ㄔㄣˊ ㄕㄨˋ }
+
+# Recursion
+- en:
+    recursion:
+    - term: recursion
+  ja:
+    再歸:
+    - { term: 再帰, read: さい き }
+  ko:
+    再歸:
+    - { term: 再歸, read: 재 귀 }
+  zh-CN:
+    遞歸:
+    - { term: 递归, read: dì guī }
+  zh-HK:
+    遞歸:
+    - { term: 遞歸, read: dai6 gwai1 }
+  zh-TW:
+    遞迴:
+    - { term: 遞迴, read: ㄉㄧˋ ㄏㄨㄟˊ }
+
 # Infinite loop
 - en:
     infinite loop:
