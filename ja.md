@@ -119,6 +119,12 @@
 [表示](tables/programming.yaml)
 
 
+道具
+----
+
+[表示](tables/tools.yaml)
+
+
 計算理論
 --------
 

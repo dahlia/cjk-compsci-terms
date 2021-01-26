@@ -126,6 +126,12 @@ Computer programming
 [Show table.](tables/programming.yaml)
 
 
+Tools
+-----
+
+[Show table.](tables/tools.yaml)
+
+
 Theory of computation
 ---------------------
 

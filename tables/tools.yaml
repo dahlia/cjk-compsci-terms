@@ -1,0 +1,85 @@
+# Editor
+- en:
+    editor:
+    - term:   edit
+    - { term: or,                                  space: no }
+  ja:
+    editor:
+    - { term: エディタ, loan: editor }
+  ko:
+    editor:
+    - { term: 에디터, loan: editor }
+    編輯器:
+    - { term: 編輯, correspond: edit, read: 편 집 }
+    - { term: 機,   correspond: or,   read: 기,    space: no }
+  zh-CN:
+    編輯器:
+    - { term: 编辑, correspond: edit, read: biān jí }
+    - { term: 器,   correspond: or,   read: qì,    space: no }
+  zh-HK:
+    編輯器:
+    - { term: 編輯, correspond: edit, read: pin1 cap1 }
+    - { term: 器,   correspond: or,   read: hei3,  space: no }
+  zh-TW:
+    編輯器:
+    - { term: 編輯, correspond: edit, read: ㄅㄧㄢ ㄐㄧˊ }
+    - { term: 器,   correspond: or,   read: ㄑㄧˋ, space: no }
+
+# Compiler
+- en:
+    compiler:
+    - { term: compil, correspond: compile }
+    - { term: er,                                       space: no }
+  ja:
+    compiler:
+    - { term: コンパイラ,   loan: compiler }
+  ko:
+    compiler:
+    - { term: 컴파일러,     loan: compiler }
+  zh-CN:
+    編譯器:
+    - { term: 编译,   correspond: compile, read: biān yì }
+    - { term: 器,     correspond: er,      read: qì,    space: no }
+  zh-HK:
+    編譯器:
+    - { term: 編譯,   correspond: compile, read: pin1 jik6 }
+    - { term: 器,     correspond: er,      read: hei3,  space: no }
+  zh-TW:
+    編譯器:
+    - { term: 編譯,   correspond: compile, read: ㄅㄧㄢ ㄧˋ }
+    - { term: 器,     correspond: er,      read: ㄑㄧˋ, space: no }
+
+# Debugger
+- en:
+    debugger:
+    - { term: debugg,     correspond: debug }
+    - { term: er,                                   space: no }
+  ja:
+    debugger:
+    - { term: デバッガ,   loan: debugger }
+  ko:
+    debugger:
+    - { term: 디버거,     loan: debugger }
+  zh-CN:
+    調試工具:
+    - { term: 调试, correspond: debug, read: tiáo shì }
+    - { term: 工具, correspond: er,    read: gōng jù }
+    調試器:
+    - { term: 调试, correspond: debug, read: tiáo shì }
+    - { term: 器,   correspond: er,    read: qì,    space: no }
+  zh-HK:
+    除錯工具:
+    - { term: 除錯, correspond: debug, read: ceoi4 co3 }
+    - { term: 工具, correspond: er,    read: gung1 geoi6 }
+    除錯器:
+    - { term: 除錯, correspond: debug, read: ceoi4 co3 }
+    - { term: 器,   correspond: er,    read: hei3,  space: no }
+  zh-TW:
+    除錯工具:
+    - { term: 除錯, correspond: debug, read: ㄔㄨˊ ㄘㄨㄛˋ }
+    - { term: 工具, correspond: er,    read: ㄍㄨㄥ ㄐㄩˋ }
+    除錯器:
+    - { term: 除錯, correspond: debug, read: ㄔㄨˊ ㄘㄨㄛˋ }
+    - { term: 器,   correspond: er,    read: ㄑㄧˋ, space: no }
+
+# vim: set et sw=2 ts=2 sts=2 ft=yaml:

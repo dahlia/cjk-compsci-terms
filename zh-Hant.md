@@ -102,6 +102,12 @@
 [顯示表](tables/programming.yaml)
 
 
+工具
+----
+
+[顯示表](tables/tools.yaml)
+
+
 計算理論
 --------
 
