@@ -49,6 +49,61 @@
     - { term: 編譯,   correspond: compile, read: ㄅㄧㄢ ㄧˋ }
     - { term: 器,     correspond: er,      read: ㄑㄧˋ, space: no }
 
+# Decompiler
+- en:
+    decompiler:
+    - term:   de
+    - { term: compiler,                                             space: no }
+  ja:
+    逆 compiler:
+    - { term: 逆,     correspond: de,       read: ぎゃく }
+    - { term: コンパイラ,   loan: compiler }
+  ko:
+    decompiler:
+    - { term: 디,           loan: de }
+    - { term: 컴파일러,     loan: compiler,                         space: no }
+    逆 compiler:
+    - { term: 逆,     correspond: de,       read: 역 }
+    - { term: 컴파일러,     loan: compiler,                         space: no }
+  zh-CN:
+    反編譯器:
+    - { term: 反,     correspond: de,       read: fǎn }
+    - { term: 编译器, correspond: compiler, read: biān yì qì,       space: no }
+  zh-HK:
+    反編譯器:
+    - { term: 反,     correspond: de,       read: faan2 }
+    - { term: 編譯器, correspond: compiler, read: pin1 jik6 hei3,   space: no }
+  zh-TW:
+    反編譯器:
+    - { term: 反,     correspond: de,       read: ㄈㄢˇ }
+    - { term: 編譯器, correspond: compiler, read: ㄅㄧㄢ ㄧˋ ㄑㄧˋ, space: no }
+
+# Transpiler
+- en:
+    transpiler:
+    - term:   trans
+    - { term: piler, correspond: compiler,                    space: no }
+  ja:
+    transpiler:
+    - { term: トランス,    loan: trans }
+    - { term: パイラ,      loan: piler, correspond: compiler, space: no }
+  ko:
+    transpiler:
+    - { term: 트랜스,      loan: trans }
+    - { term: 파일러,      loan: piler, correspond: compiler, space: no }
+  zh-CN:
+    轉譯器:
+    - { term: 转,    correspond: trans,    read: zhuǎn }
+    - { term: 译器,  correspond: compiler, read: yì qì,       space: no }
+  zh-HK:
+    轉譯器:
+    - { term: 轉,    correspond: trans,    read: zyun2 }
+    - { term: 譯器,  correspond: compiler, read: jik6 hei3,   space: no }
+  zh-TW:
+    轉譯器:
+    - { term: 轉,    correspond: trans,    read: ㄓㄨㄢˇ }
+    - { term: 譯器,  correspond: compiler, read: ㄧˋ ㄑㄧˋ,   space: no }
+
 # Debugger
 - en:
     debugger:
@@ -81,5 +136,37 @@
     除錯器:
     - { term: 除錯, correspond: debug, read: ㄔㄨˊ ㄘㄨㄛˋ }
     - { term: 器,   correspond: er,    read: ㄑㄧˋ, space: no }
+
+# IDE
+- en:
+    integrated development environment:
+    - term: integrated
+    - term: development
+    - term: environment
+  ja:
+    統合開發環境:
+    - { term: 統合, correspond: integrated,  read: とう ごう }
+    - { term: 開発, correspond: deveopment,  read: かい はつ }
+    - { term: 環境, correspond: environment, read: かん きょう }
+  ko:
+    統合開發環境:
+    - { term: 統合, correspond: integrated,  read: 통 합 }
+    - { term: 開發, correspond: deveopment,  read: 개 발 }
+    - { term: 環境, correspond: environment, read: 환 경 }
+  zh-CN:
+    集成開發環境:
+    - { term: 集成, correspond: integrated,  read: jí chéng }
+    - { term: 开发, correspond: deveopment,  read: kāi fā }
+    - { term: 环境, correspond: environment, read: huán jìng }
+  zh-HK:
+    整合開發環境:
+    - { term: 整合, correspond: integrated,  read: zing2 hap6 }
+    - { term: 開發, correspond: deveopment,  read: hoi1 faat3 }
+    - { term: 環境, correspond: environment, read: waan4 ging2 }
+  zh-TW:
+    整合開發環境:
+    - { term: 整合, correspond: integrated,  read: ㄓㄥˇ ㄏㄜˊ }
+    - { term: 開發, correspond: deveopment,  read: ㄎㄞ ㄈㄚ }
+    - { term: 環境, correspond: environment, read: ㄏㄨㄢˊ ㄐㄧㄥˋ }
 
 # vim: set et sw=2 ts=2 sts=2 ft=yaml:
