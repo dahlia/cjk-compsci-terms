@@ -18,7 +18,8 @@ definitions:
 
   locale:
     type: string
-    # In order to prevent mistakes, accept only the main CJK locales rather than accept any valid locale codes:
+    # In order to prevent mistakes, accept only the main CJK locales
+    # rather than accept any valid locale codes:
     enum: ["en", "ja", "ko", "zh-CN", "zh-HK", "zh-TW"]
 
   wordMap:

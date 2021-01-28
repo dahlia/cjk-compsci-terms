@@ -156,6 +156,142 @@
     - { term: 流程, read: ㄌㄧㄡˊ ㄔㄥˊ, correspond: flow }
     - { term: 圖,   read: ㄊㄨˊ,         correspond: chart, space: no }
 
+# Variable
+- en:
+    value:
+    - term: variable
+  ja:
+    變數:
+    - { term: 変, correspond: variable, read: へん }
+    - { term: 数, correspond: number,   read: すう,  space: no }
+  ko:
+    變數:
+    - { term: 變, correspond: variable, read: 변 }
+    - { term: 數, correspond: number,   read: 수,    space: no }
+  zh-CN:
+    變量:
+    - { term: 变, correspond: variable, read: biàn }
+    - { term: 量, correspond: quantity, read: liàng, space: no }
+  zh-HK:
+    變數:
+    - { term: 變, correspond: variable, read: bin3 }
+    - { term: 數, correspond: number,   read: sou3,  space: no }
+  zh-TW:
+    變數:
+    - { term: 變, correspond: variable, read: ㄅㄧㄢˋ }
+    - { term: 數, correspond: number,   read: ㄕㄨˋ, space: no }
+
+# Constant
+- en:
+    value:
+    - term: constant
+  ja:
+    定數:
+    - { term: 定, correspond: fixed,  read: てい }
+    - { term: 数, correspond: number, read: すう,    space: no }
+  ko:
+    常數:
+    - { term: 常, correspond: constant, read: 상 }
+    - { term: 數, correspond: number,   read: 수,    space: no }
+  zh-CN:
+    常量:
+    - { term: 常, correspond: constant, read: cháng }
+    - { term: 量, correspond: quantity, read: liàng, space: no }
+  zh-HK:
+    常數:
+    - { term: 常, correspond: constant, read: soeng4 }
+    - { term: 數, correspond: number,   read: sou3,  space: no }
+  zh-TW:
+    常數:
+    - { term: 常, correspond: constant, read: ㄔㄤˊ }
+    - { term: 數, correspond: number,   read: ㄕㄨˋ, space: no }
+
+# Value
+- en:
+    value:
+    - term: value
+  ja:
+    値:
+    - { term: 値, correspond: value, read: あたい }
+  ko:
+    값:
+    - { term: 값, correspond: value }
+  zh-CN:
+    値:
+    - { term: 値, correspond: value, read: zhí }
+  zh-HK:
+    値:
+    - { term: 値, correspond: value, read: zik6 }
+  zh-TW:
+    値:
+    - { term: 値, correspond: value, read: ㄓˊ }
+
+# Function
+- en:
+    function:
+    - term: function
+  ja:
+    關數:
+    - { term: 関, correspond: relative, read: かん }
+    - { term: 数, correspond: number,   read: すう, space: no }
+  ko:
+    函數:
+    - { term: 函, correspond: box,    read: 함 }
+    - { term: 數, correspond: number, read: 수,     space: no }
+  zh-CN:
+    函數:
+    - { term: 函, correspond: box,    read: hán }
+    - { term: 数, correspond: number, read: shù,    space: no }
+  zh-HK:
+    函數:
+    - { term: 函, correspond: box,    read: haam4 }
+    - { term: 數, correspond: number, read: sou3,   space: no }
+  zh-TW:
+    函數:
+    - { term: 函, correspond: box,    read: ㄏㄢˊ }
+    - { term: 數, correspond: number, read: ㄕㄨˋ,  space: no }
+    函式:
+    - { term: 函, correspond: box,    read: ㄏㄢˊ }
+    - { term: 式, correspond: number, read: ㄕˋ,    space: no }
+
+# Return value
+- en:
+    return value:
+    - term: return
+    - term: value
+  ja:
+    戾り値:
+    - { term: 戻り, correspond: return, read: もど り }
+    - { term: 値,   correspond: value,  read: ち,  space: no }
+    返り値:
+    - { term: 返り, correspond: return, read: かえ り }
+    - { term: 値,   correspond: value,  read: ち,  space: no }
+    返卻値:
+    - { term: 返却, correspond: return, read: へん きゃく }
+    - { term: 値,   correspond: value,  read: ち,  space: no }
+    return 値:
+    - { term: リターン,   loan: return }
+    - { term: 値,   correspond: value,  read: ち,  space: no }
+  ko:
+    返還값:
+    - { term: 返還, correspond: return, read: 반 환 }
+    - { term: 값,   correspond: value,             space: no }
+    return 값:
+    - { term: 리턴,       loan: return }
+    - { term: 값,   correspond: value,             space: no }
+  zh-CN:
+    返回值:
+    - { term: 返回, correspond: return, read: fǎn huí }
+    - { term: 値,   correspond: value,  read: zhí, space: no }
+  zh-HK:
+    轉回值:
+    - { term: 轉回, correspond: return, read: zyun2 wui4 }
+    - { term: 値, correspond: value, read: zik6,   space: no }
+  zh-TW:
+    轉回值:
+    - { term: 轉回, correspond: return, read: ㄓㄨㄢˇ ㄏㄨㄟˊ }
+    - { term: 値,   correspond: value, read: ㄓˊ,    space: no }
+
 # Conditional statement
 - en:
     conditional statement:
