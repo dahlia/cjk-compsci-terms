@@ -138,6 +138,8 @@
     - { term: 데이터, loan:       data }
     資料:
     - { term: 資料,   correspond: data,     read: 자 료 }
+    情報:
+    - { term: 情報,   correspond: data,     read: 정 보 }
   zh-CN:
     數據:
     - { term: 数,     correspond: number,   read: shù }
