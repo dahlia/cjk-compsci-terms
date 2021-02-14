@@ -18,7 +18,7 @@ You can see the website from the following link:*
 Greater China, Japan, and Korea, the so-called [Sinosphere]
 (<span lang="zh-Hant">漢字文化圈</span>;
 literally: "Chinese character cultural sphere"),
-have burrowed many concepts through Sinoxenic vocabularies from the West
+have borrowed many concepts through Sinoxenic vocabularies from the West
 since the modern era.  Some of them have their own translations,
 but some have imported translations from neighboring countries.
 In some translations, both native and foreign stems are combined.
