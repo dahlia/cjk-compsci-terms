@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import dataclasses
 import enum
+import functools
 import locale
 import os
 import os.path
@@ -562,11 +563,21 @@ def render_page(
         for l, h in ([] if lang_hrefs is None else lang_hrefs.items())
     ]
     lang_href_pairs.sort(key=lambda pair: str(pair[0]))
+    rebase_url: Callable[[str], str]
+    if not base_href:
+        rebase_url = lambda url: url
+    elif absolute_base:
+        rebase_url = lambda url: urllib.parse.urljoin(base_href or '', url)
+    else:
+        ends_with_slash = base_href and base_href.endswith("/")
+        rebase_url = lambda url: \
+            (base_href or '') + ("" if ends_with_slash else "/") + url
     return page_template.render(
         locale=locale,
         doc=Markup(doc),
         title=title,
         base_href=base_href,
+        rebase_url=rebase_url,
         lang_hrefs=lang_href_pairs,
     )
 

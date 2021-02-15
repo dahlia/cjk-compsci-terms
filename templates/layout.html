@@ -4,11 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>{{ title }}</title>
-  {% if base_href -%}
-    <base href="{{ base_href }}">
-  {%- endif %}
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="{{ rebase_url('style.css') }}">
   <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
   <script src="script.js" defer></script>
 </head>
@@ -17,7 +14,7 @@
     <nav>
       {% for lang, href in lang_hrefs %}
         {% with l = lang|string|replace('_', '-') %}
-          <a href="{{ href }}"
+          <a href="{{ rebase_url(href) }}"
              hreflang="{{ l }}"
              rel="{% if lang==locale %}canonical{% else %}alternate{% endif %}"
              lang="{{ l }}"
