@@ -528,6 +528,12 @@ def render_doc(path: Union[str, os.PathLike], locale: Locale) -> str:
     )
     html: str = md.convert(text)
     toc: str = getattr(md, "toc")
+    lang_slug = "" if locale.language == "en" else str(locale).replace('_', '-')
+    toc = re.sub(
+        r'<a href="(#.*)">',
+        lambda m: f'<a href="{lang_slug}{m.group(1)}">',
+        toc
+    )
     html = re.sub(
         r'<!--\s*TOC\s*:\s*(.+?)\s*-->',
         lambda m: f'<div id="toc"><div><h2>{m.group(1)}</h2>{toc}</div></div>',
