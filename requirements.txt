@@ -11,7 +11,7 @@ lxml-stubs >= 0.1.1, < 0.2.0
 Markdown >= 3.3.3, < 3.4.0
 MarkupSafe >= 1.1.1, < 2.0.0
 mypy >= 0.790, < 1
-opencc-py >= 1.1.0, < 2.0.0
+git+git://github.com/BYVoid/OpenCC.git@ver.1.1.1#egg=opencc&subdirectory=python
 pinyin_jyutping_sentence >= 0.9, < 1.0
 pykakasi >= 2.0.4, < 2.1.0
 PyYAML >= 5.1.2, < 6.0.0

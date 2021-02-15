@@ -50,7 +50,7 @@ $(VENV)/: requirements.txt
 				rm get-pip.py; \
 			fi; \
 		fi; \
-		$(VENV)/bin/pip install -U setuptools; \
+		$(VENV)/bin/pip install -U setuptools wheel; \
 		$(VENV)/bin/pip install -U -r requirements.txt; \
 	fi
 
