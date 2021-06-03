@@ -40,7 +40,10 @@ definitions:
     additionalProperties: false
     properties:
       term:       { type: string }
-      space:      { type: boolean }
+      space:
+        anyOf:
+        - { type: boolean }
+        - { const: "hyphen" }
       correspond: { type: string }
       read:       { type: string }
       loan:       { type: string }

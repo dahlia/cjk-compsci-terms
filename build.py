@@ -65,12 +65,19 @@ pinyin_jyutping_sentence = lazy_module('pinyin_jyutping_sentence')
 class Spacing(enum.Enum):
     space = 'space'
     no_space = 'no_space'
+    hyphen = 'hyphen'
     implicit_space = 'implicit_space'
     implicit_no_space = 'implicit_no_space'
 
     def __bool__(self):
         cls: Type[Space] = type(self)
         return self is cls.space or self is cls.implicit_space
+
+    def __str__(self):
+        cls: Type[Space] = type(self)
+        if self is cls.hyphen:
+            return '-'
+        return ' ' if self else ''
 
 
 @dataclasses.dataclass(frozen=True)
@@ -373,10 +380,13 @@ def load_table(path: Union[str, os.PathLike]) -> Table:
                     assert isinstance(term_row, Mapping)
                     t = term_row['term']
                     try:
-                        spacing = \
-                            Spacing.space \
-                            if term_row['space'] \
-                            else Spacing.no_space
+                        if term_row['space'] == 'hyphen':
+                            spacing = Spacing.hyphen
+                        else:
+                            spacing = \
+                                Spacing.space \
+                                if term_row['space'] \
+                                else Spacing.no_space
                     except KeyError:
                         spacing = implicit_spacing
                     term: Term

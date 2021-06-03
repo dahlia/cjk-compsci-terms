@@ -20,7 +20,7 @@
           if term.correspond in translation.correspondences
           else ''
         ) -%}
-      {{- ' ' if term.space -}}
+      {{- term.space|string -}}
       {%- if (word|selectattr('read')|list +
               word|selectattr('loan')|list)|length -%}
         <ruby class="{{ classes }}" lang="{{ word.locale|replace('_', '-') }}">
