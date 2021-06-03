@@ -129,3 +129,9 @@
 --------
 
 [表示](tables/theory-comp.yaml)
+
+
+プログラミングパラダイム
+------------------------
+
+[表示](tables/paradigms.yaml)

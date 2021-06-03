@@ -132,3 +132,9 @@ lang="ja"><ruby>情<rt lang="ko">정</rt>報<rt lang="ko">보</rt></ruby></q>.
 ---------
 
 [표 보기](tables/theory-comp.yaml)
+
+
+프로그래밍 패러다임
+-------------------
+
+[표 보기](tables/paradigms.yaml)

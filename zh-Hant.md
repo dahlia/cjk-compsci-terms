@@ -112,3 +112,9 @@
 --------
 
 [顯示表](tables/theory-comp.yaml)
+
+
+編程範式
+--------
+
+[顯示表](tables/paradigms.yaml)

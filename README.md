@@ -105,37 +105,43 @@ Korean
 Basic terms
 -----------
 
-[Show table.](tables/basic.yaml)
+[Show table](tables/basic.yaml)
 
 
 Units
 -----
 
-[Show table.](tables/units.yaml)
+[Show table](tables/units.yaml)
 
 
 Fields of study
 ---------------
 
-[Show table.](tables/studies.yaml)
+[Show table](tables/studies.yaml)
 
 
 Computer programming
 --------------------
 
-[Show table.](tables/programming.yaml)
+[Show table](tables/programming.yaml)
 
 
 Tools
 -----
 
-[Show table.](tables/tools.yaml)
+[Show table](tables/tools.yaml)
 
 
 Theory of computation
 ---------------------
 
-[Show table.](tables/theory-comp.yaml)
+[Show table](tables/theory-comp.yaml)
+
+
+Programming paradigms
+---------------------
+
+[Show table](tables/paradigms.yaml)
 
 
 *[CJK]: Chinese, Japanese, and Korean languages

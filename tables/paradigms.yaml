@@ -1,0 +1,196 @@
+# Imperative programming
+- en:
+    imperative programming:
+    - term:   imperative
+    - term:   programming
+  ja:
+    命令型 programming:
+    - { term: 命令,   read: めい れい,       correspond: imperative }
+    - { term: 型,     read: がた, space: no, correspond: style }
+    - { term: プログラミング,                      loan: programming }
+  ko:
+    命令型 programming:
+    - { term: 命令型, read: 명 령,           correspond: imperative }
+    - { term: 型,     read: 형,   space: no, correspond: style }
+    - { term: 프로그래밍,                          loan: programming }
+  zh-CN:
+    指令式編程:
+    - { term: 指令,   read: zhǐ lìng,        correspond: imperative }
+    - { term: 式,     read: shì,             correspond: style }
+    - { term: 编程,   read: biān chéng,      correspond: programming }
+    命令式編程:
+    - { term: 命令,   read: mìng lìng,       correspond: imperative }
+    - { term: 式,     read: shì,             correspond: style }
+    - { term: 编程,   read: biān chéng,      correspond: programming }
+  zh-HK:
+    指令式編程:
+    - { term: 指令, read: zi2 ling6,         correspond: imperative }
+    - { term: 式,   read: sik1,              correspond: style }
+    - { term: 編程, read: pin1 cing4,        correspond: programming }
+  zh-TW:
+    指令式編程:
+    - { term: 指令, read: ㄓˇ ㄌㄧㄥˋ,       correspond: imperative }
+    - { term: 式,   read: ㄕˋ,               correspond: imperative }
+    - { term: 編程, read: ㄅㄧㄢ ㄔㄥˊ,      correspond: programming }
+
+# Procedural programming
+- en:
+    procedural programming:
+    - { term: procedur,                              correspond: procedure }
+    - { term: al,                    space: no,      correspond: style }
+    - term:   programming
+  ja:
+    手續き型 programming:
+    - { term: 手続き,   read: て つづ き,            correspond: procedure }
+    - { term: 型,       read: がた,                  correspond: style }
+    - { term: プログラミング,                              loan: programming }
+  ko:
+    節次的 programming:
+    - { term: 節次,     read: 절 차,                 correspond: procedure }
+    - { term: 的,       read: 적,    space: no,      correspond: style }
+    - { term: 프로그래밍,                                  loan: programming }
+  zh-CN:
+    過程式程序設計:
+    - { term: 过程,     read: guò chéng,             correspond: procedure }
+    - { term: 式,       read: shì,                   correspond: style }
+    - { term: 程序设计, read: chéng xù shè jì,       correspond: programming }
+    過程式編程:
+    - { term: 过程,     read: guò chéng,             correspond: procedure }
+    - { term: 式,       read: shì,                   correspond: style }
+    - { term: 编程,     read: biān chéng,            correspond: programming }
+  zh-HK:
+    程序式程式設計:
+    - { term: 程序,     read: cing4 zeoi6,           correspond: procedure }
+    - { term: 式,       read: csik1,                 correspond: style }
+    - { term: 程式設計, read: cing4 sik1 cit3 gai3,  correspond: programming }
+  zh-TW:
+    程序式程式設計:
+    - { term: 程序,     read: ㄔㄥˊ ㄒㄩˋ ㄕˋ,       correspond: procedural }
+    - { term: 式,       read: ㄕˋ,                   correspond: style }
+    - { term: 程式設計, read: ㄔㄥˊ ㄕˋ ㄕㄜˋ ㄐㄧˋ, correspond: programming }
+
+# Object-oriented programming
+- en:
+    object-oriented programming:
+    - term:   object
+    - { term: oriented, space: hyphen }
+    - term:   programming
+  ja:
+    object 指向 programming:
+    - { term: オブジェクト,                                loan: object }
+    - { term: 指向,     read: し こう,               correspond: oriented }
+    - { term: プログラミング,                              loan: programming }
+  ko:
+    客體指向 programming:
+    - { term: 客體,     read: 객 체,                 correspond: object }
+    - { term: 指向,     read: 지 향,                 correspond: oriented }
+    - { term: 프로그래밍,                                  loan: programming }
+  zh-CN:
+    面向對象程序設計:
+    - { term: 面向,     read: miàn xiàng,            correspond: oriented }
+    - { term: 对象,     read: duì xiàng,             correspond: object }
+    - { term: 程序设计, read: chéng xù shè jì,       correspond: programming }
+  zh-HK:
+    物件導向程式設計:
+    - { term: 物件,     read: mat6 gin2,             correspond: object }
+    - { term: 導向,     read: dou6 hoeng3,           correspond: oriented }
+    - { term: 程式設計, read: cing4 sik1 cit3 gai3,  correspond: programming }
+  zh-TW:
+    物件導向程式設計:
+    - { term: 物件,     read: ㄨˋ ㄐㄧㄢˋ,           correspond: object }
+    - { term: 導向,     read: ㄉㄠˇ ㄒㄧㄤˋ,         correspond: oriented }
+    - { term: 程式設計, read: ㄔㄥˊ ㄕˋ ㄕㄜˋ ㄐㄧˋ, correspond: programming }
+
+# Declarative programming
+- en:
+    declarative programming:
+    - { term: declara,                               correspond: declare }
+    - { term: tive,                       space: no, correspond: style }
+    - term: programming
+  ja:
+    宣言型 programming:
+    - { term: 宣言,           read: せん げん,       correspond: declare }
+    - { term: 型,             read: がた, space: no, correspond: style }
+    - { term: プログラミング,                              loan: programming }
+  ko:
+    宣言型 programming:
+    - { term: 宣言,       read: 선 언,               correspond: declare }
+    - { term: 型,         read: 형,       space: no, correspond: style }
+    - { term: 프로그래밍,                                  loan: programming }
+    宣言的 programming:
+    - { term: 宣言,       read: 선 언,               correspond: declare }
+    - { term: 的,         read: 적,       space: no, correspond: style }
+    - { term: 프로그래밍,                                  loan: programming }
+  zh-CN:
+    聲明式編程:
+    - { term: 声明,     read: shēng míng,            correspond: declare }
+    - { term: 式,       read: shì,                   correspond: style }
+    - { term: 编程,     read: biān chéng,            correspond: programming }
+  zh-HK:
+    宣告式編程:
+    - { term: 宣告,     read: syun1 gou3,            correspond: declare }
+    - { term: 式,       read: sik1,                  correspond: style }
+    - { term: 編程,     read: pin1 cing4,            correspond: programming }
+  zh-TW:
+    宣告式程式設計:
+    - { term: 宣告,     read: ㄒㄩㄢ ㄍㄠˋ,          correspond: declare }
+    - { term: 式,       read: ㄕˋ,                   correspond: style }
+    - { term: 程式設計, read: ㄔㄥˊ ㄕˋ ㄕㄜˋ ㄐㄧˋ, correspond: programming }
+
+# Functional programming
+- en:
+    functional programming:
+    - term:   function
+    - { term: al,                    space: no,      correspond: style }
+    - term:   programming
+  ja:
+    關數型 programming:
+    - { term: 関数,     read: かん すう,             correspond: function }
+    - { term: 型,       read: がた,  space: no,      correspond: style }
+    - { term: プログラミング,                              loan: programming }
+  ko:
+    函數型 programming:
+    - { term: 函數,     read: 함 수,                 correspond: function }
+    - { term: 型,       read: 형,    space: no,      correspond: style }
+    - { term: 프로그래밍,                                  loan: programming }
+  zh-CN:
+    函數式編程:
+    - { term: 函数,     read: hán shù,               correspond: function }
+    - { term: 式,       read: shì,                   correspond: style }
+    - { term: 编程,     read: biān chéng,            correspond: programming }
+  zh-HK:
+    函數程式設計:
+    - { term: 函數,     read: haam4 sou3,            correspond: function }
+    - { term: 程式設計, read: cing4 sik1 cit3 gai3,  correspond: programming }
+  zh-TW:
+    函式程式設計:
+    - { term: 函,       read: ㄏㄢˊ,                 correspond: function }
+    - { term: 式,       read: ㄕˋ,                   correspond: style }
+    - { term: 程式設計, read: ㄔㄥˊ ㄕˋ ㄕㄜˋ ㄐㄧˋ, correspond: programming }
+
+# Logic programming
+- en:
+    logic programming:
+    - term:   logic
+    - term:   programming
+  ja:
+    論理 programming:
+    - { term: 論理, read: ろん り,                   correspond: logic }
+    - { term: プログラミング,                              loan: programming }
+  ko:
+    論理型 programming:
+    - { term: 論理, read: 논 리,                     correspond: logic }
+    - { term: 型,   read: 형,    space: no,          correspond: style }
+    - { term: 프로그래밍,                                  loan: programming }
+  zh-CN:
+    logic 編程:
+    - { term: 逻辑, loan: logic }
+    - { term: 编程,   read: biān chéng,              correspond: programming }
+  zh-HK:
+    logic 編程:
+    - { term: 邏輯, loan: logic }
+    - { term: 編程, read: pin1 cing4,                correspond: programming }
+  zh-TW:
+    logic 程式設計:
+    - { term: 邏輯,                                        loan: logic }
+    - { term: 程式設計, read: ㄔㄥˊ ㄕˋ ㄕㄜˋ ㄐㄧˋ, correspond: programming }
