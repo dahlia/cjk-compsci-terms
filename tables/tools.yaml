@@ -146,27 +146,27 @@
   ja:
     統合開發環境:
     - { term: 統合, correspond: integrated,  read: とう ごう }
-    - { term: 開発, correspond: deveopment,  read: かい はつ }
+    - { term: 開発, correspond: development,  read: かい はつ }
     - { term: 環境, correspond: environment, read: かん きょう }
   ko:
     統合開發環境:
     - { term: 統合, correspond: integrated,  read: 통 합 }
-    - { term: 開發, correspond: deveopment,  read: 개 발 }
+    - { term: 開發, correspond: development,  read: 개 발 }
     - { term: 環境, correspond: environment, read: 환 경 }
   zh-CN:
     集成開發環境:
     - { term: 集成, correspond: integrated,  read: jí chéng }
-    - { term: 开发, correspond: deveopment,  read: kāi fā }
+    - { term: 开发, correspond: development,  read: kāi fā }
     - { term: 环境, correspond: environment, read: huán jìng }
   zh-HK:
     整合開發環境:
     - { term: 整合, correspond: integrated,  read: zing2 hap6 }
-    - { term: 開發, correspond: deveopment,  read: hoi1 faat3 }
+    - { term: 開發, correspond: development,  read: hoi1 faat3 }
     - { term: 環境, correspond: environment, read: waan4 ging2 }
   zh-TW:
     整合開發環境:
     - { term: 整合, correspond: integrated,  read: ㄓㄥˇ ㄏㄜˊ }
-    - { term: 開發, correspond: deveopment,  read: ㄎㄞ ㄈㄚ }
+    - { term: 開發, correspond: development,  read: ㄎㄞ ㄈㄚ }
     - { term: 環境, correspond: environment, read: ㄏㄨㄢˊ ㄐㄧㄥˋ }
 
 # vim: set et sw=2 ts=2 sts=2 ft=yaml:

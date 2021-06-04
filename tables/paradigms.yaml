@@ -30,7 +30,7 @@
   zh-TW:
     指令式編程:
     - { term: 指令, read: ㄓˇ ㄌㄧㄥˋ,       correspond: imperative }
-    - { term: 式,   read: ㄕˋ,               correspond: imperative }
+    - { term: 式,   read: ㄕˋ,               correspond: style }
     - { term: 編程, read: ㄅㄧㄢ ㄔㄥˊ,      correspond: programming }
 
 # Procedural programming
