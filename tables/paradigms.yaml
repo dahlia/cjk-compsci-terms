@@ -164,8 +164,7 @@
     - { term: 程式設計, read: cing4 sik1 cit3 gai3,  correspond: programming }
   zh-TW:
     函式程式設計:
-    - { term: 函,       read: ㄏㄢˊ,                 correspond: function }
-    - { term: 式,       read: ㄕˋ,                   correspond: style }
+    - { term: 函式,     read: ㄏㄢˊ ㄕˋ,             correspond: function }
     - { term: 程式設計, read: ㄔㄥˊ ㄕˋ ㄕㄜˋ ㄐㄧˋ, correspond: programming }
 
 # Logic programming
