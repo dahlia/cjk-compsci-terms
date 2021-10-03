@@ -51,8 +51,9 @@ Cognates are words that are derived from one side or share a common
 etymology.
 
 For example, the English word <q>computer</q> and the Korean word
-<q lang="ko">컴퓨터</q>, the Japanese word <q lang="ja">計算科学</q> (keisan
-kagaku) and the Chinese word <q lang="zh">計算科學</q> (jìsuàn kēxué), that
+<q lang="ko">컴퓨터</q> (keompyuteo), the Japanese word
+<q lang="ja">計算科学</q> (keisan kagaku) and the Chinese word
+<q lang="zh">計算科學</q> (jìsuàn kēxué), that
 are both meaning computational science, are cognates.
 
 Cognates are indicated by the same colored border.
@@ -62,9 +63,9 @@ Cognates are indicated by the same colored border.
 Calque is a word or phrase borrowed from another language by literal
 word-for-word or root-for-root translation.
 
-For example, the Chinese word <q lang="zh">軟件</q> is a translation of the
-English word <q>software</q>, which translates the English words <q>soft</q>
-→ <q lang="zh">軟</q> (ruǎn; *soft* or *flexible*) and <q>ware</q> →
+For example, the Chinese word <q lang="zh">軟件</q> (ruǎnjiàn) is a translation
+of the English word <q>software</q>, which translates the English words
+<q>soft</q> → <q lang="zh">軟</q> (ruǎn; *soft* or *flexible*) and <q>ware</q> →
 <q lang="zh">件</q> (jiàn; *clothes* or *item*) respectively.
 
 Matching words/roots between languages in this way are underlined
