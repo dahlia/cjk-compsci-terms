@@ -17,15 +17,18 @@ Prerequisites are:
  -  GNU Make
  -  GNU Wget or `curl`
 
-The single command to build the whole website is:
+The single command to build the whole website is:[^1]
 
-    make
+    make -j
 
 This command takes much longer time at the first run as it installs dependent
 libraries.  As all dependencies are installed at first run, runs from second
 are faster than the first run.
 
 The built files are placed to the *public_html/* directory.
+
+[^1]: Option `-j`, which can be omitted, lets `make` run independent build jobs
+      in parallel.
 
 
 How to add words
