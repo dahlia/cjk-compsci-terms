@@ -6,7 +6,7 @@ function getGroupRows(term) {
     rows.push(row);
     if (row.classList.contains('group-head')) break;
   }
-  for (const row = term.parentNode.parentNode.nextElementSibling;
+  for (let row = term.parentNode.parentNode.nextElementSibling;
        row != null && !row.classList.contains('group-head');
        row = row.nextElementSibling) {
     rows.push(row);
