@@ -4,8 +4,8 @@ commonmark >= 0.9.1, < 1.0.0
 cached-property >= 1.5.2, < 1.6.0
 dragonmapper >= 0.2.6, < 0.3.0
 hangul-romanize >= 0.1.0, < 0.2.0
-git+git://github.com/BYVoid/OpenCC.git@ver.1.1.1#egg=opencc&subdirectory=python; sys_platform != "linux"
-git+git://github.com/suminb/hanja.git@9fb63ac850bf6ad73f1fef22674104270a8dafeb
+git+https://github.com/BYVoid/OpenCC.git@ver.1.1.1#egg=opencc&subdirectory=python; sys_platform != "linux"
+git+https://github.com/suminb/hanja.git@9fb63ac850bf6ad73f1fef22674104270a8dafeb
 Jinja2 >= 3.0.1, < 3.1.0
 lazy-import >= 0.2.2, < 0.3.0
 lxml >= 4.6.2, < 4.7.0
