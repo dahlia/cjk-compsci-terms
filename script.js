@@ -1,12 +1,12 @@
 function getGroupRows(term) {
-  let rows = [];
+  const rows = [];
   for (let row = term.parentNode.parentNode;
        row != null;
        row = row.previousElementSibling) {
     rows.push(row);
     if (row.classList.contains('group-head')) break;
   }
-  for (let row = term.parentNode.parentNode.nextElementSibling;
+  for (const row = term.parentNode.parentNode.nextElementSibling;
        row != null && !row.classList.contains('group-head');
        row = row.nextElementSibling) {
     rows.push(row);
@@ -21,8 +21,8 @@ function getHoverClasses(term) {
 }
 
 function onCorrespond() {
-  let classes = getHoverClasses(this);
-  for (let row of getGroupRows(this)) {
+  const classes = getHoverClasses(this);
+  for (const row of getGroupRows(this)) {
     row.className = Array.from(row.classList)
       .filter(c => !c.startsWith('hover-correspond-'))
       .concat(classes)
@@ -31,7 +31,7 @@ function onCorrespond() {
 }
 
 function offCorrespond() {
-  for (let row of getGroupRows(this)) {
+  for (const row of getGroupRows(this)) {
     row.className = Array.from(row.classList)
       .filter(c => !c.startsWith('hover-correspond-'))
       .join(' ');
