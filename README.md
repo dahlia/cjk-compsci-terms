@@ -145,4 +145,11 @@ Programming paradigms
 [Show table](tables/paradigms.yaml)
 
 
+F/OSS
+-----
+
+[Show table](tables/foss.yaml)
+
+
 *[CJK]: Chinese, Japanese, and Korean languages
+*[F/OSS]: Free and open-source software

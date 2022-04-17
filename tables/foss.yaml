@@ -1,0 +1,94 @@
+# Free software
+- en:
+    free software:
+    - term:   free
+    - term:   software
+  ja:
+    自由 software:
+    - { term: 自由,         correspond: free,     read: じ ゆう }
+    - { term: ソフトウェア,       loan: software }
+  ko:
+    自由 software:
+    - { term: 自由,         correspond: free,     read: 자 유 }
+    - { term: 소프트웨어,         loan: software }
+  zh-CN:
+    自由軟件:
+    - { term: 自由,         correspond: free,     read: zì yóu }
+    - { term: 软件,         correspond: software, read: ruǎn jiàn }
+  zh-HK:
+    自由軟件:
+    - { term: 自由,         correspond: free,     read: zi6 jau4 }
+    - { term: 軟件,         correspond: software, read: jyun5 gin2 }
+  zh-TW:
+    自由軟體:
+    - { term: 自由,         correspond: free,     read: ㄗˋ ㄧㄡˊ }
+    - { term: 軟體,         correspond: software, read: ㄖㄨㄢˇ ㄊㄧˇ }
+
+# Open source software
+- en:
+    open source software:
+    - term:   open
+    - term:   source
+    - term:   software
+  ja:
+    open source software:
+    - { term: オープン,     loan: open }
+    - { term: ソース,       loan: source }
+    - { term: ソフトウェア, loan: software }
+  ko:
+    open source software:
+    - { term: 오픈,         loan: open }
+    - { term: 소스,         loan: source }
+    - { term: 소프트웨어,   loan: software }
+  zh-CN:
+    開放源代碼軟件:
+    - { term: 开放,   correspond: open,     read: kāi fàng }
+    - { term: 源代码, correspond: source,   read: yuán dài mǎ }
+    - { term: 软件,   correspond: software, read: ruǎn jiàn }
+    開源軟件:
+    - { term: 开,     correspond: open,     read: kāi }
+    - { term: 源,     correspond: source,   read: yuán }
+    - { term: 软件,   correspond: software, read: ruǎn jiàn }
+  zh-HK:
+    開放原始碼軟件:
+    - { term: 開放,   correspond: open,     read: hoi1 fong3 }
+    - { term: 原始碼, correspond: source,   read: jyun4 ci2 maa5 }
+    - { term: 軟件,   correspond: software, read: jyun5 gin2 }
+    開源軟件:
+    - { term: 開,     correspond: open,     read: hoi1 }
+    - { term: 源,     correspond: source,   read: jyun4 }
+    - { term: 軟件,   correspond: software, read: jyun5 gin2 }
+  zh-TW:
+    開放原始碼軟體:
+    - { term: 開放,   correspond: open,     read: ㄎㄞ ㄈㄤˋ }
+    - { term: 原始碼, correspond: source,   read: ㄩㄢˊ ㄕˇ ㄇㄚˇ }
+    - { term: 軟體,   correspond: software, read: ㄖㄨㄢˇ ㄊㄧˇ }
+
+# Software license
+- en:
+    software license:
+    - term: software
+    - term: license
+  ja:
+    software license:
+    - { term: ソフトウェア,   loan: software }
+    - { term: ライセンス,     loan: license }
+  ko:
+    software license:
+    - { term: 소프트웨어,     loan: software }
+    - { term: 라이선스,       loan: license }
+    software 使用權:
+    - { term: 소프트웨어,     loan: software }
+    - { term: 使用權,   correspond: license,  read: 사 용 권 }
+  zh-CN:
+    軟件許可證:
+    - { term: 软件,     correspond: software, read: ruǎn jiàn }
+    - { term: 许可证,   correspond: license,  read: xǔ kě zhèng }
+  zh-HK:
+    軟件特許條款:
+    - { term: 軟件,     correspond: software, read: jyun5 gin2 }
+    - { term: 特許條款, correspond: license,  read: dak6 heoi2 tiu4 fun2 }
+  zh-TW:
+    軟體授權:
+    - { term: 軟體,     correspond: software, read: ㄖㄨㄢˇ ㄊㄧˇ }
+    - { term: 授權,     correspond: license,  read: ㄕㄡˋ ㄑㄩㄢˊ }
