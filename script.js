@@ -45,9 +45,9 @@ Array.from(document.querySelectorAll('*[class*="correspond-"]'))
     e.addEventListener('mouseout', offCorrespond);
   });
 
-const tocTitle = document.querySelector('#toc > h2').innerText.trim();
+const tocTitle = document.querySelector('#toc > div > h2').innerText.trim();
 
-Array.from(document.querySelectorAll(':not(#toc) > h2, h3'))
+Array.from(document.querySelectorAll(':not(#toc > div) > h2, h3'))
   .forEach(h => {
     h.innerHTML +=
       ` <a class="toc" href="${location.pathname}#toc">${tocTitle}</a>`;
