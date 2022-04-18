@@ -120,6 +120,12 @@
 [顯示表](tables/paradigms.yaml)
 
 
+並發計算
+--------
+
+[顯示表](tables/concurrency.yaml)
+
+
 自由及開放原始碼軟體
 --------------------
 

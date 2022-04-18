@@ -1,0 +1,28 @@
+# Concurrency
+- en:
+    concurrency:
+    - { term: concurren, correspond: concurrent }
+    - { term: cy,        correspond: quality,                        space: no }
+  ja:
+    竝行性:
+    - { term: 並行,      correspond: concurrent, read: へい こう }
+    - { term: 性,        correspond: quality,    read: せい,         space: no }
+  ko:
+    同時性:
+    - { term: 同時,      correspond: concurrent, read: 동 시 }
+    - { term: 性,        correspond: quality,    read: 성,           space: no }
+    竝行性:
+    - { term: 竝行,      correspond: concurrent, read: 병 행 }
+    - { term: 性,        correspond: quality,    read: 성,           space: no }
+  zh-CN:
+    倂發性:
+    - { term: 并发,      correspond: concurrent, read: bìng fā }
+    - { term: 性,        correspond: quality,    read: xìng,         space: no }
+  zh-HK:
+    倂發性:
+    - { term: 併發,      correspond: concurrent, read: bing3 faat3 }
+    - { term: 性,        correspond: quality,    read: sing3,        space: no }
+  zh-TW:
+    竝行性:
+    - { term: 並行,      correspond: concurrent, read: ㄅㄧㄥˋ ㄒㄧㄥˊ }
+    - { term: 性,        correspond: quality,    read: ㄒㄧㄥˋ,      space: no }

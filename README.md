@@ -145,6 +145,12 @@ Programming paradigms
 [Show table](tables/paradigms.yaml)
 
 
+Concurrent programming
+----------------------
+
+[Show table](tables/concurrency.yaml)
+
+
 F/OSS
 -----
 
