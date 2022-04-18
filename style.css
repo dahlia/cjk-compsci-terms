@@ -137,7 +137,7 @@ h2 {
   font-weight: normal;
 }
 
-h2 > a.toc {
+h2 > a.toc, h3 > a.toc {
   display: none;
   font-family: sans-serif;
   font-size: small;
@@ -148,12 +148,16 @@ h2 > a.toc {
   color: var(--oc-gray-6);
 }
 
-h2 > a.toc:before {
+h3 > a.toc {
+  font-size: x-small;
+}
+
+h2 > a.toc:before, h3 > a.toc:before {
   content: '\2191';
   padding-right: .2rem;
 }
 
-h2:hover > a.toc {
+h2:hover > a.toc, h3:hover > a.toc {
   display: inline;
 }
 
