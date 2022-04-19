@@ -29,3 +29,32 @@
     竝行性:
     - { term: 並行,      correspond: concurrent, read: ㄅㄧㄥˋ ㄒㄧㄥˊ }
     - { term: 性,        correspond: quality,    read: ㄒㄧㄥˋ,      space: no }
+    倂發性:
+    - { term: 併發,      correspond: concurrent, read: ㄅㄧㄥˋ ㄈㄚ }
+    - { term: 性,        correspond: quality,    read: ㄒㄧㄥˋ,      space: no }
+
+# Concurrent programming
+- en:
+    concurrent programming:
+    - term: concurrent
+    - term: programming
+  ja:
+    竝行計算:
+    - { term: 並行,     correspond: concurrent,  read: へい こう }
+    - { term: プログラミング, loan: programming }
+  ko:
+    同時性 programming:
+    - { term: 同時性,   correspond: concurrent,  read: 동 시 성 }
+    - { term: 프로그래밍,     loan: programming }
+  zh-CN:
+    倂發編程:
+    - { term: 并发,     correspond: concurrent,  read: bìng fā }
+    - { term: 编程,     correspond: programming, read: biān chéng }
+  zh-HK:
+    倂發編程:
+    - { term: 併發,     correspond: concurrent,  read: bing3 faat3 }
+    - { term: 編程,     correspond: programming, read: pin1 cing4 }
+  zh-TW:
+    倂發編程:
+    - { term: 併發,     correspond: concurrent,  read: ㄅㄧㄥˋ ㄈㄚ }
+    - { term: 編程,     correspond: programming, read: ㄅㄧㄢ ㄔㄥˊ }
