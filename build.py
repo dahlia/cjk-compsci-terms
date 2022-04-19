@@ -18,6 +18,7 @@ from typing import (
     Iterator,
     List,
     Mapping,
+    NewType,
     Optional,
     Sequence,
     Set,
@@ -62,6 +63,9 @@ except ImportError:
 pinyin_jyutping_sentence = lazy_module('pinyin_jyutping_sentence')
 
 
+LanguageTag = NewType('LanguageTag', str)
+
+
 class Spacing(enum.Enum):
     space = 'space'
     no_space = 'no_space'
@@ -86,7 +90,7 @@ class Term:
     space: Spacing
     correspond: str
 
-    def romanize(self, locale: Locale) -> Markup:
+    def romanize(self, locale: Locale) -> Tuple[LanguageTag, Markup]:
         return romanize(self.term, locale)
 
     def normalize(self, locale: Locale) -> str:
@@ -100,7 +104,7 @@ kks = kakasi()
 class EasternTerm(Term):
     read: str
 
-    def romanize(self, locale: Locale) -> Markup:
+    def romanize(self, locale: Locale) -> Tuple[LanguageTag, Markup]:
         return romanize(self.read, locale)
 
     normalizers: ClassVar[Mapping[Locale, OpenCC]] = {
@@ -192,21 +196,32 @@ class WesternTerm(Term):
     loan: str
     locale: Locale
 
-    def romanize(self, locale: Locale) -> Markup:
-        r = super().romanize(locale)
-        return Markup(r.capitalize()) if self.loan[0].isupper() else r
+    def romanize(self, locale: Locale) -> Tuple[Locale, Markup]:
+        l, r = super().romanize(locale)
+        return l, Markup(r.capitalize()) if self.loan[0].isupper() else r
 
 
 hangul_romanize_transliter = Transliter(academic)
 
-romanizers: Mapping[Locale, Callable[[str], Markup]] = {
-    Locale.parse('ja'): lambda t: Markup(to_roma(t.replace(' ', ''))),
-    Locale.parse('ko'): lambda t:
-        Markup(hangul_romanize_transliter.translit(t.replace(' ', ''))),
-    Locale.parse('zh_CN'): lambda t:
-        Markup(to_pinyin(t).replace(' ', '')),
-    Locale.parse('zh_HK'): lambda t:
-        Markup(
+Romanizer = Tuple[LanguageTag, Callable[[str], Markup]]
+
+romanizers: Mapping[Locale, Romanizer] = {
+    Locale.parse('ja'): (
+        LanguageTag('ja-Latn-hepburn'),
+        lambda t: Markup(to_roma(t.replace(' ', ''))),
+    ),
+    Locale.parse('ko'): (
+        LanguageTag('ko-Latn-t-m0-mcst'),  # See also: RFC 6497
+        lambda t:
+            Markup(hangul_romanize_transliter.translit(t.replace(' ', ''))),
+    ),
+    Locale.parse('zh_CN'): (
+        LanguageTag('zh-CN-Latn-pny'),
+        lambda t: Markup(to_pinyin(t).replace(' ', '')),
+    ),
+    Locale.parse('zh_HK'): (
+        LanguageTag('yue-HK-Latn-jyutping'),
+        lambda t: Markup(
             re.sub(
                 r'(\d) ?',
                 r'<sup>\1</sup>',
@@ -214,18 +229,22 @@ romanizers: Mapping[Locale, Callable[[str], Markup]] = {
                 else pinyin_jyutping_sentence.jyutping(t, True, True)
             )
         ),
-    Locale.parse('zh_TW'): lambda t:
-        Markup(zhuyin_to_pinyin(to_zhuyin(t)).replace(' ', '')),
+    ),
+    Locale.parse('zh_TW'): (
+        LanguageTag('zh-TW-Latn-pny'),
+        lambda t: Markup(zhuyin_to_pinyin(to_zhuyin(t)).replace(' ', '')),
+    ),
 }
 
 
-def romanize(term: str, locale: Locale) -> Markup:
+def romanize(term: str, locale: Locale) -> Tuple[LanguageTag, Markup]:
     global romanizers
     try:
-        f = romanizers[locale]
+        l, f = romanizers[locale]
     except KeyError:
-        return Markup(term.replace(' ', ''))
-    return f(term)
+        l = LanguageTag(f'{locale.language}-Latn')
+        return l, Markup(term.replace(' ', ''))
+    return l, f(term)
 
 
 class Word(Sequence[Term]):
@@ -240,10 +259,12 @@ class Word(Sequence[Term]):
     def __len__(self) -> int:
         return len(self.terms)
 
-    def romanize(self) -> str:
-        return Markup('').join(
+    def romanize(self) -> Tuple[LanguageTag, str]:
+        global romanizers
+        l, _ = romanizers[self.locale]
+        return l, Markup('').join(
             Markup('' if term.space is Spacing.no_space else ' ') +
-                term.romanize(self.locale)
+                term.romanize(self.locale)[1]
             for term in self
         ).strip()
 

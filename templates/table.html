@@ -121,8 +121,12 @@
                            }) %}
                            {{ word_span(word, locale, translation, table) }}
                            {% if word.locale.language != 'en' %}
-                             <span class="romanization">(
-                               {{- word.romanize() }})</span>
+                             {% with (langtag, rom) = word.romanize() %}
+                               <span
+                                 class="romanization"
+                                 lang="{{ langtag }}"
+                               >({{ rom }})</span>
+                              {% endwith %}
                            {% endif %}
                         {% endcall %}
                       {% endwith %}
