@@ -58,3 +58,40 @@
     倂發編程:
     - { term: 併發,     correspond: concurrent,  read: ㄅㄧㄥˋ ㄈㄚ }
     - { term: 編程,     correspond: programming, read: ㄅㄧㄢ ㄔㄥˊ }
+
+# Lock & mutex
+- en:
+    lock:
+    - term:   lock
+    mutex:
+    - { term: mut, correspond: mutual }
+    - { term: ex,  correspond: exclusion,                            space: no }
+  ja:
+    lock:
+    - { term: ロック,    loan: lock }
+  ko:
+    lock:
+    - { term: 락,        loan: lock }
+    mutex:
+    - { term: 뮤텍스,    loan: mutex }  # FIXME
+  zh-CN:
+    鎖:
+    - { term: 锁,  correspond: lock,      read: suǒ }
+    互斥鎖:
+    - { term: 互,  correspond: mutual,    read: hù }
+    - { term: 斥,  correspond: exclusion, read: chì,                 space: no }
+    - { term: 锁,  correspond: lock,      read: suǒ }
+  zh-HK:
+    鎖:
+    - { term: 鎖,  correspond: lock,      read: so2 }
+    互斥鎖:
+    - { term: 互,  correspond: mutual,    read: wu6 }
+    - { term: 斥,  correspond: exclusion, read: cik1,                space: no }
+    - { term: 鎖,  correspond: lock,      read: so2 }
+  zh-TW:
+    鎖:
+    - { term: 鎖,  correspond: lock,      read: ㄙㄨㄛˇ }
+    互斥鎖:
+    - { term: 互,  correspond: mutual,    read: ㄏㄨˋ }
+    - { term: 斥,  correspond: exclusion, read: ㄔˋ,                 space: no }
+    - { term: 鎖,  correspond: lock,      read: ㄙㄨㄛˇ }
