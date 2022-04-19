@@ -403,6 +403,11 @@ table.terms .romanization {
   white-space: nowrap;
 }
 
+table.terms .romanization:lang(yue-HK-Latn-jyutping) sup {
+  color: var(--oc-gray-6);
+  font-size: x-small;
+}
+
 @media (max-width: 1023px) {
   table.terms .romanization {
     font-size: x-small;
