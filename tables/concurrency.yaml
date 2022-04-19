@@ -19,6 +19,9 @@
     - { term: 并发,      correspond: concurrent, read: bìng fā }
     - { term: 性,        correspond: quality,    read: xìng,         space: no }
   zh-HK:
+    竝行性:
+    - { term: 並行,      correspond: concurrent, read: bing6 hang4 }
+    - { term: 性,        correspond: quality,    read: sing3,        space: no }
     倂發性:
     - { term: 併發,      correspond: concurrent, read: bing3 faat3 }
     - { term: 性,        correspond: quality,    read: sing3,        space: no }
