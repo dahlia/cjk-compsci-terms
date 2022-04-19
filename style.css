@@ -187,32 +187,34 @@ h3:lang(en), h3:lang(fr) {
   font-weight: normal;
 }
 
-h3:lang(en), h3 :lang(en), h3:lang(fr), h3 :lang(fr),
-dt:lang(en), dt :lang(en), dt:lang(fr), dt :lang(fr) {
+h3:lang(en), h3 :lang(en), h3:lang(fr), h3 :lang(fr) {
   font-style: italic;
 }
 
-h3:lang(ja), h3:lang(ko), h3:lang(zh),
-dt:lang(ja), dt:lang(ko), dt:lang(zh) {
+h3:lang(ja), h3:lang(ko), h3:lang(zh) {
   font-weight: bolder;
 }
 
 h3:lang(ja) :not(:lang(ja)),
 h3:lang(ko) :not(:lang(ko)),
-h3:lang(zh) :not(:lang(zh)),
-dt:lang(ja) :not(:lang(ja)),
-dt:lang(ko) :not(:lang(ko)),
-dt:lang(zh) :not(:lang(zh)) {
+h3:lang(zh) :not(:lang(zh)) {
   font-weight: normal;
 }
 
-dd {
-  margin-top: 0;
-  margin-bottom: 1em;
+body > dl > dt {
+  float: left;
+  clear: both;
 }
 
-dd > p {
-  margin-top: 0;
+body > dl > dt:after {
+  content: '\2192';
+  color: var(--oc-gray-6);
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+body > dl > dd, body > dl > dd > p {
+  margin: 0;
 }
 
 h3[id] + p, h3[id] + p + p, h3[id] + p + p + p,
