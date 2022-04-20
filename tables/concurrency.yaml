@@ -59,6 +59,29 @@
     - { term: 併發,     correspond: concurrent,  read: ㄅㄧㄥˋ ㄈㄚ }
     - { term: 編程,     correspond: programming, read: ㄅㄧㄢ ㄔㄥˊ }
 
+# Thread
+- en:
+    thread:
+    - term: thread
+  ja:
+    thread:
+    - { term: スレッド,   loan: thread }
+  ko:
+    thread:
+    - { term: 스레드,     loan: thread }
+  zh-CN:
+    線程:
+    - { term: 线,   correspond: thread,  read: xiàn }
+    - { term: 程,   correspond: process, read: chéng }
+  zh-HK:
+    線程:
+    - { term: 線,   correspond: thread,  read: sin3 }
+    - { term: 程,   correspond: process, read: cing4 }
+  zh-TW:
+    執行緒:
+    - { term: 執行, correspond: process, read: ㄓˊ ㄒㄧㄥˊ }
+    - { term: 緒,   correspond: thread,  read: ㄒㄩˋ }
+
 # Lock & mutex
 - en:
     lock:
