@@ -31,6 +31,11 @@ clean:
 
 lint: yaml-schema mypy yamllint
 
+validate-html5: $(VENV)/ $(OBJ_FILES)
+	$(VENV)/bin/html5validator \
+		--root $(OBJ) \
+		--ignore '"latn" does not match the format for any permissible subtag'
+
 yaml-schema: $(YAJSV) table.schema.yaml $(TABLES)
 	$(YAJSV) -s table.schema.yaml $(TABLES)
 

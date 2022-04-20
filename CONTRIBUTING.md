@@ -17,6 +17,8 @@ Prerequisites are:
  -  GNU Make
  -  GNU Wget or `curl`
 
+Optionally you may need Java Runtime as well if you want to validate HTML files.
+
 The single command to build the whole website is:[^1]
 
     make -j

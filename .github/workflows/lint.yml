@@ -22,7 +22,4 @@ jobs:
     - uses: actions/setup-python@v2
       with:
         python-version: '3.7'
-    - run: make -j
-    - uses: Cyb3r-Jak3/html5validator-action@v0.4.4
-      with:
-        root: public_html/
+    - run: make -j validate-html5
