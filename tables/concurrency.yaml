@@ -59,6 +59,41 @@
     - { term: 併發,     correspond: concurrent,  read: ㄅㄧㄥˋ ㄈㄚ }
     - { term: 編程,     correspond: programming, read: ㄅㄧㄢ ㄔㄥˊ }
 
+# Multiprocessing
+- en:
+    multiprocessing:
+    - {                       term: multi,      correspond: multiple }
+    - {                       term: processing, correspond: process, space: no }
+  ja:
+    multiprocessing:
+    - { term: マルチ,         loan: multi,      correspond: multiple }
+    - { term: プロセッシング, loan: processing, correspond: process, space: no }
+  ko:
+    multiprocessing:
+    - { term: 멀티,           loan: multi,      correspond: multiple }
+    - { term: 프로세싱,       loan: processing, correspond: process, space: no }
+    多重處理:
+    - { term: 多重, read: 다 중,                correspond: multiple }
+    - { term: 處理, read: 처 리,                correspond: process }
+  zh-CN:
+    多進程:
+    - { term: 多,   read: duō,                  correspond: multiple }
+    - { term: 進程, read: jìn chéng,            correspond: process }
+  zh-HK:
+    多元處理:
+    - { term: 多元, read: do1 jyun4,            correspond: multiple }
+    - { term: 處理, read: cyu2 lei5,            correspond: process }
+    多重處理:
+    - { term: 多重, read: do1 cung4,            correspond: multiple }
+    - { term: 處理, read: cyu2 lei5,            correspond: process }
+  zh-TW:
+    多元處理:
+    - { term: 多元, read: ㄉㄨㄛ ㄩㄢˊ,         correspond: multiple }
+    - { term: 處理, read: ㄔㄨˇ ㄌㄧˇ,          correspond: process }
+    多重處理:
+    - { term: 多重, read: ㄉㄨㄛ ㄔㄨㄥˊ,       correspond: multiple }
+    - { term: 處理, read: ㄔㄨˇ ㄌㄧˇ,          correspond: process }
+
 # Thread
 - en:
     thread:
