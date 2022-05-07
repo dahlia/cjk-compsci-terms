@@ -1,6 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100&family=Noto+Sans+JP:wght@100&family=Noto+Sans+KR:wght@100&family=Noto+Sans+SC:wght@100&family=Noto+Sans+TC:wght@100&family=Noto+Serif+JP&family=Noto+Serif+KR&family=Noto+Serif+TC&display=swap');
 @import url(https://cdn.jsdelivr.net/gh/yeun/open-color@v1.7.0/open-color.css);
 
+:root {
+  --c-header: var(--oc-gray-9);
+  --c-header-text: var(--oc-gray-1);
+  --c-header-link: var(--oc-gray-3);
+  --c-header-highlight: var(--oc-gray-0);
+
+  --c-toc: var(--oc-gray-2);
+  --c-toc-border: var(--oc-gray-6);
+  --c-toc-link: var(--oc-gray-6);
+
+  --c-term-arrow: var(--oc-gray-6);
+
+  --c-content-bg: white;
+  --c-content-text: var(--oc-gray-9);
+  --c-content-link: blue;
+  --c-content-link-active: red;
+  --c-content-link-visited: purple;
+
+  --c-table-border: var(--oc-gray-6);
+  --c-table-header: var(--oc-gray-2);
+  --c-table-header-subtext: var(--oc-gray-7);
+
+  --c-romaninization-tone-sup: var(--oc-gray-6);
+
+  --c-cognate-group-1: var(--oc-red-1);
+  --c-cognate-group-2: var(--oc-indigo-1);
+  --c-cognate-group-3: var(--oc-green-1);
+  --c-cognate-group-4: var(--oc-orange-1);
+
+  --c-correspond-1: var(--oc-indigo-4);
+  --c-correspond-1-hover: var(--oc-indigo-9);
+  --c-correspond-2: var(--oc-red-4);
+  --c-correspond-2-hover: var(--oc-red-9);
+  --c-correspond-3: var(--oc-green-3);
+  --c-correspond-3-hover: var(--oc-green-6);
+  --c-correspond-4: var(--oc-orange-5);
+  --c-correspond-4-hover: var(--oc-orange-9);
+  --c-correspond-5: var(--oc-pink-3);
+  --c-correspond-5-hover: var(--oc-pink-8);
+
+  --c-footnote-border: var(--oc-gray-6);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c-header: var(--oc-gray-8);
+    --c-header-text: var(--oc-gray-3);
+    --c-header-link: var(--oc-gray-1);
+    --c-header-highlight: var(--oc-gray-0);
+
+    --c-toc: var(--oc-gray-8);
+    --c-toc-border: var(--oc-gray-7);
+    --c-toc-link: var(--oc-gray-7);
+
+    --c-term-arrow: var(--oc-gray-6);
+
+    --c-content-bg: var(--oc-gray-9);
+    --c-content-text: var(--oc-gray-1);
+    --c-content-link: var(--oc-blue-5);
+    --c-content-link-active: var(--oc-red-6);
+    --c-content-link-visited: var(--oc-grape-4);
+
+    --c-table-border: var(--oc-gray-7);
+    --c-table-header: var(--oc-gray-8);
+    --c-table-header-subtext: var(--oc-gray-4);
+
+    --c-romaninization-tone-sup: var(--oc-gray-5);
+
+    --c-cognate-group-1: hsl(0,      20%, 25%);
+    --c-cognate-group-2: hsl(230deg, 20%, 31%);
+    --c-cognate-group-3: hsl(123deg, 20%, 20%);
+    --c-cognate-group-4: hsl(17deg,  20%, 28%);
+
+    --c-correspond-1: var(--oc-indigo-9);
+    --c-correspond-1-hover: var(--oc-indigo-4);
+    --c-correspond-2: var(--oc-red-9);
+    --c-correspond-2-hover: var(--oc-red-4);
+    --c-correspond-3: var(--oc-green-6);
+    --c-correspond-3-hover: var(--oc-green-3);
+    --c-correspond-4: var(--oc-orange-9);
+    --c-correspond-4-hover: var(--oc-orange-5);
+    --c-correspond-5: var(--oc-pink-8);
+    --c-correspond-5-hover: var(--oc-pink-3);
+
+    --c-footnote-border: var(--oc-gray-6);
+  }
+}
+
 .term {
   font-weight: 100;
   text-decoration-skip-ink: none;
@@ -84,6 +172,7 @@
 body {
   padding: 0;
   margin: 0;
+  background-color: var(--c-content-bg);
 }
 
 body > *:not(div.terms, header) {
@@ -100,20 +189,20 @@ body > *:not(div.terms, header) {
 
 :root {
   font-family: serif;
-  color: var(--oc-gray-9);
+  color: var(--c-content-text);
 }
 
 body > header {
   width: 100%;
   padding: 0.5rem 1rem;
-  background-color: var(--oc-gray-9);
-  color: var(--oc-gray-1);
+  background-color: var(--c-header);
+  color: var(--c-header-text);
   text-align: right;
 }
 
 body > header > nav > a {
   text-decoration: none;
-  color: var(--oc-gray-3);
+  color: var(--c-header-link);
   margin-left: 0.3rem;
 }
 
@@ -124,7 +213,7 @@ body > header > nav > a[rel=alternate]:hover {
 
 body > header > nav > a[rel=canonical] {
   font-weight: bolder;
-  color: var(--oc-gray-0);
+  color: var(--c-header-highlight);
   cursor: default;
 }
 
@@ -145,7 +234,7 @@ h2 > a.toc, h3 > a.toc {
   vertical-align: super;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--oc-gray-6);
+  color: var(--c-toc-link);
 }
 
 h3 > a.toc {
@@ -163,8 +252,8 @@ h2:hover > a.toc, h3:hover > a.toc {
 
 #toc > div {
   display: inline-block;
-  border: 1px solid var(--oc-gray-6);
-  background-color: var(--oc-gray-2);
+  border: 1px solid var(--c-toc-border);
+  background-color: var(--c-toc);
 }
 
 #toc h2 {
@@ -208,7 +297,7 @@ body > dl > dt {
 
 body > dl > dt:after {
   content: '\2192';
-  color: var(--oc-gray-6);
+  color: var(--c-term-arrow);
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
@@ -276,13 +365,29 @@ li:lang(ja), li:lang(ko), li:lang(zh) {
   text-align: justify;
 }
 
+a:link {
+  color: var(--c-content-link);
+}
+
+a:active {
+  color: var(--c-content-link-active);
+}
+
+a:visited {
+  color: var(--c-content-link-visited);
+}
+
+a:visited:active {
+  color: var(--c-content-link-active);
+}
+
 .footnote {
   margin-top: 2rem;
 }
 
 .footnote > hr {
   border: none;
-  border-top: 1px solid var(--oc-gray-6);
+  border-top: 1px solid var(--c-footnote-border);
 }
 
 .footnote > ol {
@@ -299,11 +404,9 @@ div.terms {
 }
 
 table.terms {
-  --border-color: var(--oc-gray-6);
-  --header-color: var(--oc-gray-2);
   width: calc(100% - 2rem);
   margin: 1rem 1rem 3rem 1rem;
-  border: 2px solid var(--border-color);
+  border: 2px solid var(--c-table-border);
   border-top: none;
   border-bottom-width: 1px;
   border-spacing: 0;
@@ -311,7 +414,7 @@ table.terms {
 }
 
 table.terms > thead {
-  background-color: var(--header-color);
+  background-color: var(--c-table-header);
   text-align: center;
 }
 
@@ -326,14 +429,14 @@ table.terms > thead {
 
 table.terms > thead > tr:first-child > td,
 table.terms > thead > tr:first-child > th {
-  border-top: 2px solid var(--border-color);
+  border-top: 2px solid var(--c-table-border);
 }
 
 table.terms > thead td[rowspan],
 table.terms > thead th[rowspan],
 table.terms > thead > tr:last-child > td,
 table.terms > thead > tr:last-child > th {
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--c-table-border);
 }
 
 @-moz-document url-prefix() {
@@ -344,7 +447,7 @@ table.terms > thead > tr:last-child > th {
 }
 
 table.terms > thead .native-name {
-  color: var(--oc-gray-7);
+  color: var(--c-table-header-subtext);
   font-size: smaller;
 }
 
@@ -366,7 +469,7 @@ table.terms > thead td[rowspan],
 table.terms > thead td[colspan],
 table.terms > thead td:first-child,
 table.terms > tbody td {
-  border-left: 1px solid var(--border-color);
+  border-left: 1px solid var(--c-table-border);
 }
 
 table.terms th,
@@ -378,7 +481,7 @@ table.terms > tbody td[rowspan],
 table.terms > tbody th[rowspan],
 table.terms > tbody > tr.group-foot > td,
 table.terms > tbody > tr.group-foot > th {
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--c-table-border);
 }
 
 table.terms .term {
@@ -406,7 +509,7 @@ table.terms .romanization {
 }
 
 table.terms .romanization:lang(yue-HK-Latn-jyutping) sup {
-  color: var(--oc-gray-6);
+  color: var(--c-romaninization-tone-sup);
   font-size: x-small;
 }
 
@@ -465,19 +568,19 @@ table.terms .romanization:lang(yue-HK-Latn-jyutping) sup {
 }
 
 .cognate-group-1 {
-  --color: var(--oc-red-1);
+  --color: var(--c-cognate-group-1);
 }
 
 .cognate-group-2 {
-  --color: var(--oc-indigo-1);
+  --color: var(--c-cognate-group-2);
 }
 
 .cognate-group-3 {
-  --color: var(--oc-green-1);
+  --color: var(--c-cognate-group-3);
 }
 
 .cognate-group-4 {
-  --color: var(--oc-orange-1);
+  --color: var(--c-cognate-group-4);
 }
 
 .hover-correspond-1 .term:not(.correspond-1),
@@ -491,51 +594,52 @@ table.terms .romanization:lang(yue-HK-Latn-jyutping) sup {
 .correspond-1 {
   text-decoration: underline;
   text-decoration-style: wavy;
-  text-decoration-color: var(--oc-indigo-4);
+  text-decoration-color: var(--c-correspond-1);
 }
 
 .hover-correspond-1 .correspond-1 {
-  text-decoration-color: var(--oc-indigo-9);
+  text-decoration-color: var(--c-correspond-1-hover);
 }
 
 .correspond-2 {
   text-decoration: underline;
   text-decoration-style: double;
-  text-decoration-color: var(--oc-red-4);
+  text-decoration-color: var(--c-correspond-2);
 }
 
 .hover-correspond-2 .correspond-2 {
-  text-decoration-color: var(--oc-red-9);
+  text-decoration-color: var(--c-correspond-2-hover);
 }
 
 .correspond-3 {
   text-decoration: underline;
-  text-decoration-color: var(--oc-green-3);
+  text-decoration-color: var(--c-correspond-3);
   text-decoration-thickness: 0.2rem;
 }
 
 .hover-correspond-3 .correspond-3 {
-  text-decoration-color: var(--oc-green-6);
+  text-decoration-color: var(--c-correspond-3-hover);
 }
 
 .correspond-4 {
   text-decoration: underline;
   text-decoration-style: dotted;
-  text-decoration-color: var(--oc-orange-5);
+  text-decoration-color: var(--c-correspond-4);
 }
 
 .hover-correspond-4 .correspond-4 {
   text-decoration-style: solid;
+  text-decoration-color: var(--c-correspond-4-hover);
 }
 
 .correspond-5 {
   text-decoration: underline;
   text-decoration-style: wavy;
-  text-decoration-color: var(--oc-pink-3);
+  text-decoration-color: var(--c-correspond-5);
 }
 
 .hover-correspond-5 .correspond-5 {
-  text-decoration-color: var(--oc-pink-8);
+  text-decoration-color: var(--c-correspond-5-hover);
 }
 
 /* vim: set et sw=2 ts=2 sts=2 ft=css: */
