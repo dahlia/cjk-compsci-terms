@@ -86,7 +86,7 @@ $(YAJSV):
 $(OBJ)/:
 	mkdir -p $(OBJ)
 
-$(OBJ)/.nojekyll:
+$(OBJ)/.nojekyll: $(OBJ)/
 	touch $(OBJ)/.nojekyll
 
 $(OBJ)/%.svg: %.svg | $(OBJ)/
