@@ -197,13 +197,17 @@ body > header {
   padding: 0.5rem 1rem;
   background-color: var(--c-header);
   color: var(--c-header-text);
-  text-align: right;
+  text-align: center;
 }
 
 body > header > nav > a {
   text-decoration: none;
   color: var(--c-header-link);
-  margin-left: 0.3rem;
+  margin-left: 1rem;
+}
+
+body > header > nav > a:first-child {
+  margin-left: 0;
 }
 
 body > header > nav > a[rel=alternate]:hover {
