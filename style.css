@@ -5,6 +5,7 @@
   --c-header: var(--oc-gray-9);
   --c-header-text: var(--oc-gray-1);
   --c-header-link: var(--oc-gray-3);
+  --c-header-link-active: var(--oc-gray-0);
   --c-header-highlight: var(--oc-gray-0);
 
   --c-toc: var(--oc-gray-2);
@@ -49,6 +50,7 @@
     --c-header: var(--oc-gray-8);
     --c-header-text: var(--oc-gray-3);
     --c-header-link: var(--oc-gray-1);
+    --c-header-link-active: var(--oc-gray-0);
     --c-header-highlight: var(--oc-gray-0);
 
     --c-toc: var(--oc-gray-8);
@@ -204,6 +206,18 @@ body > header > nav > a {
   text-decoration: none;
   color: var(--c-header-link);
   margin-left: 1rem;
+}
+
+body > header > nav > a:visited {
+  color: var(--c-header-link);
+}
+
+body > header > nav > a:active {
+  color: var(--c-header-link-active);
+}
+
+body > header > nav > a:visited:active {
+  color: var(--c-header-link-active);
 }
 
 body > header > nav > a:first-child {
