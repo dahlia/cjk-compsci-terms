@@ -208,15 +208,11 @@ body > header > nav > a {
   margin-left: 1rem;
 }
 
-body > header > nav > a:visited {
+body > header > nav > a:link, body > header > nav > a:visited {
   color: var(--c-header-link);
 }
 
-body > header > nav > a:active {
-  color: var(--c-header-link-active);
-}
-
-body > header > nav > a:visited:active {
+body > header > nav > a:active, body > header > nav > a:visited:active {
   color: var(--c-header-link-active);
 }
 
