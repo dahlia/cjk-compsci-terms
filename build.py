@@ -194,9 +194,12 @@ class EasternTerm(Term):
 @dataclasses.dataclass(frozen=True)
 class WesternTerm(Term):
     loan: str
+    read: Optional[str]
     locale: Locale
 
     def romanize(self, locale: Locale) -> Tuple[Locale, Markup]:
+        if self.read is not None:
+            return romanize(self.read, locale)
         l, r = super().romanize(locale)
         return l, Markup(r.capitalize()) if self.loan[0].isupper() else r
 
@@ -417,6 +420,7 @@ def load_table(path: Union[str, os.PathLike]) -> Table:
                             spacing,
                             term_row.get('correspond', term_row['loan']),
                             term_row['loan'],
+                            term_row.get('read', None),
                             term_row.get('language', Locale.parse('en'))
                         )
                     elif 'read' in term_row:

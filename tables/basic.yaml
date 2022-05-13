@@ -212,6 +212,6 @@
   zh-TW:
     應用程式:
     - { term: 應用,             correspond: application, read: ㄧㄥˋ ㄩㄥˋ }
-    - { term: 程式,             correspond: program,     read: ㄔㄥˊ ㄒㄩˋ }
+    - { term: 程式,             correspond: program,     read: ㄔㄥˊ ㄕˋ }
 
 # vim: set et sw=2 ts=2 sts=2 ft=yaml:

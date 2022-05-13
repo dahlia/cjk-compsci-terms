@@ -48,9 +48,5 @@ definitions:
       read:       { type: string }
       loan:       { type: string }
     required: [ term ]
-    allOf:
-    - not:
-        type: object
-        required: [ read, loan ]
 
 # vim: set et sw=2 ts=2 sts=2 ft=yaml:

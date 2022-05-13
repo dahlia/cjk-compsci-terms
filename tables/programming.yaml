@@ -78,7 +78,7 @@
     - { term: 버그,   loan:       bug,                        space: no }
   zh-CN:
     調試:
-    - { term: 调,     correspond: adjust,      read: tiá }
+    - { term: 调,     correspond: adjust,      read: tiáo }
     - { term: 试,     correspond: experiment,  read: shì,     space: no }
   zh-HK:
     除錯:

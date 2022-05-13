@@ -65,7 +65,7 @@
     - { term: 程式設計, read: cing4 sik1 cit3 gai3,  correspond: programming }
   zh-TW:
     程序式程式設計:
-    - { term: 程序,     read: ㄔㄥˊ ㄒㄩˋ ㄕˋ,       correspond: procedural }
+    - { term: 程序,     read: ㄔㄥˊ ㄒㄩˋ,           correspond: procedural }
     - { term: 式,       read: ㄕˋ,                   correspond: style }
     - { term: 程式設計, read: ㄔㄥˊ ㄕˋ ㄕㄜˋ ㄐㄧˋ, correspond: programming }
 
@@ -174,22 +174,22 @@
     - term:   programming
   ja:
     論理 programming:
-    - { term: 論理, read: ろん り,                   correspond: logic }
+    - { term: 論理,     read: ろん り,               correspond: logic }
     - { term: プログラミング,                              loan: programming }
   ko:
     論理型 programming:
-    - { term: 論理, read: 논 리,                     correspond: logic }
-    - { term: 型,   read: 형,    space: no,          correspond: style }
+    - { term: 論理,     read: 논 리,                 correspond: logic }
+    - { term: 型,       read: 형,    space: no,      correspond: style }
     - { term: 프로그래밍,                                  loan: programming }
   zh-CN:
     logic 編程:
-    - { term: 逻辑, loan: logic }
-    - { term: 编程,   read: biān chéng,              correspond: programming }
+    - { term: 逻辑,     read: luó jí,                      loan: logic }
+    - { term: 编程,     read: biān chéng,            correspond: programming }
   zh-HK:
     logic 編程:
-    - { term: 邏輯, loan: logic }
-    - { term: 編程, read: pin1 cing4,                correspond: programming }
+    - { term: 邏輯,     read: lo4 cap1,                    loan: logic }
+    - { term: 編程,     read: pin1 cing4,            correspond: programming }
   zh-TW:
     logic 程式設計:
-    - { term: 邏輯,                                        loan: logic }
+    - { term: 邏輯,     read: ㄌㄨㄛˊ ㄐㄧˊ,               loan: logic }
     - { term: 程式設計, read: ㄔㄥˊ ㄕˋ ㄕㄜˋ ㄐㄧˋ, correspond: programming }
