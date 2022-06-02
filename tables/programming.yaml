@@ -231,9 +231,9 @@
     function:
     - term: function
   ja:
-    關數:
-    - { term: 関, correspond: relative, read: かん }
-    - { term: 数, correspond: number,   read: すう, space: no }
+    函數:
+    - { term: 関, correspond: box,    read: かん }
+    - { term: 数, correspond: number, read: すう, space: no }
   ko:
     函數:
     - { term: 函, correspond: box,    read: 함 }
@@ -252,7 +252,7 @@
     - { term: 數, correspond: number, read: ㄕㄨˋ,  space: no }
     函式:
     - { term: 函, correspond: box,    read: ㄏㄢˊ }
-    - { term: 式, correspond: number, read: ㄕˋ,    space: no }
+    - { term: 式, correspond: style,  read: ㄕˋ,    space: no }
 
 # Return value
 - en:
