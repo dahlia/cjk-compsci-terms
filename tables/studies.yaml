@@ -11,7 +11,7 @@
     - { term: 計算機, read: けい さん き,  correspond: computer }
     - { term: 科学,   read: か がく,       correspond: science }
   ko:
-    "computer 科學":
+    computer 科學:
     - { term: 컴퓨터, loan: computer }
     - { term: 科學,   read: 과 학,         correspond: science }
     電算學:
@@ -48,8 +48,11 @@
     - { term: 计算, read: jì suàn,            correspond: computation }
     - { term: 科学, read: kē xué,             correspond: science }
   zh-HK:
-    運算性科學:
-    - { term: 運算性, read: wan6 syun3 sing3, correspond: computation }
+    計算科學:
+    - { term: 計算, read: gai3 syun3,         correspond: computation }
+    - { term: 科學, read: fo1 hok6,           correspond: science }
+    運算科學:
+    - { term: 運算, read: wan6 syun3,         correspond: computation }
     - { term: 科學, read: fo1 hok6,           correspond: science }
   zh-TW:
     計算科學:
@@ -75,6 +78,9 @@
     - { term: 计算, read: jì suàn,       correspond: computation }
     - { term: 理论, read: lǐ lùn,        correspond: theory }
   zh-HK:
+    計算理論:
+    - { term: 計算, read: gai3 syun3,    correspond: computation }
+    - { term: 理論, read: lei5 leon6,    correspond: theory }
     運算理論:
     - { term: 運算, read: wan6 syun3,    correspond: computation }
     - { term: 理論, read: lei5 leon6,    correspond: theory }
@@ -92,11 +98,11 @@
     計算機工學:
     - { term: 計算機,       read: けい さん き,  correspond: computer }
     - { term: 工学,         read: こう がく,     correspond: engineering }
-    "computer 工學":
+    computer 工學:
     - { term: コンピュータ, loan: computer }
     - { term: 工学,         read: こう がく,     correspond: engineering }
   ko:
-    "computer 工學":
+    computer 工學:
     - { term: 컴퓨터,       loan: computer }
     - { term: 工學,         read: 공 학,         correspond: engineering }
   zh-CN:
