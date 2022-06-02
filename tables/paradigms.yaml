@@ -144,7 +144,7 @@
     - { term: al,                    space: no,      correspond: style }
     - term:   programming
   ja:
-    關數型 programming:
+    函數型 programming:
     - { term: 関数,     read: かん すう,             correspond: function }
     - { term: 型,       read: がた,  space: no,      correspond: style }
     - { term: プログラミング,                              loan: programming }
