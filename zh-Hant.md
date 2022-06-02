@@ -120,7 +120,7 @@
 [顯示表](tables/paradigms.yaml)
 
 
-並發計算
+併發計算
 --------
 
 [顯示表](tables/concurrency.yaml)
