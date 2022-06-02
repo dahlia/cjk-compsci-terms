@@ -284,12 +284,15 @@
     - { term: 返回, correspond: return, read: fǎn huí }
     - { term: 値,   correspond: value,  read: zhí, space: no }
   zh-HK:
-    轉回值:
-    - { term: 轉回, correspond: return, read: zyun2 wui4 }
+    傳回值:
+    - { term: 傳回, correspond: return, read: cyun4 wui4 }
     - { term: 値, correspond: value, read: zik6,   space: no }
   zh-TW:
-    轉回值:
-    - { term: 轉回, correspond: return, read: ㄓㄨㄢˇ ㄏㄨㄟˊ }
+    傳回值:
+    - { term: 傳回, correspond: return, read: ㄔㄨㄢˊ ㄏㄨㄟˊ }
+    - { term: 値,   correspond: value, read: ㄓˊ,    space: no }
+    回傳值:
+    - { term: 回傳, correspond: return, read: ㄏㄨㄟˊ ㄔㄨㄢˊ }
     - { term: 値,   correspond: value, read: ㄓˊ,    space: no }
 
 # Conditional statement
@@ -298,11 +301,14 @@
     - term: conditional
     - term: statement
   ja:
-    if文:
+    if 文:
     - { term: イフ,         loan: if }
     - { term: 文,     correspond: statement, read: ぶん }
+    條件文:
+    - { term: 条件,   correspond: conditional, read: じょう けん }
+    - { term: 文,     correspond: statement,   read: ぶん }
   ko:
-    if文:
+    if 文:
     - { term: 이프,         loan: if }
     - { term: 文,     correspond: statement,   read: 문, space: no }
     條件文:
