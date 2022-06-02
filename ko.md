@@ -79,7 +79,7 @@ lang="ja"><ruby>情<rt lang="ko">정</rt>報<rt lang="ko">보</rt></ruby></q>.
 언어별 전사 방식은 다음과 같습니다.
 
 한국어
-:   [국립국어원 로마자 표기법]
+:   [국립국어원 로마자 표기법] (한글 복원을 전제로 한 학술 표기[^1])
 
 일본어
 :   [헵번식 로마자 표기법]
@@ -92,10 +92,13 @@ lang="ja"><ruby>情<rt lang="ko">정</rt>報<rt lang="ko">보</rt></ruby></q>.
 
 *[월병]: 홍콩 언어학 학회 월어 병음 방안
 
+[^1]: 국립국어원 [〈국어의 로마자 표기법〉 제3장 제8항].
+
 [국립국어원 로마자 표기법]: https://kornorms.korean.go.kr/regltn/regltnView.do?regltn_code=0004
 [헵번식 로마자 표기법]: https://ko.wikipedia.org/wiki/%ED%97%B5%EB%B2%88%EC%8B%9D_%EB%A1%9C%EB%A7%88%EC%9E%90_%ED%91%9C%EA%B8%B0%EB%B2%95
 [한어 병음]: https://ko.wikipedia.org/wiki/%ED%95%9C%EC%96%B4_%EB%B3%91%EC%9D%8C
 [월병]: https://ko.wikipedia.org/wiki/%ED%99%8D%EC%BD%A9_%EC%96%B8%EC%96%B4%ED%95%99_%ED%95%99%ED%9A%8C_%EC%9B%94%EC%96%B4_%EB%B3%91%EC%9D%8C_%EB%B0%A9%EC%95%88
+[〈국어의 로마자 표기법〉 제3장 제8항]: https://kornorms.korean.go.kr/regltn/regltnView.do?regltn_code=0004#a489
 
 
 기본 용어

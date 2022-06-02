@@ -95,12 +95,18 @@ Japanese
 :   [Hepburn romanization]
 
 Korean
-:   [Revised Romanization of Korean][RR]
+:   [Revised Romanization of Korean][RR] (academic transcription for
+    recovering morphophonemic elements[^1])
+
+[^1]: <cite>Romanization of Korean</cite>.
+      National Institute of Korean Language.
+      [§ 3.8][Romanization of Korean § 3.8] (Korean).
 
 [Hanyu Pinyin]: https://en.wikipedia.org/wiki/Pinyin
 [Jyutping]: https://en.wikipedia.org/wiki/Jyutping
 [Hepburn romanization]: https://en.wikipedia.org/wiki/Hepburn_romanization
 [RR]: https://korean.go.kr/front_eng/roman/roman_01.do
+[Romanization of Korean § 3.8]: https://kornorms.korean.go.kr/regltn/regltnView.do?regltn_code=0004
 
 
 Basic terms

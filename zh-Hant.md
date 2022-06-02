@@ -70,12 +70,15 @@
 :   [平文式羅馬字]
 
 韓語
-:   [文化觀光部2000年式]
+:   [文化觀光部2000年式]（用於復形態音素的學術符號[^1]）
+
+[^1]: 國立國語院[「國語羅馬字表記法」第3章第8項]（韓語）
 
 [漢語拼音]: https://zh.wikipedia.org/wiki/%E6%B1%89%E8%AF%AD%E6%8B%BC%E9%9F%B3
 [粵拼]: https://zh.wikipedia.org/wiki/%E9%A6%99%E6%B8%AF%E8%AA%9E%E8%A8%80%E5%AD%B8%E5%AD%B8%E6%9C%83%E7%B2%B5%E8%AA%9E%E6%8B%BC%E9%9F%B3%E6%96%B9%E6%A1%88
 [平文式羅馬字]: https://zh.wikipedia.org/wiki/%E5%B9%B3%E6%96%87%E5%BC%8F%E7%BD%97%E9%A9%AC%E5%AD%97
 [文化觀光部2000年式]: https://zh.wikipedia.org/wiki/%E6%96%87%E5%8C%96%E8%A7%82%E5%85%89%E9%83%A82000%E5%B9%B4%E5%BC%8F
+[「國語羅馬字表記法」第3章第8項]: https://kornorms.korean.go.kr/regltn/regltnView.do?regltn_code=0004#a489
 
 
 基本術語
