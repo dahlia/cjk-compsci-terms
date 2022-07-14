@@ -1,4 +1,5 @@
 .venv/
 _site/
 bin/yajsv
+get-pip.py
 public_html/

@@ -9,7 +9,7 @@ git+https://github.com/BYVoid/OpenCC.git@ver.1.1.1#egg=opencc&subdirectory=pytho
 git+https://github.com/suminb/hanja.git@9fb63ac850bf6ad73f1fef22674104270a8dafeb
 Jinja2 >= 3.0.1, < 3.1.0
 lazy-import >= 0.2.2, < 0.3.0
-lxml >= 4.6.2, < 4.7.0
+lxml >= 4.9.1, < 4.10.0
 lxml-stubs >= 0.1.1, < 0.2.0
 Markdown >= 3.3.3, < 3.4.0
 MarkupSafe >= 2.0.1, < 3.0.0
