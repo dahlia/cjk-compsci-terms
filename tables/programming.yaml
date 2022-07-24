@@ -140,8 +140,14 @@
     - { term: 流れ, read: なが れ,       correspond: flow }
     - { term: 図,   read: ず,            correspond: chart, space: no }
   ko:
+    flowchart:
+    - { term: 플로,                      loan:       flow }
+    - { term: 차트,                      loan:       chart }
     順序圖:
     - { term: 順序, read: 순 서,         correspond: flow }
+    - { term: 圖,   read: 도,            correspond: chart, space: no }
+    흐름圖:
+    - { term: 흐름,                      correspond: flow }
     - { term: 圖,   read: 도,            correspond: chart, space: no }
   zh-CN:
     流程圖:
