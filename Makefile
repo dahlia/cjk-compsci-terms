@@ -10,8 +10,7 @@ PYTHON = $(PYTHON_INTERPRETER)
 else
 PYTHON = $(VENV)/bin/python
 endif
-LANGS = $(patsubst %.md,%,$(patsubst README.md,en.md, \
-	$(filter-out CONTRIBUTING.md,$(wildcard *.md))))
+LANGS = $(patsubst %.md,%,$(wildcard [a-z][a-z].md))
 LANG_HREFS = $(patsubst %:en/,%:./,$(foreach f,$(LANGS),$(f):$(f)/))
 TABLES = $(wildcard tables/*.yaml)
 TEMPLATES = $(wildcard templates/*.html)
@@ -98,7 +97,7 @@ $(OBJ)/%.css: %.css | $(OBJ)/
 $(OBJ)/%.js: %.js | $(OBJ)/
 	cp $< $@
 
-$(OBJ)/index.html: README.md $(VENV)/ build.py $(TABLES) $(TEMPLATES) | $(OBJ)/
+$(OBJ)/index.html: en.md $(VENV)/ build.py $(TABLES) $(TEMPLATES) | $(OBJ)/
 	$(PYTHON) build.py \
 		$(if $(URL_BASE),--base-href=$(URL_BASE),) \
 		$(LANG_HREFS:%=--lang=%$(if $(URL_BASE),,index.html)) en $< > $@
