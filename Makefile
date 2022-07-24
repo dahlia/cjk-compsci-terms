@@ -10,7 +10,9 @@ PYTHON = $(PYTHON_INTERPRETER)
 else
 PYTHON = $(VENV)/bin/python
 endif
-LANGS = $(patsubst %.md,%,$(wildcard [a-z][a-z].md))
+LANGS = \
+	$(patsubst %.md,%,$(wildcard [a-z][a-z].md)) \
+	$(patsubst %.md,%,$(wildcard [a-z][a-z]-[A-Z][a-z][a-z][a-z].md))
 LANG_HREFS = $(patsubst %:en/,%:./,$(foreach f,$(LANGS),$(f):$(f)/))
 TABLES = $(wildcard tables/*.yaml)
 TEMPLATES = $(wildcard templates/*.html)
