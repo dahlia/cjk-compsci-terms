@@ -220,7 +220,7 @@ body > header > nav > a:first-child {
   margin-left: 0;
 }
 
-body > header > nav > a[rel=alternate]:hover {
+body > header > nav > a:not([rel=canonical]):hover {
   text-decoration: underline;
   text-underline-offset: 0.2rem;
 }
@@ -229,6 +229,14 @@ body > header > nav > a[rel=canonical] {
   font-weight: bolder;
   color: var(--c-header-highlight);
   cursor: default;
+}
+
+body > header > nav > a[rel=source-code] {
+  margin-left: 1.5rem;
+}
+
+body > header > nav > a[rel=source-code], body > header > nav > a[rel=license] {
+  font-size: smaller;
 }
 
 h1 {

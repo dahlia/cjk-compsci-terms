@@ -58,6 +58,7 @@ $(VENV)/: requirements.txt
 		fi; \
 		$(VENV)/bin/python -m pip install -U pip setuptools wheel; \
 		$(VENV)/bin/pip install -U -r requirements.txt; \
+		echo "*" > $(VENV)/.gitignore; \
 	fi
 
 $(YAJSV):

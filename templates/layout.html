@@ -6,7 +6,6 @@
   <title>{{ title }}</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" type="text/css" href="{{ rebase_url('style.css') }}">
-  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
   <script src="{{ rebase_url('script.js') }}" defer></script>
 </head>
 <body>
@@ -23,6 +22,10 @@
           </a>
         {% endwith %}
       {% endfor %}
+      <a href="https://github.com/dahlia/cjk-compsci-terms"
+         rel="source-code">GitHub</a>
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/"
+         rel="license">CC BY-SA 4.0</a>
     </nav>
   </header>
   {{- doc -}}
