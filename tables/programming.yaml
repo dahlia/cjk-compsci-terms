@@ -53,7 +53,7 @@
     - { term: 버그, loan: bug }
   zh-CN:
     漏洞:
-    - { term: 漏洞, correspond: hole,    read: lòudòng }
+    - { term: 漏洞, correspond: hole,    read: lòu dòng }
     錯誤:
     - { term: 错误, correspond: mistake, read: cuò wù }
   zh-HK:
