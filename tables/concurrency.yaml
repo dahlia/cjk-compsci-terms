@@ -59,6 +59,37 @@
     - { term: 併發,     correspond: concurrent,  read: ㄅㄧㄥˋ ㄈㄚ }
     - { term: 編程,     correspond: programming, read: ㄅㄧㄢ ㄔㄥˊ }
 
+# Synchronization
+- en:
+    synchronization:
+    - { term: synchron, correspond: synchronous }
+    - { term: ization,  correspond: make,                            space: no }
+  ja:
+    同期:
+    - { term: 同期,     correspond: synchronous, read: どう き }
+  ko:
+    同期化:
+    - { term: 同期,     correspond: synchronous, read: 동 기 }
+    - { term: 化,       correspond: make,        read: 화,           space: no }
+  zh-CN:
+    同步:
+    - { term: 同步,     correspond: synchronous, read: tóng bù }
+    同步化:
+    - { term: 同步,     correspond: synchronous, read: tóng bù }
+    - { term: 化,       correspond: make,        read: huà,          space: no }
+  zh-HK:
+    同步:
+    - { term: 同步,     correspond: synchronous, read: tung4 bou6 }
+    同步化:
+    - { term: 同步,     correspond: synchronous, read: tung4 bou6 }
+    - { term: 化,       correspond: make,        read: faa3,         space: no }
+  zh-TW:
+    同步:
+    - { term: 同步,     correspond: synchronous, read: ㄊㄨㄥˊ ㄅㄨˋ }
+    同步化:
+    - { term: 同步,     correspond: synchronous, read: ㄊㄨㄥˊ ㄅㄨˋ }
+    - { term: 化,       correspond: make,        read: ㄏㄨㄚˋ,      space: no }
+
 # Multiprocessing
 - en:
     multiprocessing:
@@ -153,3 +184,58 @@
     - { term: 互,  correspond: mutual,    read: ㄏㄨˋ }
     - { term: 斥,  correspond: exclusion, read: ㄔˋ,                 space: no }
     - { term: 鎖,  correspond: lock,      read: ㄙㄨㄛˇ }
+
+# Monitor
+- en:
+    monitor:
+    - { term: moni,                    correspond: watch }
+    - { term: tor,                     correspond: agent,            space: no }
+  ja:
+    monitor:
+    - { term: モニ,  loan: moni,       correspond: watch }
+    - { term: タ,    loan: tor,        correspond: agent,            space: no }
+  ko:
+    monitor:
+    - { term: 모니,  loan: moni,       correspond: watch }
+    - { term: 터,    loan: tor,        correspond: agent,           space: no }
+  zh-CN:
+    管程:
+    - { term: 管,    read: guǎn,       correspond: watch }
+    - { term: 程,    read: chéng,      correspond: process,          space: no }
+    監視器:
+    - { term: 监视,  read: jiān shì,   correspond: watch }
+    - { term: 器,    read: qì,         correspond: agent,            space: no }
+  zh-HK:
+    監視器:
+    - { term: 監視,  read: gaam1 si6,  correspond: watch }
+    - { term: 器,    read: hei3,       correspond: agent,            space: no }
+  zh-TW:
+    監視器:
+    - { term: 監視,  read: ㄐㄧㄢ ㄕˋ, correspond: watch }
+    - { term: 器,    read: ㄑㄧˋ,      correspond: agent,            space: no }
+
+# Transactional memory
+- en:
+    transactional memory:
+    - term: transactional
+    - term: memory
+  ja:
+    transactional memory:
+    - { term: トランザクショナル, loan: transactional }
+    - { term: メモリ,             loan: memory }
+  ko:
+    transactional memory:
+    - { term: 트랜잭셔널,         loan: transactional }
+    - { term: 메모리,             loan: memory }
+  zh-CN:
+    事務內存:
+    - { term: 事务,         correspond: transactional, read: shì wù }
+    - { term: 内存,         correspond: memoery,       read: nèi cún }
+  zh-HK:
+    事務記憶體:
+    - { term: 事務,         correspond: transactional, read: si6 mou6 }
+    - { term: 記憶體,       correspond: memory,        read: gei3 jik1 tai2 }
+  zh-TW:
+    事務記憶體:
+    - { term: 事務,         correspond: transactional, read: ㄕˋ ㄨˋ }
+    - { term: 記憶體,       correspond: memory,        read: ㄐㄧˋ ㄧˋ ㄊㄧˇ }
