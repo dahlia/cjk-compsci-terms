@@ -98,3 +98,34 @@
     軟體授權:
     - { term: 軟體,     correspond: software, read: ㄖㄨㄢˇ ㄊㄧˇ }
     - { term: 授權,     correspond: license,  read: ㄕㄡˋ ㄑㄩㄢˊ }
+
+# Copyleft
+- en:
+    copyleft:
+    - term:   copy
+    - { term: left,                                                  space: no }
+  ja:
+    copyleft:
+    - { term: コピー,                     loan: copy }
+    - { term: レフト,                     loan: left,                space: no }
+  ko:
+    copyleft:
+    - { term: 카피,                       loan: copy }
+    - { term: 레프트,                     loan: left,                space: no }
+  zh-CN:
+    反版權:
+    - { term: 反,   read: fǎn,         correspond: anti }
+    - { term: 版权, read: bǎn quán,    correspond: copy,             space: no }
+  zh-HK:
+    著佐權:
+    - { term: 著,   read: zyu3,        correspond: copy }
+    - { term: 佐,   read: zo2,         correspond: left,             space: no }
+    - { term: 權,   read: kyun4,       correspond: copy,             space: no }
+    反版權:
+    - { term: 反,   read: faan2,       correspond: anti }
+    - { term: 版權, read: baan2 kyun4, correspond: copy,             space: no }
+  zh-TW:
+    著佐權:
+    - { term: 著,   read: ㄓㄨˋ,       correspond: copy }
+    - { term: 佐,   read: ㄗㄨㄛˇ,     correspond: left,             space: no }
+    - { term: 權,   read: ㄑㄩㄢˊ,     correspond: copy,             space: no }
