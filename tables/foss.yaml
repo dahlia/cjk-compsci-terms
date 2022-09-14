@@ -3,9 +3,15 @@
     free software:
     - term:   free
     - term:   software
+    libre software:
+    - { term: libre,        correspond: free }
+    - term:   software
   ja:
     自由 software:
     - { term: 自由,         correspond: free,     read: じ ゆう }
+    - { term: ソフトウェア,       loan: software }
+    free software:
+    - { term: フリー,             loan: free }
     - { term: ソフトウェア,       loan: software }
   ko:
     自由 software:
