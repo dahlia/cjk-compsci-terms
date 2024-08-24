@@ -4,6 +4,7 @@
 [![GitHub](https://img.shields.io/github/stars/dahlia/cjk-compsci-terms?style=social)][GitHub]
 [![Netlify](https://api.netlify.com/api/v1/badges/2ae1a16c-e345-4863-90c0-080e520855a5/deploy-status)][Netlify]
 [![크리에이티브 커먼즈 라이선스](cc-by-sa.svg)][CC BY-SA 4.0]
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/dahlia?logo=github)][GitHub Sponsors]
 
 한국·일본·중화권은 이른바 [한자문화권]으로 불리며,
 근대 이후 서양의 여러 개념을 한자의 조어력을 이용해 번역차용했습니다.
@@ -25,6 +26,7 @@
 [GitHub]: https://github.com/dahlia/cjk-compsci-terms
 [Netlify]: https://app.netlify.com/sites/cjk-compsci-terms/deploys
 [CC BY-SA 4.0]: https://creativecommons.org/licenses/by-sa/4.0/
+[GitHub Sponsors]: https://github.com/sponsors/dahlia
 
 
 <!-- TOC: 목차 -->
