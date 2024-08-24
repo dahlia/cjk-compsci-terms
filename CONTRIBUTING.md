@@ -13,7 +13,7 @@ How to build
 Prerequisites are:
 
  -  POSIX-compliant environment (e.g., Linux, macOS)
- -  Python 3.7+
+ -  Python 3.10+
  -  GNU Make
  -  GNU Wget or `curl`
 

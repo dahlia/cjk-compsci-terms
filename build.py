@@ -37,7 +37,7 @@ from hangul_romanize import Transliter  # type: ignore
 from hangul_romanize.rule import academic  # type: ignore
 from hanja import translate  # type: ignore
 from jinja2.environment import Environment
-from jinja2.filters import contextfilter
+from jinja2.filters import pass_context
 from jinja2.loaders import FileSystemLoader
 from jinja2.utils import select_autoescape
 from lazy_import import lazy_module  # type: ignore
@@ -52,7 +52,6 @@ from markdown.inlinepatterns import SimpleTextInlineProcessor  # type: ignore
 from markupsafe import Markup
 from opencc import OpenCC  # type: ignore
 from pykakasi import kakasi
-from romkan import to_roma  # type: ignore
 from yaml import load
 try:
     from yaml import CLoader as Loader
@@ -73,12 +72,12 @@ class Spacing(enum.Enum):
     implicit_space = 'implicit_space'
     implicit_no_space = 'implicit_no_space'
 
-    def __bool__(self):
-        cls: Type[Space] = type(self)
+    def __bool__(self) -> bool:
+        cls: Type[Spacing] = type(self)
         return self is cls.space or self is cls.implicit_space
 
-    def __str__(self):
-        cls: Type[Space] = type(self)
+    def __str__(self) -> str:
+        cls: Type[Spacing] = type(self)
         if self is cls.hyphen:
             return '-'
         return ' ' if self else ''
@@ -197,12 +196,11 @@ class WesternTerm(Term):
     read: Optional[str]
     locale: Locale
 
-    def romanize(self, locale: Locale) -> Tuple[Locale, Markup]:
+    def romanize(self, locale: Locale) -> Tuple[LanguageTag, Markup]:
         if self.read is not None:
             return romanize(self.read, locale)
         l, r = super().romanize(locale)
         return l, Markup(r.capitalize()) if self.loan[0].isupper() else r
-
 
 hangul_romanize_transliter = Transliter(academic)
 
@@ -211,7 +209,7 @@ Romanizer = Tuple[LanguageTag, Callable[[str], Markup]]
 romanizers: Mapping[Locale, Romanizer] = {
     Locale.parse('ja'): (
         LanguageTag('ja-Latn-hepburn'),
-        lambda t: Markup(to_roma(t.replace(' ', ''))),
+        lambda t: Markup(kks.convert(t.replace(' ', ''))[0]['hepburn']),
     ),
     Locale.parse('ko'): (
         LanguageTag('ko-Latn-t-m0-mcst'),  # See also: RFC 6497
@@ -265,7 +263,7 @@ class Word(Sequence[Term]):
     def romanize(self) -> Tuple[LanguageTag, str]:
         global romanizers
         l, _ = romanizers[self.locale]
-        return l, Markup('').join(
+        return l, Markup('').join(  # type: ignore
             Markup('' if term.space is Spacing.no_space else ' ') +
                 term.romanize(self.locale)[1]
             for term in self
@@ -299,7 +297,7 @@ class Translation(Mapping[Locale, Sequence[Word]]):
     def __init__(self, translation: Iterable[Tuple[Locale, Sequence[Word]]]):
         self.translation: Mapping[Locale, Sequence[Word]] = dict(translation)
 
-    def __iter__(self) -> Iterator[Tuple[Locale, Sequence[Word]]]:
+    def __iter__(self) -> Iterator[Locale]:
         return iter(self.translation)
 
     def __len__(self) -> int:
@@ -454,6 +452,8 @@ territory_names: Mapping[Tuple[str, Locale], str] = {
 
 def get_territory_name(territory: Union[Locale, str], language: Locale) -> str:
     if isinstance(territory, Locale):
+        if territory.territory is None:
+            raise ValueError('territory is not specified')
         territory = territory.territory
     return territory_names.get(
         (territory, language),
@@ -470,7 +470,7 @@ template_env = Environment(
     extensions=['jinja2.ext.do'],
 )
 template_env.filters.update(
-    dictselect=contextfilter(
+    dictselect=pass_context(
         lambda ctx, dict, test=None, *args, **kwargs: {
             k: v
             for k, v in dict.items()
@@ -488,6 +488,11 @@ def render_table(
     table: Table,
     source: Optional[str] = None,
 ) -> str:
+    def get_territory(locale: Locale) -> str:
+        if locale.territory is None:
+            raise ValueError('territory is not specified')
+        return locale.territory
+
     supported_locale_map: Mapping[str, AbstractSet[Locale]] = {
         locale.language: {
             l for l in table.supported_locales
@@ -499,13 +504,13 @@ def render_table(
         l: next(iter(ls)) if len(ls) == 1 else {
             '_': Locale(l),
             **{
-                l.territory: l
+                get_territory(l): l
                 for l in sorted(
                     ls,
                     key=lambda l: (
                         l != locale,
                         l.territory != locale.territory,
-                        get_territory_name(l.territory, locale),
+                        get_territory_name(l, locale),
                     )
                 )
             }
@@ -617,7 +622,7 @@ def render_page(
     )
 
 
-def main():
+def main() -> None:
     def parse_locale(locale: str) -> Locale:
         try:
             return Locale.parse(locale.replace('-', '_'))
