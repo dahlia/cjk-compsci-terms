@@ -169,9 +169,9 @@
     - { term: 人工, read: jan4 gung1,   correspond: artificial }
     - { term: 智能, read: zi3 nang4,    correspond: intelligence }
   zh-TW:
-    人工智能:
+    人工智慧:
     - { term: 人工, read: ㄖㄣˊ ㄍㄨㄥ, correspond: artificial }
-    - { term: 智能, read: ㄓˋ ㄋㄥˊ,    correspond: intelligence }
+    - { term: 智慧, read: ㄓˋ ㄏㄨㄟˋ,  correspond: intelligence }
 
 # Computer security
 - en:
