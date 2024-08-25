@@ -171,7 +171,7 @@
   zh-TW:
     人工智慧:
     - { term: 人工, read: ㄖㄣˊ ㄍㄨㄥ, correspond: artificial }
-    - { term: 智慧, read: ㄓˋ ㄏㄨㄟˋ,    correspond: intelligence }
+    - { term: 智慧, read: ㄓˋ ㄏㄨㄟˋ,  correspond: intelligence }
 
 # Computer security
 - en:
