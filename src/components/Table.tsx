@@ -12,12 +12,43 @@ import type { LocaleCode, LocaleInfo } from "../types/locale.ts";
 import {
   getDisplayName,
   getTerritoryName,
-  groupLocalesByLanguage,
   parseLocale,
 } from "../types/locale.ts";
 import { getWords } from "../types/translation.ts";
 import { WordSpan } from "./WordSpan.tsx";
 import type { CharacterReading } from "../lib/romanization/types.ts";
+
+/**
+ * Group locales by language for table headers.
+ * Returns ordered groups where each group contains locales of the same language.
+ */
+function groupLocalesByLanguage(
+  locales: LocaleCode[],
+): Map<string, LocaleCode[]> {
+  const groups = new Map<string, LocaleCode[]>();
+  const order = ["en", "ja", "ko", "zh"];
+
+  for (const locale of locales) {
+    const language = locale.split("-")[0];
+    let group = groups.get(language);
+    if (!group) {
+      group = [];
+      groups.set(language, group);
+    }
+    group.push(locale);
+  }
+
+  // Return in canonical order
+  const orderedGroups = new Map<string, LocaleCode[]>();
+  for (const lang of order) {
+    const group = groups.get(lang);
+    if (group) {
+      orderedGroups.set(lang, group);
+    }
+  }
+
+  return orderedGroups;
+}
 
 export interface TableProps {
   /** The table data */
