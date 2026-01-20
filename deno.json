@@ -1,0 +1,28 @@
+{
+  "tasks": {
+    "build": "deno run --allow-read --allow-write src/build.ts",
+    "dev": "deno run --allow-read --allow-write --watch src/build.ts",
+    "test": "deno test --allow-read",
+    "check": "deno check src/**/*.ts src/**/*.tsx",
+    "lint": "deno lint src/",
+    "fmt": "deno fmt src/"
+  },
+  "imports": {
+    "@std/yaml": "jsr:@std/yaml@^1",
+    "@std/fs": "jsr:@std/fs@^1",
+    "@std/path": "jsr:@std/path@^1",
+    "@std/cli": "jsr:@std/cli@^1",
+    "@std/assert": "jsr:@std/assert@^1"
+  },
+  "compilerOptions": {
+    "strict": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "./src/jsx-runtime"
+  },
+  "exclude": [
+    ".venv/",
+    "public_html/",
+    "bin/",
+    "hooks/"
+  ]
+}
