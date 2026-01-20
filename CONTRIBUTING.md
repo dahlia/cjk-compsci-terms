@@ -12,25 +12,24 @@ How to build
 
 Prerequisites are:
 
- -  POSIX-compliant environment (e.g., Linux, macOS)
- -  Python 3.10+
- -  GNU Make
- -  GNU Wget or `curl`
+ -  Deno 2.6 or later (<https://deno.land/>)
+ -  POSIX-compliant environment (e.g., Linux, macOS, WSL)
 
-Optionally you may need Java Runtime as well if you want to validate HTML files.
+The single command to build the whole website is:
 
-The single command to build the whole website is:[^1]
+    deno task build
 
-    make -j
+This command downloads dependencies on first run. Subsequent builds are faster.
 
-This command takes much longer time at the first run as it installs dependent
-libraries.  As all dependencies are installed at first run, runs from second
-are faster than the first run.
+The built files are placed in the *public_html/* directory.
 
-The built files are placed to the *public_html/* directory.
+### Other useful commands
 
-[^1]: Option `-j`, which can be omitted, lets `make` run independent build jobs
-      in parallel.
+    deno task test     # Run all tests
+    deno task build -l en  # Build only English page
+    deno task check    # Type-check TypeScript files
+    deno task lint     # Run linter
+    deno task fmt      # Format source code
 
 
 How to add words
