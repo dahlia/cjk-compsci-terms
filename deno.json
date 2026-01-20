@@ -12,7 +12,15 @@
     "@std/fs": "jsr:@std/fs@^1",
     "@std/path": "jsr:@std/path@^1",
     "@std/cli": "jsr:@std/cli@^1",
-    "@std/assert": "jsr:@std/assert@^1"
+    "@std/assert": "jsr:@std/assert@^1",
+    "es-hangul": "npm:es-hangul@^2.3.8",
+    "hanja": "npm:hanja@^1.1.5",
+    "kakasi": "npm:kakasi@^1.0.0",
+    "kuroshiro": "npm:kuroshiro@^1.2.0",
+    "kuroshiro-analyzer-kuromoji": "npm:kuroshiro-analyzer-kuromoji@^1.1.0",
+    "opencc-js": "npm:opencc-js@^1.0.5",
+    "pinyin": "npm:pinyin@^4.0.0",
+    "to-jyutping": "npm:to-jyutping@^3.1.1"
   },
   "compilerOptions": {
     "strict": true,

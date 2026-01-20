@@ -2,7 +2,20 @@
   "version": "5",
   "specifiers": {
     "jsr:@std/assert@1": "1.0.16",
-    "jsr:@std/internal@^1.0.12": "1.0.12"
+    "jsr:@std/cli@1": "1.0.26",
+    "jsr:@std/fs@1": "1.0.22",
+    "jsr:@std/internal@^1.0.12": "1.0.12",
+    "jsr:@std/path@1": "1.1.4",
+    "jsr:@std/path@^1.1.4": "1.1.4",
+    "jsr:@std/yaml@1": "1.0.11",
+    "npm:es-hangul@^2.3.8": "2.3.8",
+    "npm:hanja@^1.1.5": "1.1.5",
+    "npm:kakasi@1": "1.0.0",
+    "npm:kuroshiro-analyzer-kuromoji@^1.1.0": "1.1.0",
+    "npm:kuroshiro@^1.2.0": "1.2.0",
+    "npm:opencc-js@^1.0.5": "1.0.5",
+    "npm:pinyin@4": "4.0.0",
+    "npm:to-jyutping@^3.1.1": "3.1.1"
   },
   "jsr": {
     "@std/assert@1.0.16": {
@@ -11,8 +24,101 @@
         "jsr:@std/internal"
       ]
     },
+    "@std/cli@1.0.26": {
+      "integrity": "53679a2b041406f15c3ff193986852595f3d11ba7b9d4b0c71a42589662e8fb5",
+      "dependencies": [
+        "jsr:@std/internal"
+      ]
+    },
+    "@std/fs@1.0.22": {
+      "integrity": "de0f277a58a867147a8a01bc1b181d0dfa80bfddba8c9cf2bacd6747bcec9308",
+      "dependencies": [
+        "jsr:@std/internal",
+        "jsr:@std/path@^1.1.4"
+      ]
+    },
     "@std/internal@1.0.12": {
       "integrity": "972a634fd5bc34b242024402972cd5143eac68d8dffaca5eaa4dba30ce17b027"
+    },
+    "@std/path@1.1.4": {
+      "integrity": "1d2d43f39efb1b42f0b1882a25486647cb851481862dc7313390b2bb044314b5",
+      "dependencies": [
+        "jsr:@std/internal"
+      ]
+    },
+    "@std/yaml@1.0.11": {
+      "integrity": "bd139ce77f2d06cbed3713c8b26d301d2a2e12ecc7986130a268107e212143ee"
+    }
+  },
+  "npm": {
+    "@babel/runtime@7.28.4": {
+      "integrity": "sha512-Q/N6JNWvIvPnLDvjlE1OUBLPQHH6l3CltCEsHIujp45zQUSSh8K+gHnaEX45yAT1nyngnINhvWtzN+Nb9D8RAQ=="
+    },
+    "async@2.6.4": {
+      "integrity": "sha512-mzo5dfJYwAn29PeiJ0zvwTo04zj8HDJj0Mn8TD7sno7q12prdbnasKJHhkm2c1LgrhlJ0teaea8860oxi51mGA==",
+      "dependencies": [
+        "lodash"
+      ]
+    },
+    "commander@1.1.1": {
+      "integrity": "sha512-71Rod2AhcH3JhkBikVpNd0pA+fWsmAaVoti6OR38T76chA7vE3pSerS0Jor4wDw+tOueD2zLVvFOw5H0Rcj7rA==",
+      "dependencies": [
+        "keypress"
+      ]
+    },
+    "doublearray@0.0.2": {
+      "integrity": "sha512-aw55FtZzT6AmiamEj2kvmR6BuFqvYgKZUkfQ7teqVRNqD5UE0rw8IeW/3gieHNKQ5sPuDKlljWEn4bzv5+1bHw=="
+    },
+    "es-hangul@2.3.8": {
+      "integrity": "sha512-VrJuqYBC7W04aKYjCnswomuJNXQRc0q33SG1IltVrRofi2YEE6FwVDPlsEJIdKbHwsOpbBL/mk9sUaBxVpbd+w=="
+    },
+    "hanja@1.1.5": {
+      "integrity": "sha512-gKNEkX+IIBmxXUIm5Lf859YlvHnGD01kbiHL+7CoV1ZxGI+EttflD1k/Ntz8zbymMVIlVELunTk8pK5SNYOVlg=="
+    },
+    "kakasi@1.0.0": {
+      "integrity": "sha512-i9T9X0bLS0WtPko59TxOaiwBVjyC4L2dX1biUG3ChtrVnqjVvk2Kw3HKFd1NV1i9Ad+nxy//kALrOcPKZeLtXA=="
+    },
+    "keypress@0.1.0": {
+      "integrity": "sha512-x0yf9PL/nx9Nw9oLL8ZVErFAk85/lslwEP7Vz7s5SI1ODXZIgit3C5qyWjw4DxOuO/3Hb4866SQh28a1V1d+WA=="
+    },
+    "kuromoji@0.1.2": {
+      "integrity": "sha512-V0dUf+C2LpcPEXhoHLMAop/bOht16Dyr+mDiIE39yX3vqau7p80De/koFqpiTcL1zzdZlc3xuHZ8u5gjYRfFaQ==",
+      "dependencies": [
+        "async",
+        "doublearray",
+        "zlibjs"
+      ]
+    },
+    "kuroshiro-analyzer-kuromoji@1.1.0": {
+      "integrity": "sha512-BSJFhpsQdPwfFLfjKxfLA9iL+/PC6LCR9vgwgb5Jc7jZwk9ilX8SAV6CwhAQZY611tiuhbB52ONYKDO8hgY1bA==",
+      "dependencies": [
+        "kuromoji"
+      ]
+    },
+    "kuroshiro@1.2.0": {
+      "integrity": "sha512-yBGCK9oDOY3LGZ/KXaN9m7ADcAuSczOR2FoMRYwHLUlis3/o/uxdMVROAjENFO0NQJgALhIdWxI/vIBVrMCk9w==",
+      "dependencies": [
+        "@babel/runtime"
+      ]
+    },
+    "lodash@4.17.21": {
+      "integrity": "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="
+    },
+    "opencc-js@1.0.5": {
+      "integrity": "sha512-LD+1SoNnZdlRwtYTjnQdFrSVCAaYpuDqL5CkmOaHOkKoKh7mFxUicLTRVNLU5C+Jmi1vXQ3QL4jWdgSaa4sKjg=="
+    },
+    "pinyin@4.0.0": {
+      "integrity": "sha512-vHpV5K+vpp6XUUpZNGRDuHoN+1xcmieM3EWlH4QjSX2kkpG/gVOwpqwV9EOJ9x9c9UERFKeLml5XVSukE/PLgQ==",
+      "dependencies": [
+        "commander"
+      ],
+      "bin": true
+    },
+    "to-jyutping@3.1.1": {
+      "integrity": "sha512-8dqSOTbYC5pBs1DQtC9olmFLhf/pzKqxMfQLRUYu1BXXtWgqyS8dSFy9mHuF0cHjgjtX86pCBvGIvKzzlVM6lw=="
+    },
+    "zlibjs@0.3.1": {
+      "integrity": "sha512-+J9RrgTKOmlxFSDHo0pI1xM6BLVUv+o0ZT9ANtCxGkjIVCCUdx9alUF8Gm+dGLKbkkkidWIHFDZHDMpfITt4+w=="
     }
   },
   "workspace": {
@@ -21,7 +127,15 @@
       "jsr:@std/cli@1",
       "jsr:@std/fs@1",
       "jsr:@std/path@1",
-      "jsr:@std/yaml@1"
+      "jsr:@std/yaml@1",
+      "npm:es-hangul@^2.3.8",
+      "npm:hanja@^1.1.5",
+      "npm:kakasi@1",
+      "npm:kuroshiro-analyzer-kuromoji@^1.1.0",
+      "npm:kuroshiro@^1.2.0",
+      "npm:opencc-js@^1.0.5",
+      "npm:pinyin@4",
+      "npm:to-jyutping@^3.1.1"
     ]
   }
 }
