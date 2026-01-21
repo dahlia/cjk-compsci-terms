@@ -53,7 +53,10 @@
     過程式程序設計:
     - { term: 过程,     read: guò chéng,             correspond: procedure }
     - { term: 式,       read: shì,                   correspond: style }
-    - { term: 程序设计, read: chéng xù shè jì,       correspond: programming }
+    - { term: 程, read: chéng, correspond: procedure, space: no }
+    - { term: 序, read: xù, correspond: order, space: no }
+    - { term: 设, read: shè, norm: 設, correspond: design, space: no }
+    - { term: 计, read: jì, norm: 計, correspond: plan, space: no }
     過程式編程:
     - { term: 过程,     read: guò chéng,             correspond: procedure }
     - { term: 式,       read: shì,                   correspond: style }
@@ -62,12 +65,18 @@
     程序式程式設計:
     - { term: 程序,     read: cing4 zeoi6,           correspond: procedure }
     - { term: 式,       read: sik1,                  correspond: style }
-    - { term: 程式設計, read: cing4 sik1 cit3 gai3,  correspond: programming }
+    - { term: 程, read: cing4, correspond: procedure, space: no }
+    - { term: 式, read: sik1, correspond: style, space: no }
+    - { term: 設, read: cit3, correspond: design, space: no }
+    - { term: 計, read: gai3, correspond: plan, space: no }
   zh-TW:
     程序式程式設計:
     - { term: 程序,     read: ㄔㄥˊ ㄒㄩˋ,           correspond: procedural }
     - { term: 式,       read: ㄕˋ,                   correspond: style }
-    - { term: 程式設計, read: ㄔㄥˊ ㄕˋ ㄕㄜˋ ㄐㄧˋ, correspond: programming }
+    - { term: 程, read: ㄔㄥˊ, correspond: procedure, space: no }
+    - { term: 式, read: ㄕˋ, correspond: style, space: no }
+    - { term: 設, read: ㄕㄜˋ, correspond: design, space: no }
+    - { term: 計, read: ㄐㄧˋ, correspond: plan, space: no }
 
 # Object-oriented programming
 - en:
@@ -89,17 +98,26 @@
     面向對象程序設計:
     - { term: 面向,     read: miàn xiàng,            correspond: oriented }
     - { term: 对象,     read: duì xiàng,             correspond: object }
-    - { term: 程序设计, read: chéng xù shè jì,       correspond: programming }
+    - { term: 程, read: chéng, correspond: procedure, space: no }
+    - { term: 序, read: xù, correspond: order, space: no }
+    - { term: 设, read: shè, norm: 設, correspond: design, space: no }
+    - { term: 计, read: jì, norm: 計, correspond: plan, space: no }
   zh-HK:
     物件導向程式設計:
     - { term: 物件,     read: mat6 gin2,             correspond: object }
     - { term: 導向,     read: dou6 hoeng3,           correspond: oriented }
-    - { term: 程式設計, read: cing4 sik1 cit3 gai3,  correspond: programming }
+    - { term: 程, read: cing4, correspond: procedure, space: no }
+    - { term: 式, read: sik1, correspond: style, space: no }
+    - { term: 設, read: cit3, correspond: design, space: no }
+    - { term: 計, read: gai3, correspond: plan, space: no }
   zh-TW:
     物件導向程式設計:
     - { term: 物件,     read: ㄨˋ ㄐㄧㄢˋ,           correspond: object }
     - { term: 導向,     read: ㄉㄠˇ ㄒㄧㄤˋ,         correspond: oriented }
-    - { term: 程式設計, read: ㄔㄥˊ ㄕˋ ㄕㄜˋ ㄐㄧˋ, correspond: programming }
+    - { term: 程, read: ㄔㄥˊ, correspond: procedure, space: no }
+    - { term: 式, read: ㄕˋ, correspond: style, space: no }
+    - { term: 設, read: ㄕㄜˋ, correspond: design, space: no }
+    - { term: 計, read: ㄐㄧˋ, correspond: plan, space: no }
 
 # Declarative programming
 - en:
@@ -135,7 +153,10 @@
     宣告式程式設計:
     - { term: 宣告,     read: ㄒㄩㄢ ㄍㄠˋ,          correspond: declare }
     - { term: 式,       read: ㄕˋ,                   correspond: style }
-    - { term: 程式設計, read: ㄔㄥˊ ㄕˋ ㄕㄜˋ ㄐㄧˋ, correspond: programming }
+    - { term: 程, read: ㄔㄥˊ, correspond: procedure, space: no }
+    - { term: 式, read: ㄕˋ, correspond: style, space: no }
+    - { term: 設, read: ㄕㄜˋ, correspond: design, space: no }
+    - { term: 計, read: ㄐㄧˋ, correspond: plan, space: no }
 
 # Functional programming
 - en:
@@ -161,11 +182,17 @@
   zh-HK:
     函數程式設計:
     - { term: 函數,     read: haam4 sou3,            correspond: function }
-    - { term: 程式設計, read: cing4 sik1 cit3 gai3,  correspond: programming }
+    - { term: 程, read: cing4, correspond: procedure, space: no }
+    - { term: 式, read: sik1, correspond: style, space: no }
+    - { term: 設, read: cit3, correspond: design, space: no }
+    - { term: 計, read: gai3, correspond: plan, space: no }
   zh-TW:
     函式程式設計:
     - { term: 函式,     read: ㄏㄢˊ ㄕˋ,             correspond: function }
-    - { term: 程式設計, read: ㄔㄥˊ ㄕˋ ㄕㄜˋ ㄐㄧˋ, correspond: programming }
+    - { term: 程, read: ㄔㄥˊ, correspond: procedure, space: no }
+    - { term: 式, read: ㄕˋ, correspond: style, space: no }
+    - { term: 設, read: ㄕㄜˋ, correspond: design, space: no }
+    - { term: 計, read: ㄐㄧˋ, correspond: plan, space: no }
 
 # Logic programming
 - en:
@@ -192,4 +219,7 @@
   zh-TW:
     logic 程式設計:
     - { term: 邏輯,     read: ㄌㄨㄛˊ ㄐㄧˊ,               loan: logic }
-    - { term: 程式設計, read: ㄔㄥˊ ㄕˋ ㄕㄜˋ ㄐㄧˋ, correspond: programming }
+    - { term: 程, read: ㄔㄥˊ, correspond: procedure, space: no }
+    - { term: 式, read: ㄕˋ, correspond: style, space: no }
+    - { term: 設, read: ㄕㄜˋ, correspond: design, space: no }
+    - { term: 計, read: ㄐㄧˋ, correspond: plan, space: no }

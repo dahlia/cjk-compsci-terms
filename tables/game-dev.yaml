@@ -59,15 +59,20 @@
     - term: detection
   ja:
     衝突判定:
-    - { term: 衝突, read: しょう とつ, correspond: collision }
-    - { term: 判定, read: はん てい, correspond: detection, space: no }
+    - { term: 衝, read: しょう, correspond: clash }
+    - { term: 突, read: とつ, correspond: strike, space: no }
+    - { term: 判, read: はん, correspond: judge, space: no }
+    - { term: 定, read: てい, correspond: determine, space: no }
     當たり判定:
     - { term: 当たり, read: あたり, norm: 當たり, correspond: collision }
-    - { term: 判定, read: はん てい, correspond: detection, space: no }
+    - { term: 判, read: はん, correspond: judge, space: no }
+    - { term: 定, read: てい, correspond: determine, space: no }
   ko:
     衝突感知:
-    - { term: 衝突, read: 충 돌, correspond: collision }
-    - { term: 感知, read: 감 지, correspond: detection }
+    - { term: 衝, read: 충, correspond: clash }
+    - { term: 突, read: 돌, correspond: strike, space: no }
+    - { term: 感, read: 감, correspond: sense, space: no }
+    - { term: 知, read: 지, correspond: know, space: no }
   zh-CN:
     碰撞檢測:
     - { term: 碰撞, read: pèng zhuàng, correspond: collision }
@@ -93,13 +98,16 @@
     - { term: 스프라이트, loan: sprite }
   zh-CN:
     精靈:
-    - { term: 精灵, read: jīng líng, norm: 精靈 }
+    - { term: 精, read: jīng, norm: 精, correspond: spirit }
+    - { term: 灵, read: líng, norm: 靈, correspond: soul, space: no }
   zh-HK:
     精靈:
-    - { term: 精靈, read: zing1 ling4 }
+    - { term: 精, read: zing1, correspond: spirit }
+    - { term: 靈, read: ling4, correspond: soul, space: no }
   zh-TW:
     精靈:
-    - { term: 精靈, read: ㄐㄧㄥ ㄌㄧㄥˊ }
+    - { term: 精, read: ㄐㄧㄥ, correspond: spirit }
+    - { term: 靈, read: ㄌㄧㄥˊ, correspond: soul, space: no }
 
 # frame rate
 - en:
@@ -172,12 +180,14 @@
     - { term: ヒットボックス, loan: hitbox }
     當たり判定:
     - { term: 当たり, read: あたり, norm: 當たり, correspond: hit }
-    - { term: 判定, read: はん てい, correspond: box, space: no }
+    - { term: 判, read: はん, correspond: judge, space: no }
+    - { term: 定, read: てい, correspond: determine, space: no }
   ko:
     hitbox:
     - { term: 히트박스, loan: hitbox }
     判定:
-    - { term: 判定, read: 판 정, correspond: hitbox }
+    - { term: 判, read: 판, correspond: judge }
+    - { term: 定, read: 정, correspond: determine, space: no }
   zh-CN:
     判定框:
     - { term: 判定, read: pàn dìng, correspond: hit }
@@ -203,13 +213,16 @@
     - { term: 애니메이션, loan: animation }
   zh-CN:
     動畫:
-    - { term: 动画, read: dòng huà, norm: 動畫 }
+    - { term: 动, read: dòng, norm: 動, correspond: move }
+    - { term: 画, read: huà, norm: 畫, correspond: picture, space: no }
   zh-HK:
     動畫:
-    - { term: 動畫, read: dung6 waa2 }
+    - { term: 動, read: dung6, correspond: move }
+    - { term: 畫, read: waa2, correspond: picture, space: no }
   zh-TW:
     動畫:
-    - { term: 動畫, read: ㄉㄨㄥˋ ㄏㄨㄚˋ }
+    - { term: 動, read: ㄉㄨㄥˋ, correspond: move }
+    - { term: 畫, read: ㄏㄨㄚˋ, correspond: picture, space: no }
 
 # level
 - en:
@@ -225,13 +238,16 @@
     - { term: 레벨, loan: level }
   zh-CN:
     關卡:
-    - { term: 关卡, read: guān qiǎ, norm: 關卡 }
+    - { term: 关, read: guān, norm: 關, correspond: gate }
+    - { term: 卡, read: qiǎ, correspond: checkpoint, space: no }
   zh-HK:
     關卡:
-    - { term: 關卡, read: gwaan1 kaa1 }
+    - { term: 關, read: gwaan1, correspond: gate }
+    - { term: 卡, read: kaa1, correspond: checkpoint, space: no }
   zh-TW:
     關卡:
-    - { term: 關卡, read: ㄍㄨㄢ ㄑㄧㄚˇ }
+    - { term: 關, read: ㄍㄨㄢ, correspond: gate }
+    - { term: 卡, read: ㄑㄧㄚˇ, correspond: checkpoint, space: no }
 
 # boss
 - en:
@@ -247,16 +263,19 @@
     boss:
     - { term: boss, loan: boss }
     頭目:
-    - { term: 头目, read: tóu mù, norm: 頭目 }
+    - { term: 头, read: tóu, norm: 頭, correspond: head }
+    - { term: 目, read: mù, correspond: eye, space: no }
   zh-HK:
     boss:
     - { term: boss, loan: boss }
     頭目:
-    - { term: 頭目, read: tau4 muk6 }
+    - { term: 頭, read: tau4, correspond: head }
+    - { term: 目, read: muk6, correspond: eye, space: no }
   zh-TW:
     boss:
     - { term: boss, loan: boss }
     頭目:
-    - { term: 頭目, read: ㄊㄡˊ ㄇㄨˋ }
+    - { term: 頭, read: ㄊㄡˊ, correspond: head }
+    - { term: 目, read: ㄇㄨˋ, correspond: eye, space: no }
 
 # vim: set et sw=2 ts=2 sts=2 ft=yaml:

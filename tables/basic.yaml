@@ -110,21 +110,27 @@
     - term: information
   ja:
     情報:
-    - { term: 情報, correspond: information, read: じょう ほう }
+    - { term: 情, read: じょう, correspond: feeling }
+    - { term: 報, read: ほう, correspond: report, space: no }
   ko:
     情報:
-    - { term: 情報, correspond: information, read: 정 보 }
+    - { term: 情, read: 정, correspond: feeling }
+    - { term: 報, read: 보, correspond: report, space: no }
   zh-CN:
     信息:
-    - { term: 信息, correspond: information, read: xìn xī }
+    - { term: 信, read: xìn, correspond: message }
+    - { term: 息, read: xī, correspond: breath, space: no }
   zh-HK:
     資訊:
-    - { term: 資訊, correspond: information, read: zi1 seon3 }
+    - { term: 資, read: zi1, correspond: resource }
+    - { term: 訊, read: seon3, correspond: message, space: no }
     信息:
-    - { term: 信息, correspond: information, read: seon3 sik1 }
+    - { term: 信, read: seon3, correspond: message }
+    - { term: 息, read: sik1, correspond: breath, space: no }
   zh-TW:
     資訊:
-    - { term: 資訊, correspond: information, read: ㄗ ㄒㄩㄣˋ }
+    - { term: 資, read: ㄗ, correspond: resource }
+    - { term: 訊, read: ㄒㄩㄣˋ, correspond: message, space: no }
 
 # Data
 - en:
@@ -137,20 +143,23 @@
     data:
     - { term: 데이터, loan:       data }
     資料:
-    - { term: 資料,   correspond: data,     read: 자 료 }
+    - { term: 資,     read: 자, correspond: resource }
+    - { term: 料,     read: 료, correspond: material, space: no }
   zh-CN:
     數據:
     - { term: 数,     correspond: number,   read: shù }
     - { term: 据,     correspond: evidence, read: jù,    space: no }
   zh-HK:
     資料:
-    - { term: 資料,   correspond: data,     read: zi1 liu2 }
+    - { term: 資,     read: zi1, correspond: resource }
+    - { term: 料,     read: liu2, correspond: material, space: no }
     數據:
     - { term: 數,     correspond: number,   read: sou3 }
     - { term: 據,     correspond: evidence, read: geoi3, space: no }
   zh-TW:
     資料:
-    - { term: 資料,   correspond: data,     read: ㄗ ㄌㄧㄠˋ }
+    - { term: 資,     read: ㄗ, correspond: resource }
+    - { term: 料,     read: ㄌㄧㄠˋ, correspond: material, space: no }
 
 # Network
 - en:
@@ -192,26 +201,34 @@
     app:
     - { term: アプリ,           correspond: app }
     應用:
-    - { term: 応用,             correspond: application, read: おう よう }
+    - { term: 応, norm: 應,     read: おう, correspond: respond }
+    - { term: 用,               read: よう, correspond: use, space: no }
   ko:
     application:
     - { term: 애플리케이션,     loan:       application }
     app:
     - { term: 앱,               loan:       app }
     應用 program:
-    - { term: 應用,             correspond: application, read: 응 용 }
+    - { term: 應,               read: 응, correspond: respond }
+    - { term: 用,               read: 용, correspond: use, space: no }
     - { term: 프로그램,         loan:       program }
   zh-CN:
     應用程序:
-    - { term: 应用,             correspond: application, read: yìng yòng }
-    - { term: 程序,             correspond: program,     read: chéng xù }
+    - { term: 应, norm: 應,     read: yìng, correspond: respond }
+    - { term: 用,               read: yòng, correspond: use, space: no }
+    - { term: 程,               read: chéng, correspond: procedure, space: no }
+    - { term: 序,               read: xù, correspond: order, space: no }
   zh-HK:
     應用程式:
-    - { term: 應用,             correspond: application, read: jing3 jung6 }
-    - { term: 程式,             correspond: program,     read: cing4 sik1 }
+    - { term: 應,               read: jing3, correspond: respond }
+    - { term: 用,               read: jung6, correspond: use, space: no }
+    - { term: 程,               read: cing4, correspond: procedure, space: no }
+    - { term: 式,               read: sik1, correspond: style, space: no }
   zh-TW:
     應用程式:
-    - { term: 應用,             correspond: application, read: ㄧㄥˋ ㄩㄥˋ }
-    - { term: 程式,             correspond: program,     read: ㄔㄥˊ ㄕˋ }
+    - { term: 應,               read: ㄧㄥˋ, correspond: respond }
+    - { term: 用,               read: ㄩㄥˋ, correspond: use, space: no }
+    - { term: 程,               read: ㄔㄥˊ, correspond: procedure, space: no }
+    - { term: 式,               read: ㄕˋ, correspond: style, space: no }
 
 # vim: set et sw=2 ts=2 sts=2 ft=yaml:

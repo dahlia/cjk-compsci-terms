@@ -163,7 +163,8 @@
     latency:
     - { term: 레이턴시, loan: latency }
     遲延:
-    - { term: 遲延, read: 지 연, correspond: delay }
+    - { term: 遲, read: 지, correspond: delay }
+    - { term: 延, read: 연, correspond: extend, space: no }
   zh-CN:
     延遲:
     - { term: 延, read: yán, correspond: extend }

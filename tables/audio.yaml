@@ -6,21 +6,26 @@
     audio:
     - { term: オーディオ, loan: audio }
     音聲:
-    - { term: 音声, read: おん せい }
+    - { term: 音, read: おん, correspond: sound }
+    - { term: 声, norm: 聲, read: せい, correspond: voice, space: no }
   ko:
     audio:
     - { term: 오디오, loan: audio }
     音聲:
-    - { term: 音聲, read: 음 성 }
+    - { term: 音, read: 음, correspond: sound }
+    - { term: 聲, read: 성, correspond: voice, space: no }
   zh-CN:
     音頻:
-    - { term: 音频, read: yīn pín, norm: 音頻 }
+    - { term: 音, read: yīn, correspond: sound }
+    - { term: 频, read: pín, norm: 頻, correspond: frequency, space: no }
   zh-HK:
     音頻:
-    - { term: 音頻, read: jam1 pan4 }
+    - { term: 音, read: jam1, correspond: sound }
+    - { term: 頻, read: pan4, correspond: frequency, space: no }
   zh-TW:
     音訊:
-    - { term: 音訊, read: ㄧㄣ ㄒㄩㄣˋ }
+    - { term: 音, read: ㄧㄣ, correspond: sound }
+    - { term: 訊, read: ㄒㄩㄣˋ, correspond: signal, space: no }
 
 # sampling
 - en:
@@ -30,22 +35,26 @@
     sampling:
     - { term: サンプリング, loan: sampling }
     標本化:
-    - { term: 標本化, read: ひょう ほん か }
+    - { term: 標本, read: ひょう ほん, correspond: sample }
+    - { term: 化, read: か, correspond: "-ization", space: no }
   ko:
     sampling:
     - { term: 샘플링, loan: sampling }
     標本化:
-    - { term: 標本, read: 표 본 }
-    - { term: 化, read: 화, space: no }
+    - { term: 標本, read: 표 본, correspond: sample }
+    - { term: 化, read: 화, correspond: "-ization", space: no }
   zh-CN:
     採樣:
-    - { term: 采样, read: cǎi yàng, norm: 採樣 }
+    - { term: 采, read: cǎi, norm: 採, correspond: collect }
+    - { term: 样, read: yàng, norm: 樣, correspond: sample, space: no }
   zh-HK:
     採樣:
-    - { term: 採樣, read: coi2 joeng6 }
+    - { term: 採, read: coi2, correspond: collect }
+    - { term: 樣, read: joeng6, correspond: sample, space: no }
   zh-TW:
     取樣:
-    - { term: 取樣, read: ㄑㄩˇ ㄧㄤˋ }
+    - { term: 取, read: ㄑㄩˇ, correspond: take }
+    - { term: 樣, read: ㄧㄤˋ, correspond: sample, space: no }
 
 # codec
 - en:

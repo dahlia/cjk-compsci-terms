@@ -113,19 +113,24 @@
     conflict:
     - { term: コンフリクト, loan: conflict }
     衝突:
-    - { term: 衝突, read: しょう とつ }
+    - { term: 衝, read: しょう, correspond: clash }
+    - { term: 突, read: とつ, correspond: strike, space: no }
   ko:
     衝突:
-    - { term: 衝突, read: 충 돌 }
+    - { term: 衝, read: 충, correspond: clash }
+    - { term: 突, read: 돌, correspond: strike, space: no }
   zh-CN:
     衝突:
-    - { term: 冲突, read: chōng tū, norm: 衝突 }
+    - { term: 冲, read: chōng, norm: 衝, correspond: clash }
+    - { term: 突, read: tū, correspond: strike, space: no }
   zh-HK:
     衝突:
-    - { term: 衝突, read: cung1 dat6 }
+    - { term: 衝, read: cung1, correspond: clash }
+    - { term: 突, read: dat6, correspond: strike, space: no }
   zh-TW:
     衝突:
-    - { term: 衝突, read: ㄔㄨㄥ ㄊㄨ }
+    - { term: 衝, read: ㄔㄨㄥ, correspond: clash }
+    - { term: 突, read: ㄊㄨ, correspond: strike, space: no }
 
 # clone
 - en:

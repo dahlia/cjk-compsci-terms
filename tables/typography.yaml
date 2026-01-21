@@ -9,16 +9,20 @@
     font:
     - { term: 폰트, loan: font }
     書體:
-    - { term: 書體, read: 서 체 }
+    - { term: 書, read: 서, correspond: writing }
+    - { term: 體, read: 체, correspond: style, space: no }
   zh-CN:
     字體:
-    - { term: 字体, read: zì tǐ, norm: 字體 }
+    - { term: 字, read: zì, correspond: character }
+    - { term: 体, norm: 體, read: tǐ, correspond: style, space: no }
   zh-HK:
     字體:
-    - { term: 字體, read: zi6 tai2 }
+    - { term: 字, read: zi6, correspond: character }
+    - { term: 體, read: tai2, correspond: style, space: no }
   zh-TW:
     字體:
-    - { term: 字體, read: ㄗˋ ㄊㄧˇ }
+    - { term: 字, read: ㄗˋ, correspond: character }
+    - { term: 體, read: ㄊㄧˇ, correspond: style, space: no }
 
 # typeface
 - en:
@@ -26,19 +30,24 @@
     - term: typeface
   ja:
     書體:
-    - { term: 書体, read: しょ たい }
+    - { term: 書, read: しょ, correspond: writing }
+    - { term: 体, norm: 體, read: たい, correspond: style, space: no }
   ko:
     書體:
-    - { term: 書體, read: 서 체 }
+    - { term: 書, read: 서, correspond: writing }
+    - { term: 體, read: 체, correspond: style, space: no }
   zh-CN:
     字體:
-    - { term: 字体, read: zì tǐ, norm: 字體 }
+    - { term: 字, read: zì, correspond: character }
+    - { term: 体, norm: 體, read: tǐ, correspond: style, space: no }
   zh-HK:
     字體:
-    - { term: 字體, read: zi6 tai2 }
+    - { term: 字, read: zi6, correspond: character }
+    - { term: 體, read: tai2, correspond: style, space: no }
   zh-TW:
     字型:
-    - { term: 字型, read: ㄗˋ ㄒㄧㄥˊ }
+    - { term: 字, read: ㄗˋ, correspond: character }
+    - { term: 型, read: ㄒㄧㄥˊ, correspond: form, space: no }
 
 # glyph
 - en:
@@ -48,21 +57,26 @@
     glyph:
     - { term: グリフ, loan: glyph }
     字形:
-    - { term: 字形, read: じ けい }
+    - { term: 字, read: じ, correspond: character }
+    - { term: 形, read: けい, correspond: form, space: no }
   ko:
     glyph:
     - { term: 글리프, loan: glyph }
     字形:
-    - { term: 字形, read: 자 형 }
+    - { term: 字, read: 자, correspond: character }
+    - { term: 形, read: 형, correspond: form, space: no }
   zh-CN:
     字形:
-    - { term: 字形, read: zì xíng }
+    - { term: 字, read: zì, correspond: character }
+    - { term: 形, read: xíng, correspond: form, space: no }
   zh-HK:
     字形:
-    - { term: 字形, read: zi6 jing4 }
+    - { term: 字, read: zi6, correspond: character }
+    - { term: 形, read: jing4, correspond: form, space: no }
   zh-TW:
     字形:
-    - { term: 字形, read: ㄗˋ ㄒㄧㄥˊ }
+    - { term: 字, read: ㄗˋ, correspond: character }
+    - { term: 形, read: ㄒㄧㄥˊ, correspond: form, space: no }
 
 # serif
 - en:
@@ -182,22 +196,26 @@
     encoding:
     - { term: エンコーディング, loan: encoding }
     符號化:
-    - { term: 符号化, read: ふ ごう か }
+    - { term: 符号, norm: 符號, read: ふ ごう, correspond: symbol }
+    - { term: 化, read: か, correspond: "-ization", space: no }
   ko:
     符號化:
-    - { term: 符號, read: 부 호 }
-    - { term: 化, read: 화, space: no }
+    - { term: 符號, read: 부 호, correspond: symbol }
+    - { term: 化, read: 화, correspond: "-ization", space: no }
     encoding:
     - { term: 인코딩, loan: encoding }
   zh-CN:
     編碼:
-    - { term: 编码, read: biān mǎ, norm: 編碼 }
+    - { term: 编, read: biān, norm: 編, correspond: arrange }
+    - { term: 码, read: mǎ, norm: 碼, correspond: code, space: no }
   zh-HK:
     編碼:
-    - { term: 編碼, read: pin1 maa5 }
+    - { term: 編, read: pin1, correspond: arrange }
+    - { term: 碼, read: maa5, correspond: code, space: no }
   zh-TW:
     編碼:
-    - { term: 編碼, read: ㄅㄧㄢ ㄇㄚˇ }
+    - { term: 編, read: ㄅㄧㄢ, correspond: arrange }
+    - { term: 碼, read: ㄇㄚˇ, correspond: code, space: no }
 
 # character set
 - en:

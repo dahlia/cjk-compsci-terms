@@ -77,29 +77,31 @@
     pixel:
     - { term: ピクセル, loan: pixel }
     畫素:
-    - { term: 画素, norm: 畫素, read: が そ, correspond: pixel }
+    - { term: 画, norm: 畫, read: が, correspond: picture }
+    - { term: 素, read: そ, correspond: element, space: no }
   ko:
     pixel:
     - { term: 픽셀, loan: pixel }
     畫素:
-    - { term: 畫素, read: 화 소, correspond: pixel }
+    - { term: 畫, read: 화, correspond: picture }
+    - { term: 素, read: 소, correspond: element, space: no }
   zh-CN:
     像素:
-    - { term: 像, read: xiàng, correspond: image }
+    - { term: 像, read: xiàng, correspond: picture }
     - { term: 素, read: sù, correspond: element, space: no }
     畫素:
     - { term: 画, read: huà, norm: 畫, correspond: picture }
     - { term: 素, read: sù, correspond: element, space: no }
   zh-HK:
     像素:
-    - { term: 像, read: zoeng6, correspond: image }
+    - { term: 像, read: zoeng6, correspond: picture }
     - { term: 素, read: sou3, correspond: element, space: no }
     畫素:
     - { term: 畫, read: waak6, correspond: picture }
     - { term: 素, read: sou3, correspond: element, space: no }
   zh-TW:
     像素:
-    - { term: 像, read: ㄒㄧㄤˋ, correspond: image }
+    - { term: 像, read: ㄒㄧㄤˋ, correspond: picture }
     - { term: 素, read: ㄙㄨˋ, correspond: element, space: no }
     畫素:
     - { term: 畫, read: ㄏㄨㄚˋ, correspond: picture }
@@ -111,10 +113,12 @@
     - term: vertex
   ja:
     頂點:
-    - { term: 頂点, norm: 頂點, read: ちょう てん, correspond: vertex }
+    - { term: 頂, read: ちょう, correspond: top }
+    - { term: 点, norm: 點, read: てん, correspond: point, space: no }
   ko:
     頂點:
-    - { term: 頂點, read: 정 점, correspond: vertex }
+    - { term: 頂, read: 정, correspond: top }
+    - { term: 點, read: 점, correspond: point, space: no }
   zh-CN:
     頂點:
     - { term: 顶, read: dǐng, correspond: top }

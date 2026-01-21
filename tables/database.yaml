@@ -54,13 +54,16 @@
     - { term: 레코드, loan: record }
   zh-CN:
     記錄:
-    - { term: 记录, read: jì lù, correspond: record }
+    - { term: 记, read: jì, norm: 記, correspond: record }
+    - { term: 录, read: lù, norm: 錄, correspond: record, space: no }
   zh-HK:
     記錄:
-    - { term: 記錄, read: gei3 luk6, correspond: record }
+    - { term: 記, read: gei3, correspond: record }
+    - { term: 錄, read: luk6, correspond: record, space: no }
   zh-TW:
     記錄:
-    - { term: 記錄, read: ㄐㄧˋ ㄌㄨˋ, correspond: record }
+    - { term: 記, read: ㄐㄧˋ, correspond: record }
+    - { term: 錄, read: ㄌㄨˋ, correspond: record, space: no }
 
 # field
 - en:
@@ -97,7 +100,8 @@
     - { term: 스키마, loan: schema }
   zh-CN:
     模式:
-    - { term: 模式, read: mó shì, correspond: schema }
+    - { term: 模, read: mó, correspond: pattern }
+    - { term: 式, read: shì, correspond: style, space: no }
   zh-HK:
     綱要:
     - { term: 綱, read: gong1, correspond: outline }
@@ -142,7 +146,8 @@
     - { term: 트랜잭션, loan: transaction }
   zh-CN:
     事務:
-    - { term: 事务, read: shì wù, correspond: transaction }
+    - { term: 事, read: shì, norm: 事, correspond: affair }
+    - { term: 务, read: wù, norm: 務, correspond: task, space: no }
   zh-HK:
     交易:
     - { term: 交, read: gaau1, correspond: exchange }
@@ -163,7 +168,8 @@
     index:
     - { term: 인덱스, loan: index }
     索引:
-    - { term: 索引, read: 색 인, correspond: index }
+    - { term: 索, read: 색, correspond: search }
+    - { term: 引, read: 인, correspond: guide, space: no }
   zh-CN:
     索引:
     - { term: 索, read: suǒ, correspond: search }

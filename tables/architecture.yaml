@@ -37,15 +37,20 @@
     - { term: 파이프라인, loan: pipeline }
   zh-CN:
     流水線:
-    - { term: 流水线, read: liú shuǐ xiàn, norm: 流水線 }
+    - { term: 流, read: liú, norm: 流, correspond: flow }
+    - { term: 水, read: shuǐ, correspond: water, space: no }
+    - { term: 线, read: xiàn, norm: 線, correspond: line, space: no }
     管線:
-    - { term: 管线, read: guǎn xiàn, norm: 管線 }
+    - { term: 管, read: guǎn, correspond: pipe }
+    - { term: 线, read: xiàn, norm: 線, correspond: line, space: no }
   zh-HK:
     管線:
-    - { term: 管線, read: gun2 sin3 }
+    - { term: 管, read: gun2, correspond: pipe }
+    - { term: 線, read: sin3, correspond: line, space: no }
   zh-TW:
     管線:
-    - { term: 管線, read: ㄍㄨㄢˇ ㄒㄧㄢˋ }
+    - { term: 管, read: ㄍㄨㄢˇ, correspond: pipe }
+    - { term: 線, read: ㄒㄧㄢˋ, correspond: line, space: no }
 
 # register
 - en:
@@ -121,19 +126,22 @@
     - term: interrupt
   ja:
     割り込み:
-    - { term: 割り込み, read: わりこみ }
+    - { term: 割り込み, read: わりこみ, correspond: interrupt }
   ko:
     interrupt:
     - { term: 인터럽트, loan: interrupt }
   zh-CN:
     中斷:
-    - { term: 中断, read: zhōng duàn, norm: 中斷 }
+    - { term: 中, read: zhōng, norm: 中, correspond: middle }
+    - { term: 断, read: duàn, norm: 斷, correspond: break, space: no }
   zh-HK:
     中斷:
-    - { term: 中斷, read: zung1 tyun5 }
+    - { term: 中, read: zung1, correspond: middle }
+    - { term: 斷, read: tyun5, correspond: break, space: no }
   zh-TW:
     中斷:
-    - { term: 中斷, read: ㄓㄨㄥ ㄉㄨㄢˋ }
+    - { term: 中, read: ㄓㄨㄥ, correspond: middle }
+    - { term: 斷, read: ㄉㄨㄢˋ, correspond: break, space: no }
 
 # clock
 - en:
@@ -147,13 +155,16 @@
     - { term: 클럭, loan: clock }
   zh-CN:
     時鐘:
-    - { term: 时钟, read: shí zhōng, norm: 時鐘 }
+    - { term: 时, read: shí, norm: 時, correspond: time }
+    - { term: 钟, read: zhōng, norm: 鐘, correspond: bell, space: no }
   zh-HK:
     時鐘:
-    - { term: 時鐘, read: si4 zung1 }
+    - { term: 時, read: si4, correspond: time }
+    - { term: 鐘, read: zung1, correspond: bell, space: no }
   zh-TW:
     時鐘:
-    - { term: 時鐘, read: ㄕˊ ㄓㄨㄥ }
+    - { term: 時, read: ㄕˊ, correspond: time }
+    - { term: 鐘, read: ㄓㄨㄥ, correspond: bell, space: no }
 
 # RISC
 - en:
@@ -263,6 +274,7 @@
     - { term: 字, read: zi6 }
   zh-TW:
     字組:
-    - { term: 字組, read: ㄗˋ ㄗㄨˇ }
+    - { term: 字, read: ㄗˋ, correspond: character }
+    - { term: 組, read: ㄗㄨˇ, correspond: group, space: no }
 
 # vim: set et sw=2 ts=2 sts=2 ft=yaml:
