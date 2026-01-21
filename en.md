@@ -3,7 +3,7 @@ CJK computer science terms comparison
 
 [![GitHub](https://img.shields.io/github/stars/dahlia/cjk-compsci-terms?style=social)][GitHub]
 [![Netlify](https://api.netlify.com/api/v1/badges/2ae1a16c-e345-4863-90c0-080e520855a5/deploy-status)][Netlify]
-[![Creative Commons License](cc-by-sa.svg)][CC BY-SA 4.0]
+[![Creative Commons License](/cc-by-sa.svg)][CC BY-SA 4.0]
 [![GitHub Sponsors](https://img.shields.io/github/sponsors/dahlia?logo=github)][GitHub Sponsors]
 
 <!-- hide -->
