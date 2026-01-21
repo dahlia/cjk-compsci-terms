@@ -1,5 +1,18 @@
-.venv/
-_site/
-bin/yajsv
-get-pip.py
+# Build output
 public_html/
+
+# Binaries
+bin/
+
+# Editor/IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+
+# Legacy Python (can be removed once everyone migrates)
+.venv/
+__pycache__/
