@@ -13,6 +13,7 @@
     "@std/path": "jsr:@std/path@^1",
     "@std/cli": "jsr:@std/cli@^1",
     "@std/assert": "jsr:@std/assert@^1",
+    "@austinshelby/pinyin-to-bopomofo": "jsr:@austinshelby/pinyin-to-bopomofo@^1",
     "es-hangul": "npm:es-hangul@^2.3.8",
     "hanja": "npm:hanja@^1.1.5",
     "kakasi": "npm:kakasi@^1.0.0",

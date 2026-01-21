@@ -24,6 +24,7 @@ import {
   CHINESE_SIMPLIFIED_LANG_TAG,
   CHINESE_TRADITIONAL_LANG_TAG,
   readChinese,
+  readTraditionalChinese,
   romanizeSimplifiedChinese,
   romanizeTraditionalChinese,
 } from "./chinese.ts";
@@ -54,8 +55,11 @@ export {
   CHINESE_SIMPLIFIED_LANG_TAG,
   CHINESE_TRADITIONAL_LANG_TAG,
   readChinese,
+  readTraditionalChinese,
   romanizeSimplifiedChinese,
   romanizeTraditionalChinese,
+  toBopomofo,
+  toBopomofoPerCharacter,
   toPinyin,
   toPinyinPerCharacter,
 } from "./chinese.ts";
@@ -105,7 +109,7 @@ const readers: Partial<Record<LocaleCode, Reader>> = {
   ko: readKorean,
   "zh-CN": readChinese,
   "zh-HK": readCantonese,
-  "zh-TW": readChinese, // zh-TW uses the same reader as zh-CN (Pinyin)
+  "zh-TW": readTraditionalChinese, // zh-TW uses Bopomofo (Zhuyin)
 };
 
 /**

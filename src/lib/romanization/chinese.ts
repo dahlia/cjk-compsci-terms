@@ -1,8 +1,10 @@
 /**
- * Chinese (Mandarin) romanization using pinyin.
+ * Chinese (Mandarin) romanization using pinyin and zhuyin.
  * Handles both Simplified (zh-CN) and Traditional (zh-TW) Chinese.
+ * zh-CN uses Pinyin, zh-TW uses Bopomofo (Zhuyin).
  */
 import { pinyin as pinyinFunc } from "pinyin";
+import { pinyinToBopomofo } from "@austinshelby/pinyin-to-bopomofo";
 import type { CharacterReading, RomanizationResult } from "./types.ts";
 
 // STYLE_TONE = 1: with tone marks (e.g., diàn)
@@ -19,8 +21,8 @@ function pinyin(
 /** Language tag for Simplified Chinese Pinyin */
 export const CHINESE_SIMPLIFIED_LANG_TAG = "zh-CN-Latn-pny";
 
-/** Language tag for Traditional Chinese Pinyin */
-export const CHINESE_TRADITIONAL_LANG_TAG = "zh-TW-Latn-pny";
+/** Language tag for Traditional Chinese Zhuyin (Bopomofo) */
+export const CHINESE_TRADITIONAL_LANG_TAG = "zh-TW-Bopo";
 
 /**
  * Convert Chinese text to Pinyin.
@@ -47,6 +49,38 @@ export function toPinyinPerCharacter(text: string): string[] {
 }
 
 /**
+ * Convert Chinese text to Bopomofo (Zhuyin).
+ * Uses pinyin with tone marks as intermediate, since pinyinToBopomofo
+ * expects tone marks (e.g., diàn) rather than tone numbers (e.g., dian4).
+ */
+export function toBopomofo(text: string): string {
+  const pinyinList = toPinyinPerCharacter(text);
+  const bopomofos = pinyinList.map((py) => {
+    try {
+      return pinyinToBopomofo(py);
+    } catch {
+      // If conversion fails, return the original pinyin
+      return py;
+    }
+  });
+  return bopomofos.join("");
+}
+
+/**
+ * Get Bopomofo for each character.
+ */
+export function toBopomofoPerCharacter(text: string): string[] {
+  const pinyinList = toPinyinPerCharacter(text);
+  return pinyinList.map((py) => {
+    try {
+      return pinyinToBopomofo(py);
+    } catch {
+      return py;
+    }
+  });
+}
+
+/**
  * Romanize Simplified Chinese text to Pinyin.
  */
 export function romanizeSimplifiedChinese(text: string): RomanizationResult {
@@ -58,19 +92,19 @@ export function romanizeSimplifiedChinese(text: string): RomanizationResult {
 }
 
 /**
- * Romanize Traditional Chinese text to Pinyin.
- * Note: zh-TW uses Zhuyin (Bopomofo) natively, but we convert to Pinyin for romanization.
+ * Romanize Traditional Chinese text to Bopomofo (Zhuyin).
+ * Taiwan uses Zhuyin (ㄅㄆㄇㄈ) as the primary phonetic system.
  */
 export function romanizeTraditionalChinese(text: string): RomanizationResult {
   const normalized = text.replace(/ /g, "");
   return {
     langTag: CHINESE_TRADITIONAL_LANG_TAG,
-    text: toPinyin(normalized),
+    text: toBopomofo(normalized),
   };
 }
 
 /**
- * Get character-by-character readings for Chinese text.
+ * Get character-by-character readings for Simplified Chinese text.
  * Returns pairs of [character, pinyin].
  */
 export function readChinese(
@@ -85,6 +119,27 @@ export function readChinese(
     const origChar = term[i];
     const pinyinReading = pinyinList[i] ?? origChar;
     readings.push([origChar, pinyinReading]);
+  }
+
+  return readings;
+}
+
+/**
+ * Get character-by-character readings for Traditional Chinese text.
+ * Returns pairs of [character, bopomofo].
+ */
+export function readTraditionalChinese(
+  term: string,
+  normalizedTerm: string,
+  _previousTerms: string[],
+): CharacterReading[] {
+  const bopomofoList = toBopomofoPerCharacter(normalizedTerm);
+  const readings: CharacterReading[] = [];
+
+  for (let i = 0; i < term.length; i++) {
+    const origChar = term[i];
+    const bopomofoReading = bopomofoList[i] ?? origChar;
+    readings.push([origChar, bopomofoReading]);
   }
 
   return readings;

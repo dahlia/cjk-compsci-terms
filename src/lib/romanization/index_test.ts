@@ -25,10 +25,12 @@ Deno.test("romanize handles Simplified Chinese", async () => {
   assertEquals(result.text.length > 0, true);
 });
 
-Deno.test("romanize handles Traditional Chinese", async () => {
+Deno.test("romanize handles Traditional Chinese with Bopomofo", async () => {
   const result = await romanize("電腦", "zh-TW");
-  assertEquals(result.langTag, "zh-TW-Latn-pny");
+  assertEquals(result.langTag, "zh-TW-Bopo");
   assertEquals(result.text.length > 0, true);
+  // Should contain Bopomofo characters (ㄅ-ㄩ range)
+  assertEquals(/[\u3100-\u312F]/.test(result.text), true);
 });
 
 Deno.test("romanize handles Cantonese", async () => {
@@ -48,7 +50,7 @@ Deno.test("getLanguageTag returns correct tags", () => {
   assertEquals(getLanguageTag("ko"), "ko-Latn-t-m0-mcst");
   assertEquals(getLanguageTag("zh-CN"), "zh-CN-Latn-pny");
   assertEquals(getLanguageTag("zh-HK"), "yue-HK-Latn-jyutping");
-  assertEquals(getLanguageTag("zh-TW"), "zh-TW-Latn-pny");
+  assertEquals(getLanguageTag("zh-TW"), "zh-TW-Bopo");
   assertEquals(getLanguageTag("en"), "en-Latn");
 });
 

@@ -54,23 +54,23 @@ function getLanguageHrefs(): [LocaleCode, string][] {
 
 /**
  * Pre-compute romanizations for all words in a table.
+ * Processes all locales in the table, not just the display locale.
  */
 async function computeRomanizations(
   table: Table,
-  locale: LocaleCode,
 ): Promise<Map<Word, { langTag: string; text: string }>> {
   const results = new Map<Word, { langTag: string; text: string }>();
 
   for (const translation of table.translations) {
-    const words = translation.map.get(locale);
-    if (!words) continue;
+    // Process all locales in the translation
+    for (const [localeCode, words] of translation.map) {
+      for (const word of words) {
+        if (word.locale.language === "en") continue;
 
-    for (const word of words) {
-      if (word.locale.language === "en") continue;
-
-      const text = word.terms.map((t) => t.term).join("");
-      const rom = await romanize(text, locale);
-      results.set(word, { langTag: rom.langTag, text: rom.text });
+        const text = word.terms.map((t) => t.term).join("");
+        const rom = await romanize(text, localeCode);
+        results.set(word, { langTag: rom.langTag, text: rom.text });
+      }
     }
   }
 
@@ -79,35 +79,35 @@ async function computeRomanizations(
 
 /**
  * Pre-compute character readings for all words in a table.
+ * Processes all locales in the table, not just the display locale.
  */
 async function computeReadings(
   table: Table,
-  locale: LocaleCode,
 ): Promise<Map<Word, Map<Term, CharacterReading[]>>> {
   const results = new Map<Word, Map<Term, CharacterReading[]>>();
 
   for (const translation of table.translations) {
-    const words = translation.map.get(locale);
-    if (!words) continue;
+    // Process all locales in the translation
+    for (const [localeCode, words] of translation.map) {
+      for (const word of words) {
+        const wordReadings = new Map<Term, CharacterReading[]>();
+        const previousTermTexts: string[] = [];
 
-    for (const word of words) {
-      const wordReadings = new Map<Term, CharacterReading[]>();
-      const previousTermTexts: string[] = [];
-
-      for (const term of word.terms) {
-        if ("read" in term) {
-          const readings = await getCharacterReadings(
-            term.term,
-            term.term, // normalized term
-            previousTermTexts,
-            locale,
-          );
-          wordReadings.set(term, readings);
+        for (const term of word.terms) {
+          if ("read" in term) {
+            const readings = await getCharacterReadings(
+              term.term,
+              term.term, // normalized term
+              previousTermTexts,
+              localeCode,
+            );
+            wordReadings.set(term, readings);
+          }
+          previousTermTexts.push(term.term);
         }
-        previousTermTexts.push(term.term);
-      }
 
-      results.set(word, wordReadings);
+        results.set(word, wordReadings);
+      }
     }
   }
 
@@ -132,6 +132,16 @@ async function loadTableCached(path: string): Promise<Table> {
 }
 
 /**
+ * Cache for computed romanizations per table.
+ */
+const romanizationCache = new Map<string, Map<Word, { langTag: string; text: string }>>();
+
+/**
+ * Cache for computed readings per table.
+ */
+const readingsCache = new Map<string, Map<Word, Map<Term, CharacterReading[]>>>();
+
+/**
  * Render a table for a specific locale.
  */
 async function renderTable(
@@ -139,8 +149,20 @@ async function renderTable(
   locale: LocaleCode,
 ): Promise<string> {
   const table = await loadTableCached(tablePath);
-  const romanizations = await computeRomanizations(table, locale);
-  const readings = await computeReadings(table, locale);
+
+  // Get or compute romanizations (cached per table)
+  let romanizations = romanizationCache.get(tablePath);
+  if (!romanizations) {
+    romanizations = await computeRomanizations(table);
+    romanizationCache.set(tablePath, romanizations);
+  }
+
+  // Get or compute readings (cached per table)
+  let readings = readingsCache.get(tablePath);
+  if (!readings) {
+    readings = await computeReadings(table);
+    readingsCache.set(tablePath, readings);
+  }
 
   const tableHtml = TableComponent({
     table,

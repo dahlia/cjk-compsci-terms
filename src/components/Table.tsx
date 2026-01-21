@@ -3,7 +3,7 @@
  * @module
  */
 
-import { Fragment, type HtmlString, jsx, raw } from "../jsx-runtime/index.ts";
+import { type HtmlString, jsx, raw } from "../jsx-runtime/index.ts";
 import type { Table as TableType } from "../types/table.ts";
 import type { Translation } from "../types/translation.ts";
 import type { Word } from "../types/word.ts";
@@ -221,11 +221,12 @@ function TranslationRow(props: {
             readings: wordReadings,
           }),
           // Add romanization for non-English locales
+          // Use raw() because Jyutping contains <sup> tags for tones
           word.locale.language !== "en" && romanization
             ? jsx("span", {
                 className: "romanization",
                 lang: romanization.langTag,
-                children: ` (${romanization.text})`,
+                children: [" (", raw(romanization.text), ")"],
               })
             : null,
         ],
