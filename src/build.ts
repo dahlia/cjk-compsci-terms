@@ -55,6 +55,8 @@ function getLanguageHrefs(): [LocaleCode, string][] {
 /**
  * Pre-compute romanizations for all words in a table.
  * Processes all locales in the table, not just the display locale.
+ * For EasternTerms, romanizes the 'read' field (phonetic reading).
+ * For other terms, romanizes the 'term' field.
  */
 async function computeRomanizations(
   table: Table,
@@ -67,7 +69,17 @@ async function computeRomanizations(
       for (const word of words) {
         if (word.locale.language === "en") continue;
 
-        const text = word.terms.map((t) => t.term).join("");
+        // For EasternTerms, use the 'read' field (phonetic reading)
+        // For WesternTerms with 'read', use that
+        // Otherwise use the term text
+        const text = word.terms.map((t) => {
+          if ("read" in t && t.read) {
+            // Remove spaces from read field (spaces are for character separation)
+            return t.read.replace(/ /g, "");
+          }
+          return t.term;
+        }).join("");
+
         const rom = await romanize(text, localeCode);
         results.set(word, { langTag: rom.langTag, text: rom.text });
       }
@@ -78,29 +90,54 @@ async function computeRomanizations(
 }
 
 /**
- * Pre-compute character readings for all words in a table.
- * Processes all locales in the table, not just the display locale.
+ * Pre-compute character readings for all words in a table for a specific display locale.
+ * Uses the display locale's reader to generate readings, implementing the read_as logic.
+ *
+ * The reading rules are:
+ * 1. If word locale == display locale: use the term's own 'read' field
+ * 2. If display locale has a reader: use display locale's reader function
+ * 3. Otherwise (fallback): use the term's own 'read' field (original reading)
  */
-async function computeReadings(
+async function computeReadingsForLocale(
   table: Table,
+  displayLocale: LocaleCode,
 ): Promise<Map<Word, Map<Term, CharacterReading[]>>> {
   const results = new Map<Word, Map<Term, CharacterReading[]>>();
+  const { hasReader } = await import("./lib/romanization/index.ts");
 
   for (const translation of table.translations) {
     // Process all locales in the translation
-    for (const [localeCode, words] of translation.map) {
+    for (const [wordLocale, words] of translation.map) {
       for (const word of words) {
         const wordReadings = new Map<Term, CharacterReading[]>();
         const previousTermTexts: string[] = [];
 
         for (const term of word.terms) {
-          if ("read" in term) {
-            const readings = await getCharacterReadings(
-              term.term,
-              term.term, // normalized term
-              previousTermTexts,
-              localeCode,
-            );
+          if ("read" in term && term.read) {
+            let readings: CharacterReading[];
+
+            // Check if we should use the original reading or display locale's reader
+            const useOriginalReading =
+              wordLocale === displayLocale || !hasReader(displayLocale);
+
+            if (useOriginalReading) {
+              // Use the term's own 'read' field
+              const readParts = term.read.split(" ");
+              readings = [];
+              for (let i = 0; i < term.term.length; i++) {
+                readings.push([term.term[i], readParts[i] ?? term.term[i]]);
+              }
+            } else {
+              // Use display locale's reader
+              // First normalize the term (e.g., convert JP kanji to traditional)
+              const normalizedTerm = await normalizeForLocale(term.term, wordLocale);
+              readings = await getCharacterReadings(
+                term.term,
+                normalizedTerm,
+                previousTermTexts,
+                displayLocale,
+              );
+            }
             wordReadings.set(term, readings);
           }
           previousTermTexts.push(term.term);
@@ -112,6 +149,18 @@ async function computeReadings(
   }
 
   return results;
+}
+
+/**
+ * Normalize characters for a given source locale.
+ * Converts Japanese kanji to traditional Chinese, simplified to traditional, etc.
+ */
+async function normalizeForLocale(text: string, locale: LocaleCode): Promise<string> {
+  const { normalizeCharacters, hasNormalizer } = await import("./lib/romanization/index.ts");
+  if (hasNormalizer(locale)) {
+    return normalizeCharacters(text, locale);
+  }
+  return text;
 }
 
 /**
@@ -137,7 +186,7 @@ async function loadTableCached(path: string): Promise<Table> {
 const romanizationCache = new Map<string, Map<Word, { langTag: string; text: string }>>();
 
 /**
- * Cache for computed readings per table.
+ * Cache for computed readings per (table, displayLocale) pair.
  */
 const readingsCache = new Map<string, Map<Word, Map<Term, CharacterReading[]>>>();
 
@@ -157,11 +206,12 @@ async function renderTable(
     romanizationCache.set(tablePath, romanizations);
   }
 
-  // Get or compute readings (cached per table)
-  let readings = readingsCache.get(tablePath);
+  // Get or compute readings (cached per table + display locale)
+  const readingsCacheKey = `${tablePath}:${locale}`;
+  let readings = readingsCache.get(readingsCacheKey);
   if (!readings) {
-    readings = await computeReadings(table);
-    readingsCache.set(tablePath, readings);
+    readings = await computeReadingsForLocale(table, locale);
+    readingsCache.set(readingsCacheKey, readings);
   }
 
   const tableHtml = TableComponent({

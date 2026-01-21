@@ -68,6 +68,10 @@ export async function romanizeJapanese(
 /**
  * Get character-by-character readings for Japanese text.
  * Returns pairs of [original, hiragana].
+ *
+ * When the term contains non-Japanese characters (e.g., Simplified Chinese),
+ * we use the normalized term (Traditional Chinese) for reading lookup but
+ * pair with the original characters for display.
  */
 export async function readJapanese(
   term: string,
@@ -75,25 +79,25 @@ export async function readJapanese(
   _previousTerms: string[],
 ): Promise<CharacterReading[]> {
   const kuroshiro = await getKuroshiro();
-  // Get hiragana for each character group
-  const hiragana = await kuroshiro.convert(normalizedTerm, {
-    to: "hiragana",
-    mode: "okurigana",
-  });
 
-  // For simplicity, pair each original character with corresponding hiragana
-  // This is a simplified version - Kuroshiro's okurigana mode gives us furigana markup
-  // We parse that to extract readings
+  // Convert normalized term character by character to get readings
   const readings: CharacterReading[] = [];
-  let i = 0;
-  for (const char of term) {
-    // Simple approximation: just get the hiragana reading
-    const reading = await kuroshiro.convert(char, {
+  const termChars = [...term];
+  const normalizedChars = [...normalizedTerm];
+
+  for (let i = 0; i < termChars.length; i++) {
+    const origChar = termChars[i];
+    // Use normalized character for reading lookup (e.g., 電 instead of 电)
+    const normalizedChar = normalizedChars[i] ?? origChar;
+
+    // Get hiragana reading for the normalized character
+    const reading = await kuroshiro.convert(normalizedChar, {
       to: "hiragana",
       mode: "normal",
     });
-    readings.push([char, reading]);
-    i++;
+
+    // Pair original character with its reading
+    readings.push([origChar, reading]);
   }
 
   return readings;
