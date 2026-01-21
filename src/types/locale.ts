@@ -4,7 +4,7 @@
 export type LocaleCode = "en" | "ja" | "ko" | "zh-CN" | "zh-HK" | "zh-TW";
 
 /**
- * All supported locale codes as an array.
+ * All supported locale codes as an array (for table columns).
  */
 export const LOCALE_CODES: readonly LocaleCode[] = [
   "en",
@@ -12,6 +12,17 @@ export const LOCALE_CODES: readonly LocaleCode[] = [
   "ko",
   "zh-CN",
   "zh-HK",
+  "zh-TW",
+] as const;
+
+/**
+ * Locales for which pages are generated (for navigation).
+ * Chinese variants share a single zh-Hant page.
+ */
+export const PAGE_LOCALES: readonly LocaleCode[] = [
+  "en",
+  "ja",
+  "ko",
   "zh-TW",
 ] as const;
 
@@ -68,6 +79,7 @@ export function toBcp47(code: LocaleCode | string): string {
 /**
  * Get the display name of a locale in a target language.
  * Uses the Intl.DisplayNames API.
+ * For zh-TW, returns "中文 (繁體)" style format.
  */
 export function getDisplayName(
   locale: LocaleInfo,
@@ -76,7 +88,20 @@ export function getDisplayName(
   const displayNames = new Intl.DisplayNames([inLocale.code], {
     type: "language",
   });
-  return displayNames.of(locale.language) ?? locale.language;
+  const langName = displayNames.of(locale.language) ?? locale.language;
+
+  // For Traditional Chinese, add script name
+  if (locale.code === "zh-TW") {
+    const scriptNames = new Intl.DisplayNames([inLocale.code], {
+      type: "script",
+    });
+    const scriptName = scriptNames.of("Hant");
+    if (scriptName) {
+      return `${langName} (${scriptName})`;
+    }
+  }
+
+  return langName;
 }
 
 /**

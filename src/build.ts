@@ -7,7 +7,7 @@ import { ensureDir, copy } from "@std/fs";
 import { parseArgs } from "@std/cli";
 import { render, raw } from "./jsx-runtime/index.ts";
 import type { LocaleCode } from "./types/locale.ts";
-import { LOCALE_CODES } from "./types/locale.ts";
+import { LOCALE_CODES, PAGE_LOCALES } from "./types/locale.ts";
 import type { Table } from "./types/table.ts";
 import type { Word } from "./types/word.ts";
 import type { Term } from "./types/term.ts";
@@ -24,29 +24,25 @@ const OUTPUT_DIR = "public_html";
 /** Static assets to copy */
 const STATIC_ASSETS = ["style.css", "script.js", "cc-by-sa.svg"];
 
-/** Locale to markdown file mapping */
+/** Locale to markdown file mapping (only for PAGE_LOCALES) */
 const LOCALE_MD_FILES: Record<string, string> = {
   en: "en.md",
   ja: "ja.md",
   ko: "ko.md",
-  "zh-CN": "zh-Hant.md",
-  "zh-HK": "zh-Hant.md",
   "zh-TW": "zh-Hant.md",
 };
 
-/** Locale to output filename mapping */
+/** Locale to output filename mapping (only for PAGE_LOCALES) */
 const LOCALE_OUTPUT_FILES: Record<string, string> = {
   en: "index.html",
   ja: "ja/index.html",
   ko: "ko/index.html",
-  "zh-CN": "zh-Hans/index.html",
-  "zh-HK": "zh-Hant-HK/index.html",
   "zh-TW": "zh-Hant/index.html",
 };
 
 /** Language hrefs for navigation */
 function getLanguageHrefs(): [LocaleCode, string][] {
-  return LOCALE_CODES.map((locale) => [
+  return PAGE_LOCALES.map((locale) => [
     locale,
     LOCALE_OUTPUT_FILES[locale],
   ]);
@@ -330,8 +326,7 @@ async function build(): Promise<void> {
   await ensureDir(OUTPUT_DIR);
 
   // Build all locale pages
-  const localesToBuild = LOCALE_CODES;
-  for (const locale of localesToBuild) {
+  for (const locale of PAGE_LOCALES) {
     await buildPage(locale);
   }
 
@@ -371,9 +366,9 @@ Examples:
   try {
     if (args.locale) {
       const locale = args.locale as LocaleCode;
-      if (!LOCALE_CODES.includes(locale)) {
+      if (!PAGE_LOCALES.includes(locale)) {
         console.error(`Unknown locale: ${args.locale}`);
-        console.error(`Valid locales: ${LOCALE_CODES.join(", ")}`);
+        console.error(`Valid locales: ${PAGE_LOCALES.join(", ")}`);
         Deno.exit(1);
       }
       await ensureDir(OUTPUT_DIR);
