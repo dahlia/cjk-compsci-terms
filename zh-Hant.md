@@ -198,3 +198,9 @@
 --------
 
 [顯示表](tables/game-dev.yaml)
+
+
+硬體
+----
+
+[顯示表](tables/hardware.yaml)

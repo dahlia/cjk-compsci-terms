@@ -1,0 +1,283 @@
+# CPU
+- en:
+    CPU:
+    - term: CPU
+    central processing unit:
+    - term: central
+    - term: processing
+    - term: unit
+  ja:
+    CPU:
+    - term: CPU
+    中央處理裝置:
+    - { term: 中央, read: ちゅう おう, correspond: central }
+    - { term: 処理, read: しょ り, norm: 處理, correspond: processing, space: no }
+    - { term: 装置, read: そう ち, norm: 裝置, correspond: unit, space: no }
+  ko:
+    CPU:
+    - term: CPU
+    中央處理裝置:
+    - { term: 중앙, correspond: central }
+    - { term: 처리, correspond: processing }
+    - { term: 장치, correspond: unit }
+  zh-CN:
+    CPU:
+    - term: CPU
+    中央處理器:
+    - { term: 中央, read: zhōng yāng, correspond: central }
+    - { term: 处理, read: chǔ lǐ, norm: 處理, correspond: processing, space: no }
+    - { term: 器, read: qì, correspond: unit, space: no }
+  zh-HK:
+    CPU:
+    - term: CPU
+    中央處理器:
+    - { term: 中央, read: zung1 joeng1, correspond: central }
+    - { term: 處理, read: cyu5 lei5, correspond: processing, space: no }
+    - { term: 器, read: hei3, correspond: unit, space: no }
+  zh-TW:
+    CPU:
+    - term: CPU
+    中央處理器:
+    - { term: 中央, read: ㄓㄨㄥ ㄧㄤ, correspond: central }
+    - { term: 處理, read: ㄔㄨˇ ㄌㄧˇ, correspond: processing, space: no }
+    - { term: 器, read: ㄑㄧˋ, correspond: unit, space: no }
+
+# GPU
+- en:
+    GPU:
+    - term: GPU
+    graphics processing unit:
+    - term: graphics
+    - term: processing
+    - term: unit
+  ja:
+    GPU:
+    - term: GPU
+    グラフィックスプロセッサ:
+    - { term: グラフィックス, loan: graphics, correspond: graphics }
+    - { term: プロセッサ, loan: processor, correspond: processing, space: no }
+  ko:
+    GPU:
+    - term: GPU
+    그래픽 處理 裝置:
+    - { term: 그래픽, loan: graphics, correspond: graphics }
+    - { term: 처리, correspond: processing }
+    - { term: 장치, correspond: unit }
+  zh-CN:
+    GPU:
+    - term: GPU
+    圖形處理器:
+    - { term: 图形, read: tú xíng, norm: 圖形, correspond: graphics }
+    - { term: 处理, read: chǔ lǐ, norm: 處理, correspond: processing, space: no }
+    - { term: 器, read: qì, correspond: unit, space: no }
+  zh-HK:
+    GPU:
+    - term: GPU
+    圖形處理器:
+    - { term: 圖形, read: tou4 jing4, correspond: graphics }
+    - { term: 處理, read: cyu5 lei5, correspond: processing, space: no }
+    - { term: 器, read: hei3, correspond: unit, space: no }
+  zh-TW:
+    GPU:
+    - term: GPU
+    圖形處理器:
+    - { term: 圖形, read: ㄊㄨˊ ㄒㄧㄥˊ, correspond: graphics }
+    - { term: 處理, read: ㄔㄨˇ ㄌㄧˇ, correspond: processing, space: no }
+    - { term: 器, read: ㄑㄧˋ, correspond: unit, space: no }
+
+# RAM
+- en:
+    RAM:
+    - term: RAM
+    random access memory:
+    - term: random
+    - term: access
+    - term: memory
+  ja:
+    RAM:
+    - term: RAM
+    メモリ:
+    - { term: メモリ, loan: memory }
+  ko:
+    RAM:
+    - term: RAM
+    램:
+    - { term: 램, loan: RAM }
+  zh-CN:
+    記憶體:
+    - { term: 内存, read: nèi cún, norm: 記憶體 }
+    隨機存取記憶體:
+    - { term: 随机, read: suí jī, norm: 隨機, correspond: random }
+    - { term: 存取, read: cún qǔ, correspond: access, space: no }
+    - { term: 存储, read: cún chǔ, norm: 記憶體, correspond: memory, space: no }
+    - { term: 器, read: qì, space: no }
+  zh-HK:
+    記憶體:
+    - { term: 記憶體, read: gei3 jik1 tai2 }
+  zh-TW:
+    記憶體:
+    - { term: 記憶體, read: ㄐㄧˋ ㄧˋ ㄊㄧˇ }
+
+# cache
+- en:
+    cache:
+    - term: cache
+  ja:
+    cache:
+    - { term: キャッシュ, loan: cache }
+  ko:
+    cache:
+    - { term: 캐시, loan: cache }
+  zh-CN:
+    緩存:
+    - { term: 缓存, read: huǎn cún, norm: 緩存 }
+  zh-HK:
+    快取:
+    - { term: 快取, read: faai3 ceoi2 }
+  zh-TW:
+    快取:
+    - { term: 快取, read: ㄎㄨㄞˋ ㄑㄩˇ }
+
+# SSD
+- en:
+    SSD:
+    - term: SSD
+    solid state drive:
+    - term: solid
+    - term: state
+    - term: drive
+  ja:
+    SSD:
+    - term: SSD
+  ko:
+    SSD:
+    - term: SSD
+  zh-CN:
+    固態硬碟:
+    - { term: 固态, read: gù tài, norm: 固態, correspond: solid state }
+    - { term: 硬盘, read: yìng pán, norm: 硬碟, correspond: drive, space: no }
+  zh-HK:
+    固態硬碟:
+    - { term: 固態, read: gu3 taai3, correspond: solid state }
+    - { term: 硬碟, read: ngaang6 dip2, correspond: drive, space: no }
+  zh-TW:
+    固態硬碟:
+    - { term: 固態, read: ㄍㄨˋ ㄊㄞˋ, correspond: solid state }
+    - { term: 硬碟, read: ㄧㄥˋ ㄉㄧㄝˊ, correspond: drive, space: no }
+
+# HDD
+- en:
+    HDD:
+    - term: HDD
+    hard disk drive:
+    - term: hard
+    - term: disk
+    - term: drive
+  ja:
+    HDD:
+    - term: HDD
+    ハードディスク:
+    - { term: ハードディスク, loan: hard disk }
+  ko:
+    HDD:
+    - term: HDD
+    하드 디스크:
+    - { term: 하드 디스크, loan: hard disk }
+  zh-CN:
+    硬碟:
+    - { term: 硬盘, read: yìng pán, norm: 硬碟 }
+  zh-HK:
+    硬碟:
+    - { term: 硬碟, read: ngaang6 dip2 }
+  zh-TW:
+    硬碟:
+    - { term: 硬碟, read: ㄧㄥˋ ㄉㄧㄝˊ }
+
+# motherboard
+- en:
+    motherboard:
+    - { term: mother }
+    - { term: board, space: no }
+  ja:
+    motherboard:
+    - { term: マザーボード, loan: motherboard }
+  ko:
+    motherboard:
+    - { term: 마더보드, loan: motherboard }
+    메인보드:
+    - { term: 메인보드, loan: mainboard }
+  zh-CN:
+    主機板:
+    - { term: 主板, read: zhǔ bǎn, norm: 主機板 }
+  zh-HK:
+    主機板:
+    - { term: 主機板, read: zyu2 gei1 baan2 }
+  zh-TW:
+    主機板:
+    - { term: 主機板, read: ㄓㄨˇ ㄐㄧ ㄅㄢˇ }
+
+# bus
+- en:
+    bus:
+    - term: bus
+  ja:
+    bus:
+    - { term: バス, loan: bus }
+  ko:
+    bus:
+    - { term: 버스, loan: bus }
+  zh-CN:
+    匯流排:
+    - { term: 总线, read: zǒng xiàn, norm: 匯流排 }
+  zh-HK:
+    匯流排:
+    - { term: 匯流排, read: wui6 lau4 paai4 }
+  zh-TW:
+    匯流排:
+    - { term: 匯流排, read: ㄏㄨㄟˋ ㄌㄧㄡˊ ㄆㄞˊ }
+
+# peripheral
+- en:
+    peripheral:
+    - term: peripheral
+  ja:
+    周邊機器:
+    - { term: 周辺, read: しゅう へん, norm: 周邊, correspond: peripheral }
+    - { term: 機器, read: き き, correspond: device, space: no }
+  ko:
+    周邊機器:
+    - { term: 주변, correspond: peripheral }
+    - { term: 기기, correspond: device }
+  zh-CN:
+    周邊設備:
+    - { term: 外设, read: wài shè, norm: 周邊設備 }
+  zh-HK:
+    周邊設備:
+    - { term: 周邊, read: zau1 bin1, correspond: peripheral }
+    - { term: 設備, read: cit3 bei6, correspond: device, space: no }
+  zh-TW:
+    周邊設備:
+    - { term: 周邊, read: ㄓㄡ ㄅㄧㄢ, correspond: peripheral }
+    - { term: 設備, read: ㄕㄜˋ ㄅㄟˋ, correspond: device, space: no }
+
+# chip
+- en:
+    chip:
+    - term: chip
+  ja:
+    chip:
+    - { term: チップ, loan: chip }
+  ko:
+    chip:
+    - { term: 칩, loan: chip }
+  zh-CN:
+    芯片:
+    - { term: 芯片, read: xīn piàn }
+  zh-HK:
+    晶片:
+    - { term: 晶片, read: zing1 pin2 }
+  zh-TW:
+    晶片:
+    - { term: 晶片, read: ㄐㄧㄥ ㄆㄧㄢˋ }
+
+# vim: set et sw=2 ts=2 sts=2 ft=yaml:

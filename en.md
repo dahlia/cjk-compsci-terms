@@ -225,5 +225,11 @@ Game development
 [Show table](tables/game-dev.yaml)
 
 
+Hardware
+--------
+
+[Show table](tables/hardware.yaml)
+
+
 *[CJK]: Chinese, Japanese, and Korean languages
 *[F/OSS]: Free and open-source software

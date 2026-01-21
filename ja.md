@@ -215,3 +215,9 @@
 ----------
 
 [表示](tables/game-dev.yaml)
+
+
+ハードウェア
+------------
+
+[表示](tables/hardware.yaml)
