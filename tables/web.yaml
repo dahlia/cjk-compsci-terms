@@ -1,0 +1,225 @@
+# browser
+- en:
+    browser:
+    - { term: brows, correspond: browse }
+    - { term: er, space: no }
+  ja:
+    browser:
+    - { term: ブラウザ, loan: browser }
+  ko:
+    browser:
+    - { term: 브라우저, loan: browser }
+  zh-CN:
+    瀏覽器:
+    - { term: 浏览, read: liú lǎn, correspond: browse }
+    - { term: 器, read: qì, correspond: device, space: no }
+  zh-HK:
+    瀏覽器:
+    - { term: 瀏覽, read: lau4 laam5, correspond: browse }
+    - { term: 器, read: hei3, correspond: device, space: no }
+  zh-TW:
+    瀏覽器:
+    - { term: 瀏覽, read: ㄌㄧㄡˊ ㄌㄢˇ, correspond: browse }
+    - { term: 器, read: ㄑㄧˋ, correspond: device, space: no }
+
+# HTTP
+- en:
+    HTTP:
+    - term: HTTP
+  ja:
+    HTTP:
+    - term: HTTP
+  ko:
+    HTTP:
+    - term: HTTP
+  zh-CN:
+    HTTP:
+    - term: HTTP
+  zh-HK:
+    HTTP:
+    - term: HTTP
+  zh-TW:
+    HTTP:
+    - term: HTTP
+
+# URL
+- en:
+    URL:
+    - term: URL
+  ja:
+    URL:
+    - term: URL
+  ko:
+    URL:
+    - term: URL
+  zh-CN:
+    URL:
+    - term: URL
+    網址:
+    - { term: 网, read: wǎng, correspond: web }
+    - { term: 址, read: zhǐ, correspond: address, space: no }
+  zh-HK:
+    URL:
+    - term: URL
+    網址:
+    - { term: 網, read: mong5, correspond: web }
+    - { term: 址, read: zi2, correspond: address, space: no }
+  zh-TW:
+    URL:
+    - term: URL
+    網址:
+    - { term: 網, read: ㄨㄤˇ, correspond: web }
+    - { term: 址, read: ㄓˇ, correspond: address, space: no }
+
+# cookie
+- en:
+    cookie:
+    - term: cookie
+  ja:
+    cookie:
+    - { term: クッキー, loan: cookie }
+  ko:
+    cookie:
+    - { term: 쿠키, loan: cookie }
+  zh-CN:
+    cookie:
+    - { term: cookie, loan: cookie }
+  zh-HK:
+    cookie:
+    - { term: cookie, loan: cookie }
+  zh-TW:
+    cookie:
+    - { term: cookie, loan: cookie }
+
+# session
+- en:
+    session:
+    - term: session
+  ja:
+    session:
+    - { term: セッション, loan: session }
+  ko:
+    session:
+    - { term: 세션, loan: session }
+  zh-CN:
+    會話:
+    - { term: 会, read: huì, correspond: meeting }
+    - { term: 话, read: huà, correspond: speech, space: no }
+  zh-HK:
+    工作階段:
+    - { term: 工作, read: gung1 zok3, correspond: work }
+    - { term: 階段, read: gaai1 dyun6, correspond: period, space: no }
+  zh-TW:
+    工作階段:
+    - { term: 工作, read: ㄍㄨㄥ ㄗㄨㄛˋ, correspond: work }
+    - { term: 階段, read: ㄐㄧㄝ ㄉㄨㄢˋ, correspond: period, space: no }
+
+# API
+- en:
+    API:
+    - term: API
+  ja:
+    API:
+    - term: API
+  ko:
+    API:
+    - term: API
+  zh-CN:
+    API:
+    - term: API
+  zh-HK:
+    API:
+    - term: API
+  zh-TW:
+    API:
+    - term: API
+
+# HTML
+- en:
+    HTML:
+    - term: HTML
+  ja:
+    HTML:
+    - term: HTML
+  ko:
+    HTML:
+    - term: HTML
+  zh-CN:
+    HTML:
+    - term: HTML
+  zh-HK:
+    HTML:
+    - term: HTML
+  zh-TW:
+    HTML:
+    - term: HTML
+
+# CSS
+- en:
+    CSS:
+    - term: CSS
+  ja:
+    CSS:
+    - term: CSS
+  ko:
+    CSS:
+    - term: CSS
+  zh-CN:
+    CSS:
+    - term: CSS
+  zh-HK:
+    CSS:
+    - term: CSS
+  zh-TW:
+    CSS:
+    - term: CSS
+
+# frontend
+- en:
+    frontend:
+    - { term: front }
+    - { term: end, space: no }
+  ja:
+    frontend:
+    - { term: フロントエンド, loan: frontend }
+  ko:
+    frontend:
+    - { term: 프론트엔드, loan: frontend }
+  zh-CN:
+    前端:
+    - { term: 前, read: qián, correspond: front }
+    - { term: 端, read: duān, correspond: end, space: no }
+  zh-HK:
+    前端:
+    - { term: 前, read: cin4, correspond: front }
+    - { term: 端, read: dyun1, correspond: end, space: no }
+  zh-TW:
+    前端:
+    - { term: 前, read: ㄑㄧㄢˊ, correspond: front }
+    - { term: 端, read: ㄉㄨㄢ, correspond: end, space: no }
+
+# backend
+- en:
+    backend:
+    - { term: back }
+    - { term: end, space: no }
+  ja:
+    backend:
+    - { term: バックエンド, loan: backend }
+  ko:
+    backend:
+    - { term: 백엔드, loan: backend }
+  zh-CN:
+    後端:
+    - { term: 后, read: hòu, correspond: back }
+    - { term: 端, read: duān, correspond: end, space: no }
+  zh-HK:
+    後端:
+    - { term: 後, read: hau6, correspond: back }
+    - { term: 端, read: dyun1, correspond: end, space: no }
+  zh-TW:
+    後端:
+    - { term: 後, read: ㄏㄡˋ, correspond: back }
+    - { term: 端, read: ㄉㄨㄢ, correspond: end, space: no }
+
+# vim: set et sw=2 ts=2 sts=2 ft=yaml:

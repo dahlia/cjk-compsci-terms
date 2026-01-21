@@ -207,5 +207,11 @@ Computer graphics
 [Show table](tables/graphics.yaml)
 
 
+Web
+---
+
+[Show table](tables/web.yaml)
+
+
 *[CJK]: Chinese, Japanese, and Korean languages
 *[F/OSS]: Free and open-source software
