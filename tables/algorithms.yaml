@@ -1,0 +1,250 @@
+# algorithm
+- en:
+    algorithm:
+    - term: algorithm
+  ja:
+    algorithm:
+    - { term: アルゴリズム, loan: algorithm }
+  ko:
+    algorithm:
+    - { term: 알고리즘, loan: algorithm }
+  zh-CN:
+    算法:
+    - { term: 算, read: suàn, correspond: calculate }
+    - { term: 法, read: fǎ, correspond: method, space: no }
+  zh-HK:
+    算法:
+    - { term: 算, read: syun3, correspond: calculate }
+    - { term: 法, read: faat3, correspond: method, space: no }
+  zh-TW:
+    演算法:
+    - { term: 演算, read: ㄧㄢˇ ㄙㄨㄢˋ, correspond: calculate }
+    - { term: 法, read: ㄈㄚˇ, correspond: method, space: no }
+
+# sorting
+- en:
+    sorting:
+    - term: sorting
+  ja:
+    整列:
+    - { term: 整列, read: せい れつ, correspond: sorting }
+    sort:
+    - { term: ソート, loan: sort }
+  ko:
+    整列:
+    - { term: 整列, read: 정 렬, correspond: sorting }
+  zh-CN:
+    排序:
+    - { term: 排, read: pái, correspond: arrange }
+    - { term: 序, read: xù, correspond: order, space: no }
+  zh-HK:
+    排序:
+    - { term: 排, read: paai4, correspond: arrange }
+    - { term: 序, read: zeoi6, correspond: order, space: no }
+  zh-TW:
+    排序:
+    - { term: 排, read: ㄆㄞˊ, correspond: arrange }
+    - { term: 序, read: ㄒㄩˋ, correspond: order, space: no }
+
+# searching
+- en:
+    searching:
+    - term: searching
+  ja:
+    探索:
+    - { term: 探索, read: たん さく, correspond: searching }
+  ko:
+    探索:
+    - { term: 探索, read: 탐 색, correspond: searching }
+  zh-CN:
+    搜索:
+    - { term: 搜, read: sōu, correspond: search }
+    - { term: 索, read: suǒ, correspond: seek, space: no }
+  zh-HK:
+    搜尋:
+    - { term: 搜, read: sau2, correspond: search }
+    - { term: 尋, read: cam4, correspond: seek, space: no }
+  zh-TW:
+    搜尋:
+    - { term: 搜, read: ㄙㄡ, correspond: search }
+    - { term: 尋, read: ㄒㄩㄣˊ, correspond: seek, space: no }
+
+# recursion
+- en:
+    recursion:
+    - term: recursion
+  ja:
+    再歸:
+    - { term: 再帰, norm: 再歸, read: さい き, correspond: recursion }
+  ko:
+    再歸:
+    - { term: 再歸, read: 재 귀, correspond: recursion }
+  zh-CN:
+    遞歸:
+    - { term: 递, read: dì, correspond: pass }
+    - { term: 归, read: guī, correspond: return, space: no }
+  zh-HK:
+    遞迴:
+    - { term: 遞, read: dai6, correspond: pass }
+    - { term: 迴, read: wui4, correspond: return, space: no }
+  zh-TW:
+    遞迴:
+    - { term: 遞, read: ㄉㄧˋ, correspond: pass }
+    - { term: 迴, read: ㄏㄨㄟˊ, correspond: return, space: no }
+
+# dynamic programming
+- en:
+    dynamic programming:
+    - term: dynamic
+    - term: programming
+  ja:
+    動的計畫法:
+    - { term: 動的, read: どう てき, correspond: dynamic }
+    - { term: 計画, norm: 計畫, read: けい かく, correspond: programming }
+    - { term: 法, read: ほう, correspond: method, space: no }
+  ko:
+    動的 programming:
+    - { term: 動的, read: 동 적, correspond: dynamic }
+    - { term: 프로그래밍, loan: programming }
+  zh-CN:
+    動態規劃:
+    - { term: 动态, read: dòng tài, correspond: dynamic }
+    - { term: 规划, read: guī huà, correspond: programming, space: no }
+  zh-HK:
+    動態規劃:
+    - { term: 動態, read: dung6 taai3, correspond: dynamic }
+    - { term: 規劃, read: kwai1 waak6, correspond: programming, space: no }
+  zh-TW:
+    動態規劃:
+    - { term: 動態, read: ㄉㄨㄥˋ ㄊㄞˋ, correspond: dynamic }
+    - { term: 規劃, read: ㄍㄨㄟ ㄏㄨㄚˋ, correspond: programming, space: no }
+
+# greedy algorithm
+- en:
+    greedy algorithm:
+    - term: greedy
+    - term: algorithm
+  ja:
+    貪欲法:
+    - { term: 貪欲, read: どん よく, correspond: greedy }
+    - { term: 法, read: ほう, correspond: algorithm, space: no }
+  ko:
+    貪欲 algorithm:
+    - { term: 貪欲, read: 탐 욕, correspond: greedy }
+    - { term: 알고리즘, loan: algorithm }
+  zh-CN:
+    貪婪算法:
+    - { term: 贪婪, read: tān lán, correspond: greedy }
+    - { term: 算法, read: suàn fǎ, correspond: algorithm, space: no }
+  zh-HK:
+    貪婪演算法:
+    - { term: 貪婪, read: taam1 laam4, correspond: greedy }
+    - { term: 演算法, read: jin2 syun3 faat3, correspond: algorithm, space: no }
+  zh-TW:
+    貪婪演算法:
+    - { term: 貪婪, read: ㄊㄢ ㄌㄢˊ, correspond: greedy }
+    - { term: 演算法, read: ㄧㄢˇ ㄙㄨㄢˋ ㄈㄚˇ, correspond: algorithm, space: no }
+
+# divide and conquer
+- en:
+    divide and conquer:
+    - term: divide
+    - term: and
+    - term: conquer
+  ja:
+    分割統治:
+    - { term: 分割, read: ぶん かつ, correspond: divide }
+    - { term: 統治, read: とう ち, correspond: conquer, space: no }
+  ko:
+    分割征服:
+    - { term: 分割, read: 분 할, correspond: divide }
+    - { term: 征服, read: 정 복, correspond: conquer, space: no }
+  zh-CN:
+    分治:
+    - { term: 分, read: fēn, correspond: divide }
+    - { term: 治, read: zhì, correspond: conquer, space: no }
+  zh-HK:
+    分治:
+    - { term: 分, read: fan1, correspond: divide }
+    - { term: 治, read: zi6, correspond: conquer, space: no }
+  zh-TW:
+    分治:
+    - { term: 分, read: ㄈㄣ, correspond: divide }
+    - { term: 治, read: ㄓˋ, correspond: conquer, space: no }
+
+# time complexity
+- en:
+    time complexity:
+    - term: time
+    - term: complexity
+  ja:
+    時間計算量:
+    - { term: 時間, read: じ かん, correspond: time }
+    - { term: 計算量, read: けい さん りょう, correspond: complexity, space: no }
+  ko:
+    時間複雜度:
+    - { term: 時間, read: 시 간, correspond: time }
+    - { term: 複雜度, read: 복 잡 도, correspond: complexity, space: no }
+  zh-CN:
+    時間複雜度:
+    - { term: 时间, read: shí jiān, correspond: time }
+    - { term: 复杂度, read: fù zá dù, correspond: complexity, space: no }
+  zh-HK:
+    時間複雜度:
+    - { term: 時間, read: si4 gaan1, correspond: time }
+    - { term: 複雜度, read: fuk1 zaap6 dou6, correspond: complexity, space: no }
+  zh-TW:
+    時間複雜度:
+    - { term: 時間, read: ㄕˊ ㄐㄧㄢ, correspond: time }
+    - { term: 複雜度, read: ㄈㄨˋ ㄗㄚˊ ㄉㄨˋ, correspond: complexity, space: no }
+
+# space complexity
+- en:
+    space complexity:
+    - term: space
+    - term: complexity
+  ja:
+    空間計算量:
+    - { term: 空間, read: くう かん, correspond: space }
+    - { term: 計算量, read: けい さん りょう, correspond: complexity, space: no }
+  ko:
+    空間複雜度:
+    - { term: 空間, read: 공 간, correspond: space }
+    - { term: 複雜度, read: 복 잡 도, correspond: complexity, space: no }
+  zh-CN:
+    空間複雜度:
+    - { term: 空间, read: kōng jiān, correspond: space }
+    - { term: 复杂度, read: fù zá dù, correspond: complexity, space: no }
+  zh-HK:
+    空間複雜度:
+    - { term: 空間, read: hung1 gaan1, correspond: space }
+    - { term: 複雜度, read: fuk1 zaap6 dou6, correspond: complexity, space: no }
+  zh-TW:
+    空間複雜度:
+    - { term: 空間, read: ㄎㄨㄥ ㄐㄧㄢ, correspond: space }
+    - { term: 複雜度, read: ㄈㄨˋ ㄗㄚˊ ㄉㄨˋ, correspond: complexity, space: no }
+
+# iteration
+- en:
+    iteration:
+    - term: iteration
+  ja:
+    反復:
+    - { term: 反復, read: はん ぷく, correspond: iteration }
+  ko:
+    反復:
+    - { term: 反復, read: 반 복, correspond: iteration }
+  zh-CN:
+    迭代:
+    - { term: 迭, read: dié, correspond: repeat }
+    - { term: 代, read: dài, correspond: generation, space: no }
+  zh-HK:
+    迭代:
+    - { term: 迭, read: dit6, correspond: repeat }
+    - { term: 代, read: doi6, correspond: generation, space: no }
+  zh-TW:
+    迭代:
+    - { term: 迭, read: ㄉㄧㄝˊ, correspond: repeat }
+    - { term: 代, read: ㄉㄞˋ, correspond: generation, space: no }
+
+# vim: set et sw=2 ts=2 sts=2 ft=yaml:

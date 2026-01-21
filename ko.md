@@ -182,3 +182,9 @@ lang="ja"><ruby>情<rt lang="ko">정</rt>報<rt lang="ko">보</rt></ruby></q>.
 --------
 
 [표 보기](tables/data-structures.yaml)
+
+
+알고리즘
+--------
+
+[표 보기](tables/algorithms.yaml)

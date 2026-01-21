@@ -189,5 +189,11 @@ Data structures
 [Show table](tables/data-structures.yaml)
 
 
+Algorithms
+----------
+
+[Show table](tables/algorithms.yaml)
+
+
 *[CJK]: Chinese, Japanese, and Korean languages
 *[F/OSS]: Free and open-source software

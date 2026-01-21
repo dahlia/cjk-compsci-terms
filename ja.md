@@ -179,3 +179,9 @@
 ----------
 
 [表示](tables/data-structures.yaml)
+
+
+アルゴリズム
+------------
+
+[表示](tables/algorithms.yaml)

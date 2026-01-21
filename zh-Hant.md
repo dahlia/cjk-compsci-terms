@@ -162,3 +162,9 @@
 --------
 
 [顯示表](tables/data-structures.yaml)
+
+
+演算法
+------
+
+[顯示表](tables/algorithms.yaml)
