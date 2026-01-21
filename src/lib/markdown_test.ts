@@ -122,3 +122,10 @@ Deno.test("insertToc replaces TOC placeholder", () => {
   assertEquals(result.includes("<!-- TOC: Contents -->"), false);
   assertEquals(result.includes('<nav class="toc">'), true);
 });
+
+Deno.test("markdownToHtml converts abbreviations", () => {
+  const md = "The HTML specification is maintained by the W3C.\n\n*[HTML]: Hyper Text Markup Language\n*[W3C]: World Wide Web Consortium";
+  const html = markdownToHtml(md);
+  assertEquals(html.includes("<abbr"), true);
+  assertEquals(html.includes("Hyper Text Markup Language"), true);
+});

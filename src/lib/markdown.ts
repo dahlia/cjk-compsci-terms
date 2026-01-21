@@ -4,6 +4,7 @@
  */
 
 import MarkdownIt from "markdown-it";
+import abbr from "markdown-it-abbr";
 import deflist from "markdown-it-deflist";
 import footnote from "markdown-it-footnote";
 import type { HtmlString } from "../jsx-runtime/index.ts";
@@ -14,7 +15,7 @@ const md = new MarkdownIt({
   html: true, // Allow HTML tags in source
   linkify: true, // Auto-convert URLs to links
   typographer: false, // Don't replace quotes/dashes
-}).use(deflist).use(footnote);
+}).use(abbr).use(deflist).use(footnote);
 
 /**
  * Remove <!-- hide -->...<!-- /hide --> sections from markdown.

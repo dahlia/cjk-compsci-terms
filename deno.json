@@ -19,6 +19,7 @@
     "kakasi": "npm:kakasi@^1.0.0",
     "kuroshiro": "npm:kuroshiro@^1.2.0",
     "kuroshiro-analyzer-kuromoji": "npm:kuroshiro-analyzer-kuromoji@^1.1.0",
+    "markdown-it-abbr": "npm:markdown-it-abbr@^2.0.0",
     "opencc-js": "npm:opencc-js@^1.0.5",
     "pinyin": "npm:pinyin@^4.0.0",
     "to-jyutping": "npm:to-jyutping@^3.1.1",

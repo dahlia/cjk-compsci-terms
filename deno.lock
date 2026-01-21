@@ -14,6 +14,7 @@
     "npm:kakasi@1": "1.0.0",
     "npm:kuroshiro-analyzer-kuromoji@^1.1.0": "1.1.0",
     "npm:kuroshiro@^1.2.0": "1.2.0",
+    "npm:markdown-it-abbr@2": "2.0.0",
     "npm:markdown-it-deflist@3": "3.0.0",
     "npm:markdown-it-footnote@4": "4.0.0",
     "npm:markdown-it@^14.1.0": "14.1.0",
@@ -123,6 +124,9 @@
     "lodash@4.17.21": {
       "integrity": "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="
     },
+    "markdown-it-abbr@2.0.0": {
+      "integrity": "sha512-of7C8pXSjXjDojW4neNP+jD7inUYH/DO0Ca+K/4FUEccg0oHAEX/nfscw0jfz66PJbYWOAT9U8mjO21X5p6aAw=="
+    },
     "markdown-it-deflist@3.0.0": {
       "integrity": "sha512-OxPmQ/keJZwbubjiQWOvKLHwpV2wZ5I3Smc81OjhwbfJsjdRrvD5aLTQxmZzzePeO0kbGzAo3Krk4QLgA8PWLg=="
     },
@@ -180,6 +184,7 @@
       "npm:kakasi@1",
       "npm:kuroshiro-analyzer-kuromoji@^1.1.0",
       "npm:kuroshiro@^1.2.0",
+      "npm:markdown-it-abbr@2",
       "npm:markdown-it-deflist@3",
       "npm:markdown-it-footnote@4",
       "npm:markdown-it@^14.1.0",
