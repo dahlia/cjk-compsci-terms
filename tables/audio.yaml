@@ -1,0 +1,226 @@
+# audio
+- en:
+    audio:
+    - term: audio
+  ja:
+    audio:
+    - { term: オーディオ, loan: audio }
+    音聲:
+    - { term: 音声, read: おん せい }
+  ko:
+    audio:
+    - { term: 오디오, loan: audio }
+    音聲:
+    - { term: 음성 }
+  zh-CN:
+    音頻:
+    - { term: 音频, read: yīn pín, norm: 音頻 }
+  zh-HK:
+    音頻:
+    - { term: 音頻, read: jam1 pan4 }
+  zh-TW:
+    音訊:
+    - { term: 音訊, read: ㄧㄣ ㄒㄩㄣˋ }
+
+# sampling
+- en:
+    sampling:
+    - term: sampling
+  ja:
+    sampling:
+    - { term: サンプリング, loan: sampling }
+    標本化:
+    - { term: 標本化, read: ひょう ほん か }
+  ko:
+    sampling:
+    - { term: 샘플링, loan: sampling }
+    標本化:
+    - { term: 표본화 }
+  zh-CN:
+    採樣:
+    - { term: 采样, read: cǎi yàng, norm: 採樣 }
+  zh-HK:
+    採樣:
+    - { term: 採樣, read: coi2 joeng6 }
+  zh-TW:
+    取樣:
+    - { term: 取樣, read: ㄑㄩˇ ㄧㄤˋ }
+
+# codec
+- en:
+    codec:
+    - { term: co, correspond: coder }
+    - { term: dec, correspond: decoder, space: no }
+  ja:
+    codec:
+    - { term: コーデック, loan: codec }
+  ko:
+    codec:
+    - { term: 코덱, loan: codec }
+  zh-CN:
+    編解碼器:
+    - { term: 编, read: biān, correspond: coder, norm: 編 }
+    - { term: 解码, read: jiě mǎ, correspond: decoder, space: no, norm: 解碼 }
+    - { term: 器, read: qì, space: no }
+  zh-HK:
+    編解碼器:
+    - { term: 編, read: pin1, correspond: coder }
+    - { term: 解碼, read: gaai2 maa5, correspond: decoder, space: no }
+    - { term: 器, read: hei3, space: no }
+  zh-TW:
+    編解碼器:
+    - { term: 編, read: ㄅㄧㄢ, correspond: coder }
+    - { term: 解碼, read: ㄐㄧㄝˇ ㄇㄚˇ, correspond: decoder, space: no }
+    - { term: 器, read: ㄑㄧˋ, space: no }
+
+# bitrate
+- en:
+    bitrate:
+    - { term: bit, correspond: bit }
+    - { term: rate, correspond: rate, space: no }
+  ja:
+    bitrate:
+    - { term: ビットレート, loan: bitrate }
+  ko:
+    bitrate:
+    - { term: 비트레이트, loan: bitrate }
+  zh-CN:
+    比特率:
+    - { term: 比特, read: bǐ tè, loan: bit, correspond: bit }
+    - { term: 率, read: lǜ, correspond: rate, space: no }
+  zh-HK:
+    位元率:
+    - { term: 位元, read: wai6 jyun4, correspond: bit }
+    - { term: 率, read: leot6, correspond: rate, space: no }
+  zh-TW:
+    位元率:
+    - { term: 位元, read: ㄨㄟˋ ㄩㄢˊ, correspond: bit }
+    - { term: 率, read: ㄌㄩˋ, correspond: rate, space: no }
+
+# frequency
+- en:
+    frequency:
+    - term: frequency
+  ja:
+    周波數:
+    - { term: 周波数, read: しゅう は すう }
+  ko:
+    周波數:
+    - { term: 주파수 }
+  zh-CN:
+    頻率:
+    - { term: 频率, read: pín lǜ, norm: 頻率 }
+  zh-HK:
+    頻率:
+    - { term: 頻率, read: pan4 leot6 }
+  zh-TW:
+    頻率:
+    - { term: 頻率, read: ㄆㄧㄣˊ ㄌㄩˋ }
+
+# amplitude
+- en:
+    amplitude:
+    - term: amplitude
+  ja:
+    振幅:
+    - { term: 振幅, read: しん ぷく }
+  ko:
+    振幅:
+    - { term: 진폭 }
+  zh-CN:
+    振幅:
+    - { term: 振幅, read: zhèn fú }
+  zh-HK:
+    振幅:
+    - { term: 振幅, read: zan3 fuk1 }
+  zh-TW:
+    振幅:
+    - { term: 振幅, read: ㄓㄣˋ ㄈㄨˊ }
+
+# waveform
+- en:
+    waveform:
+    - { term: wave, correspond: wave }
+    - { term: form, correspond: form, space: no }
+  ja:
+    波形:
+    - { term: 波, read: は, correspond: wave }
+    - { term: 形, read: けい, correspond: form, space: no }
+  ko:
+    波形:
+    - { term: 파형 }
+  zh-CN:
+    波形:
+    - { term: 波, read: bō, correspond: wave }
+    - { term: 形, read: xíng, correspond: form, space: no }
+  zh-HK:
+    波形:
+    - { term: 波, read: bo1, correspond: wave }
+    - { term: 形, read: jing4, correspond: form, space: no }
+  zh-TW:
+    波形:
+    - { term: 波, read: ㄅㄛ, correspond: wave }
+    - { term: 形, read: ㄒㄧㄥˊ, correspond: form, space: no }
+
+# streaming
+- en:
+    streaming:
+    - term: streaming
+  ja:
+    streaming:
+    - { term: ストリーミング, loan: streaming }
+  ko:
+    streaming:
+    - { term: 스트리밍, loan: streaming }
+  zh-CN:
+    流媒體:
+    - { term: 流, read: liú, correspond: stream }
+    - { term: 媒体, read: méi tǐ, correspond: media, space: no, norm: 媒體 }
+  zh-HK:
+    串流:
+    - { term: 串流, read: cyun3 lau4 }
+  zh-TW:
+    串流:
+    - { term: 串流, read: ㄔㄨㄢˋ ㄌㄧㄡˊ }
+
+# compression
+- en:
+    compression:
+    - term: compression
+  ja:
+    壓縮:
+    - { term: 圧縮, read: あっ しゅく }
+  ko:
+    壓縮:
+    - { term: 압축 }
+  zh-CN:
+    壓縮:
+    - { term: 压缩, read: yā suō, norm: 壓縮 }
+  zh-HK:
+    壓縮:
+    - { term: 壓縮, read: aat3 suk1 }
+  zh-TW:
+    壓縮:
+    - { term: 壓縮, read: ㄧㄚ ㄙㄨㄛ }
+
+# channel
+- en:
+    channel:
+    - term: channel
+  ja:
+    channel:
+    - { term: チャンネル, loan: channel }
+  ko:
+    channel:
+    - { term: 채널, loan: channel }
+  zh-CN:
+    聲道:
+    - { term: 声道, read: shēng dào, norm: 聲道 }
+  zh-HK:
+    聲道:
+    - { term: 聲道, read: sing1 dou6 }
+  zh-TW:
+    聲道:
+    - { term: 聲道, read: ㄕㄥ ㄉㄠˋ }
+
+# vim: set et sw=2 ts=2 sts=2 ft=yaml:

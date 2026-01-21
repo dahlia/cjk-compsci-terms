@@ -267,5 +267,11 @@ User interface
 [Show table](tables/ui-ux.yaml)
 
 
+Audio
+-----
+
+[Show table](tables/audio.yaml)
+
+
 *[CJK]: Chinese, Japanese, and Korean languages
 *[F/OSS]: Free and open-source software
