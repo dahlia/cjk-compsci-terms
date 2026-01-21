@@ -255,5 +255,11 @@ Version control
 [Show table](tables/version-control.yaml)
 
 
+Typography
+----------
+
+[Show table](tables/typography.yaml)
+
+
 *[CJK]: Chinese, Japanese, and Korean languages
 *[F/OSS]: Free and open-source software

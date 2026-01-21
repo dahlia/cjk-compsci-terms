@@ -245,3 +245,9 @@
 --------------
 
 [表示](tables/version-control.yaml)
+
+
+タイポグラフィ
+--------------
+
+[表示](tables/typography.yaml)

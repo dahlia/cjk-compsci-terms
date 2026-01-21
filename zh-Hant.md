@@ -228,3 +228,9 @@
 --------
 
 [顯示表](tables/version-control.yaml)
+
+
+字體排印
+--------
+
+[顯示表](tables/typography.yaml)

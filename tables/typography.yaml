@@ -1,0 +1,224 @@
+# font
+- en:
+    font:
+    - term: font
+  ja:
+    font:
+    - { term: フォント, loan: font }
+  ko:
+    font:
+    - { term: 폰트, loan: font }
+    書體:
+    - { term: 서체 }
+  zh-CN:
+    字體:
+    - { term: 字体, read: zì tǐ, norm: 字體 }
+  zh-HK:
+    字體:
+    - { term: 字體, read: zi6 tai2 }
+  zh-TW:
+    字體:
+    - { term: 字體, read: ㄗˋ ㄊㄧˇ }
+
+# typeface
+- en:
+    typeface:
+    - term: typeface
+  ja:
+    書體:
+    - { term: 書体, read: しょ たい }
+  ko:
+    書體:
+    - { term: 서체 }
+  zh-CN:
+    字體:
+    - { term: 字体, read: zì tǐ, norm: 字體 }
+  zh-HK:
+    字體:
+    - { term: 字體, read: zi6 tai2 }
+  zh-TW:
+    字型:
+    - { term: 字型, read: ㄗˋ ㄒㄧㄥˊ }
+
+# glyph
+- en:
+    glyph:
+    - term: glyph
+  ja:
+    glyph:
+    - { term: グリフ, loan: glyph }
+    字形:
+    - { term: 字形, read: じ けい }
+  ko:
+    glyph:
+    - { term: 글리프, loan: glyph }
+    字形:
+    - { term: 자형 }
+  zh-CN:
+    字形:
+    - { term: 字形, read: zì xíng }
+  zh-HK:
+    字形:
+    - { term: 字形, read: zi6 jing4 }
+  zh-TW:
+    字形:
+    - { term: 字形, read: ㄗˋ ㄒㄧㄥˊ }
+
+# serif
+- en:
+    serif:
+    - term: serif
+  ja:
+    明朝體:
+    - { term: 明朝体, read: みん ちょう たい }
+  ko:
+    明朝體:
+    - { term: 명조체 }
+    바탕體:
+    - { term: 바탕체 }
+  zh-CN:
+    宋體:
+    - { term: 宋体, read: sòng tǐ, norm: 宋體 }
+  zh-HK:
+    明體:
+    - { term: 明體, read: ming4 tai2 }
+  zh-TW:
+    明體:
+    - { term: 明體, read: ㄇㄧㄥˊ ㄊㄧˇ }
+
+# sans-serif
+- en:
+    sans-serif:
+    - { term: sans, correspond: without }
+    - { term: "-", space: no }
+    - { term: serif, space: no }
+  ja:
+    gothic體:
+    - { term: ゴシック体, loan: gothic }
+  ko:
+    gothic體:
+    - { term: 고딕체, loan: gothic }
+    돋움體:
+    - { term: 돋움체 }
+  zh-CN:
+    黑體:
+    - { term: 黑体, read: hēi tǐ, norm: 黑體 }
+  zh-HK:
+    黑體:
+    - { term: 黑體, read: hak1 tai2 }
+  zh-TW:
+    黑體:
+    - { term: 黑體, read: ㄏㄟ ㄊㄧˇ }
+
+# kerning
+- en:
+    kerning:
+    - term: kerning
+  ja:
+    kerning:
+    - { term: カーニング, loan: kerning }
+  ko:
+    字間:
+    - { term: 자간 }
+  zh-CN:
+    字距:
+    - { term: 字距, read: zì jù }
+  zh-HK:
+    字距:
+    - { term: 字距, read: zi6 geoi6 }
+  zh-TW:
+    字距:
+    - { term: 字距, read: ㄗˋ ㄐㄩˋ }
+
+# leading
+- en:
+    leading:
+    - term: leading
+  ja:
+    行送:
+    - { term: 行送り, read: ぎょう おく り }
+  ko:
+    行間:
+    - { term: 행간 }
+  zh-CN:
+    行距:
+    - { term: 行距, read: háng jù }
+  zh-HK:
+    行距:
+    - { term: 行距, read: hong4 geoi6 }
+  zh-TW:
+    行距:
+    - { term: 行距, read: ㄏㄤˊ ㄐㄩˋ }
+
+# Unicode
+- en:
+    Unicode:
+    - { term: Uni, correspond: unified }
+    - { term: code, space: no, correspond: code }
+  ja:
+    Unicode:
+    - { term: ユニコード, loan: Unicode }
+  ko:
+    Unicode:
+    - { term: 유니코드, loan: Unicode }
+  zh-CN:
+    Unicode:
+    - { term: 统一码, read: tǒng yī mǎ, correspond: unified code }
+  zh-HK:
+    Unicode:
+    - { term: 統一碼, read: tung2 jat1 maa5, correspond: unified code }
+  zh-TW:
+    Unicode:
+    - { term: 萬國碼, read: ㄨㄢˋ ㄍㄨㄛˊ ㄇㄚˇ }
+
+# encoding
+- en:
+    encoding:
+    - term: encoding
+  ja:
+    encoding:
+    - { term: エンコーディング, loan: encoding }
+    符號化:
+    - { term: 符号化, read: ふ ごう か }
+  ko:
+    符號化:
+    - { term: 부호화 }
+    encoding:
+    - { term: 인코딩, loan: encoding }
+  zh-CN:
+    編碼:
+    - { term: 编码, read: biān mǎ, norm: 編碼 }
+  zh-HK:
+    編碼:
+    - { term: 編碼, read: pin1 maa5 }
+  zh-TW:
+    編碼:
+    - { term: 編碼, read: ㄅㄧㄢ ㄇㄚˇ }
+
+# character set
+- en:
+    character set:
+    - { term: character, correspond: character }
+    - { term: set, correspond: set }
+  ja:
+    文字集合:
+    - { term: 文字, read: も じ, correspond: character }
+    - { term: 集合, read: しゅう ごう, correspond: set, space: no }
+  ko:
+    文字集合:
+    - { term: 문자, correspond: character }
+    - { term: 집합, correspond: set }
+  zh-CN:
+    字符集:
+    - { term: 字符, read: zì fú, correspond: character }
+    - { term: 集, read: jí, correspond: set, space: no }
+  zh-HK:
+    字元集:
+    - { term: 字元, read: zi6 jyun4, correspond: character }
+    - { term: 集, read: zaap6, correspond: set, space: no }
+  zh-TW:
+    字元集:
+    - { term: 字元, read: ㄗˋ ㄩㄢˊ, correspond: character }
+    - { term: 集, read: ㄐㄧˊ, correspond: set, space: no }
+
+# vim: set et sw=2 ts=2 sts=2 ft=yaml:
