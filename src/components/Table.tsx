@@ -20,13 +20,12 @@ import type { CharacterReading } from "../lib/romanization/types.ts";
 
 /**
  * Group locales by language for table headers.
- * Returns ordered groups where each group contains locales of the same language.
+ * Preserves the input order of locales.
  */
 function groupLocalesByLanguage(
   locales: LocaleCode[],
 ): Map<string, LocaleCode[]> {
   const groups = new Map<string, LocaleCode[]>();
-  const order = ["en", "ja", "ko", "zh"];
 
   for (const locale of locales) {
     const language = locale.split("-")[0];
@@ -38,16 +37,7 @@ function groupLocalesByLanguage(
     group.push(locale);
   }
 
-  // Return in canonical order
-  const orderedGroups = new Map<string, LocaleCode[]>();
-  for (const lang of order) {
-    const group = groups.get(lang);
-    if (group) {
-      orderedGroups.set(lang, group);
-    }
-  }
-
-  return orderedGroups;
+  return groups;
 }
 
 export interface TableProps {
@@ -267,16 +257,61 @@ function TableBody(props: {
 }
 
 /**
+ * Order locales so that English is first, then the display locale's language group,
+ * then the remaining languages in canonical order.
+ */
+function orderLocalesForDisplay(
+  supportedLocales: Set<LocaleCode>,
+  displayLocale: LocaleCode,
+): LocaleCode[] {
+  const displayLanguage = displayLocale.split("-")[0];
+  const canonicalOrder = ["en", "ja", "ko", "zh"];
+
+  // Build ordered language list: en first, then display language, then rest
+  const languageOrder = ["en"];
+  if (displayLanguage !== "en") {
+    languageOrder.push(displayLanguage);
+  }
+  for (const lang of canonicalOrder) {
+    if (!languageOrder.includes(lang)) {
+      languageOrder.push(lang);
+    }
+  }
+
+  // Map languages to their locales
+  const allLocales: LocaleCode[] = [
+    "en",
+    "ja",
+    "ko",
+    "zh-CN",
+    "zh-HK",
+    "zh-TW",
+  ];
+  const result: LocaleCode[] = [];
+
+  for (const lang of languageOrder) {
+    for (const locale of allLocales) {
+      if (
+        locale.split("-")[0] === lang &&
+        supportedLocales.has(locale)
+      ) {
+        result.push(locale);
+      }
+    }
+  }
+
+  return result;
+}
+
+/**
  * Render the complete comparison table.
  */
 export function Table(props: TableProps): HtmlString {
   const { table, displayLocale, readings, romanizations } = props;
   const langTag = displayLocale.replace("_", "-");
 
-  // Get ordered list of locales
-  const locales: LocaleCode[] = ["en", "ja", "ko", "zh-CN", "zh-HK", "zh-TW"].filter(
-    (l) => table.supportedLocales.has(l as LocaleCode)
-  ) as LocaleCode[];
+  // Get ordered list of locales (display locale's language comes after English)
+  const locales = orderLocalesForDisplay(table.supportedLocales, displayLocale);
 
   return jsx("div", {
     className: "terms",
