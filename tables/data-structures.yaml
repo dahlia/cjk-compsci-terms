@@ -1,0 +1,225 @@
+# array
+- en:
+    array:
+    - term: array
+  ja:
+    配列:
+    - { term: 配列, read: はい れつ, correspond: array }
+  ko:
+    配列:
+    - { term: 配列, read: 배 열, correspond: array }
+  zh-CN:
+    數組:
+    - { term: 数, read: shù, correspond: number }
+    - { term: 组, read: zǔ, correspond: group, space: no }
+  zh-HK:
+    陣列:
+    - { term: 陣, read: zan6, correspond: formation }
+    - { term: 列, read: lit6, correspond: row, space: no }
+  zh-TW:
+    陣列:
+    - { term: 陣, read: ㄓㄣˋ, correspond: formation }
+    - { term: 列, read: ㄌㄧㄝˋ, correspond: row, space: no }
+
+# linked list
+- en:
+    linked list:
+    - { term: link, correspond: link }
+    - { term: ed, space: no }
+    - term: list
+  ja:
+    連結 list:
+    - { term: 連結, read: れん けつ, correspond: linked }
+    - { term: リスト, loan: list }
+  ko:
+    連結 list:
+    - { term: 連結, read: 연 결, correspond: linked }
+    - { term: 리스트, loan: list }
+  zh-CN:
+    鏈表:
+    - { term: 链, read: liàn, correspond: chain }
+    - { term: 表, read: biǎo, correspond: list, space: no }
+  zh-HK:
+    鏈結串列:
+    - { term: 鏈結, read: lin4 git3, correspond: linked }
+    - { term: 串列, read: cyun3 lit6, correspond: list, space: no }
+  zh-TW:
+    鏈結串列:
+    - { term: 鏈結, read: ㄌㄧㄢˋ ㄐㄧㄝˊ, correspond: linked }
+    - { term: 串列, read: ㄔㄨㄢˋ ㄌㄧㄝˋ, correspond: list, space: no }
+
+# stack
+- en:
+    stack:
+    - term: stack
+  ja:
+    stack:
+    - { term: スタック, loan: stack }
+  ko:
+    stack:
+    - { term: 스택, loan: stack }
+  zh-CN:
+    棧:
+    - { term: 栈, read: zhàn, correspond: stack }
+  zh-HK:
+    堆疊:
+    - { term: 堆, read: deoi1, correspond: heap }
+    - { term: 疊, read: dip6, correspond: stack, space: no }
+  zh-TW:
+    堆疊:
+    - { term: 堆, read: ㄉㄨㄟ, correspond: heap }
+    - { term: 疊, read: ㄉㄧㄝˊ, correspond: stack, space: no }
+
+# queue
+- en:
+    queue:
+    - term: queue
+  ja:
+    queue:
+    - { term: キュー, loan: queue }
+  ko:
+    queue:
+    - { term: 큐, loan: queue }
+  zh-CN:
+    隊列:
+    - { term: 队, read: duì, correspond: line }
+    - { term: 列, read: liè, correspond: row, space: no }
+  zh-HK:
+    佇列:
+    - { term: 佇, read: cyu5, correspond: wait }
+    - { term: 列, read: lit6, correspond: row, space: no }
+  zh-TW:
+    佇列:
+    - { term: 佇, read: ㄓㄨˋ, correspond: wait }
+    - { term: 列, read: ㄌㄧㄝˋ, correspond: row, space: no }
+
+# tree
+- en:
+    tree:
+    - term: tree
+  ja:
+    木:
+    - { term: 木, read: き, correspond: tree }
+  ko:
+    tree:
+    - { term: 트리, loan: tree }
+  zh-CN:
+    樹:
+    - { term: 树, read: shù, correspond: tree }
+  zh-HK:
+    樹:
+    - { term: 樹, read: syu6, correspond: tree }
+  zh-TW:
+    樹:
+    - { term: 樹, read: ㄕㄨˋ, correspond: tree }
+
+# graph
+- en:
+    graph:
+    - term: graph
+  ja:
+    graph:
+    - { term: グラフ, loan: graph }
+  ko:
+    graph:
+    - { term: 그래프, loan: graph }
+  zh-CN:
+    圖:
+    - { term: 图, read: tú, correspond: graph }
+  zh-HK:
+    圖:
+    - { term: 圖, read: tou4, correspond: graph }
+  zh-TW:
+    圖:
+    - { term: 圖, read: ㄊㄨˊ, correspond: graph }
+
+# hash table
+- en:
+    hash table:
+    - term: hash
+    - term: table
+  ja:
+    hash table:
+    - { term: ハッシュ, loan: hash }
+    - { term: テーブル, loan: table }
+  ko:
+    hash table:
+    - { term: 해시, loan: hash }
+    - { term: 테이블, loan: table }
+  zh-CN:
+    雜湊表:
+    - { term: 哈希, read: hā xī, loan: hash }
+    - { term: 表, read: biǎo, correspond: table, space: no }
+  zh-HK:
+    雜湊表:
+    - { term: 雜湊, read: zaap6 cau3, correspond: hash }
+    - { term: 表, read: biu2, correspond: table, space: no }
+  zh-TW:
+    雜湊表:
+    - { term: 雜湊, read: ㄗㄚˊ ㄘㄡˋ, correspond: hash }
+    - { term: 表, read: ㄅㄧㄠˇ, correspond: table, space: no }
+
+# heap
+- en:
+    heap:
+    - term: heap
+  ja:
+    heap:
+    - { term: ヒープ, loan: heap }
+  ko:
+    heap:
+    - { term: 힙, loan: heap }
+  zh-CN:
+    堆:
+    - { term: 堆, read: duī, correspond: heap }
+  zh-HK:
+    堆:
+    - { term: 堆, read: deoi1, correspond: heap }
+  zh-TW:
+    堆:
+    - { term: 堆, read: ㄉㄨㄟ, correspond: heap }
+
+# set
+- en:
+    set:
+    - term: set
+  ja:
+    集合:
+    - { term: 集合, read: しゅう ごう, correspond: set }
+  ko:
+    集合:
+    - { term: 集合, read: 집 합, correspond: set }
+  zh-CN:
+    集合:
+    - { term: 集合, read: jí hé, correspond: set }
+  zh-HK:
+    集合:
+    - { term: 集合, read: zaap6 hap6, correspond: set }
+  zh-TW:
+    集合:
+    - { term: 集合, read: ㄐㄧˊ ㄏㄜˊ, correspond: set }
+
+# node
+- en:
+    node:
+    - term: node
+  ja:
+    node:
+    - { term: ノード, loan: node }
+  ko:
+    node:
+    - { term: 노드, loan: node }
+  zh-CN:
+    節點:
+    - { term: 节, read: jié, correspond: joint }
+    - { term: 点, read: diǎn, correspond: point, space: no }
+  zh-HK:
+    節點:
+    - { term: 節, read: zit3, correspond: joint }
+    - { term: 點, read: dim2, correspond: point, space: no }
+  zh-TW:
+    節點:
+    - { term: 節, read: ㄐㄧㄝˊ, correspond: joint }
+    - { term: 點, read: ㄉㄧㄢˇ, correspond: point, space: no }
+
+# vim: set et sw=2 ts=2 sts=2 ft=yaml:

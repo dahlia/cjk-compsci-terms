@@ -183,5 +183,11 @@ Security
 [Show table](tables/security.yaml)
 
 
+Data structures
+---------------
+
+[Show table](tables/data-structures.yaml)
+
+
 *[CJK]: Chinese, Japanese, and Korean languages
 *[F/OSS]: Free and open-source software
