@@ -80,7 +80,8 @@ function getLanguageHrefs(cleanUrls: boolean): [LocaleCode, string][] {
 /**
  * Pre-compute romanizations for all words in a table.
  * Processes all locales in the table, not just the display locale.
- * For EasternTerms, romanizes the 'read' field (phonetic reading).
+ * For Chinese locales, romanizes the 'term' field (Chinese characters).
+ * For Japanese/Korean, romanizes the 'read' field (hiragana/hangul).
  * For other terms, romanizes the 'term' field.
  */
 async function computeRomanizations(
@@ -94,11 +95,13 @@ async function computeRomanizations(
       for (const word of words) {
         if (word.locale.language === "en") continue;
 
-        // For EasternTerms, use the 'read' field (phonetic reading)
-        // For WesternTerms with 'read', use that
-        // Otherwise use the term text
+        // For Chinese locales (zh-CN, zh-TW, zh-HK), always use t.term
+        // because romanization needs the actual Chinese characters.
+        // The 'read' field for zh-TW contains bopomofo, not characters.
+        // For Japanese/Korean, use 'read' field (hiragana/hangul) if available.
+        const isChinese = localeCode.startsWith("zh-");
         const text = word.terms.map((t) => {
-          if ("read" in t && t.read) {
+          if (!isChinese && "read" in t && t.read) {
             // Remove spaces from read field (spaces are for character separation)
             return t.read.replace(/ /g, "");
           }

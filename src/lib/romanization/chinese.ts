@@ -21,8 +21,8 @@ function pinyin(
 /** Language tag for Simplified Chinese Pinyin */
 export const CHINESE_SIMPLIFIED_LANG_TAG = "zh-CN-Latn-pny";
 
-/** Language tag for Traditional Chinese Zhuyin (Bopomofo) */
-export const CHINESE_TRADITIONAL_LANG_TAG = "zh-TW-Bopo";
+/** Language tag for Traditional Chinese Pinyin romanization */
+export const CHINESE_TRADITIONAL_LANG_TAG = "zh-TW-Latn-pny";
 
 /**
  * Convert Chinese text to Pinyin.
@@ -92,14 +92,16 @@ export function romanizeSimplifiedChinese(text: string): RomanizationResult {
 }
 
 /**
- * Romanize Traditional Chinese text to Bopomofo (Zhuyin).
- * Taiwan uses Zhuyin (ㄅㄆㄇㄈ) as the primary phonetic system.
+ * Romanize Traditional Chinese text to Pinyin.
+ * While Taiwan uses Zhuyin (ㄅㄆㄇㄈ) as the primary phonetic system,
+ * Pinyin is used for romanization (Latin script representation).
+ * Zhuyin is used separately for ruby annotations via readTraditionalChinese.
  */
 export function romanizeTraditionalChinese(text: string): RomanizationResult {
   const normalized = text.replace(/ /g, "");
   return {
     langTag: CHINESE_TRADITIONAL_LANG_TAG,
-    text: toBopomofo(normalized),
+    text: toPinyin(normalized),
   };
 }
 
