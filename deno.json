@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "build": "deno run --allow-read --allow-write --allow-env src/build.ts",
+    "build": "deno run --allow-read --allow-write --allow-env --allow-net src/build.ts",
     "dev": "deno run --allow-read --allow-write --watch src/build.ts",
     "test": "deno test --allow-read",
     "check": "deno check src/**/*.ts src/**/*.tsx",
@@ -28,7 +28,10 @@
     "markdown-it": "npm:markdown-it@^14.1.0",
     "markdown-it-deflist": "npm:markdown-it-deflist@^3.0.0",
     "markdown-it-footnote": "npm:markdown-it-footnote@^4.0.0",
-    "jsx-runtime/jsx-runtime": "./src/jsx-runtime/index.ts"
+    "jsx-runtime/jsx-runtime": "./src/jsx-runtime/index.ts",
+    "satori": "npm:satori@^0.12.0",
+    "yoga-wasm-web": "npm:yoga-wasm-web@^0.3.3",
+    "@resvg/resvg-wasm": "npm:@resvg/resvg-wasm@^2.6.2"
   },
   "compilerOptions": {
     "strict": true,

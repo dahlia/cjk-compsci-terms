@@ -17,6 +17,7 @@ import { Table as TableComponent } from "./components/Table.tsx";
 import { Layout } from "./components/Layout.tsx";
 import { romanize, getCharacterReadings } from "./lib/romanization/index.ts";
 import type { CharacterReading } from "./lib/romanization/types.ts";
+import { generateOGImage, getOGImageFilename } from "./lib/og-image.ts";
 
 /** Output directory */
 const OUTPUT_DIR = "public_html";
@@ -60,8 +61,6 @@ const LOCALE_DESCRIPTIONS: Record<string, string> = {
   "zh-TW": "中文、日文、韓文電腦科學術語翻譯比較 — 漢字文化圈的譯詞、外來語、同源詞對照表",
 };
 
-/** Open Graph image filename */
-const OG_IMAGE = "og-image.png";
 
 /**
  * Language hrefs for navigation.
@@ -329,7 +328,8 @@ async function buildPage(locale: LocaleCode): Promise<void> {
   // Build canonical URL and OG image URL if URL_BASE is set
   const outputHref = LOCALE_OUTPUT_FILES[locale].replace(/index\.html$/, "");
   const canonicalUrl = urlBase ? `${urlBase}/${outputHref}` : undefined;
-  const ogImage = urlBase ? `${urlBase}/${OG_IMAGE}` : undefined;
+  const ogImageFilename = getOGImageFilename(locale);
+  const ogImage = urlBase ? `${urlBase}/${ogImageFilename}` : undefined;
 
   const page = Layout({
     title,
@@ -359,6 +359,19 @@ async function copyStaticAssets(): Promise<void> {
 }
 
 /**
+ * Generate OG images for all locales.
+ */
+async function generateOGImages(): Promise<void> {
+  console.log("\nGenerating OG images...");
+  for (const locale of PAGE_LOCALES) {
+    const filename = getOGImageFilename(locale);
+    console.log(`  Generating ${filename}...`);
+    const pngData = await generateOGImage(locale);
+    await Deno.writeFile(`${OUTPUT_DIR}/${filename}`, pngData);
+  }
+}
+
+/**
  * Main build function.
  */
 async function build(): Promise<void> {
@@ -374,6 +387,9 @@ async function build(): Promise<void> {
 
   // Copy static assets
   await copyStaticAssets();
+
+  // Generate OG images
+  await generateOGImages();
 
   const elapsed = ((Date.now() - start) / 1000).toFixed(2);
   console.log(`\nBuild complete in ${elapsed}s`);
@@ -416,6 +432,11 @@ Examples:
       await ensureDir(OUTPUT_DIR);
       await buildPage(locale);
       await copyStaticAssets();
+      // Generate OG image for this locale
+      const filename = getOGImageFilename(locale);
+      console.log(`\nGenerating ${filename}...`);
+      const pngData = await generateOGImage(locale);
+      await Deno.writeFile(`${OUTPUT_DIR}/${filename}`, pngData);
     } else {
       await build();
     }
