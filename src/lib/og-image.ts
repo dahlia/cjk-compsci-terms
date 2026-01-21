@@ -87,28 +87,17 @@ function toSatoriLang(locale: string): string {
 }
 
 // Satori and resvg modules (loaded dynamically)
-let satoriInit: typeof import("satori").init | null = null;
 let satori: typeof import("satori").default | null = null;
 let Resvg: typeof import("@resvg/resvg-wasm").Resvg | null = null;
 let resvgInitialized = false;
 
 /**
- * Initialize Satori with yoga-wasm-web.
+ * Initialize Satori.
+ * Satori 0.19+ bundles yoga internally, no separate initialization needed.
  */
 async function initSatori(): Promise<void> {
   if (satori) return;
-
   const satoriModule = await import("satori");
-  const initYoga = (await import("yoga-wasm-web")).default;
-
-  // Load yoga WASM
-  const yogaWasm = await fetch(
-    "https://cdn.jsdelivr.net/npm/yoga-wasm-web@0.3.3/dist/yoga.wasm"
-  );
-  const yoga = await initYoga(await yogaWasm.arrayBuffer());
-
-  satoriInit = satoriModule.init;
-  satoriInit(yoga);
   satori = satoriModule.default;
 }
 

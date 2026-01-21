@@ -8,12 +8,12 @@
     "fmt": "deno fmt src/"
   },
   "imports": {
-    "@std/yaml": "jsr:@std/yaml@^1",
-    "@std/fs": "jsr:@std/fs@^1",
-    "@std/path": "jsr:@std/path@^1",
-    "@std/cli": "jsr:@std/cli@^1",
-    "@std/assert": "jsr:@std/assert@^1",
-    "@austinshelby/pinyin-to-bopomofo": "jsr:@austinshelby/pinyin-to-bopomofo@^1",
+    "@std/yaml": "jsr:@std/yaml@^1.0.11",
+    "@std/fs": "jsr:@std/fs@^1.0.22",
+    "@std/path": "jsr:@std/path@^1.1.4",
+    "@std/cli": "jsr:@std/cli@^1.0.26",
+    "@std/assert": "jsr:@std/assert@^1.0.17",
+    "@austinshelby/pinyin-to-bopomofo": "jsr:@austinshelby/pinyin-to-bopomofo@^1.0.1",
     "es-hangul": "npm:es-hangul@^2.3.8",
     "hanja": "npm:hanja@^1.1.5",
     "kakasi": "npm:kakasi@^1.0.0",
@@ -29,8 +29,7 @@
     "markdown-it-deflist": "npm:markdown-it-deflist@^3.0.0",
     "markdown-it-footnote": "npm:markdown-it-footnote@^4.0.0",
     "jsx-runtime/jsx-runtime": "./src/jsx-runtime/index.ts",
-    "satori": "npm:satori@^0.12.0",
-    "yoga-wasm-web": "npm:yoga-wasm-web@^0.3.3",
+    "satori": "npm:satori@^0.19.1",
     "@resvg/resvg-wasm": "npm:@resvg/resvg-wasm@^2.6.2"
   },
   "compilerOptions": {
