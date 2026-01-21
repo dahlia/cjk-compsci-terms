@@ -87,13 +87,22 @@
     像素:
     - { term: 像, read: xiàng, correspond: image }
     - { term: 素, read: sù, correspond: element, space: no }
+    畫素:
+    - { term: 画, read: huà, norm: 畫, correspond: picture }
+    - { term: 素, read: sù, correspond: element, space: no }
   zh-HK:
     像素:
     - { term: 像, read: zoeng6, correspond: image }
     - { term: 素, read: sou3, correspond: element, space: no }
+    畫素:
+    - { term: 畫, read: waak6, correspond: picture }
+    - { term: 素, read: sou3, correspond: element, space: no }
   zh-TW:
     像素:
     - { term: 像, read: ㄒㄧㄤˋ, correspond: image }
+    - { term: 素, read: ㄙㄨˋ, correspond: element, space: no }
+    畫素:
+    - { term: 畫, read: ㄏㄨㄚˋ, correspond: picture }
     - { term: 素, read: ㄙㄨˋ, correspond: element, space: no }
 
 # vertex
