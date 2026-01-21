@@ -80,9 +80,8 @@ function getLanguageHrefs(cleanUrls: boolean): [LocaleCode, string][] {
 /**
  * Pre-compute romanizations for all words in a table.
  * Processes all locales in the table, not just the display locale.
- * For Chinese locales, romanizes the 'term' field (Chinese characters).
- * For Japanese/Korean, romanizes the 'read' field (hiragana/hangul).
- * For other terms, romanizes the 'term' field.
+ * For CJK locales, romanizes each term separately and joins with spaces
+ * for better morpheme visibility.
  */
 async function computeRomanizations(
   table: Table,
@@ -95,21 +94,32 @@ async function computeRomanizations(
       for (const word of words) {
         if (word.locale.language === "en") continue;
 
-        // For Chinese locales (zh-CN, zh-TW, zh-HK), always use t.term
-        // because romanization needs the actual Chinese characters.
-        // The 'read' field for zh-TW contains bopomofo, not characters.
-        // For Japanese/Korean, use 'read' field (hiragana/hangul) if available.
+        // Romanize each term separately and join with spaces
+        // for better morpheme visibility across all CJK locales.
+        // For Chinese: use t.term (Chinese characters)
+        // For Japanese/Korean: use t.read (hiragana/hangul) if available
         const isChinese = localeCode.startsWith("zh-");
-        const text = word.terms.map((t) => {
-          if (!isChinese && "read" in t && t.read) {
-            // Remove spaces from read field (spaces are for character separation)
-            return t.read.replace(/ /g, "");
-          }
-          return t.term;
-        }).join("");
+        const romanizedTerms: string[] = [];
+        let langTag: string = "";
 
-        const rom = await romanize(text, localeCode);
-        results.set(word, { langTag: rom.langTag, text: rom.text });
+        for (const t of word.terms) {
+          let textToRomanize: string;
+          if (isChinese) {
+            // For Chinese, always use the term (characters)
+            textToRomanize = t.term;
+          } else if ("read" in t && t.read) {
+            // For Japanese/Korean, use reading (hiragana/hangul)
+            // Remove internal spaces (they're for character separation in ruby)
+            textToRomanize = t.read.replace(/ /g, "");
+          } else {
+            textToRomanize = t.term;
+          }
+          const rom = await romanize(textToRomanize, localeCode);
+          langTag = rom.langTag;
+          romanizedTerms.push(rom.text);
+        }
+
+        results.set(word, { langTag, text: romanizedTerms.join(" ") });
       }
     }
   }
