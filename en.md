@@ -231,5 +231,11 @@ Hardware
 [Show table](tables/hardware.yaml)
 
 
+Computer architecture
+---------------------
+
+[Show table](tables/architecture.yaml)
+
+
 *[CJK]: Chinese, Japanese, and Korean languages
 *[F/OSS]: Free and open-source software

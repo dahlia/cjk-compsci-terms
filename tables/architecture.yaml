@@ -1,0 +1,268 @@
+# instruction set
+- en:
+    instruction set:
+    - term: instruction
+    - term: set
+  ja:
+    命令セット:
+    - { term: 命令, read: めい れい, correspond: instruction }
+    - { term: セット, loan: set, correspond: set, space: no }
+  ko:
+    命令語 集合:
+    - { term: 명령어, correspond: instruction }
+    - { term: 집합, correspond: set }
+  zh-CN:
+    指令集:
+    - { term: 指令, read: zhǐ lìng, correspond: instruction }
+    - { term: 集, read: jí, correspond: set, space: no }
+  zh-HK:
+    指令集:
+    - { term: 指令, read: zi2 ling6, correspond: instruction }
+    - { term: 集, read: zaap6, correspond: set, space: no }
+  zh-TW:
+    指令集:
+    - { term: 指令, read: ㄓˇ ㄌㄧㄥˋ, correspond: instruction }
+    - { term: 集, read: ㄐㄧˊ, correspond: set, space: no }
+
+# pipeline
+- en:
+    pipeline:
+    - { term: pipe }
+    - { term: line, space: no }
+  ja:
+    pipeline:
+    - { term: パイプライン, loan: pipeline }
+  ko:
+    pipeline:
+    - { term: 파이프라인, loan: pipeline }
+  zh-CN:
+    流水線:
+    - { term: 流水线, read: liú shuǐ xiàn, norm: 流水線 }
+    管線:
+    - { term: 管线, read: guǎn xiàn, norm: 管線 }
+  zh-HK:
+    管線:
+    - { term: 管線, read: gun2 sin3 }
+  zh-TW:
+    管線:
+    - { term: 管線, read: ㄍㄨㄢˇ ㄒㄧㄢˋ }
+
+# register
+- en:
+    register:
+    - term: register
+  ja:
+    register:
+    - { term: レジスタ, loan: register }
+  ko:
+    register:
+    - { term: 레지스터, loan: register }
+  zh-CN:
+    寄存器:
+    - { term: 寄存, read: jì cún, correspond: store }
+    - { term: 器, read: qì, correspond: device, space: no }
+  zh-HK:
+    暫存器:
+    - { term: 暫存, read: zaam6 cyun4, correspond: store }
+    - { term: 器, read: hei3, correspond: device, space: no }
+  zh-TW:
+    暫存器:
+    - { term: 暫存, read: ㄓㄢˋ ㄘㄨㄣˊ, correspond: store }
+    - { term: 器, read: ㄑㄧˋ, correspond: device, space: no }
+
+# ALU
+- en:
+    ALU:
+    - term: ALU
+    arithmetic logic unit:
+    - term: arithmetic
+    - term: logic
+    - term: unit
+  ja:
+    ALU:
+    - term: ALU
+    算術論理演算裝置:
+    - { term: 算術, read: さん じゅつ, correspond: arithmetic }
+    - { term: 論理, read: ろん り, correspond: logic, space: no }
+    - { term: 演算, read: えん ざん, correspond: operation, space: no }
+    - { term: 装置, read: そう ち, norm: 裝置, correspond: unit, space: no }
+  ko:
+    ALU:
+    - term: ALU
+    算術論理裝置:
+    - { term: 산술, correspond: arithmetic }
+    - { term: 논리, correspond: logic }
+    - { term: 장치, correspond: unit }
+  zh-CN:
+    ALU:
+    - term: ALU
+    算術邏輯單元:
+    - { term: 算术, read: suàn shù, norm: 算術, correspond: arithmetic }
+    - { term: 逻辑, read: luó jí, norm: 邏輯, correspond: logic, space: no }
+    - { term: 单元, read: dān yuán, norm: 單元, correspond: unit, space: no }
+  zh-HK:
+    ALU:
+    - term: ALU
+    算術邏輯單元:
+    - { term: 算術, read: syun3 seot6, correspond: arithmetic }
+    - { term: 邏輯, read: lo4 cap1, correspond: logic, space: no }
+    - { term: 單元, read: daan1 jyun4, correspond: unit, space: no }
+  zh-TW:
+    ALU:
+    - term: ALU
+    算術邏輯單元:
+    - { term: 算術, read: ㄙㄨㄢˋ ㄕㄨˋ, correspond: arithmetic }
+    - { term: 邏輯, read: ㄌㄨㄛˊ ㄐㄧˊ, correspond: logic, space: no }
+    - { term: 單元, read: ㄉㄢ ㄩㄢˊ, correspond: unit, space: no }
+
+# interrupt
+- en:
+    interrupt:
+    - term: interrupt
+  ja:
+    割り込み:
+    - { term: 割り込み, read: わりこみ }
+  ko:
+    interrupt:
+    - { term: 인터럽트, loan: interrupt }
+  zh-CN:
+    中斷:
+    - { term: 中断, read: zhōng duàn, norm: 中斷 }
+  zh-HK:
+    中斷:
+    - { term: 中斷, read: zung1 tyun5 }
+  zh-TW:
+    中斷:
+    - { term: 中斷, read: ㄓㄨㄥ ㄉㄨㄢˋ }
+
+# clock
+- en:
+    clock:
+    - term: clock
+  ja:
+    clock:
+    - { term: クロック, loan: clock }
+  ko:
+    clock:
+    - { term: 클럭, loan: clock }
+  zh-CN:
+    時鐘:
+    - { term: 时钟, read: shí zhōng, norm: 時鐘 }
+  zh-HK:
+    時鐘:
+    - { term: 時鐘, read: si4 zung1 }
+  zh-TW:
+    時鐘:
+    - { term: 時鐘, read: ㄕˊ ㄓㄨㄥ }
+
+# RISC
+- en:
+    RISC:
+    - term: RISC
+  ja:
+    RISC:
+    - term: RISC
+  ko:
+    RISC:
+    - term: RISC
+  zh-CN:
+    RISC:
+    - term: RISC
+    精簡指令集:
+    - { term: 精简, read: jīng jiǎn, norm: 精簡, correspond: reduced }
+    - { term: 指令, read: zhǐ lìng, correspond: instruction, space: no }
+    - { term: 集, read: jí, correspond: set, space: no }
+  zh-HK:
+    RISC:
+    - term: RISC
+    精簡指令集:
+    - { term: 精簡, read: zing1 gaan2, correspond: reduced }
+    - { term: 指令, read: zi2 ling6, correspond: instruction, space: no }
+    - { term: 集, read: zaap6, correspond: set, space: no }
+  zh-TW:
+    RISC:
+    - term: RISC
+    精簡指令集:
+    - { term: 精簡, read: ㄐㄧㄥ ㄐㄧㄢˇ, correspond: reduced }
+    - { term: 指令, read: ㄓˇ ㄌㄧㄥˋ, correspond: instruction, space: no }
+    - { term: 集, read: ㄐㄧˊ, correspond: set, space: no }
+
+# CISC
+- en:
+    CISC:
+    - term: CISC
+  ja:
+    CISC:
+    - term: CISC
+  ko:
+    CISC:
+    - term: CISC
+  zh-CN:
+    CISC:
+    - term: CISC
+    複雜指令集:
+    - { term: 复杂, read: fù zá, norm: 複雜, correspond: complex }
+    - { term: 指令, read: zhǐ lìng, correspond: instruction, space: no }
+    - { term: 集, read: jí, correspond: set, space: no }
+  zh-HK:
+    CISC:
+    - term: CISC
+    複雜指令集:
+    - { term: 複雜, read: fuk1 zaap6, correspond: complex }
+    - { term: 指令, read: zi2 ling6, correspond: instruction, space: no }
+    - { term: 集, read: zaap6, correspond: set, space: no }
+  zh-TW:
+    CISC:
+    - term: CISC
+    複雜指令集:
+    - { term: 複雜, read: ㄈㄨˋ ㄗㄚˊ, correspond: complex }
+    - { term: 指令, read: ㄓˇ ㄌㄧㄥˋ, correspond: instruction, space: no }
+    - { term: 集, read: ㄐㄧˊ, correspond: set, space: no }
+
+# memory hierarchy
+- en:
+    memory hierarchy:
+    - term: memory
+    - term: hierarchy
+  ja:
+    メモリ階層:
+    - { term: メモリ, loan: memory, correspond: memory }
+    - { term: 階層, read: かい そう, correspond: hierarchy, space: no }
+  ko:
+    記憶 階層:
+    - { term: 기억, correspond: memory }
+    - { term: 계층, correspond: hierarchy }
+  zh-CN:
+    記憶體階層:
+    - { term: 内存, read: nèi cún, norm: 記憶體, correspond: memory }
+    - { term: 层次, read: céng cì, norm: 階層, correspond: hierarchy, space: no }
+  zh-HK:
+    記憶體階層:
+    - { term: 記憶體, read: gei3 jik1 tai2, correspond: memory }
+    - { term: 階層, read: gaai1 cang4, correspond: hierarchy, space: no }
+  zh-TW:
+    記憶體階層:
+    - { term: 記憶體, read: ㄐㄧˋ ㄧˋ ㄊㄧˇ, correspond: memory }
+    - { term: 階層, read: ㄐㄧㄝ ㄘㄥˊ, correspond: hierarchy, space: no }
+
+# word
+- en:
+    word:
+    - term: word
+  ja:
+    word:
+    - { term: ワード, loan: word }
+  ko:
+    word:
+    - { term: 워드, loan: word }
+  zh-CN:
+    字:
+    - { term: 字, read: zì }
+  zh-HK:
+    字:
+    - { term: 字, read: zi6 }
+  zh-TW:
+    字組:
+    - { term: 字組, read: ㄗˋ ㄗㄨˇ }
+
+# vim: set et sw=2 ts=2 sts=2 ft=yaml:

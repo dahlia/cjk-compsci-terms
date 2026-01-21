@@ -221,3 +221,9 @@
 ------------
 
 [表示](tables/hardware.yaml)
+
+
+コンピュータアーキテクチャ
+--------------------------
+
+[表示](tables/architecture.yaml)

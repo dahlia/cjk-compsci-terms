@@ -204,3 +204,9 @@
 ----
 
 [顯示表](tables/hardware.yaml)
+
+
+電腦結構
+--------
+
+[顯示表](tables/architecture.yaml)
