@@ -5,17 +5,44 @@
 
 import MarkdownIt from "markdown-it";
 import abbr from "markdown-it-abbr";
+import anchor from "markdown-it-anchor";
 import deflist from "markdown-it-deflist";
 import footnote from "markdown-it-footnote";
+import toc from "markdown-it-toc-done-right";
 import type { HtmlString } from "../jsx-runtime/index.ts";
 import { raw } from "../jsx-runtime/index.ts";
+
+/**
+ * Generate a URL-safe slug from heading text.
+ */
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .trim();
+}
 
 // Initialize markdown-it with plugins
 const md = new MarkdownIt({
   html: true, // Allow HTML tags in source
   linkify: true, // Auto-convert URLs to links
   typographer: false, // Don't replace quotes/dashes
-}).use(abbr).use(deflist).use(footnote);
+})
+  .use(abbr)
+  .use(deflist)
+  .use(footnote)
+  .use(anchor, {
+    slugify,
+    permalink: false,
+  })
+  .use(toc, {
+    slugify,
+    containerClass: "toc",
+    listType: "ul",
+    level: [2, 3],
+  });
 
 /**
  * Remove <!-- hide -->...<!-- /hide --> sections from markdown.
@@ -40,85 +67,30 @@ export function findTablePlaceholders(markdown: string): [string, string][] {
 }
 
 /**
- * Extract TOC (Table of Contents) from markdown.
- * Only includes h2 and h3 headers (## and ###).
+ * Extract TOC title from placeholder and replace with ${toc}.
+ * Returns [processedMarkdown, title].
  */
-export function extractToc(markdown: string): { id: string; text: string; level: number }[] {
-  const toc: { id: string; text: string; level: number }[] = [];
-
-  // Match ATX headers (## and ###)
-  const atxRegex = /^(#{2,3})\s+(.+)$/gm;
-  let match;
-  while ((match = atxRegex.exec(markdown)) !== null) {
-    const level = match[1].length;
-    const text = match[2].replace(/<[^>]+>/g, "").trim(); // Strip HTML tags
-    const id = generateId(text);
-    toc.push({ id, text, level });
-  }
-
-  // Match setext h2 headers (underlined with --)
-  const setextH2Regex = /^(.+)\n-{2,}$/gm;
-  while ((match = setextH2Regex.exec(markdown)) !== null) {
-    const text = match[1].replace(/<[^>]+>/g, "").trim();
-    const id = generateId(text);
-    toc.push({ id, text, level: 2 });
-  }
-
-  return toc;
-}
-
-/**
- * Generate a URL-safe ID from heading text.
- */
-function generateId(text: string): string {
-  return text
-    .toLowerCase()
-    .replace(/[^\w\s-]/g, "")
-    .replace(/\s+/g, "-")
-    .replace(/-+/g, "-")
-    .trim();
-}
-
-/**
- * Generate TOC HTML (just the nav element with ul).
- */
-export function renderToc(toc: { id: string; text: string; level: number }[]): string {
-  if (toc.length === 0) return "";
-
-  let html = '<nav class="toc"><ul>';
-  for (const item of toc) {
-    html += `<li class="toc-level-${item.level}"><a href="#${item.id}">${item.text}</a></li>`;
-  }
-  html += "</ul></nav>";
-  return html;
-}
-
-/**
- * Replace TOC placeholder with rendered TOC.
- * Extracts the title from the placeholder comment and wraps TOC in proper structure.
- * Format: <!-- TOC: Title --> becomes <div id="toc"><div><h2>Title</h2>...</div></div>
- */
-export function insertToc(html: string, toc: string): string {
-  return html.replace(
+function prepareTocPlaceholder(markdown: string): [string, string] {
+  let title = "Contents";
+  const processed = markdown.replace(
     /<!--\s*TOC:\s*(.+?)\s*-->/i,
-    (_, title: string) => {
-      if (!toc) return "";
-      return `<div id="toc"><div><h2>${title}</h2>${toc}</div></div>`;
+    (_, t: string) => {
+      title = t;
+      return "${toc}";
     }
   );
+  return [processed, title];
 }
 
 /**
- * Add IDs to headers in rendered HTML for anchor links.
+ * Wrap the generated TOC nav with proper structure.
  */
-function addHeaderIds(html: string): string {
-  // Add id attributes to h1-h6 tags that don't have them
+function wrapToc(html: string, title: string): string {
+  // markdown-it-toc-done-right generates: <nav class="toc">...</nav>
+  // We need: <div id="toc"><div><h2>Title</h2><nav class="toc">...</nav></div></div>
   return html.replace(
-    /<(h[1-6])>([^<]+)<\/h[1-6]>/g,
-    (_, tag: string, text: string) => {
-      const id = generateId(text);
-      return `<${tag} id="${id}">${text}</${tag}>`;
-    }
+    /<nav class="toc">([^]*?)<\/nav>/,
+    `<div id="toc"><div><h2>${title}</h2><nav class="toc">$1</nav></div></div>`
   );
 }
 
@@ -126,8 +98,7 @@ function addHeaderIds(html: string): string {
  * Convert markdown to HTML using markdown-it.
  */
 export function markdownToHtml(markdown: string): string {
-  const html = md.render(markdown);
-  return addHeaderIds(html);
+  return md.render(markdown);
 }
 
 /**
@@ -147,15 +118,54 @@ export function processMarkdown(
     processed = processed.replace(placeholder, tableHtml.__html);
   }
 
-  // 3. Extract TOC before converting (from original with tables replaced)
-  const toc = extractToc(processed);
-  const tocHtml = renderToc(toc);
+  // 3. Prepare TOC placeholder (convert <!-- TOC: Title --> to ${toc})
+  const [withTocPlaceholder, tocTitle] = prepareTocPlaceholder(processed);
 
-  // 4. Convert markdown to HTML
-  let html = markdownToHtml(processed);
+  // 4. Convert markdown to HTML (TOC is generated automatically)
+  let html = markdownToHtml(withTocPlaceholder);
 
-  // 5. Insert TOC
-  html = insertToc(html, tocHtml);
+  // 5. Wrap TOC with proper structure
+  html = wrapToc(html, tocTitle);
 
   return raw(html);
+}
+
+// Legacy exports for tests (keeping backward compatibility)
+export function extractToc(markdown: string): { id: string; text: string; level: number }[] {
+  const tocItems: { id: string; text: string; level: number }[] = [];
+  const atxRegex = /^(#{2,3})\s+(.+)$/gm;
+  let match;
+  while ((match = atxRegex.exec(markdown)) !== null) {
+    const level = match[1].length;
+    const text = match[2].replace(/<[^>]+>/g, "").trim();
+    const id = slugify(text);
+    tocItems.push({ id, text, level });
+  }
+  const setextH2Regex = /^(.+)\n-{2,}$/gm;
+  while ((match = setextH2Regex.exec(markdown)) !== null) {
+    const text = match[1].replace(/<[^>]+>/g, "").trim();
+    const id = slugify(text);
+    tocItems.push({ id, text, level: 2 });
+  }
+  return tocItems;
+}
+
+export function renderToc(tocItems: { id: string; text: string; level: number }[]): string {
+  if (tocItems.length === 0) return "";
+  let html = '<nav class="toc"><ul>';
+  for (const item of tocItems) {
+    html += `<li class="toc-level-${item.level}"><a href="#${item.id}">${item.text}</a></li>`;
+  }
+  html += "</ul></nav>";
+  return html;
+}
+
+export function insertToc(html: string, tocHtml: string): string {
+  return html.replace(
+    /<!--\s*TOC:\s*(.+?)\s*-->/i,
+    (_, title: string) => {
+      if (!tocHtml) return "";
+      return `<div id="toc"><div><h2>${title}</h2>${tocHtml}</div></div>`;
+    }
+  );
 }
