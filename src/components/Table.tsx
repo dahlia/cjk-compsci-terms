@@ -266,7 +266,7 @@ function TableBody(props: {
  * order based on Python's Babel output.
  */
 function orderLocalesForDisplay(
-  supportedLocales: Set<LocaleCode>,
+  supportedLocales: ReadonlySet<LocaleCode>,
   displayLocale: LocaleCode,
 ): LocaleCode[] {
   const displayLanguage = displayLocale.split("-")[0];

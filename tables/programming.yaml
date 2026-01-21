@@ -238,8 +238,8 @@
     - term: function
   ja:
     函數:
-    - { term: 関, correspond: box,    read: かん }
-    - { term: 数, correspond: number, read: すう, space: no }
+    - { term: 関, norm: 函, correspond: box,    read: かん }
+    - { term: 数, norm: 數, correspond: number, read: すう, space: no }
   ko:
     函數:
     - { term: 函, correspond: box,    read: 함 }

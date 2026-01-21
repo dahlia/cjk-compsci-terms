@@ -148,3 +148,33 @@ Deno.test("loadTables loads multiple YAML files", async () => {
   assertEquals(tables[0].source, "tables/basic.yaml");
   assertEquals(tables[1].source, "tables/programming.yaml");
 });
+
+Deno.test("parseRawWord preserves norm property for regional variants", () => {
+  // Japanese 関 is a regional variant of Chinese 函 (same reading "kan" in Japanese)
+  const rawTerms = [
+    { term: "関", norm: "函", correspond: "box", read: "かん" },
+    { term: "数", norm: "數", correspond: "number", read: "すう", space: false },
+  ];
+  const word = parseRawWord("函數", rawTerms, "ja" as LocaleCode);
+
+  assertEquals(word.terms.length, 2);
+  assertEquals(word.terms[0].term, "関");
+  assertEquals(word.terms[0].norm, "函");
+  assertEquals(word.terms[1].term, "数");
+  assertEquals(word.terms[1].norm, "數");
+});
+
+Deno.test("parseRawWord defaults norm to term when not specified", () => {
+  const rawTerms = [
+    { term: "函", correspond: "box", read: "함" },
+    { term: "數", correspond: "number", read: "수", space: false },
+  ];
+  const word = parseRawWord("函數", rawTerms, "ko" as LocaleCode);
+
+  assertEquals(word.terms.length, 2);
+  // When norm is not specified, it should default to term
+  assertEquals(word.terms[0].term, "函");
+  assertEquals(word.terms[0].norm, "函");
+  assertEquals(word.terms[1].term, "數");
+  assertEquals(word.terms[1].norm, "數");
+});

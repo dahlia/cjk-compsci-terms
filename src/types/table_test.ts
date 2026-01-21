@@ -9,6 +9,7 @@ function createTestTable() {
   // Create "computer" translation
   const computerEn: BaseTerm = {
     term: "computer",
+    norm: "computer",
     space: "implicit-space",
     correspond: "computer",
   };
@@ -20,6 +21,7 @@ function createTestTable() {
 
   const computerJa: WesternTerm = {
     term: "コンピュータ",
+    norm: "コンピュータ",
     space: "implicit-no-space",
     correspond: "computer",
     loan: "computer",
@@ -39,11 +41,13 @@ function createTestTable() {
   // Create "software" translation
   const softwareEn1: BaseTerm = {
     term: "soft",
+    norm: "soft",
     space: "implicit-space",
     correspond: "soft",
   };
   const softwareEn2: BaseTerm = {
     term: "ware",
+    norm: "ware",
     space: "no-space",
     correspond: "ware",
   };

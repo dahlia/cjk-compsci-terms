@@ -48,6 +48,7 @@ function parseRawTerm(
     term: raw.term,
     space,
     correspond: raw.correspond ?? "",
+    norm: raw.norm ?? raw.term,
   };
 
   // Check for loan word (Western term)

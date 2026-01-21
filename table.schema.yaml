@@ -47,6 +47,7 @@ definitions:
       correspond: { type: string }
       read:       { type: string }
       loan:       { type: string }
+      norm:       { type: string }
     required: [ term ]
 
 # vim: set et sw=2 ts=2 sts=2 ft=yaml:

@@ -11,6 +11,12 @@ export interface BaseTerm {
   readonly space: Spacing;
   /** Etymology/correspondence link for coloring related terms */
   readonly correspond: string;
+  /**
+   * The orthodox/normalized form for cross-locale reading lookup.
+   * Used when a character is a regional variant (e.g., Japanese 関 for Chinese 函).
+   * Defaults to `term` if not specified.
+   */
+  readonly norm: string;
 }
 
 /**
@@ -76,4 +82,6 @@ export interface RawTermData {
   correspond?: string;
   read?: string;
   loan?: string;
+  /** Orthodox form for cross-locale normalization (regional variants) */
+  norm?: string;
 }

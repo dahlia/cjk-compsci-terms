@@ -145,8 +145,8 @@
     - term:   programming
   ja:
     函數型 programming:
-    - { term: 関数,     read: かん すう,             correspond: function }
-    - { term: 型,       read: がた,  space: no,      correspond: style }
+    - { term: 関数, norm: 函數, read: かん すう,     correspond: function }
+    - { term: 型,               read: がた, space: no, correspond: style }
     - { term: プログラミング,                              loan: programming }
   ko:
     函數型 programming:

@@ -7,6 +7,7 @@ import { parseLocale } from "./locale.ts";
 function createTestTranslation(): TranslationMap {
   const enTerm: BaseTerm = {
     term: "computer",
+    norm: "computer",
     space: "implicit-space",
     correspond: "computer",
   };
@@ -18,6 +19,7 @@ function createTestTranslation(): TranslationMap {
 
   const jaTerm: WesternTerm = {
     term: "コンピュータ",
+    norm: "コンピュータ",
     space: "implicit-no-space",
     correspond: "computer",
     loan: "computer",
@@ -31,12 +33,14 @@ function createTestTranslation(): TranslationMap {
 
   const zhCNTerm1: EasternTerm = {
     term: "电",
+    norm: "电",
     space: "implicit-no-space",
     correspond: "electronic",
     read: "diàn",
   };
   const zhCNTerm2: EasternTerm = {
     term: "脑",
+    norm: "脑",
     space: "no-space",
     correspond: "brain",
     read: "nǎo",

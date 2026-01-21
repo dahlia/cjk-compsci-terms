@@ -155,8 +155,9 @@ async function computeReadingsForLocale(
             } else {
               // Use display locale's reader
               // Normalize the term for the target locale's reading system
+              // Use term.norm (orthodox form) for normalization to handle regional variants
               const normalizedTerm = await normalizeForReading(
-                term.term,
+                term.norm,
                 wordLocale,
                 displayLocale,
               );
@@ -169,7 +170,8 @@ async function computeReadingsForLocale(
             }
             wordReadings.set(term, readings);
           }
-          previousTermTexts.push(term.term);
+          // Use norm for building phonetic context (e.g., Korean 두음법칙)
+          previousTermTexts.push(term.norm);
         }
 
         results.set(word, wordReadings);

@@ -12,6 +12,7 @@ import { parseLocale } from "./locale.ts";
 Deno.test("isEasternTerm identifies terms with read property", () => {
   const eastern: EasternTerm = {
     term: "电",
+    norm: "电",
     space: "implicit-no-space",
     correspond: "electronic",
     read: "diàn",
@@ -19,6 +20,7 @@ Deno.test("isEasternTerm identifies terms with read property", () => {
 
   const base: BaseTerm = {
     term: "comput",
+    norm: "comput",
     space: "implicit-space",
     correspond: "compute",
   };
@@ -30,6 +32,7 @@ Deno.test("isEasternTerm identifies terms with read property", () => {
 Deno.test("isWesternTerm identifies terms with loan property", () => {
   const western: WesternTerm = {
     term: "コンピュータ",
+    norm: "コンピュータ",
     space: "implicit-no-space",
     correspond: "computer",
     loan: "computer",
@@ -38,6 +41,7 @@ Deno.test("isWesternTerm identifies terms with loan property", () => {
 
   const eastern: EasternTerm = {
     term: "电",
+    norm: "电",
     space: "implicit-no-space",
     correspond: "electronic",
     read: "diàn",
@@ -50,6 +54,7 @@ Deno.test("isWesternTerm identifies terms with loan property", () => {
 Deno.test("hasAnnotation returns true for terms needing ruby annotations", () => {
   const western: WesternTerm = {
     term: "コンピュータ",
+    norm: "コンピュータ",
     space: "implicit-no-space",
     correspond: "computer",
     loan: "computer",
@@ -58,6 +63,7 @@ Deno.test("hasAnnotation returns true for terms needing ruby annotations", () =>
 
   const eastern: EasternTerm = {
     term: "电",
+    norm: "电",
     space: "implicit-no-space",
     correspond: "electronic",
     read: "diàn",
@@ -65,6 +71,7 @@ Deno.test("hasAnnotation returns true for terms needing ruby annotations", () =>
 
   const base: BaseTerm = {
     term: "comput",
+    norm: "comput",
     space: "implicit-space",
     correspond: "compute",
   };
