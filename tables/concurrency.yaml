@@ -239,3 +239,220 @@
     事務記憶體:
     - { term: 事務,         correspond: transactional, read: ㄕˋ ㄨˋ }
     - { term: 記憶體,       correspond: memory,        read: ㄐㄧˋ ㄧˋ ㄊㄧˇ }
+
+# Parallel computing
+- en:
+    parallel computing:
+    - term: parallel
+    - term: computing
+  ja:
+    竝列計算:
+    - { term: 並列,           correspond: parallel,  read: へい れつ }
+    - { term: 計算,           correspond: computing, read: けい さん }
+  ko:
+    竝列 computing:
+    - { term: 竝列,           correspond: parallel,  read: 병 렬 }
+    - { term: 컴퓨팅,         loan: computing }
+  zh-CN:
+    竝行計算:
+    - { term: 并行,           correspond: parallel,  read: bìng xíng }
+    - { term: 计算,           correspond: computing, read: jì suàn }
+  zh-HK:
+    平行計算:
+    - { term: 平行,           correspond: parallel,  read: ping4 hang4 }
+    - { term: 計算,           correspond: computing, read: gai3 syun3 }
+  zh-TW:
+    平行計算:
+    - { term: 平行,           correspond: parallel,  read: ㄆㄧㄥˊ ㄒㄧㄥˊ }
+    - { term: 計算,           correspond: computing, read: ㄐㄧˋ ㄙㄨㄢˋ }
+
+# Asynchronous programming
+- en:
+    asynchronous programming:
+    - { term: a,              correspond: not }
+    - { term: synchron,       correspond: synchronous, space: no }
+    - { term: ous,            correspond: quality,     space: no }
+    - term: programming
+  ja:
+    非同期 programming:
+    - { term: 非,             correspond: not,         read: ひ }
+    - { term: 同期,           correspond: synchronous, read: どう き, space: no }
+    - { term: プログラミング, loan: programming }
+  ko:
+    非同期 programming:
+    - { term: 非同期,         correspond: asynchronous, read: 비 동 기 }
+    - { term: 프로그래밍,     loan: programming }
+  zh-CN:
+    異步編程:
+    - { term: 异步,           correspond: asynchronous, read: yì bù }
+    - { term: 编程,           correspond: programming,  read: biān chéng }
+  zh-HK:
+    非同步編程:
+    - { term: 非同步,         correspond: asynchronous, read: fei1 tung4 bou6 }
+    - { term: 編程,           correspond: programming,  read: pin1 cing4 }
+  zh-TW:
+    非同步程式設計:
+    - { term: 非同步,         correspond: asynchronous, read: ㄈㄟ ㄊㄨㄥˊ ㄅㄨˋ }
+    - { term: 程式設計,       correspond: programming,  read: ㄔㄥˊ ㄕˋ ㄕㄜˋ ㄐㄧˋ }
+
+# Synchronous programming
+- en:
+    synchronous programming:
+    - { term: synchron,       correspond: synchronous }
+    - { term: ous,            correspond: quality,    space: no }
+    - term: programming
+  ja:
+    同期 programming:
+    - { term: 同期,           correspond: synchronous, read: どう き }
+    - { term: プログラミング, loan: programming }
+  ko:
+    同期 programming:
+    - { term: 同期,           correspond: synchronous, read: 동 기 }
+    - { term: 프로그래밍,     loan: programming }
+  zh-CN:
+    同步編程:
+    - { term: 同步,           correspond: synchronous, read: tóng bù }
+    - { term: 编程,           correspond: programming, read: biān chéng }
+  zh-HK:
+    同步編程:
+    - { term: 同步,           correspond: synchronous, read: tung4 bou6 }
+    - { term: 編程,           correspond: programming, read: pin1 cing4 }
+  zh-TW:
+    同步程式設計:
+    - { term: 同步,           correspond: synchronous, read: ㄊㄨㄥˊ ㄅㄨˋ }
+    - { term: 程式設計,       correspond: programming, read: ㄔㄥˊ ㄕˋ ㄕㄜˋ ㄐㄧˋ }
+
+# Multi-core
+- en:
+    multi-core:
+    - { term: multi,          correspond: multiple }
+    - { term: core,           space: hyphen }
+  ja:
+    multi-core:
+    - { term: マルチ,         loan: multi,  correspond: multiple }
+    - { term: コア,           loan: core,   space: no }
+  ko:
+    multi-core:
+    - { term: 멀티,           loan: multi,  correspond: multiple }
+    - { term: 코어,           loan: core,   space: no }
+  zh-CN:
+    多核心:
+    - { term: 多,             correspond: multiple, read: duō }
+    - { term: 核心,           correspond: core,     read: hé xīn, space: no }
+  zh-HK:
+    多核心:
+    - { term: 多,             correspond: multiple, read: do1 }
+    - { term: 核心,           correspond: core,     read: hat6 sam1, space: no }
+  zh-TW:
+    多核心:
+    - { term: 多,             correspond: multiple, read: ㄉㄨㄛ }
+    - { term: 核心,           correspond: core,     read: ㄏㄜˊ ㄒㄧㄣ, space: no }
+
+# Deadlock
+- en:
+    deadlock:
+    - { term: dead,           correspond: dead }
+    - { term: lock,           correspond: lock, space: no }
+  ja:
+    deadlock:
+    - { term: デッド,         loan: dead,   correspond: dead }
+    - { term: ロック,         loan: lock,   correspond: lock, space: no }
+  ko:
+    膠着狀態:
+    - { term: 膠着,           correspond: dead, read: 교 착 }
+    - { term: 狀態,           correspond: lock, read: 상 태, space: no }
+    deadlock:
+    - { term: 데드,           loan: dead,   correspond: dead }
+    - { term: 락,             loan: lock,   correspond: lock, space: no }
+  zh-CN:
+    死鎖:
+    - { term: 死,             correspond: dead, read: sǐ }
+    - { term: 锁,             correspond: lock, read: suǒ, space: no }
+  zh-HK:
+    死鎖:
+    - { term: 死,             correspond: dead, read: sei2 }
+    - { term: 鎖,             correspond: lock, read: so2, space: no }
+  zh-TW:
+    死結:
+    - { term: 死,             correspond: dead, read: ㄙˇ }
+    - { term: 結,             correspond: lock, read: ㄐㄧㄝˊ, space: no }
+    死鎖:
+    - { term: 死,             correspond: dead, read: ㄙˇ }
+    - { term: 鎖,             correspond: lock, read: ㄙㄨㄛˇ, space: no }
+
+# Race condition
+- en:
+    race condition:
+    - term: race
+    - term: condition
+  ja:
+    競合狀態:
+    - { term: 競合,           correspond: race,      read: きょう ごう }
+    - { term: 状態,           correspond: condition, read: じょう たい }
+  ko:
+    競爭狀態:
+    - { term: 競爭,           correspond: race,      read: 경 쟁 }
+    - { term: 狀態,           correspond: condition, read: 상 태 }
+  zh-CN:
+    競態條件:
+    - { term: 竞态,           correspond: race,      read: jìng tài }
+    - { term: 条件,           correspond: condition, read: tiáo jiàn }
+    競爭條件:
+    - { term: 竞争,           correspond: race,      read: jìng zhēng }
+    - { term: 条件,           correspond: condition, read: tiáo jiàn }
+  zh-HK:
+    競爭條件:
+    - { term: 競爭,           correspond: race,      read: ging6 zang1 }
+    - { term: 條件,           correspond: condition, read: tiu4 gin2 }
+  zh-TW:
+    競爭條件:
+    - { term: 競爭,           correspond: race,      read: ㄐㄧㄥˋ ㄓㄥ }
+    - { term: 條件,           correspond: condition, read: ㄊㄧㄠˊ ㄐㄧㄢˋ }
+
+# Semaphore
+- en:
+    semaphore:
+    - term: semaphore
+  ja:
+    semaphore:
+    - { term: セマフォ,       loan: semaphore }
+  ko:
+    semaphore:
+    - { term: 세마포어,       loan: semaphore }
+  zh-CN:
+    信號量:
+    - { term: 信号,           correspond: signal, read: xìn hào }
+    - { term: 量,             correspond: amount, read: liàng, space: no }
+  zh-HK:
+    信號量:
+    - { term: 信號,           correspond: signal, read: seon3 hou6 }
+    - { term: 量,             correspond: amount, read: loeng4, space: no }
+  zh-TW:
+    號誌:
+    - { term: 號誌,           correspond: semaphore, read: ㄏㄠˋ ㄓˋ }
+
+# Coroutine
+- en:
+    coroutine:
+    - { term: co,             correspond: together }
+    - { term: routine,        correspond: routine, space: no }
+  ja:
+    coroutine:
+    - { term: コ,             loan: co,      correspond: together }
+    - { term: ルーチン,       loan: routine, correspond: routine, space: no }
+  ko:
+    coroutine:
+    - { term: 코,             loan: co,      correspond: together }
+    - { term: 루틴,           loan: routine, correspond: routine, space: no }
+  zh-CN:
+    協程:
+    - { term: 协,             correspond: together, read: xié }
+    - { term: 程,             correspond: routine,  read: chéng, space: no }
+  zh-HK:
+    協程:
+    - { term: 協,             correspond: together, read: hip3 }
+    - { term: 程,             correspond: routine,  read: cing4, space: no }
+  zh-TW:
+    協程:
+    - { term: 協,             correspond: together, read: ㄒㄧㄝˊ }
+    - { term: 程,             correspond: routine,  read: ㄔㄥˊ, space: no }
