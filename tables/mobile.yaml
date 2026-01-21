@@ -1,0 +1,251 @@
+# app (application)
+- en:
+    application:
+    - term: application
+  ja:
+    application:
+    - { term: アプリ, loan: application }
+  ko:
+    application:
+    - { term: 앱, loan: app }
+  zh-CN:
+    應用:
+    - { term: 应用, norm: 應用, read: yìng yòng }
+  zh-HK:
+    應用程式:
+    - { term: 應用, read: jing3 jung6, correspond: application }
+    - { term: 程式, read: cing4 sik1, correspond: program, space: no }
+  zh-TW:
+    應用程式:
+    - { term: 應用, read: ㄧㄥˋ ㄩㄥˋ, correspond: application }
+    - { term: 程式, read: ㄔㄥˊ ㄕˋ, correspond: program, space: no }
+
+# smartphone
+- en:
+    smartphone:
+    - { term: smart }
+    - { term: phone, space: no }
+  ja:
+    smartphone:
+    - { term: スマートフォン, loan: smartphone }
+  ko:
+    smartphone:
+    - { term: 스마트폰, loan: smartphone }
+  zh-CN:
+    智能手機:
+    - { term: 智能, read: zhì néng, correspond: smart }
+    - { term: 手机, read: shǒu jī, norm: 手機, correspond: phone, space: no }
+  zh-HK:
+    智能電話:
+    - { term: 智能, read: zi3 nang4, correspond: smart }
+    - { term: 電話, read: din6 waa2, correspond: phone, space: no }
+    智能手機:
+    - { term: 智能, read: zi3 nang4, correspond: smart }
+    - { term: 手機, read: sau2 gei1, correspond: phone, space: no }
+  zh-TW:
+    智慧型手機:
+    - { term: 智慧型, read: ㄓˋ ㄏㄨㄟˋ ㄒㄧㄥˊ, correspond: smart }
+    - { term: 手機, read: ㄕㄡˇ ㄐㄧ, correspond: phone, space: no }
+
+# firmware
+- en:
+    firmware:
+    - { term: firm }
+    - { term: ware, space: no }
+  ja:
+    firmware:
+    - { term: ファームウェア, loan: firmware }
+  ko:
+    firmware:
+    - { term: 펌웨어, loan: firmware }
+  zh-CN:
+    固件:
+    - { term: 固, read: gù, correspond: firm }
+    - { term: 件, read: jiàn, correspond: ware, space: no }
+  zh-HK:
+    韌體:
+    - { term: 韌, read: jan6, correspond: firm }
+    - { term: 體, read: tai2, correspond: ware, space: no }
+  zh-TW:
+    韌體:
+    - { term: 韌, read: ㄖㄣˋ, correspond: firm }
+    - { term: 體, read: ㄊㄧˇ, correspond: ware, space: no }
+
+# touch screen
+- en:
+    touch screen:
+    - term: touch
+    - term: screen
+  ja:
+    touch screen:
+    - { term: タッチスクリーン, loan: touch screen }
+    タッチパネル:
+    - { term: タッチパネル, loan: touch panel }
+  ko:
+    touch screen:
+    - { term: 터치스크린, loan: touch screen }
+    터치패널:
+    - { term: 터치패널, loan: touch panel }
+  zh-CN:
+    觸摸屏:
+    - { term: 触摸, read: chù mō, norm: 觸摸, correspond: touch }
+    - { term: 屏, read: píng, correspond: screen, space: no }
+  zh-HK:
+    觸控螢幕:
+    - { term: 觸控, read: cuk1 hung3, correspond: touch }
+    - { term: 螢幕, read: jing4 mok6, correspond: screen, space: no }
+  zh-TW:
+    觸控螢幕:
+    - { term: 觸控, read: ㄔㄨˋ ㄎㄨㄥˋ, correspond: touch }
+    - { term: 螢幕, read: ㄧㄥˊ ㄇㄨˋ, correspond: screen, space: no }
+
+# sensor
+- en:
+    sensor:
+    - { term: sens, correspond: sense }
+    - { term: or, space: no }
+  ja:
+    sensor:
+    - { term: センサー, loan: sensor }
+  ko:
+    sensor:
+    - { term: 센서, loan: sensor }
+  zh-CN:
+    傳感器:
+    - { term: 传感, read: chuán gǎn, norm: 傳感, correspond: sense }
+    - { term: 器, read: qì, correspond: device, space: no }
+  zh-HK:
+    感應器:
+    - { term: 感應, read: gam2 jing3, correspond: sense }
+    - { term: 器, read: hei3, correspond: device, space: no }
+  zh-TW:
+    感測器:
+    - { term: 感測, read: ㄍㄢˇ ㄘㄜˋ, correspond: sense }
+    - { term: 器, read: ㄑㄧˋ, correspond: device, space: no }
+
+# GPS
+- en:
+    GPS:
+    - term: GPS
+  ja:
+    GPS:
+    - term: GPS
+  ko:
+    GPS:
+    - term: GPS
+  zh-CN:
+    GPS:
+    - term: GPS
+    全球定位系統:
+    - { term: 全球, read: quán qiú, correspond: global }
+    - { term: 定位, read: dìng wèi, correspond: positioning, space: no }
+    - { term: 系统, read: xì tǒng, norm: 系統, correspond: system, space: no }
+  zh-HK:
+    GPS:
+    - term: GPS
+    全球定位系統:
+    - { term: 全球, read: cyun4 kau4, correspond: global }
+    - { term: 定位, read: ding6 wai2, correspond: positioning, space: no }
+    - { term: 系統, read: hai6 tung2, correspond: system, space: no }
+  zh-TW:
+    GPS:
+    - term: GPS
+    全球定位系統:
+    - { term: 全球, read: ㄑㄩㄢˊ ㄑㄧㄡˊ, correspond: global }
+    - { term: 定位, read: ㄉㄧㄥˋ ㄨㄟˋ, correspond: positioning, space: no }
+    - { term: 系統, read: ㄒㄧˋ ㄊㄨㄥˇ, correspond: system, space: no }
+
+# notification
+- en:
+    notification:
+    - term: notification
+  ja:
+    通知:
+    - { term: 通知, read: つう ち }
+  ko:
+    通知:
+    - { term: 알림 }
+  zh-CN:
+    通知:
+    - { term: 通知, read: tōng zhī }
+  zh-HK:
+    通知:
+    - { term: 通知, read: tung1 zi1 }
+  zh-TW:
+    通知:
+    - { term: 通知, read: ㄊㄨㄥ ㄓ }
+
+# widget
+- en:
+    widget:
+    - term: widget
+  ja:
+    widget:
+    - { term: ウィジェット, loan: widget }
+  ko:
+    widget:
+    - { term: 위젯, loan: widget }
+  zh-CN:
+    小組件:
+    - { term: 小, read: xiǎo, correspond: small }
+    - { term: 组件, read: zǔ jiàn, norm: 組件, correspond: widget, space: no }
+  zh-HK:
+    小工具:
+    - { term: 小, read: siu2, correspond: small }
+    - { term: 工具, read: gung1 geoi6, correspond: tool, space: no }
+  zh-TW:
+    小工具:
+    - { term: 小, read: ㄒㄧㄠˇ, correspond: small }
+    - { term: 工具, read: ㄍㄨㄥ ㄐㄩˋ, correspond: tool, space: no }
+
+# accelerometer
+- en:
+    accelerometer:
+    - { term: accelero, correspond: acceleration }
+    - { term: meter, space: no }
+  ja:
+    加速度センサー:
+    - { term: 加速度, read: か そく ど, correspond: acceleration }
+    - { term: センサー, loan: sensor, space: no }
+  ko:
+    加速度計:
+    - { term: 加速度, read: 가 속 도, correspond: acceleration }
+    - { term: 計, read: 계, correspond: meter, space: no }
+  zh-CN:
+    加速度計:
+    - { term: 加速度, read: jiā sù dù, correspond: acceleration }
+    - { term: 计, read: jì, norm: 計, correspond: meter, space: no }
+  zh-HK:
+    加速度計:
+    - { term: 加速度, read: gaa1 cuk1 dou6, correspond: acceleration }
+    - { term: 計, read: gai3, correspond: meter, space: no }
+  zh-TW:
+    加速度計:
+    - { term: 加速度, read: ㄐㄧㄚ ㄙㄨˋ ㄉㄨˋ, correspond: acceleration }
+    - { term: 計, read: ㄐㄧˋ, correspond: meter, space: no }
+
+# gyroscope
+- en:
+    gyroscope:
+    - { term: gyro, correspond: rotation }
+    - { term: scope, space: no }
+  ja:
+    gyroscope:
+    - { term: ジャイロスコープ, loan: gyroscope }
+  ko:
+    gyroscope:
+    - { term: 자이로스코프, loan: gyroscope }
+  zh-CN:
+    陀螺儀:
+    - { term: 陀螺, read: tuó luó, correspond: gyro }
+    - { term: 仪, read: yí, norm: 儀, correspond: instrument, space: no }
+  zh-HK:
+    陀螺儀:
+    - { term: 陀螺, read: to4 lo4, correspond: gyro }
+    - { term: 儀, read: ji4, correspond: instrument, space: no }
+  zh-TW:
+    陀螺儀:
+    - { term: 陀螺, read: ㄊㄨㄛˊ ㄌㄨㄛˊ, correspond: gyro }
+    - { term: 儀, read: ㄧˊ, correspond: instrument, space: no }
+
+# vim: set et sw=2 ts=2 sts=2 ft=yaml:

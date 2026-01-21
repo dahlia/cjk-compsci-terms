@@ -203,3 +203,9 @@
 ------
 
 [表示](tables/web.yaml)
+
+
+モバイル
+--------
+
+[表示](tables/mobile.yaml)

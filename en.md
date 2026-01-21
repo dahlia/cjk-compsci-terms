@@ -213,5 +213,11 @@ Web
 [Show table](tables/web.yaml)
 
 
+Mobile
+------
+
+[Show table](tables/mobile.yaml)
+
+
 *[CJK]: Chinese, Japanese, and Korean languages
 *[F/OSS]: Free and open-source software
