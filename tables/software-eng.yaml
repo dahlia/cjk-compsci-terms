@@ -1,0 +1,224 @@
+# refactoring
+- en:
+    refactoring:
+    - { term: re, correspond: re }
+    - { term: factor, correspond: factor, space: no }
+    - { term: ing, space: no }
+  ja:
+    refactoring:
+    - { term: リファクタリング, loan: refactoring }
+  ko:
+    refactoring:
+    - { term: 리팩토링, loan: refactoring }
+  zh-CN:
+    重構:
+    - { term: 重构, read: chóng gòu, norm: 重構 }
+  zh-HK:
+    重構:
+    - { term: 重構, read: cung4 kau3 }
+  zh-TW:
+    重構:
+    - { term: 重構, read: ㄔㄨㄥˊ ㄍㄡˋ }
+
+# debugging
+- en:
+    debugging:
+    - { term: de, correspond: de }
+    - { term: bug, correspond: bug, space: no }
+    - { term: ging, space: no }
+  ja:
+    debugging:
+    - { term: デバッグ, loan: debug }
+  ko:
+    debugging:
+    - { term: 디버깅, loan: debugging }
+  zh-CN:
+    調試:
+    - { term: 调试, read: tiáo shì, norm: 調試 }
+  zh-HK:
+    除錯:
+    - { term: 除錯, read: ceoi4 co3 }
+  zh-TW:
+    除錯:
+    - { term: 除錯, read: ㄔㄨˊ ㄘㄨㄛˋ }
+
+# unit test
+- en:
+    unit test:
+    - term: unit
+    - term: test
+  ja:
+    單體テスト:
+    - { term: 単体, read: たん たい, norm: 單體, correspond: unit }
+    - { term: テスト, loan: test, correspond: test, space: no }
+  ko:
+    單位テスト:
+    - { term: 단위, correspond: unit }
+    - { term: 테스트, loan: test, correspond: test }
+  zh-CN:
+    單元測試:
+    - { term: 单元, read: dān yuán, norm: 單元, correspond: unit }
+    - { term: 测试, read: cè shì, norm: 測試, correspond: test, space: no }
+  zh-HK:
+    單元測試:
+    - { term: 單元, read: daan1 jyun4, correspond: unit }
+    - { term: 測試, read: cak1 si5, correspond: test, space: no }
+  zh-TW:
+    單元測試:
+    - { term: 單元, read: ㄉㄢ ㄩㄢˊ, correspond: unit }
+    - { term: 測試, read: ㄘㄜˋ ㄕˋ, correspond: test, space: no }
+
+# integration test
+- en:
+    integration test:
+    - term: integration
+    - term: test
+  ja:
+    結合テスト:
+    - { term: 結合, read: けつ ごう, correspond: integration }
+    - { term: テスト, loan: test, correspond: test, space: no }
+  ko:
+    統合テスト:
+    - { term: 통합, correspond: integration }
+    - { term: 테스트, loan: test, correspond: test }
+  zh-CN:
+    集成測試:
+    - { term: 集成, read: jí chéng, correspond: integration }
+    - { term: 测试, read: cè shì, norm: 測試, correspond: test, space: no }
+  zh-HK:
+    整合測試:
+    - { term: 整合, read: zing2 hap6, correspond: integration }
+    - { term: 測試, read: cak1 si5, correspond: test, space: no }
+  zh-TW:
+    整合測試:
+    - { term: 整合, read: ㄓㄥˇ ㄏㄜˊ, correspond: integration }
+    - { term: 測試, read: ㄘㄜˋ ㄕˋ, correspond: test, space: no }
+
+# deployment
+- en:
+    deployment:
+    - term: deployment
+  ja:
+    deployment:
+    - { term: デプロイ, loan: deploy }
+  ko:
+    配布:
+    - { term: 배포 }
+  zh-CN:
+    部署:
+    - { term: 部署, read: bù shǔ }
+  zh-HK:
+    部署:
+    - { term: 部署, read: bou6 cyu5 }
+  zh-TW:
+    部署:
+    - { term: 部署, read: ㄅㄨˋ ㄕㄨˇ }
+
+# code review
+- en:
+    code review:
+    - term: code
+    - term: review
+  ja:
+    code review:
+    - { term: コードレビュー, loan: code review }
+  ko:
+    code review:
+    - { term: 코드 리뷰, loan: code review }
+  zh-CN:
+    代碼審查:
+    - { term: 代码, read: dài mǎ, norm: 代碼, correspond: code }
+    - { term: 审查, read: shěn chá, norm: 審查, correspond: review, space: no }
+  zh-HK:
+    代碼審查:
+    - { term: 代碼, read: doi6 maa5, correspond: code }
+    - { term: 審查, read: sam2 caa4, correspond: review, space: no }
+  zh-TW:
+    程式碼審查:
+    - { term: 程式碼, read: ㄔㄥˊ ㄕˋ ㄇㄚˇ, correspond: code }
+    - { term: 審查, read: ㄕㄣˇ ㄔㄚˊ, correspond: review, space: no }
+
+# documentation
+- en:
+    documentation:
+    - term: documentation
+  ja:
+    ドキュメント:
+    - { term: ドキュメント, loan: document }
+  ko:
+    文書化:
+    - { term: 문서화 }
+  zh-CN:
+    文檔:
+    - { term: 文档, read: wén dàng, norm: 文檔 }
+  zh-HK:
+    文檔:
+    - { term: 文檔, read: man4 dong2 }
+  zh-TW:
+    文件:
+    - { term: 文件, read: ㄨㄣˊ ㄐㄧㄢˋ }
+
+# maintenance
+- en:
+    maintenance:
+    - term: maintenance
+  ja:
+    保守:
+    - { term: 保守, read: ほ しゅ }
+    メンテナンス:
+    - { term: メンテナンス, loan: maintenance }
+  ko:
+    維持保守:
+    - { term: 유지, correspond: maintenance }
+    - { term: 보수, correspond: maintenance }
+  zh-CN:
+    維護:
+    - { term: 维护, read: wéi hù, norm: 維護 }
+  zh-HK:
+    維護:
+    - { term: 維護, read: wai4 wu6 }
+  zh-TW:
+    維護:
+    - { term: 維護, read: ㄨㄟˊ ㄏㄨˋ }
+
+# agile
+- en:
+    agile:
+    - term: agile
+  ja:
+    agile:
+    - { term: アジャイル, loan: agile }
+  ko:
+    agile:
+    - { term: 애자일, loan: agile }
+  zh-CN:
+    敏捷:
+    - { term: 敏捷, read: mǐn jié }
+  zh-HK:
+    敏捷:
+    - { term: 敏捷, read: man5 zit6 }
+  zh-TW:
+    敏捷:
+    - { term: 敏捷, read: ㄇㄧㄣˇ ㄐㄧㄝˊ }
+
+# sprint
+- en:
+    sprint:
+    - term: sprint
+  ja:
+    sprint:
+    - { term: スプリント, loan: sprint }
+  ko:
+    sprint:
+    - { term: 스프린트, loan: sprint }
+  zh-CN:
+    衝刺:
+    - { term: 冲刺, read: chōng cì, norm: 衝刺 }
+  zh-HK:
+    衝刺:
+    - { term: 衝刺, read: cung1 ci3 }
+  zh-TW:
+    衝刺:
+    - { term: 衝刺, read: ㄔㄨㄥ ㄘˋ }
+
+# vim: set et sw=2 ts=2 sts=2 ft=yaml:

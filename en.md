@@ -237,5 +237,11 @@ Computer architecture
 [Show table](tables/architecture.yaml)
 
 
+Software engineering
+--------------------
+
+[Show table](tables/software-eng.yaml)
+
+
 *[CJK]: Chinese, Japanese, and Korean languages
 *[F/OSS]: Free and open-source software
