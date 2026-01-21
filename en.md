@@ -261,5 +261,11 @@ Typography
 [Show table](tables/typography.yaml)
 
 
+User interface
+--------------
+
+[Show table](tables/ui-ux.yaml)
+
+
 *[CJK]: Chinese, Japanese, and Korean languages
 *[F/OSS]: Free and open-source software

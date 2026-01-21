@@ -1,0 +1,216 @@
+# user interface
+- en:
+    user interface:
+    - { term: user, correspond: user }
+    - { term: interface, correspond: interface }
+  ja:
+    user interface:
+    - { term: ユーザー, loan: user, correspond: user }
+    - { term: インターフェース, loan: interface, correspond: interface, space: no }
+  ko:
+    使用者 interface:
+    - { term: 사용자, correspond: user }
+    - { term: 인터페이스, loan: interface, correspond: interface }
+  zh-CN:
+    用戶界面:
+    - { term: 用户, read: yòng hù, correspond: user, norm: 用戶 }
+    - { term: 界面, read: jiè miàn, correspond: interface, space: no }
+  zh-HK:
+    用戶介面:
+    - { term: 用戶, read: jung6 wu6, correspond: user }
+    - { term: 介面, read: gaai3 min6, correspond: interface, space: no }
+  zh-TW:
+    使用者介面:
+    - { term: 使用者, read: ㄕˇ ㄩㄥˋ ㄓㄜˇ, correspond: user }
+    - { term: 介面, read: ㄐㄧㄝˋ ㄇㄧㄢˋ, correspond: interface, space: no }
+
+# widget
+- en:
+    widget:
+    - term: widget
+  ja:
+    widget:
+    - { term: ウィジェット, loan: widget }
+  ko:
+    widget:
+    - { term: 위젯, loan: widget }
+  zh-CN:
+    控件:
+    - { term: 控件, read: kòng jiàn }
+  zh-HK:
+    控件:
+    - { term: 控件, read: hung3 gin6 }
+  zh-TW:
+    元件:
+    - { term: 元件, read: ㄩㄢˊ ㄐㄧㄢˋ }
+
+# button
+- en:
+    button:
+    - term: button
+  ja:
+    button:
+    - { term: ボタン, loan: button }
+  ko:
+    button:
+    - { term: 버튼, loan: button }
+  zh-CN:
+    按鈕:
+    - { term: 按钮, read: àn niǔ, norm: 按鈕 }
+  zh-HK:
+    按鈕:
+    - { term: 按鈕, read: on3 nau2 }
+  zh-TW:
+    按鈕:
+    - { term: 按鈕, read: ㄢˋ ㄋㄧㄡˇ }
+
+# dialog
+- en:
+    dialog:
+    - term: dialog
+  ja:
+    dialog:
+    - { term: ダイアログ, loan: dialog }
+  ko:
+    對話相子:
+    - { term: 대화 }
+    - { term: 상자 }
+  zh-CN:
+    對話框:
+    - { term: 对话框, read: duì huà kuàng, norm: 對話框 }
+  zh-HK:
+    對話框:
+    - { term: 對話框, read: deoi3 waa6 kwaang1 }
+  zh-TW:
+    對話框:
+    - { term: 對話框, read: ㄉㄨㄟˋ ㄏㄨㄚˋ ㄎㄨㄤ }
+
+# menu
+- en:
+    menu:
+    - term: menu
+  ja:
+    menu:
+    - { term: メニュー, loan: menu }
+  ko:
+    menu:
+    - { term: 메뉴, loan: menu }
+  zh-CN:
+    菜單:
+    - { term: 菜单, read: cài dān, norm: 菜單 }
+  zh-HK:
+    選單:
+    - { term: 選單, read: syun2 daan1 }
+  zh-TW:
+    選單:
+    - { term: 選單, read: ㄒㄩㄢˇ ㄉㄢ }
+
+# icon
+- en:
+    icon:
+    - term: icon
+  ja:
+    icon:
+    - { term: アイコン, loan: icon }
+  ko:
+    icon:
+    - { term: 아이콘, loan: icon }
+  zh-CN:
+    圖標:
+    - { term: 图标, read: tú biāo, norm: 圖標 }
+  zh-HK:
+    圖示:
+    - { term: 圖示, read: tou4 si6 }
+  zh-TW:
+    圖示:
+    - { term: 圖示, read: ㄊㄨˊ ㄕˋ }
+
+# cursor
+- en:
+    cursor:
+    - term: cursor
+  ja:
+    cursor:
+    - { term: カーソル, loan: cursor }
+  ko:
+    cursor:
+    - { term: 커서, loan: cursor }
+  zh-CN:
+    光標:
+    - { term: 光标, read: guāng biāo, norm: 光標 }
+  zh-HK:
+    游標:
+    - { term: 游標, read: jau4 biu1 }
+  zh-TW:
+    游標:
+    - { term: 游標, read: ㄧㄡˊ ㄅㄧㄠ }
+
+# checkbox
+- en:
+    checkbox:
+    - { term: check, correspond: check }
+    - { term: box, correspond: box, space: no }
+  ja:
+    checkbox:
+    - { term: チェックボックス, loan: checkbox }
+  ko:
+    checkbox:
+    - { term: 체크박스, loan: checkbox }
+  zh-CN:
+    複選框:
+    - { term: 复选框, read: fù xuǎn kuàng, norm: 複選框 }
+  zh-HK:
+    核取方塊:
+    - { term: 核取, read: hat6 ceoi2, correspond: check }
+    - { term: 方塊, read: fong1 faai3, correspond: box, space: no }
+  zh-TW:
+    核取方塊:
+    - { term: 核取, read: ㄏㄜˊ ㄑㄩˇ, correspond: check }
+    - { term: 方塊, read: ㄈㄤ ㄎㄨㄞˋ, correspond: box, space: no }
+
+# dropdown
+- en:
+    dropdown:
+    - { term: drop, correspond: drop }
+    - { term: down, correspond: down, space: no }
+  ja:
+    dropdown:
+    - { term: ドロップダウン, loan: dropdown }
+  ko:
+    dropdown:
+    - { term: 드롭다운, loan: dropdown }
+  zh-CN:
+    下拉:
+    - { term: 下拉, read: xià lā }
+  zh-HK:
+    下拉:
+    - { term: 下拉, read: haa6 laai1 }
+  zh-TW:
+    下拉:
+    - { term: 下拉, read: ㄒㄧㄚˋ ㄌㄚ }
+
+# tooltip
+- en:
+    tooltip:
+    - { term: tool, correspond: tool }
+    - { term: tip, correspond: tip, space: no }
+  ja:
+    tooltip:
+    - { term: ツールチップ, loan: tooltip }
+  ko:
+    tooltip:
+    - { term: 툴팁, loan: tooltip }
+  zh-CN:
+    工具提示:
+    - { term: 工具, read: gōng jù, correspond: tool }
+    - { term: 提示, read: tí shì, correspond: tip, space: no }
+  zh-HK:
+    工具提示:
+    - { term: 工具, read: gung1 geoi6, correspond: tool }
+    - { term: 提示, read: tai4 si6, correspond: tip, space: no }
+  zh-TW:
+    工具提示:
+    - { term: 工具, read: ㄍㄨㄥ ㄐㄩˋ, correspond: tool }
+    - { term: 提示, read: ㄊㄧˊ ㄕˋ, correspond: tip, space: no }
+
+# vim: set et sw=2 ts=2 sts=2 ft=yaml:
