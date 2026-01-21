@@ -89,15 +89,12 @@
 :   [香港語言学学会粤語拼音方案][粤拼]
 
 韓国語
-:   [文化観光部2000年式] (形態音素の復原を前提とした学術表記[^1])
-
-[^1]: 国立国語院 [「国語のローマ字表記法」第3章第8項][](韓国語)。
+:   [文化観光部2000年式]
 
 [ヘボン式ローマ字]: https://ja.wikipedia.org/wiki/%E3%83%98%E3%83%9C%E3%83%B3%E5%BC%8F%E3%83%AD%E3%83%BC%E3%83%9E%E5%AD%97
 [漢語拼音]: https://ja.wikipedia.org/wiki/%E6%8B%BC%E9%9F%B3
 [粤拼]: https://ja.wikipedia.org/wiki/%E9%A6%99%E6%B8%AF%E8%AA%9E%E8%A8%80%E5%AD%A6%E5%AD%A6%E4%BC%9A%E7%B2%A4%E8%AA%9E%E6%8B%BC%E9%9F%B3%E6%96%B9%E6%A1%88
 [文化観光部2000年式]: https://ja.wikipedia.org/wiki/%E6%96%87%E5%8C%96%E8%A6%B3%E5%85%89%E9%83%A82000%E5%B9%B4%E5%BC%8F
-[「国語のローマ字表記法」第3章第8項]: https://kornorms.korean.go.kr/regltn/regltnView.do?regltn_code=0004#a489
 
 
 基本用語
