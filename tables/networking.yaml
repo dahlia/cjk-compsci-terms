@@ -1,0 +1,253 @@
+# network
+- en:
+    network:
+    - { term: net }
+    - { term: work, space: no }
+  ja:
+    network:
+    - { term: ネットワーク, loan: network }
+  ko:
+    network:
+    - { term: 네트워크, loan: network }
+    通信網:
+    - { term: 通信, read: 통 신, correspond: communication }
+    - { term: 網, read: 망, correspond: net, space: no }
+  zh-CN:
+    網絡:
+    - { term: 网, read: wǎng, correspond: net }
+    - { term: 络, read: luò, correspond: work, space: no }
+  zh-HK:
+    網絡:
+    - { term: 網, read: mong5, correspond: net }
+    - { term: 絡, read: lok6, correspond: work, space: no }
+  zh-TW:
+    網路:
+    - { term: 網, read: ㄨㄤˇ, correspond: net }
+    - { term: 路, read: ㄌㄨˋ, correspond: work, space: no }
+
+# protocol
+- en:
+    protocol:
+    - term: protocol
+  ja:
+    protocol:
+    - { term: プロトコル, loan: protocol }
+  ko:
+    protocol:
+    - { term: 프로토콜, loan: protocol }
+    通信規約:
+    - { term: 通信, read: 통 신, correspond: communication }
+    - { term: 規約, read: 규 약, correspond: protocol, space: no }
+  zh-CN:
+    協議:
+    - { term: 协, read: xié, correspond: agreement }
+    - { term: 议, read: yì, correspond: discussion, space: no }
+  zh-HK:
+    協議:
+    - { term: 協, read: hip6, correspond: agreement }
+    - { term: 議, read: ji5, correspond: discussion, space: no }
+  zh-TW:
+    協定:
+    - { term: 協, read: ㄒㄧㄝˊ, correspond: agreement }
+    - { term: 定, read: ㄉㄧㄥˋ, correspond: fixed, space: no }
+
+# packet
+- en:
+    packet:
+    - term: packet
+  ja:
+    packet:
+    - { term: パケット, loan: packet }
+  ko:
+    packet:
+    - { term: 패킷, loan: packet }
+  zh-CN:
+    數據包:
+    - { term: 数据, read: shù jù, correspond: data }
+    - { term: 包, read: bāo, correspond: packet, space: no }
+  zh-HK:
+    封包:
+    - { term: 封, read: fung1, correspond: seal }
+    - { term: 包, read: baau1, correspond: packet, space: no }
+  zh-TW:
+    封包:
+    - { term: 封, read: ㄈㄥ, correspond: seal }
+    - { term: 包, read: ㄅㄠ, correspond: packet, space: no }
+
+# router
+- en:
+    router:
+    - { term: rout, correspond: route }
+    - { term: er, space: no }
+  ja:
+    router:
+    - { term: ルーター, loan: router }
+  ko:
+    router:
+    - { term: 라우터, loan: router }
+  zh-CN:
+    路由器:
+    - { term: 路由, read: lù yóu, correspond: route }
+    - { term: 器, read: qì, correspond: device, space: no }
+  zh-HK:
+    路由器:
+    - { term: 路由, read: lou6 jau4, correspond: route }
+    - { term: 器, read: hei3, correspond: device, space: no }
+  zh-TW:
+    路由器:
+    - { term: 路由, read: ㄌㄨˋ ㄧㄡˊ, correspond: route }
+    - { term: 器, read: ㄑㄧˋ, correspond: device, space: no }
+
+# firewall
+- en:
+    firewall:
+    - { term: fire }
+    - { term: wall, space: no }
+  ja:
+    firewall:
+    - { term: ファイアウォール, loan: firewall }
+  ko:
+    防火壁:
+    - { term: 防火, read: 방 화, correspond: fire }
+    - { term: 壁, read: 벽, correspond: wall, space: no }
+  zh-CN:
+    防火牆:
+    - { term: 防火, read: fáng huǒ, correspond: fire }
+    - { term: 墙, read: qiáng, correspond: wall, space: no }
+  zh-HK:
+    防火牆:
+    - { term: 防火, read: fong4 fo2, correspond: fire }
+    - { term: 牆, read: coeng4, correspond: wall, space: no }
+  zh-TW:
+    防火牆:
+    - { term: 防火, read: ㄈㄤˊ ㄏㄨㄛˇ, correspond: fire }
+    - { term: 牆, read: ㄑㄧㄤˊ, correspond: wall, space: no }
+
+# bandwidth
+- en:
+    bandwidth:
+    - { term: band }
+    - { term: width, space: no }
+  ja:
+    帶域幅:
+    - { term: 帯域, read: たい いき, correspond: band }
+    - { term: 幅, read: はば, correspond: width, space: no }
+  ko:
+    帶域幅:
+    - { term: 帶域, read: 대 역, correspond: band }
+    - { term: 幅, read: 폭, correspond: width, space: no }
+  zh-CN:
+    帶寬:
+    - { term: 带, read: dài, correspond: band }
+    - { term: 宽, read: kuān, correspond: width, space: no }
+  zh-HK:
+    頻寬:
+    - { term: 頻, read: pan4, correspond: frequency }
+    - { term: 寬, read: fun1, correspond: width, space: no }
+  zh-TW:
+    頻寬:
+    - { term: 頻, read: ㄆㄧㄣˊ, correspond: frequency }
+    - { term: 寬, read: ㄎㄨㄢ, correspond: width, space: no }
+
+# latency
+- en:
+    latency:
+    - term: latency
+  ja:
+    latency:
+    - { term: レイテンシ, loan: latency }
+    遲延:
+    - { term: 遅, norm: 遲, read: ち, correspond: delay }
+    - { term: 延, read: えん, correspond: extend, space: no }
+  ko:
+    latency:
+    - { term: 레이턴시, loan: latency }
+    遲延:
+    - { term: 遲延, read: 지 연, correspond: delay }
+  zh-CN:
+    延遲:
+    - { term: 延, read: yán, correspond: extend }
+    - { term: 迟, read: chí, correspond: delay, space: no }
+  zh-HK:
+    延遲:
+    - { term: 延, read: jin4, correspond: extend }
+    - { term: 遲, read: ci4, correspond: delay, space: no }
+  zh-TW:
+    延遲:
+    - { term: 延, read: ㄧㄢˊ, correspond: extend }
+    - { term: 遲, read: ㄔˊ, correspond: delay, space: no }
+
+# IP address
+- en:
+    IP address:
+    - term: IP
+    - term: address
+  ja:
+    IP address:
+    - term: IP
+    - { term: アドレス, loan: address }
+  ko:
+    IP 住所:
+    - term: IP
+    - { term: 住所, read: 주 소, correspond: address }
+  zh-CN:
+    IP 地址:
+    - term: IP
+    - { term: 地址, read: dì zhǐ, correspond: address }
+  zh-HK:
+    IP 地址:
+    - term: IP
+    - { term: 地址, read: dei6 zi2, correspond: address }
+  zh-TW:
+    IP 位址:
+    - term: IP
+    - { term: 位址, read: ㄨㄟˋ ㄓˇ, correspond: address }
+
+# server
+- en:
+    server:
+    - { term: serv, correspond: serve }
+    - { term: er, space: no }
+  ja:
+    server:
+    - { term: サーバー, loan: server }
+  ko:
+    server:
+    - { term: 서버, loan: server }
+  zh-CN:
+    伺服器:
+    - { term: 服务, read: fú wù, correspond: serve }
+    - { term: 器, read: qì, correspond: device, space: no }
+  zh-HK:
+    伺服器:
+    - { term: 伺服, read: zi6 fuk6, correspond: serve }
+    - { term: 器, read: hei3, correspond: device, space: no }
+  zh-TW:
+    伺服器:
+    - { term: 伺服, read: ㄙˋ ㄈㄨˊ, correspond: serve }
+    - { term: 器, read: ㄑㄧˋ, correspond: device, space: no }
+
+# client
+- en:
+    client:
+    - term: client
+  ja:
+    client:
+    - { term: クライアント, loan: client }
+  ko:
+    client:
+    - { term: 클라이언트, loan: client }
+  zh-CN:
+    客戶端:
+    - { term: 客户, read: kè hù, correspond: customer }
+    - { term: 端, read: duān, correspond: end, space: no }
+  zh-HK:
+    用戶端:
+    - { term: 用戶, read: jung6 wu6, correspond: user }
+    - { term: 端, read: dyun1, correspond: end, space: no }
+  zh-TW:
+    用戶端:
+    - { term: 用戶, read: ㄩㄥˋ ㄏㄨˋ, correspond: user }
+    - { term: 端, read: ㄉㄨㄢ, correspond: end, space: no }
+
+# vim: set et sw=2 ts=2 sts=2 ft=yaml:

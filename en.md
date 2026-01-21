@@ -165,5 +165,11 @@ F/OSS
 [Show table](tables/foss.yaml)
 
 
+Networking
+----------
+
+[Show table](tables/networking.yaml)
+
+
 *[CJK]: Chinese, Japanese, and Korean languages
 *[F/OSS]: Free and open-source software
