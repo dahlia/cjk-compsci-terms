@@ -24,6 +24,18 @@ const OUTPUT_DIR = "public_html";
 /** Static assets to copy */
 const STATIC_ASSETS = ["style.css", "script.js", "cc-by-sa.svg"];
 
+/**
+ * Get the base URL for links.
+ * If URL_BASE environment variable is set, use absolute URLs.
+ * Otherwise, use relative URLs.
+ */
+function getUrlBase(): string | null {
+  const urlBase = Deno.env.get("URL_BASE");
+  if (!urlBase) return null;
+  // Ensure no trailing slash for consistent joining
+  return urlBase.replace(/\/+$/, "");
+}
+
 /** Locale to markdown file mapping (only for PAGE_LOCALES) */
 const LOCALE_MD_FILES: Record<string, string> = {
   en: "en.md",
@@ -292,12 +304,14 @@ async function buildPage(locale: LocaleCode): Promise<void> {
 
   // Wrap in layout
   const langHrefs = getLanguageHrefs();
+  const urlBase = getUrlBase();
+  const baseUrl = urlBase ?? (locale === "en" ? "." : "..");
   const page = Layout({
     title,
     locale,
     langHrefs,
     content: raw(contentHtml),
-    baseUrl: locale === "en" ? "." : "..",
+    baseUrl,
   });
 
   // Write output
