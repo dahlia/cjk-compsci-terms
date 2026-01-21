@@ -129,8 +129,12 @@ async function computeReadingsForLocale(
               }
             } else {
               // Use display locale's reader
-              // First normalize the term (e.g., convert JP kanji to traditional)
-              const normalizedTerm = await normalizeForLocale(term.term, wordLocale);
+              // Normalize the term for the target locale's reading system
+              const normalizedTerm = await normalizeForReading(
+                term.term,
+                wordLocale,
+                displayLocale,
+              );
               readings = await getCharacterReadings(
                 term.term,
                 normalizedTerm,
@@ -152,13 +156,28 @@ async function computeReadingsForLocale(
 }
 
 /**
- * Normalize characters for a given source locale.
- * Converts Japanese kanji to traditional Chinese, simplified to traditional, etc.
+ * Normalize characters for reading in a target locale.
+ * Converts characters to the form expected by the target locale's reader.
+ *
+ * For Japanese target: converts to Japanese shinjitai (新字体)
+ * For other targets: converts to traditional Chinese form
  */
-async function normalizeForLocale(text: string, locale: LocaleCode): Promise<string> {
-  const { normalizeCharacters, hasNormalizer } = await import("./lib/romanization/index.ts");
-  if (hasNormalizer(locale)) {
-    return normalizeCharacters(text, locale);
+async function normalizeForReading(
+  text: string,
+  sourceLocale: LocaleCode,
+  targetLocale: LocaleCode,
+): Promise<string> {
+  const { toJapaneseShinjitai, normalizeCharacters, hasNormalizer } =
+    await import("./lib/romanization/index.ts");
+
+  if (targetLocale === "ja") {
+    // For Japanese readings, convert to shinjitai
+    return toJapaneseShinjitai(text, sourceLocale);
+  }
+
+  // For other locales, use the source locale's normalizer (to traditional Chinese)
+  if (hasNormalizer(sourceLocale)) {
+    return normalizeCharacters(text, sourceLocale);
   }
   return text;
 }

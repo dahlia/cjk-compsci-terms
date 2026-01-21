@@ -75,7 +75,10 @@ export {
   hasNormalizer,
   japaneseToTraditional,
   normalizeCharacters,
+  simplifiedToJapanese,
   simplifiedToTraditional,
+  toJapaneseShinjitai,
+  traditionalToJapanese,
 } from "./opencc.ts";
 
 /**
