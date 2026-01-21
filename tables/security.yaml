@@ -1,0 +1,270 @@
+# encryption
+- en:
+    encryption:
+    - term: encryption
+  ja:
+    暗號化:
+    - { term: 暗号, norm: 暗號, read: あん ごう, correspond: cipher }
+    - { term: 化, read: か, correspond: "-ization", space: no }
+  ko:
+    暗號化:
+    - { term: 暗號化, read: 암 호 화, correspond: encryption }
+  zh-CN:
+    加密:
+    - { term: 加, read: jiā, correspond: add }
+    - { term: 密, read: mì, correspond: secret, space: no }
+  zh-HK:
+    加密:
+    - { term: 加, read: gaa1, correspond: add }
+    - { term: 密, read: mat6, correspond: secret, space: no }
+  zh-TW:
+    加密:
+    - { term: 加, read: ㄐㄧㄚ, correspond: add }
+    - { term: 密, read: ㄇㄧˋ, correspond: secret, space: no }
+
+# decryption
+- en:
+    decryption:
+    - term: decryption
+  ja:
+    復號:
+    - { term: 復号, norm: 復號, read: ふく ごう, correspond: decryption }
+  ko:
+    復號化:
+    - { term: 復號化, read: 복 호 화, correspond: decryption }
+  zh-CN:
+    解密:
+    - { term: 解, read: jiě, correspond: solve }
+    - { term: 密, read: mì, correspond: secret, space: no }
+  zh-HK:
+    解密:
+    - { term: 解, read: gaai2, correspond: solve }
+    - { term: 密, read: mat6, correspond: secret, space: no }
+  zh-TW:
+    解密:
+    - { term: 解, read: ㄐㄧㄝˇ, correspond: solve }
+    - { term: 密, read: ㄇㄧˋ, correspond: secret, space: no }
+
+# hash
+- en:
+    hash:
+    - term: hash
+  ja:
+    hash:
+    - { term: ハッシュ, loan: hash }
+  ko:
+    hash:
+    - { term: 해시, loan: hash }
+  zh-CN:
+    散列:
+    - { term: 散, read: sàn, correspond: scatter }
+    - { term: 列, read: liè, correspond: sequence, space: no }
+    哈希:
+    - { term: 哈希, read: hā xī, loan: hash }
+  zh-HK:
+    雜湊:
+    - { term: 雜, read: zaap6, correspond: mixed }
+    - { term: 湊, read: cau3, correspond: gather, space: no }
+  zh-TW:
+    雜湊:
+    - { term: 雜, read: ㄗㄚˊ, correspond: mixed }
+    - { term: 湊, read: ㄘㄡˋ, correspond: gather, space: no }
+
+# authentication
+- en:
+    authentication:
+    - term: authentication
+  ja:
+    認證:
+    - { term: 認証, norm: 認證, read: にん しょう, correspond: authentication }
+  ko:
+    認證:
+    - { term: 認證, read: 인 증, correspond: authentication }
+  zh-CN:
+    認證:
+    - { term: 认, read: rèn, correspond: recognize }
+    - { term: 证, read: zhèng, correspond: proof, space: no }
+  zh-HK:
+    認證:
+    - { term: 認, read: jing6, correspond: recognize }
+    - { term: 證, read: zing3, correspond: proof, space: no }
+  zh-TW:
+    認證:
+    - { term: 認, read: ㄖㄣˋ, correspond: recognize }
+    - { term: 證, read: ㄓㄥˋ, correspond: proof, space: no }
+
+# authorization
+- en:
+    authorization:
+    - term: authorization
+  ja:
+    權限附與:
+    - { term: 権限, norm: 權限, read: けん げん, correspond: authority }
+    - { term: 付与, norm: 附與, read: ふ よ, correspond: grant, space: no }
+  ko:
+    權限附與:
+    - { term: 權限, read: 권 한, correspond: authority }
+    - { term: 附與, read: 부 여, correspond: grant, space: no }
+  zh-CN:
+    授權:
+    - { term: 授, read: shòu, correspond: grant }
+    - { term: 权, read: quán, correspond: authority, space: no }
+  zh-HK:
+    授權:
+    - { term: 授, read: sau6, correspond: grant }
+    - { term: 權, read: kyun4, correspond: authority, space: no }
+  zh-TW:
+    授權:
+    - { term: 授, read: ㄕㄡˋ, correspond: grant }
+    - { term: 權, read: ㄑㄩㄢˊ, correspond: authority, space: no }
+
+# password
+- en:
+    password:
+    - { term: pass }
+    - { term: word, space: no }
+  ja:
+    password:
+    - { term: パスワード, loan: password }
+  ko:
+    password:
+    - { term: 비밀, read: 비 밀, correspond: secret }
+    - { term: 번호, read: 번 호, correspond: number, space: no }
+  zh-CN:
+    密碼:
+    - { term: 密, read: mì, correspond: secret }
+    - { term: 码, read: mǎ, correspond: code, space: no }
+  zh-HK:
+    密碼:
+    - { term: 密, read: mat6, correspond: secret }
+    - { term: 碼, read: maa5, correspond: code, space: no }
+  zh-TW:
+    密碼:
+    - { term: 密, read: ㄇㄧˋ, correspond: secret }
+    - { term: 碼, read: ㄇㄚˇ, correspond: code, space: no }
+
+# vulnerability
+- en:
+    vulnerability:
+    - term: vulnerability
+  ja:
+    脆弱性:
+    - { term: 脆弱, read: ぜい じゃく, correspond: fragile }
+    - { term: 性, read: せい, correspond: "-ity", space: no }
+  ko:
+    脆弱點:
+    - { term: 脆弱, read: 취 약, correspond: fragile }
+    - { term: 點, read: 점, correspond: point, space: no }
+  zh-CN:
+    漏洞:
+    - { term: 漏, read: lòu, correspond: leak }
+    - { term: 洞, read: dòng, correspond: hole, space: no }
+  zh-HK:
+    漏洞:
+    - { term: 漏, read: lau6, correspond: leak }
+    - { term: 洞, read: dung6, correspond: hole, space: no }
+  zh-TW:
+    漏洞:
+    - { term: 漏, read: ㄌㄡˋ, correspond: leak }
+    - { term: 洞, read: ㄉㄨㄥˋ, correspond: hole, space: no }
+
+# certificate
+- en:
+    certificate:
+    - term: certificate
+  ja:
+    證明書:
+    - { term: 証明, norm: 證明, read: しょう めい, correspond: proof }
+    - { term: 書, read: しょ, correspond: document, space: no }
+  ko:
+    認證書:
+    - { term: 認證, read: 인 증, correspond: certification }
+    - { term: 書, read: 서, correspond: document, space: no }
+  zh-CN:
+    證書:
+    - { term: 证, read: zhèng, correspond: proof }
+    - { term: 书, read: shū, correspond: document, space: no }
+  zh-HK:
+    證書:
+    - { term: 證, read: zing3, correspond: proof }
+    - { term: 書, read: syu1, correspond: document, space: no }
+  zh-TW:
+    憑證:
+    - { term: 憑, read: ㄆㄧㄥˊ, correspond: credential }
+    - { term: 證, read: ㄓㄥˋ, correspond: proof, space: no }
+
+# cipher
+- en:
+    cipher:
+    - term: cipher
+  ja:
+    暗號:
+    - { term: 暗号, norm: 暗號, read: あん ごう, correspond: cipher }
+  ko:
+    暗號:
+    - { term: 暗號, read: 암 호, correspond: cipher }
+  zh-CN:
+    密碼:
+    - { term: 密码, read: mì mǎ, correspond: cipher }
+  zh-HK:
+    密碼:
+    - { term: 密碼, read: mat6 maa5, correspond: cipher }
+  zh-TW:
+    密碼:
+    - { term: 密碼, read: ㄇㄧˋ ㄇㄚˇ, correspond: cipher }
+
+# public key
+- en:
+    public key:
+    - term: public
+    - term: key
+  ja:
+    公開鍵:
+    - { term: 公開, read: こう かい, correspond: public }
+    - { term: 鍵, read: かぎ, correspond: key, space: no }
+  ko:
+    公開 key:
+    - { term: 公開, read: 공 개, correspond: public }
+    - term: " "
+    - { term: 키, loan: key }
+  zh-CN:
+    公鑰:
+    - { term: 公, read: gōng, correspond: public }
+    - { term: 钥, read: yào, correspond: key, space: no }
+  zh-HK:
+    公鑰:
+    - { term: 公, read: gung1, correspond: public }
+    - { term: 鑰, read: joek6, correspond: key, space: no }
+  zh-TW:
+    公鑰:
+    - { term: 公, read: ㄍㄨㄥ, correspond: public }
+    - { term: 鑰, read: ㄩㄝˋ, correspond: key, space: no }
+
+# private key
+- en:
+    private key:
+    - term: private
+    - term: key
+  ja:
+    秘密鍵:
+    - { term: 秘密, read: ひ みつ, correspond: private }
+    - { term: 鍵, read: かぎ, correspond: key, space: no }
+  ko:
+    秘密 key:
+    - { term: 秘密, read: 비 밀, correspond: private }
+    - term: " "
+    - { term: 키, loan: key }
+  zh-CN:
+    私鑰:
+    - { term: 私, read: sī, correspond: private }
+    - { term: 钥, read: yào, correspond: key, space: no }
+  zh-HK:
+    私鑰:
+    - { term: 私, read: si1, correspond: private }
+    - { term: 鑰, read: joek6, correspond: key, space: no }
+  zh-TW:
+    私鑰:
+    - { term: 私, read: ㄙ, correspond: private }
+    - { term: 鑰, read: ㄩㄝˋ, correspond: key, space: no }
+
+# vim: set et sw=2 ts=2 sts=2 ft=yaml:
