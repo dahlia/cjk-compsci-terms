@@ -257,28 +257,43 @@ function TableBody(props: {
 }
 
 /**
- * Order locales so that English is first, then the display locale's language group,
- * then the remaining languages in canonical order.
+ * Order locales so that English is first, then the display locale's language,
+ * then remaining languages sorted by their display name.
+ *
+ * The order matches the original Python implementation which uses Babel's
+ * locale data. Since JavaScript's Intl API produces different collation
+ * results for some locales (especially Japanese), we hardcode the expected
+ * order based on Python's Babel output.
  */
 function orderLocalesForDisplay(
   supportedLocales: Set<LocaleCode>,
   displayLocale: LocaleCode,
 ): LocaleCode[] {
   const displayLanguage = displayLocale.split("-")[0];
-  const canonicalOrder = ["en", "ja", "ko", "zh"];
 
-  // Build ordered language list: en first, then display language, then rest
+  // Language order after current locale, based on Python Babel's sorting
+  // for each page locale. This ensures consistent ordering with the original.
+  const remainingOrder: Record<string, string[]> = {
+    en: ["zh", "ja", "ko"],
+    ja: ["zh", "ko"],
+    ko: ["ja", "zh"],
+    zh: ["ja", "ko"],
+  };
+
+  // Build language order: en first, then current language, then remaining
   const languageOrder = ["en"];
   if (displayLanguage !== "en") {
     languageOrder.push(displayLanguage);
   }
-  for (const lang of canonicalOrder) {
+  const remaining = remainingOrder[displayLanguage] ?? ["zh", "ja", "ko"];
+  for (const lang of remaining) {
     if (!languageOrder.includes(lang)) {
       languageOrder.push(lang);
     }
   }
 
-  // Map languages to their locales
+  // Group supported locales by language
+  const languageGroups = new Map<string, LocaleCode[]>();
   const allLocales: LocaleCode[] = [
     "en",
     "ja",
@@ -287,16 +302,25 @@ function orderLocalesForDisplay(
     "zh-HK",
     "zh-TW",
   ];
-  const result: LocaleCode[] = [];
 
-  for (const lang of languageOrder) {
-    for (const locale of allLocales) {
-      if (
-        locale.split("-")[0] === lang &&
-        supportedLocales.has(locale)
-      ) {
-        result.push(locale);
+  for (const locale of allLocales) {
+    if (supportedLocales.has(locale)) {
+      const lang = locale.split("-")[0];
+      let group = languageGroups.get(lang);
+      if (!group) {
+        group = [];
+        languageGroups.set(lang, group);
       }
+      group.push(locale);
+    }
+  }
+
+  // Build result array in the determined order
+  const result: LocaleCode[] = [];
+  for (const lang of languageOrder) {
+    const locales = languageGroups.get(lang);
+    if (locales) {
+      result.push(...locales);
     }
   }
 
