@@ -4,7 +4,7 @@
     - term: version
     - term: control
   ja:
-    バージョン管理:
+    version 管理:
     - { term: バージョン, loan: version, correspond: version }
     - { term: 管理, read: かん り, correspond: control, space: no }
   ko:

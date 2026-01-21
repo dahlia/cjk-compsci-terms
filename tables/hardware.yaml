@@ -53,7 +53,7 @@
   ja:
     GPU:
     - term: GPU
-    グラフィックスプロセッサ:
+    graphics processor:
     - { term: グラフィックス, loan: graphics, correspond: graphics }
     - { term: プロセッサ, loan: processor, correspond: processing, space: no }
   ko:
@@ -96,12 +96,10 @@
   ja:
     RAM:
     - term: RAM
-    メモリ:
+    memory:
     - { term: メモリ, loan: memory }
   ko:
     RAM:
-    - term: RAM
-    램:
     - { term: 램, loan: RAM }
   zh-CN:
     記憶體:
@@ -176,12 +174,12 @@
   ja:
     HDD:
     - term: HDD
-    ハードディスク:
+    hard disk:
     - { term: ハードディスク, loan: hard disk }
   ko:
     HDD:
     - term: HDD
-    하드 디스크:
+    hard disk:
     - { term: 하드 디스크, loan: hard disk }
   zh-CN:
     硬碟:
@@ -204,7 +202,7 @@
   ko:
     motherboard:
     - { term: 마더보드, loan: motherboard }
-    메인보드:
+    mainboard:
     - { term: 메인보드, loan: mainboard }
   zh-CN:
     主機板:

@@ -284,7 +284,7 @@
     - { term: 假想, correspond: virtual, read: 가 상 }
     - { term: 記憶, correspond: memory,  read: 기 억 }
     - { term: 裝置, correspond: device,  read: 장 치 }
-    假想 메모리:
+    假想 memory:
     - { term: 假想,   correspond: virtual, read: 가 상 }
     - { term: 메모리, loan: memory }
   zh-CN:

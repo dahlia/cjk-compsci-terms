@@ -4,10 +4,10 @@
     - term: design
     - term: pattern
   ja:
-    設計パターン:
+    設計 pattern:
     - { term: 設計, read: せっ けい, correspond: design }
     - { term: パターン, loan: pattern, correspond: pattern, space: no }
-    デザインパターン:
+    design pattern:
     - { term: デザインパターン, loan: design pattern }
   ko:
     設計 pattern:

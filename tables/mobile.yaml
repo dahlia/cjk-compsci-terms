@@ -79,12 +79,12 @@
   ja:
     touch screen:
     - { term: タッチスクリーン, loan: touch screen }
-    タッチパネル:
+    touch panel:
     - { term: タッチパネル, loan: touch panel }
   ko:
     touch screen:
     - { term: 터치스크린, loan: touch screen }
-    터치패널:
+    touch panel:
     - { term: 터치패널, loan: touch panel }
   zh-CN:
     觸摸屏:
@@ -204,7 +204,7 @@
     - { term: accelero, correspond: acceleration }
     - { term: meter, space: no }
   ja:
-    加速度センサー:
+    加速度 sensor:
     - { term: 加速度, read: か そく ど, correspond: acceleration }
     - { term: センサー, loan: sensor, space: no }
   ko:

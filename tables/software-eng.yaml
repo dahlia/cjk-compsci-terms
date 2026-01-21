@@ -48,7 +48,7 @@
     - term: unit
     - term: test
   ja:
-    單體テスト:
+    單體 test:
     - { term: 単体, read: たん たい, norm: 單體, correspond: unit }
     - { term: テスト, loan: test, correspond: test, space: no }
   ko:
@@ -74,7 +74,7 @@
     - term: integration
     - term: test
   ja:
-    結合テスト:
+    結合 test:
     - { term: 結合, read: けつ ごう, correspond: integration }
     - { term: テスト, loan: test, correspond: test, space: no }
   ko:
@@ -143,7 +143,7 @@
     documentation:
     - term: documentation
   ja:
-    ドキュメント:
+    document:
     - { term: ドキュメント, loan: document }
   ko:
     文書化:
@@ -166,7 +166,7 @@
   ja:
     保守:
     - { term: 保守, read: ほ しゅ }
-    メンテナンス:
+    maintenance:
     - { term: メンテナンス, loan: maintenance }
   ko:
     維持保守:

@@ -4,7 +4,7 @@
     - term: instruction
     - term: set
   ja:
-    命令セット:
+    命令 set:
     - { term: 命令, read: めい れい, correspond: instruction }
     - { term: セット, loan: set, correspond: set, space: no }
   ko:
@@ -225,7 +225,7 @@
     - term: memory
     - term: hierarchy
   ja:
-    メモリ階層:
+    memory 階層:
     - { term: メモリ, loan: memory, correspond: memory }
     - { term: 階層, read: かい そう, correspond: hierarchy, space: no }
   ko:

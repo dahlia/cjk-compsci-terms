@@ -187,7 +187,7 @@
     - { term: コンピュータ, loan: computer }
     - { term: セキュリティ, loan: security }
   ko:
-    컴퓨터 保安:
+    computer 保安:
     - { term: 컴퓨터,       loan: computer }
     - { term: 保安,         read: 보 안,         correspond: security }
     情報技術保安:

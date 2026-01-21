@@ -159,7 +159,7 @@
     rasterization:
     - { term: ラスタライズ, loan: rasterize }
   ko:
-    래스터化:
+    raster 化:
     - { term: 래스터, loan: raster }
     - { term: 化, read: 화, correspond: "-ization", space: no }
   zh-CN:

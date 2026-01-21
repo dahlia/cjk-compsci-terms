@@ -94,10 +94,10 @@
     - { term: "-", space: no }
     - { term: serif, space: no }
   ja:
-    gothic體:
+    gothic 體:
     - { term: ゴシック体, loan: gothic }
   ko:
-    gothic體:
+    gothic 體:
     - { term: 고딕, loan: gothic }
     - { term: 體, read: 체, space: no }
     돋움體:

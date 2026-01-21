@@ -105,7 +105,7 @@
     source code:
     - { term: 소스,                  loan:       source }
     - { term: 코드,                  loan:       code }
-    原始 코드:
+    原始 code:
     - { term: 原始, read: 원 시,     correspond: source }
     - { term: 코드,                  loan:       code }
   zh-CN:

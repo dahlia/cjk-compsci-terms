@@ -28,10 +28,10 @@
     - term: physics
     - term: engine
   ja:
-    物理エンジン:
+    物理 engine:
     - { term: 物理, read: ぶつ り, correspond: physics }
     - { term: エンジン, loan: engine, space: no }
-    物理演算エンジン:
+    物理演算 engine:
     - { term: 物理, read: ぶつ り, correspond: physics }
     - { term: 演算, read: えん ざん, correspond: calculation, space: no }
     - { term: エンジン, loan: engine, space: no }
@@ -218,7 +218,7 @@
   ja:
     level:
     - { term: レベル, loan: level }
-    ステージ:
+    stage:
     - { term: ステージ, loan: stage }
   ko:
     level:
