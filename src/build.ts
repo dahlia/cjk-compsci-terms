@@ -52,12 +52,19 @@ const LOCALE_OUTPUT_FILES: Record<string, string> = {
   "zh-TW": "zh-Hant/index.html",
 };
 
-/** Language hrefs for navigation */
-function getLanguageHrefs(): [LocaleCode, string][] {
-  return PAGE_LOCALES.map((locale) => [
-    locale,
-    LOCALE_OUTPUT_FILES[locale],
-  ]);
+/**
+ * Language hrefs for navigation.
+ * @param cleanUrls If true, removes index.html from URLs (e.g., "ja/" instead of "ja/index.html")
+ */
+function getLanguageHrefs(cleanUrls: boolean): [LocaleCode, string][] {
+  return PAGE_LOCALES.map((locale) => {
+    let href = LOCALE_OUTPUT_FILES[locale];
+    if (cleanUrls) {
+      // "index.html" -> "", "ja/index.html" -> "ja/"
+      href = href.replace(/index\.html$/, "");
+    }
+    return [locale, href];
+  });
 }
 
 /**
@@ -303,8 +310,9 @@ async function buildPage(locale: LocaleCode): Promise<void> {
   }
 
   // Wrap in layout
-  const langHrefs = getLanguageHrefs();
   const urlBase = getUrlBase();
+  const useAbsoluteUrls = urlBase !== null;
+  const langHrefs = getLanguageHrefs(useAbsoluteUrls);
   const baseUrl = urlBase ?? (locale === "en" ? "." : "..");
   const page = Layout({
     title,
