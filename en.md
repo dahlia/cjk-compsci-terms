@@ -195,5 +195,11 @@ Algorithms
 [Show table](tables/algorithms.yaml)
 
 
+Artificial intelligence and machine learning
+---------------------------------------------
+
+[Show table](tables/ai-ml.yaml)
+
+
 *[CJK]: Chinese, Japanese, and Korean languages
 *[F/OSS]: Free and open-source software

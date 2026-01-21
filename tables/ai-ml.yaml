@@ -1,0 +1,249 @@
+# artificial intelligence
+- en:
+    artificial intelligence:
+    - term: artificial
+    - term: intelligence
+  ja:
+    人工知能:
+    - { term: 人工, read: じん こう, correspond: artificial }
+    - { term: 知能, read: ち のう, correspond: intelligence, space: no }
+  ko:
+    人工智能:
+    - { term: 人工, read: 인 공, correspond: artificial }
+    - { term: 智能, read: 지 능, correspond: intelligence, space: no }
+  zh-CN:
+    人工智能:
+    - { term: 人工, read: rén gōng, correspond: artificial }
+    - { term: 智能, read: zhì néng, correspond: intelligence, space: no }
+  zh-HK:
+    人工智能:
+    - { term: 人工, read: jan4 gung1, correspond: artificial }
+    - { term: 智能, read: zi3 nang4, correspond: intelligence, space: no }
+  zh-TW:
+    人工智慧:
+    - { term: 人工, read: ㄖㄣˊ ㄍㄨㄥ, correspond: artificial }
+    - { term: 智慧, read: ㄓˋ ㄏㄨㄟˋ, correspond: intelligence, space: no }
+
+# machine learning
+- en:
+    machine learning:
+    - term: machine
+    - term: learning
+  ja:
+    機械學習:
+    - { term: 機械, read: き かい, correspond: machine }
+    - { term: 学習, norm: 學習, read: がく しゅう, correspond: learning, space: no }
+  ko:
+    機械學習:
+    - { term: 機械, read: 기 계, correspond: machine }
+    - { term: 學習, read: 학 습, correspond: learning, space: no }
+  zh-CN:
+    機器學習:
+    - { term: 机器, read: jī qì, correspond: machine }
+    - { term: 学习, read: xué xí, correspond: learning, space: no }
+  zh-HK:
+    機器學習:
+    - { term: 機器, read: gei1 hei3, correspond: machine }
+    - { term: 學習, read: hok6 zaap6, correspond: learning, space: no }
+  zh-TW:
+    機器學習:
+    - { term: 機器, read: ㄐㄧ ㄑㄧˋ, correspond: machine }
+    - { term: 學習, read: ㄒㄩㄝˊ ㄒㄧˊ, correspond: learning, space: no }
+
+# deep learning
+- en:
+    deep learning:
+    - term: deep
+    - term: learning
+  ja:
+    深層學習:
+    - { term: 深層, read: しん そう, correspond: deep }
+    - { term: 学習, norm: 學習, read: がく しゅう, correspond: learning, space: no }
+    deep learning:
+    - { term: ディープラーニング, loan: deep learning }
+  ko:
+    deep learning:
+    - { term: 딥러닝, loan: deep learning }
+  zh-CN:
+    深度學習:
+    - { term: 深度, read: shēn dù, correspond: deep }
+    - { term: 学习, read: xué xí, correspond: learning, space: no }
+  zh-HK:
+    深度學習:
+    - { term: 深度, read: sam1 dou6, correspond: deep }
+    - { term: 學習, read: hok6 zaap6, correspond: learning, space: no }
+  zh-TW:
+    深度學習:
+    - { term: 深度, read: ㄕㄣ ㄉㄨˋ, correspond: deep }
+    - { term: 學習, read: ㄒㄩㄝˊ ㄒㄧˊ, correspond: learning, space: no }
+
+# neural network
+- en:
+    neural network:
+    - term: neural
+    - term: network
+  ja:
+    神經 network:
+    - { term: ニューラル, loan: neural }
+    - { term: ネットワーク, loan: network }
+  ko:
+    神經網:
+    - { term: 神經, read: 신 경, correspond: neural }
+    - { term: 網, read: 망, correspond: network, space: no }
+  zh-CN:
+    神經網絡:
+    - { term: 神经, read: shén jīng, correspond: neural }
+    - { term: 网络, read: wǎng luò, correspond: network, space: no }
+  zh-HK:
+    神經網絡:
+    - { term: 神經, read: san4 ging1, correspond: neural }
+    - { term: 網絡, read: mong5 lok6, correspond: network, space: no }
+  zh-TW:
+    神經網路:
+    - { term: 神經, read: ㄕㄣˊ ㄐㄧㄥ, correspond: neural }
+    - { term: 網路, read: ㄨㄤˇ ㄌㄨˋ, correspond: network, space: no }
+
+# training
+- en:
+    training:
+    - term: training
+  ja:
+    訓練:
+    - { term: 訓練, read: くん れん, correspond: training }
+  ko:
+    訓練:
+    - { term: 訓練, read: 훈 련, correspond: training }
+  zh-CN:
+    訓練:
+    - { term: 训练, read: xùn liàn, correspond: training }
+  zh-HK:
+    訓練:
+    - { term: 訓練, read: fan3 lin6, correspond: training }
+  zh-TW:
+    訓練:
+    - { term: 訓練, read: ㄒㄩㄣˋ ㄌㄧㄢˋ, correspond: training }
+
+# inference
+- en:
+    inference:
+    - term: inference
+  ja:
+    推論:
+    - { term: 推論, read: すい ろん, correspond: inference }
+  ko:
+    推論:
+    - { term: 推論, read: 추 론, correspond: inference }
+  zh-CN:
+    推理:
+    - { term: 推, read: tuī, correspond: deduce }
+    - { term: 理, read: lǐ, correspond: reason, space: no }
+  zh-HK:
+    推理:
+    - { term: 推, read: teoi1, correspond: deduce }
+    - { term: 理, read: lei5, correspond: reason, space: no }
+  zh-TW:
+    推論:
+    - { term: 推, read: ㄊㄨㄟ, correspond: deduce }
+    - { term: 論, read: ㄌㄨㄣˋ, correspond: argument, space: no }
+
+# model
+- en:
+    model:
+    - term: model
+  ja:
+    model:
+    - { term: モデル, loan: model }
+  ko:
+    model:
+    - { term: 모델, loan: model }
+  zh-CN:
+    模型:
+    - { term: 模, read: mó, correspond: pattern }
+    - { term: 型, read: xíng, correspond: type, space: no }
+  zh-HK:
+    模型:
+    - { term: 模, read: mou4, correspond: pattern }
+    - { term: 型, read: jing4, correspond: type, space: no }
+  zh-TW:
+    模型:
+    - { term: 模, read: ㄇㄛˊ, correspond: pattern }
+    - { term: 型, read: ㄒㄧㄥˊ, correspond: type, space: no }
+
+# dataset
+- en:
+    dataset:
+    - { term: data }
+    - { term: set, space: no }
+  ja:
+    dataset:
+    - { term: データセット, loan: dataset }
+  ko:
+    dataset:
+    - { term: 데이터셋, loan: dataset }
+  zh-CN:
+    數據集:
+    - { term: 数据, read: shù jù, correspond: data }
+    - { term: 集, read: jí, correspond: set, space: no }
+  zh-HK:
+    數據集:
+    - { term: 數據, read: sou3 geoi3, correspond: data }
+    - { term: 集, read: zaap6, correspond: set, space: no }
+  zh-TW:
+    資料集:
+    - { term: 資料, read: ㄗ ㄌㄧㄠˋ, correspond: data }
+    - { term: 集, read: ㄐㄧˊ, correspond: set, space: no }
+
+# overfitting
+- en:
+    overfitting:
+    - { term: over }
+    - { term: fitting, space: no }
+  ja:
+    過學習:
+    - { term: 過, read: か, correspond: over }
+    - { term: 学習, norm: 學習, read: がく しゅう, correspond: fitting, space: no }
+  ko:
+    過適合:
+    - { term: 過, read: 과, correspond: over }
+    - { term: 適合, read: 적 합, correspond: fitting, space: no }
+  zh-CN:
+    過擬合:
+    - { term: 过, read: guò, correspond: over }
+    - { term: 拟合, read: nǐ hé, correspond: fitting, space: no }
+  zh-HK:
+    過度擬合:
+    - { term: 過度, read: gwo3 dou6, correspond: over }
+    - { term: 擬合, read: ji5 hap6, correspond: fitting, space: no }
+  zh-TW:
+    過擬合:
+    - { term: 過, read: ㄍㄨㄛˋ, correspond: over }
+    - { term: 擬合, read: ㄋㄧˇ ㄏㄜˊ, correspond: fitting, space: no }
+
+# supervised learning
+- en:
+    supervised learning:
+    - term: supervised
+    - term: learning
+  ja:
+    敎師有學習:
+    - { term: 教師, norm: 敎師, read: きょう し, correspond: supervised }
+    - { term: あり, correspond: having }
+    - { term: 学習, norm: 學習, read: がく しゅう, correspond: learning, space: no }
+  ko:
+    指導學習:
+    - { term: 指導, read: 지 도, correspond: supervised }
+    - { term: 學習, read: 학 습, correspond: learning, space: no }
+  zh-CN:
+    監督學習:
+    - { term: 监督, read: jiān dū, correspond: supervised }
+    - { term: 学习, read: xué xí, correspond: learning, space: no }
+  zh-HK:
+    監督式學習:
+    - { term: 監督式, read: gaam1 duk1 sik1, correspond: supervised }
+    - { term: 學習, read: hok6 zaap6, correspond: learning, space: no }
+  zh-TW:
+    監督式學習:
+    - { term: 監督式, read: ㄐㄧㄢ ㄉㄨ ㄕˋ, correspond: supervised }
+    - { term: 學習, read: ㄒㄩㄝˊ ㄒㄧˊ, correspond: learning, space: no }
+
+# vim: set et sw=2 ts=2 sts=2 ft=yaml:

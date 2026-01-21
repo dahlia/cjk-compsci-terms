@@ -168,3 +168,9 @@
 ------
 
 [顯示表](tables/algorithms.yaml)
+
+
+人工智慧與機器學習
+------------------
+
+[顯示表](tables/ai-ml.yaml)

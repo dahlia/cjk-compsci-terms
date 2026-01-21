@@ -185,3 +185,9 @@
 ------------
 
 [表示](tables/algorithms.yaml)
+
+
+人工知能と機械学習
+------------------
+
+[表示](tables/ai-ml.yaml)
