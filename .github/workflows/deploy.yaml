@@ -35,8 +35,12 @@ jobs:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
 
+    # Preview deploys only for PRs from the same repo (not forks)
+    # Forks don't have access to secrets for security reasons
     - name: Deploy preview to Netlify
-      if: github.event_name == 'pull_request'
+      if: >-
+        github.event_name == 'pull_request' &&
+        github.event.pull_request.head.repo.full_name == github.repository
       uses: nwtgck/actions-netlify@v3
       with:
         publish-dir: ./public_html
