@@ -14,6 +14,7 @@
     "npm:kuroshiro-analyzer-kuromoji@^1.1.0": "1.1.0",
     "npm:kuroshiro@^1.2.0": "1.2.0",
     "npm:markdown-it-deflist@3": "3.0.0",
+    "npm:markdown-it-footnote@4": "4.0.0",
     "npm:markdown-it@^14.1.0": "14.1.0",
     "npm:opencc-js@^1.0.5": "1.0.5",
     "npm:pinyin@4": "4.0.0",
@@ -121,6 +122,9 @@
     "markdown-it-deflist@3.0.0": {
       "integrity": "sha512-OxPmQ/keJZwbubjiQWOvKLHwpV2wZ5I3Smc81OjhwbfJsjdRrvD5aLTQxmZzzePeO0kbGzAo3Krk4QLgA8PWLg=="
     },
+    "markdown-it-footnote@4.0.0": {
+      "integrity": "sha512-WYJ7urf+khJYl3DqofQpYfEYkZKbmXmwxQV8c8mO/hGIhgZ1wOe7R4HLFNwqx7TjILbnC98fuyeSsin19JdFcQ=="
+    },
     "markdown-it@14.1.0": {
       "integrity": "sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==",
       "dependencies": [
@@ -172,6 +176,7 @@
       "npm:kuroshiro-analyzer-kuromoji@^1.1.0",
       "npm:kuroshiro@^1.2.0",
       "npm:markdown-it-deflist@3",
+      "npm:markdown-it-footnote@4",
       "npm:markdown-it@^14.1.0",
       "npm:opencc-js@^1.0.5",
       "npm:pinyin@4",

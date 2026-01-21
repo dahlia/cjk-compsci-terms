@@ -85,17 +85,34 @@ Deno.test("renderToc generates nav element", () => {
   assertEquals(html.includes('<a href="#sec-2">Section 2</a>'), true);
 });
 
-Deno.test("findTablePlaceholders finds Show table links", () => {
+Deno.test("findTablePlaceholders finds table links with any text", () => {
   const md = `
 Some text
 [Show table](tables/basic.yaml)
 More text
-[Show table](tables/programming.yaml)
+[表示](tables/programming.yaml)
+[표 보기](tables/tools.yaml)
+[顯示表](tables/units.yaml)
 `;
   const placeholders = findTablePlaceholders(md);
-  assertEquals(placeholders.length, 2);
+  assertEquals(placeholders.length, 4);
   assertEquals(placeholders[0][1], "tables/basic.yaml");
   assertEquals(placeholders[1][1], "tables/programming.yaml");
+  assertEquals(placeholders[2][1], "tables/tools.yaml");
+  assertEquals(placeholders[3][1], "tables/units.yaml");
+});
+
+Deno.test("findTablePlaceholders ignores non-table yaml links", () => {
+  const md = `[Config](config.yaml)\n[Data](data/test.yaml)`;
+  const placeholders = findTablePlaceholders(md);
+  assertEquals(placeholders.length, 0);
+});
+
+Deno.test("markdownToHtml converts footnotes", () => {
+  const md = "Text with footnote[^1].\n\n[^1]: This is the footnote.";
+  const html = markdownToHtml(md);
+  assertEquals(html.includes("footnote"), true);
+  assertEquals(html.includes("This is the footnote"), true);
 });
 
 Deno.test("insertToc replaces TOC placeholder", () => {

@@ -5,15 +5,16 @@
 
 import MarkdownIt from "markdown-it";
 import deflist from "markdown-it-deflist";
+import footnote from "markdown-it-footnote";
 import type { HtmlString } from "../jsx-runtime/index.ts";
 import { raw } from "../jsx-runtime/index.ts";
 
-// Initialize markdown-it with deflist plugin
+// Initialize markdown-it with plugins
 const md = new MarkdownIt({
   html: true, // Allow HTML tags in source
   linkify: true, // Auto-convert URLs to links
   typographer: false, // Don't replace quotes/dashes
-}).use(deflist);
+}).use(deflist).use(footnote);
 
 /**
  * Remove <!-- hide -->...<!-- /hide --> sections from markdown.
@@ -24,10 +25,11 @@ function removeHideSections(markdown: string): string {
 
 /**
  * Find table placeholders in markdown.
+ * Matches any link text pointing to tables/*.yaml files.
  * Returns array of [placeholder, tablePath] tuples.
  */
 export function findTablePlaceholders(markdown: string): [string, string][] {
-  const regex = /\[Show table\]\(([^)]+\.yaml)\)/g;
+  const regex = /\[[^\]]+\]\((tables\/[^)]+\.yaml)\)/g;
   const matches: [string, string][] = [];
   let match;
   while ((match = regex.exec(markdown)) !== null) {
