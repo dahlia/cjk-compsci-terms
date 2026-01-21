@@ -1,0 +1,236 @@
+# database
+- en:
+    database:
+    - term: data
+    - { term: base, space: no }
+  ja:
+    database:
+    - { term: データベース, loan: database }
+  ko:
+    database:
+    - { term: 데이터베이스, loan: database }
+  zh-CN:
+    數據庫:
+    - { term: 数据, read: shù jù, correspond: data }
+    - { term: 库, read: kù, correspond: base, space: no }
+  zh-HK:
+    數據庫:
+    - { term: 數據, read: sou3 geoi3, correspond: data }
+    - { term: 庫, read: fu3, correspond: base, space: no }
+  zh-TW:
+    資料庫:
+    - { term: 資料, read: ㄗ ㄌㄧㄠˋ, correspond: data }
+    - { term: 庫, read: ㄎㄨˋ, correspond: base, space: no }
+
+# table
+- en:
+    table:
+    - term: table
+  ja:
+    table:
+    - { term: テーブル, loan: table }
+  ko:
+    table:
+    - { term: 테이블, loan: table }
+  zh-CN:
+    表:
+    - { term: 表, read: biǎo, correspond: table }
+  zh-HK:
+    表:
+    - { term: 表, read: biu2, correspond: table }
+  zh-TW:
+    表:
+    - { term: 表, read: ㄅㄧㄠˇ, correspond: table }
+
+# record
+- en:
+    record:
+    - term: record
+  ja:
+    record:
+    - { term: レコード, loan: record }
+  ko:
+    record:
+    - { term: 레코드, loan: record }
+  zh-CN:
+    記錄:
+    - { term: 记录, read: jì lù, correspond: record }
+  zh-HK:
+    記錄:
+    - { term: 記錄, read: gei3 luk6, correspond: record }
+  zh-TW:
+    記錄:
+    - { term: 記錄, read: ㄐㄧˋ ㄌㄨˋ, correspond: record }
+
+# field
+- en:
+    field:
+    - term: field
+  ja:
+    field:
+    - { term: フィールド, loan: field }
+  ko:
+    field:
+    - { term: 필드, loan: field }
+  zh-CN:
+    字段:
+    - { term: 字, read: zì, correspond: character }
+    - { term: 段, read: duàn, correspond: segment, space: no }
+  zh-HK:
+    欄位:
+    - { term: 欄, read: laan4, correspond: column }
+    - { term: 位, read: wai2, correspond: position, space: no }
+  zh-TW:
+    欄位:
+    - { term: 欄, read: ㄌㄢˊ, correspond: column }
+    - { term: 位, read: ㄨㄟˋ, correspond: position, space: no }
+
+# schema
+- en:
+    schema:
+    - term: schema
+  ja:
+    schema:
+    - { term: スキーマ, loan: schema }
+  ko:
+    schema:
+    - { term: 스키마, loan: schema }
+  zh-CN:
+    模式:
+    - { term: 模式, read: mó shì, correspond: schema }
+  zh-HK:
+    綱要:
+    - { term: 綱, read: gong1, correspond: outline }
+    - { term: 要, read: jiu3, correspond: essential, space: no }
+  zh-TW:
+    綱要:
+    - { term: 綱, read: ㄍㄤ, correspond: outline }
+    - { term: 要, read: ㄧㄠˋ, correspond: essential, space: no }
+
+# query
+- en:
+    query:
+    - term: query
+  ja:
+    query:
+    - { term: クエリ, loan: query }
+  ko:
+    query:
+    - { term: 쿼리, loan: query }
+  zh-CN:
+    查詢:
+    - { term: 查, read: chá, correspond: search }
+    - { term: 询, read: xún, correspond: ask, space: no }
+  zh-HK:
+    查詢:
+    - { term: 查, read: caa4, correspond: search }
+    - { term: 詢, read: seon1, correspond: ask, space: no }
+  zh-TW:
+    查詢:
+    - { term: 查, read: ㄔㄚˊ, correspond: search }
+    - { term: 詢, read: ㄒㄩㄣˊ, correspond: ask, space: no }
+
+# transaction
+- en:
+    transaction:
+    - term: transaction
+  ja:
+    transaction:
+    - { term: トランザクション, loan: transaction }
+  ko:
+    transaction:
+    - { term: 트랜잭션, loan: transaction }
+  zh-CN:
+    事務:
+    - { term: 事务, read: shì wù, correspond: transaction }
+  zh-HK:
+    交易:
+    - { term: 交, read: gaau1, correspond: exchange }
+    - { term: 易, read: jik6, correspond: easy, space: no }
+  zh-TW:
+    交易:
+    - { term: 交, read: ㄐㄧㄠ, correspond: exchange }
+    - { term: 易, read: ㄧˋ, correspond: easy, space: no }
+
+# index
+- en:
+    index:
+    - term: index
+  ja:
+    index:
+    - { term: インデックス, loan: index }
+  ko:
+    index:
+    - { term: 인덱스, loan: index }
+    索引:
+    - { term: 索引, read: 색 인, correspond: index }
+  zh-CN:
+    索引:
+    - { term: 索, read: suǒ, correspond: search }
+    - { term: 引, read: yǐn, correspond: guide, space: no }
+  zh-HK:
+    索引:
+    - { term: 索, read: sok3, correspond: search }
+    - { term: 引, read: jan5, correspond: guide, space: no }
+  zh-TW:
+    索引:
+    - { term: 索, read: ㄙㄨㄛˇ, correspond: search }
+    - { term: 引, read: ㄧㄣˇ, correspond: guide, space: no }
+
+# primary key
+- en:
+    primary key:
+    - term: primary
+    - term: key
+  ja:
+    primary key:
+    - { term: プライマリキー, loan: primary key }
+    主鍵:
+    - { term: 主, read: しゅ, correspond: primary }
+    - { term: キー, loan: key }
+  ko:
+    primary key:
+    - { term: 기본, read: 기 본, correspond: primary }
+    - term: " "
+    - { term: 키, loan: key }
+  zh-CN:
+    主鍵:
+    - { term: 主, read: zhǔ, correspond: primary }
+    - { term: 键, read: jiàn, correspond: key, space: no }
+  zh-HK:
+    主鍵:
+    - { term: 主, read: zyu2, correspond: primary }
+    - { term: 鍵, read: gin6, correspond: key, space: no }
+  zh-TW:
+    主鍵:
+    - { term: 主, read: ㄓㄨˇ, correspond: primary }
+    - { term: 鍵, read: ㄐㄧㄢˋ, correspond: key, space: no }
+
+# foreign key
+- en:
+    foreign key:
+    - term: foreign
+    - term: key
+  ja:
+    外部鍵:
+    - { term: 外部, read: がい ぶ, correspond: foreign }
+    - { term: キー, loan: key }
+  ko:
+    外來 key:
+    - { term: 外來, read: 외 래, correspond: foreign }
+    - term: " "
+    - { term: 키, loan: key }
+  zh-CN:
+    外鍵:
+    - { term: 外, read: wài, correspond: foreign }
+    - { term: 键, read: jiàn, correspond: key, space: no }
+  zh-HK:
+    外鍵:
+    - { term: 外, read: ngoi6, correspond: foreign }
+    - { term: 鍵, read: gin6, correspond: key, space: no }
+  zh-TW:
+    外鍵:
+    - { term: 外, read: ㄨㄞˋ, correspond: foreign }
+    - { term: 鍵, read: ㄐㄧㄢˋ, correspond: key, space: no }
+
+# vim: set et sw=2 ts=2 sts=2 ft=yaml:

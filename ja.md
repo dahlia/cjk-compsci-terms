@@ -161,3 +161,9 @@
 ------------
 
 [表示](tables/networking.yaml)
+
+
+データベース
+------------
+
+[表示](tables/database.yaml)
