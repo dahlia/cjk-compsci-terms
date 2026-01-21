@@ -1,0 +1,209 @@
+# version control
+- en:
+    version control:
+    - term: version
+    - term: control
+  ja:
+    バージョン管理:
+    - { term: バージョン, loan: version, correspond: version }
+    - { term: 管理, read: かん り, correspond: control, space: no }
+  ko:
+    version 管理:
+    - { term: 버전, loan: version, correspond: version }
+    - { term: 관리, correspond: control }
+  zh-CN:
+    版本控制:
+    - { term: 版本, read: bǎn běn, correspond: version }
+    - { term: 控制, read: kòng zhì, correspond: control, space: no }
+  zh-HK:
+    版本控制:
+    - { term: 版本, read: baan2 bun2, correspond: version }
+    - { term: 控制, read: hung3 zai3, correspond: control, space: no }
+  zh-TW:
+    版本控制:
+    - { term: 版本, read: ㄅㄢˇ ㄅㄣˇ, correspond: version }
+    - { term: 控制, read: ㄎㄨㄥˋ ㄓˋ, correspond: control, space: no }
+
+# repository
+- en:
+    repository:
+    - term: repository
+  ja:
+    repository:
+    - { term: リポジトリ, loan: repository }
+  ko:
+    repository:
+    - { term: 저장소 }
+  zh-CN:
+    倉庫:
+    - { term: 仓库, read: cāng kù, norm: 倉庫 }
+  zh-HK:
+    倉庫:
+    - { term: 倉庫, read: cong1 fu3 }
+  zh-TW:
+    儲存庫:
+    - { term: 儲存庫, read: ㄔㄨˇ ㄘㄨㄣˊ ㄎㄨˋ }
+
+# commit
+- en:
+    commit:
+    - term: commit
+  ja:
+    commit:
+    - { term: コミット, loan: commit }
+  ko:
+    commit:
+    - { term: 커밋, loan: commit }
+  zh-CN:
+    提交:
+    - { term: 提交, read: tí jiāo }
+  zh-HK:
+    提交:
+    - { term: 提交, read: tai4 gaau1 }
+  zh-TW:
+    提交:
+    - { term: 提交, read: ㄊㄧˊ ㄐㄧㄠ }
+
+# branch
+- en:
+    branch:
+    - term: branch
+  ja:
+    branch:
+    - { term: ブランチ, loan: branch }
+  ko:
+    branch:
+    - { term: 브랜치, loan: branch }
+  zh-CN:
+    分支:
+    - { term: 分支, read: fēn zhī }
+  zh-HK:
+    分支:
+    - { term: 分支, read: fan1 zi1 }
+  zh-TW:
+    分支:
+    - { term: 分支, read: ㄈㄣ ㄓ }
+
+# merge
+- en:
+    merge:
+    - term: merge
+  ja:
+    merge:
+    - { term: マージ, loan: merge }
+  ko:
+    merge:
+    - { term: 병합 }
+  zh-CN:
+    合併:
+    - { term: 合并, read: hé bìng, norm: 合併 }
+  zh-HK:
+    合併:
+    - { term: 合併, read: hap6 bing3 }
+  zh-TW:
+    合併:
+    - { term: 合併, read: ㄏㄜˊ ㄅㄧㄥˋ }
+
+# conflict
+- en:
+    conflict:
+    - term: conflict
+  ja:
+    conflict:
+    - { term: コンフリクト, loan: conflict }
+    衝突:
+    - { term: 衝突, read: しょう とつ }
+  ko:
+    衝突:
+    - { term: 충돌 }
+  zh-CN:
+    衝突:
+    - { term: 冲突, read: chōng tū, norm: 衝突 }
+  zh-HK:
+    衝突:
+    - { term: 衝突, read: cung1 dat6 }
+  zh-TW:
+    衝突:
+    - { term: 衝突, read: ㄔㄨㄥ ㄊㄨ }
+
+# clone
+- en:
+    clone:
+    - term: clone
+  ja:
+    clone:
+    - { term: クローン, loan: clone }
+  ko:
+    clone:
+    - { term: 클론, loan: clone }
+  zh-CN:
+    克隆:
+    - { term: 克隆, read: kè lóng, loan: clone }
+  zh-HK:
+    複製:
+    - { term: 複製, read: fuk1 zai3 }
+  zh-TW:
+    複製:
+    - { term: 複製, read: ㄈㄨˋ ㄓˋ }
+
+# push
+- en:
+    push:
+    - term: push
+  ja:
+    push:
+    - { term: プッシュ, loan: push }
+  ko:
+    push:
+    - { term: 푸시, loan: push }
+  zh-CN:
+    推送:
+    - { term: 推送, read: tuī sòng }
+  zh-HK:
+    推送:
+    - { term: 推送, read: teoi1 sung3 }
+  zh-TW:
+    推送:
+    - { term: 推送, read: ㄊㄨㄟ ㄙㄨㄥˋ }
+
+# pull
+- en:
+    pull:
+    - term: pull
+  ja:
+    pull:
+    - { term: プル, loan: pull }
+  ko:
+    pull:
+    - { term: 풀, loan: pull }
+  zh-CN:
+    拉取:
+    - { term: 拉取, read: lā qǔ }
+  zh-HK:
+    拉取:
+    - { term: 拉取, read: laai1 ceoi2 }
+  zh-TW:
+    拉取:
+    - { term: 拉取, read: ㄌㄚ ㄑㄩˇ }
+
+# diff
+- en:
+    diff:
+    - term: diff
+  ja:
+    差分:
+    - { term: 差分, read: さ ぶん }
+  ko:
+    差異:
+    - { term: 차이 }
+  zh-CN:
+    差異:
+    - { term: 差异, read: chā yì, norm: 差異 }
+  zh-HK:
+    差異:
+    - { term: 差異, read: caa1 ji6 }
+  zh-TW:
+    差異:
+    - { term: 差異, read: ㄔㄚ ㄧˋ }
+
+# vim: set et sw=2 ts=2 sts=2 ft=yaml:

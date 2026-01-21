@@ -249,5 +249,11 @@ Design patterns
 [Show table](tables/design-patterns.yaml)
 
 
+Version control
+---------------
+
+[Show table](tables/version-control.yaml)
+
+
 *[CJK]: Chinese, Japanese, and Korean languages
 *[F/OSS]: Free and open-source software
