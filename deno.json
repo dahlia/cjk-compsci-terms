@@ -21,6 +21,8 @@
     "opencc-js": "npm:opencc-js@^1.0.5",
     "pinyin": "npm:pinyin@^4.0.0",
     "to-jyutping": "npm:to-jyutping@^3.1.1",
+    "markdown-it": "npm:markdown-it@^14.1.0",
+    "markdown-it-deflist": "npm:markdown-it-deflist@^3.0.0",
     "jsx-runtime/jsx-runtime": "./src/jsx-runtime/index.ts"
   },
   "compilerOptions": {
