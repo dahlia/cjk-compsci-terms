@@ -328,7 +328,7 @@ async function buildPage(locale: LocaleCode): Promise<void> {
   // Build canonical URL and OG image URL if URL_BASE is set
   const outputHref = LOCALE_OUTPUT_FILES[locale].replace(/index\.html$/, "");
   const canonicalUrl = urlBase ? `${urlBase}/${outputHref}` : undefined;
-  const ogImageFilename = getOGImageFilename(locale);
+  const ogImageFilename = getOGImageFilename(mdFile);
   const ogImage = urlBase ? `${urlBase}/${ogImageFilename}` : undefined;
 
   const page = Layout({
@@ -364,9 +364,12 @@ async function copyStaticAssets(): Promise<void> {
 async function generateOGImages(): Promise<void> {
   console.log("\nGenerating OG images...");
   for (const locale of PAGE_LOCALES) {
-    const filename = getOGImageFilename(locale);
+    const mdFile = LOCALE_MD_FILES[locale];
+    const md = await Deno.readTextFile(mdFile);
+    const title = getTitle(md);
+    const filename = getOGImageFilename(mdFile);
     console.log(`  Generating ${filename}...`);
-    const pngData = await generateOGImage(locale);
+    const pngData = await generateOGImage(locale, title);
     await Deno.writeFile(`${OUTPUT_DIR}/${filename}`, pngData);
   }
 }
@@ -433,9 +436,12 @@ Examples:
       await buildPage(locale);
       await copyStaticAssets();
       // Generate OG image for this locale
-      const filename = getOGImageFilename(locale);
+      const mdFile = LOCALE_MD_FILES[locale];
+      const md = await Deno.readTextFile(mdFile);
+      const ogTitle = getTitle(md);
+      const filename = getOGImageFilename(mdFile);
       console.log(`\nGenerating ${filename}...`);
-      const pngData = await generateOGImage(locale);
+      const pngData = await generateOGImage(locale, ogTitle);
       await Deno.writeFile(`${OUTPUT_DIR}/${filename}`, pngData);
     } else {
       await build();

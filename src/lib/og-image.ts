@@ -57,14 +57,6 @@ async function loadFont(locale: string): Promise<ArrayBuffer> {
   return data;
 }
 
-/** Page titles for each locale */
-const PAGE_TITLES: Record<string, string> = {
-  en: "CJK Computer Science\nTerms Comparison",
-  ja: "CJK コンピュータ科学\n用語比較",
-  ko: "CJK 컴퓨터 과학\n용어 비교",
-  "zh-TW": "CJK 電腦科學\n術語比較",
-};
-
 /** Subtitles for each locale */
 const PAGE_SUBTITLES: Record<string, string> = {
   en: "Chinese · Japanese · Korean",
@@ -138,16 +130,29 @@ async function initResvg(): Promise<void> {
 }
 
 /**
+ * Calculate appropriate font size based on title length.
+ * Longer titles get smaller fonts to fit the container.
+ */
+function getTitleFontSize(title: string): number {
+  const len = title.length;
+  if (len <= 12) return 72;
+  if (len <= 16) return 64;
+  if (len <= 20) return 56;
+  if (len <= 25) return 48;
+  return 42;
+}
+
+/**
  * Create the OG image element for Satori.
  */
-function createOGElement(locale: LocaleCode): SatoriElement {
-  const title = PAGE_TITLES[locale] ?? PAGE_TITLES.en;
+function createOGElement(locale: LocaleCode, title: string): SatoriElement {
   const subtitle = PAGE_SUBTITLES[locale] ?? PAGE_SUBTITLES.en;
   const langLabels = LANG_LABELS[locale] ?? LANG_LABELS.en;
   const satoriLang = toSatoriLang(locale);
+  const titleFontSize = getTitleFontSize(title);
 
-  // Split title into lines
-  const titleLines = title.split("\n");
+  // Replace middle dot (·) with bullet (•) which has better width metrics in fonts
+  const displayTitle = title.replace(/·/g, "•");
 
   return {
     type: "div",
@@ -169,24 +174,14 @@ function createOGElement(locale: LocaleCode): SatoriElement {
           props: {
             lang: satoriLang,
             style: {
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
+              fontSize: `${titleFontSize}px`,
+              fontWeight: "bold",
+              color: "#ffffff",
+              textAlign: "center",
               marginBottom: "30px",
+              maxWidth: "1000px",
             },
-            children: titleLines.map((line) => ({
-              type: "div",
-              props: {
-                style: {
-                  fontSize: "72px",
-                  fontWeight: "bold",
-                  color: "#ffffff",
-                  textAlign: "center",
-                  lineHeight: 1.2,
-                },
-                children: line,
-              },
-            })),
+            children: displayTitle,
           },
         },
         // Subtitle
@@ -255,9 +250,14 @@ function createOGElement(locale: LocaleCode): SatoriElement {
 
 /**
  * Generate an OG image for a specific locale.
- * Returns the PNG image data as Uint8Array.
+ * @param locale The locale code
+ * @param title The page title (from markdown file)
+ * @returns PNG image data as Uint8Array
  */
-export async function generateOGImage(locale: LocaleCode): Promise<Uint8Array> {
+export async function generateOGImage(
+  locale: LocaleCode,
+  title: string,
+): Promise<Uint8Array> {
   // Initialize libraries
   await initSatori();
   await initResvg();
@@ -275,7 +275,7 @@ export async function generateOGImage(locale: LocaleCode): Promise<Uint8Array> {
   ]);
 
   // Create the element
-  const element = createOGElement(locale);
+  const element = createOGElement(locale, title);
 
   // Generate SVG
   // deno-lint-ignore no-explicit-any
@@ -299,9 +299,13 @@ export async function generateOGImage(locale: LocaleCode): Promise<Uint8Array> {
 }
 
 /**
- * Get the OG image filename for a locale.
+ * Get the OG image filename from markdown file path.
+ * @param mdFile The markdown file path (e.g., "en.md", "zh-Hant.md")
+ * @returns The OG image filename (e.g., "og-image.png", "og-image-zh-Hant.png")
  */
-export function getOGImageFilename(locale: LocaleCode): string {
-  if (locale === "en") return "og-image.png";
-  return `og-image-${locale}.png`;
+export function getOGImageFilename(mdFile: string): string {
+  // Extract language code from filename (e.g., "en.md" → "en", "zh-Hant.md" → "zh-Hant")
+  const langCode = mdFile.replace(/\.md$/, "");
+  if (langCode === "en") return "og-image.png";
+  return `og-image-${langCode}.png`;
 }
