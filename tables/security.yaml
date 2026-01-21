@@ -4,11 +4,14 @@
     - term: encryption
   ja:
     暗號化:
-    - { term: 暗号, norm: 暗號, read: あん ごう, correspond: cipher }
+    - { term: 暗, read: あん, correspond: dark }
+    - { term: 号, norm: 號, read: ごう, correspond: sign, space: no }
     - { term: 化, read: か, correspond: "-ization", space: no }
   ko:
     暗號化:
-    - { term: 暗號化, read: 암 호 화, correspond: encryption }
+    - { term: 暗, read: 암, correspond: dark }
+    - { term: 號, read: 호, correspond: sign, space: no }
+    - { term: 化, read: 화, correspond: "-ization", space: no }
   zh-CN:
     加密:
     - { term: 加, read: jiā, correspond: add }
@@ -28,10 +31,13 @@
     - term: decryption
   ja:
     復號:
-    - { term: 復号, norm: 復號, read: ふく ごう, correspond: decryption }
+    - { term: 復, read: ふく, correspond: restore }
+    - { term: 号, norm: 號, read: ごう, correspond: sign, space: no }
   ko:
     復號化:
-    - { term: 復號化, read: 복 호 화, correspond: decryption }
+    - { term: 復, read: 복, correspond: restore }
+    - { term: 號, read: 호, correspond: sign, space: no }
+    - { term: 化, read: 화, correspond: "-ization", space: no }
   zh-CN:
     解密:
     - { term: 解, read: jiě, correspond: solve }
@@ -76,10 +82,12 @@
     - term: authentication
   ja:
     認證:
-    - { term: 認証, norm: 認證, read: にん しょう, correspond: authentication }
+    - { term: 認, read: にん, correspond: recognize }
+    - { term: 証, norm: 證, read: しょう, correspond: proof, space: no }
   ko:
     認證:
-    - { term: 認證, read: 인 증, correspond: authentication }
+    - { term: 認, read: 인, correspond: recognize }
+    - { term: 證, read: 증, correspond: proof, space: no }
   zh-CN:
     認證:
     - { term: 认, read: rèn, correspond: recognize }
@@ -199,19 +207,24 @@
     - term: cipher
   ja:
     暗號:
-    - { term: 暗号, norm: 暗號, read: あん ごう, correspond: cipher }
+    - { term: 暗, read: あん, correspond: dark }
+    - { term: 号, norm: 號, read: ごう, correspond: sign, space: no }
   ko:
     暗號:
-    - { term: 暗號, read: 암 호, correspond: cipher }
+    - { term: 暗, read: 암, correspond: dark }
+    - { term: 號, read: 호, correspond: sign, space: no }
   zh-CN:
     密碼:
-    - { term: 密码, read: mì mǎ, correspond: cipher }
+    - { term: 密, read: mì, correspond: secret }
+    - { term: 码, read: mǎ, norm: 碼, correspond: code, space: no }
   zh-HK:
     密碼:
-    - { term: 密碼, read: mat6 maa5, correspond: cipher }
+    - { term: 密, read: mat6, correspond: secret }
+    - { term: 碼, read: maa5, correspond: code, space: no }
   zh-TW:
     密碼:
-    - { term: 密碼, read: ㄇㄧˋ ㄇㄚˇ, correspond: cipher }
+    - { term: 密, read: ㄇㄧˋ, correspond: secret }
+    - { term: 碼, read: ㄇㄚˇ, correspond: code, space: no }
 
 # public key
 - en:
