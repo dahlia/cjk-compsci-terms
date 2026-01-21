@@ -94,9 +94,6 @@ function toSatoriLang(locale: string): string {
   return map[locale] ?? locale;
 }
 
-/** Flag emoji for each CJK region */
-const REGION_FLAGS = ["🇨🇳", "🇯🇵", "🇰🇷"];
-
 // Satori and resvg modules (loaded dynamically)
 let satoriInit: typeof import("satori").init | null = null;
 let satori: typeof import("satori").default | null = null;
@@ -205,46 +202,50 @@ function createOGElement(locale: LocaleCode): SatoriElement {
             children: subtitle,
           },
         },
-        // Language flags and labels
+        // Language labels in a horizontal row
         {
           type: "div",
           props: {
             style: {
               display: "flex",
-              gap: "60px",
+              alignItems: "center",
+              gap: "30px",
               marginTop: "20px",
+              padding: "20px 40px",
+              borderRadius: "12px",
+              background: "rgba(255, 255, 255, 0.1)",
             },
-            children: langLabels.map((label, i) => ({
-              type: "div",
-              props: {
-                style: {
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  gap: "10px",
+            children: langLabels.flatMap((label, i) => {
+              const labelElement = {
+                type: "div",
+                props: {
+                  lang: ["zh-TW", "ja-JP", "ko-KR"][i],
+                  style: {
+                    fontSize: "32px",
+                    color: "#ffffff",
+                    fontWeight: "bold",
+                  },
+                  children: label,
                 },
-                children: [
+              };
+              // Add separator between labels (not after the last one)
+              if (i < langLabels.length - 1) {
+                return [
+                  labelElement,
                   {
                     type: "div",
                     props: {
-                      style: { fontSize: "48px" },
-                      children: REGION_FLAGS[i],
-                    },
-                  },
-                  {
-                    type: "div",
-                    props: {
-                      lang: ["zh-TW", "ja-JP", "ko-KR"][i],
                       style: {
-                        fontSize: "28px",
-                        color: "#e0e0e0",
+                        fontSize: "32px",
+                        color: "#4a9eff",
                       },
-                      children: label,
+                      children: "/",
                     },
                   },
-                ],
-              },
-            })),
+                ];
+              }
+              return [labelElement];
+            }),
           },
         },
       ],
