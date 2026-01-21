@@ -219,5 +219,11 @@ Mobile
 [Show table](tables/mobile.yaml)
 
 
+Game development
+----------------
+
+[Show table](tables/game-dev.yaml)
+
+
 *[CJK]: Chinese, Japanese, and Korean languages
 *[F/OSS]: Free and open-source software

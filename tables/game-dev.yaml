@@ -1,0 +1,262 @@
+# game engine
+- en:
+    game engine:
+    - term: game
+    - term: engine
+  ja:
+    game engine:
+    - { term: ゲームエンジン, loan: game engine }
+  ko:
+    game engine:
+    - { term: 게임 엔진, loan: game engine }
+  zh-CN:
+    遊戲引擎:
+    - { term: 游戏, read: yóu xì, norm: 遊戲, correspond: game }
+    - { term: 引擎, read: yǐn qíng, correspond: engine, space: no }
+  zh-HK:
+    遊戲引擎:
+    - { term: 遊戲, read: jau4 hei3, correspond: game }
+    - { term: 引擎, read: jan5 king4, correspond: engine, space: no }
+  zh-TW:
+    遊戲引擎:
+    - { term: 遊戲, read: ㄧㄡˊ ㄒㄧˋ, correspond: game }
+    - { term: 引擎, read: ㄧㄣˇ ㄑㄧㄥˊ, correspond: engine, space: no }
+
+# physics engine
+- en:
+    physics engine:
+    - term: physics
+    - term: engine
+  ja:
+    物理エンジン:
+    - { term: 物理, read: ぶつ り, correspond: physics }
+    - { term: エンジン, loan: engine, space: no }
+    物理演算エンジン:
+    - { term: 物理, read: ぶつ り, correspond: physics }
+    - { term: 演算, read: えん ざん, correspond: calculation, space: no }
+    - { term: エンジン, loan: engine, space: no }
+  ko:
+    物理 engine:
+    - { term: 물리, correspond: physics }
+    - { term: 엔진, loan: engine }
+  zh-CN:
+    物理引擎:
+    - { term: 物理, read: wù lǐ, correspond: physics }
+    - { term: 引擎, read: yǐn qíng, correspond: engine, space: no }
+  zh-HK:
+    物理引擎:
+    - { term: 物理, read: mat6 lei5, correspond: physics }
+    - { term: 引擎, read: jan5 king4, correspond: engine, space: no }
+  zh-TW:
+    物理引擎:
+    - { term: 物理, read: ㄨˋ ㄌㄧˇ, correspond: physics }
+    - { term: 引擎, read: ㄧㄣˇ ㄑㄧㄥˊ, correspond: engine, space: no }
+
+# collision detection
+- en:
+    collision detection:
+    - term: collision
+    - term: detection
+  ja:
+    衝突判定:
+    - { term: 衝突, read: しょう とつ, correspond: collision }
+    - { term: 判定, read: はん てい, correspond: detection, space: no }
+    當たり判定:
+    - { term: 当たり, read: あたり, norm: 當たり, correspond: collision }
+    - { term: 判定, read: はん てい, correspond: detection, space: no }
+  ko:
+    衝突 檢出:
+    - { term: 충돌, correspond: collision }
+    - { term: 감지, correspond: detection }
+  zh-CN:
+    碰撞檢測:
+    - { term: 碰撞, read: pèng zhuàng, correspond: collision }
+    - { term: 检测, read: jiǎn cè, norm: 檢測, correspond: detection, space: no }
+  zh-HK:
+    碰撞偵測:
+    - { term: 碰撞, read: pung3 zong6, correspond: collision }
+    - { term: 偵測, read: zing1 cak1, correspond: detection, space: no }
+  zh-TW:
+    碰撞偵測:
+    - { term: 碰撞, read: ㄆㄥˋ ㄓㄨㄤˋ, correspond: collision }
+    - { term: 偵測, read: ㄓㄣ ㄘㄜˋ, correspond: detection, space: no }
+
+# sprite
+- en:
+    sprite:
+    - term: sprite
+  ja:
+    sprite:
+    - { term: スプライト, loan: sprite }
+  ko:
+    sprite:
+    - { term: 스프라이트, loan: sprite }
+  zh-CN:
+    精靈:
+    - { term: 精灵, read: jīng líng, norm: 精靈 }
+  zh-HK:
+    精靈:
+    - { term: 精靈, read: zing1 ling4 }
+  zh-TW:
+    精靈:
+    - { term: 精靈, read: ㄐㄧㄥ ㄌㄧㄥˊ }
+
+# frame rate
+- en:
+    frame rate:
+    - term: frame
+    - term: rate
+  ja:
+    frame rate:
+    - { term: フレームレート, loan: frame rate }
+  ko:
+    frame rate:
+    - { term: 프레임 레이트, loan: frame rate }
+  zh-CN:
+    幀率:
+    - { term: 帧, read: zhèn, norm: 幀, correspond: frame }
+    - { term: 率, read: lǜ, correspond: rate, space: no }
+  zh-HK:
+    幀率:
+    - { term: 幀, read: zing3, correspond: frame }
+    - { term: 率, read: leot6, correspond: rate, space: no }
+  zh-TW:
+    幀率:
+    - { term: 幀, read: ㄓㄣ, correspond: frame }
+    - { term: 率, read: ㄌㄩˋ, correspond: rate, space: no }
+
+# NPC
+- en:
+    NPC:
+    - term: NPC
+    non-player character:
+    - { term: non }
+    - { term: "-", space: no }
+    - { term: player, space: no }
+    - term: character
+  ja:
+    NPC:
+    - term: NPC
+  ko:
+    NPC:
+    - term: NPC
+  zh-CN:
+    NPC:
+    - term: NPC
+    非玩家角色:
+    - { term: 非, read: fēi, correspond: non }
+    - { term: 玩家, read: wán jiā, correspond: player, space: no }
+    - { term: 角色, read: jué sè, correspond: character, space: no }
+  zh-HK:
+    NPC:
+    - term: NPC
+    非玩家角色:
+    - { term: 非, read: fei1, correspond: non }
+    - { term: 玩家, read: wun6 gaa1, correspond: player, space: no }
+    - { term: 角色, read: gok3 sik1, correspond: character, space: no }
+  zh-TW:
+    NPC:
+    - term: NPC
+    非玩家角色:
+    - { term: 非, read: ㄈㄟ, correspond: non }
+    - { term: 玩家, read: ㄨㄢˊ ㄐㄧㄚ, correspond: player, space: no }
+    - { term: 角色, read: ㄐㄩㄝˊ ㄙㄜˋ, correspond: character, space: no }
+
+# hitbox
+- en:
+    hitbox:
+    - { term: hit }
+    - { term: box, space: no }
+  ja:
+    hitbox:
+    - { term: ヒットボックス, loan: hitbox }
+    當たり判定:
+    - { term: 当たり, read: あたり, norm: 當たり, correspond: hit }
+    - { term: 判定, read: はん てい, correspond: box, space: no }
+  ko:
+    hitbox:
+    - { term: 히트박스, loan: hitbox }
+    判定:
+    - { term: 판정, correspond: hitbox }
+  zh-CN:
+    判定框:
+    - { term: 判定, read: pàn dìng, correspond: hit }
+    - { term: 框, read: kuàng, correspond: box, space: no }
+  zh-HK:
+    判定框:
+    - { term: 判定, read: pun3 ding6, correspond: hit }
+    - { term: 框, read: kwaang1, correspond: box, space: no }
+  zh-TW:
+    判定框:
+    - { term: 判定, read: ㄆㄢˋ ㄉㄧㄥˋ, correspond: hit }
+    - { term: 框, read: ㄎㄨㄤ, correspond: box, space: no }
+
+# animation
+- en:
+    animation:
+    - term: animation
+  ja:
+    animation:
+    - { term: アニメーション, loan: animation }
+  ko:
+    animation:
+    - { term: 애니메이션, loan: animation }
+  zh-CN:
+    動畫:
+    - { term: 动画, read: dòng huà, norm: 動畫 }
+  zh-HK:
+    動畫:
+    - { term: 動畫, read: dung6 waa2 }
+  zh-TW:
+    動畫:
+    - { term: 動畫, read: ㄉㄨㄥˋ ㄏㄨㄚˋ }
+
+# level
+- en:
+    level:
+    - term: level
+  ja:
+    level:
+    - { term: レベル, loan: level }
+    ステージ:
+    - { term: ステージ, loan: stage }
+  ko:
+    level:
+    - { term: 레벨, loan: level }
+  zh-CN:
+    關卡:
+    - { term: 关卡, read: guān qiǎ, norm: 關卡 }
+  zh-HK:
+    關卡:
+    - { term: 關卡, read: gwaan1 kaa1 }
+  zh-TW:
+    關卡:
+    - { term: 關卡, read: ㄍㄨㄢ ㄑㄧㄚˇ }
+
+# boss
+- en:
+    boss:
+    - term: boss
+  ja:
+    boss:
+    - { term: ボス, loan: boss }
+  ko:
+    boss:
+    - { term: 보스, loan: boss }
+  zh-CN:
+    boss:
+    - { term: boss, loan: boss }
+    頭目:
+    - { term: 头目, read: tóu mù, norm: 頭目 }
+  zh-HK:
+    boss:
+    - { term: boss, loan: boss }
+    頭目:
+    - { term: 頭目, read: tau4 muk6 }
+  zh-TW:
+    boss:
+    - { term: boss, loan: boss }
+    頭目:
+    - { term: 頭目, read: ㄊㄡˊ ㄇㄨˋ }
+
+# vim: set et sw=2 ts=2 sts=2 ft=yaml:
