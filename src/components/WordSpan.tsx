@@ -75,26 +75,31 @@ function renderTermWithRuby(
   }
 
   if (isEasternTerm(term) && readings && readings.length > 0) {
-    // Eastern term with character-by-character readings
-    return jsx("ruby", {
-      className: termClass,
-      lang: langTag,
-      children: readings.map(([char, read]) =>
-        jsx(Fragment, {
-          children: [
-            char,
-            jsx("rt", { children: char !== read ? read : "" }),
-          ],
-        })
-      ),
-    });
+    // Check if any reading differs from the character
+    const hasActualReadings = readings.some(([char, read]) => char !== read);
+
+    if (hasActualReadings) {
+      // Eastern term with character-by-character readings
+      // Only add <rt> when the reading differs from the character
+      return jsx("ruby", {
+        className: termClass,
+        lang: langTag,
+        children: readings.map(([char, read]) =>
+          char !== read
+            ? jsx(Fragment, {
+                children: [char, jsx("rt", { children: read })],
+              })
+            : char
+        ),
+      });
+    }
   }
 
-  // Term without specific reading - empty ruby text
-  return jsx("ruby", {
+  // Term without ruby annotation (no reading or readings match characters)
+  return jsx("span", {
     className: termClass,
     lang: langTag,
-    children: [term.term, jsx("rt", { children: "" })],
+    children: term.term,
   });
 }
 
