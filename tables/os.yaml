@@ -1,0 +1,303 @@
+# Operating system
+- en:
+    operating system:
+    - term: operating
+    - term: system
+  ja:
+    operating system:
+    - { term: オペレーティング, loan: operating }
+    - { term: システム,         loan: system }
+  ko:
+    運營體制:
+    - { term: 運營, correspond: operating, read: 운 영 }
+    - { term: 體制, correspond: system,    read: 체 제 }
+  zh-CN:
+    操作系統:
+    - { term: 操作, correspond: operating, read: cāo zuò }
+    - { term: 系统, correspond: system,    read: xì tǒng }
+  zh-HK:
+    操作系統:
+    - { term: 操作, correspond: operating, read: cou3 zok3 }
+    - { term: 系統, correspond: system,    read: hai6 tung2 }
+  zh-TW:
+    作業系統:
+    - { term: 作業, correspond: operating, read: ㄗㄨㄛˋ ㄧㄝˋ }
+    - { term: 系統, correspond: system,    read: ㄒㄧˋ ㄊㄨㄥˇ }
+
+# Kernel
+- en:
+    kernel:
+    - term: kernel
+  ja:
+    kernel:
+    - { term: カーネル, loan: kernel }
+  ko:
+    kernel:
+    - { term: 커널, loan: kernel }
+  zh-CN:
+    內核:
+    - { term: 内, correspond: inner,  read: nèi }
+    - { term: 核, correspond: kernel, read: hé, space: no }
+  zh-HK:
+    核心:
+    - { term: 核心, correspond: kernel, read: hat6 sam1 }
+    內核:
+    - { term: 內, correspond: inner,  read: noi6 }
+    - { term: 核, correspond: kernel, read: hat6, space: no }
+  zh-TW:
+    核心:
+    - { term: 核心, correspond: kernel, read: ㄏㄜˊ ㄒㄧㄣ }
+
+# Microkernel
+- en:
+    microkernel:
+    - { term: micro, correspond: small }
+    - { term: kernel,                   space: no }
+  ja:
+    microkernel:
+    - { term: マイクロ, loan: micro, correspond: small }
+    - { term: カーネル, loan: kernel,                   space: no }
+  ko:
+    microkernel:
+    - { term: 마이크로, loan: micro, correspond: small }
+    - { term: 커널,     loan: kernel,                   space: no }
+  zh-CN:
+    微內核:
+    - { term: 微, correspond: small,  read: wēi }
+    - { term: 内, correspond: inner,  read: nèi,        space: no }
+    - { term: 核, correspond: kernel, read: hé,         space: no }
+  zh-HK:
+    微核心:
+    - { term: 微,   correspond: small,  read: mei4 }
+    - { term: 核心, correspond: kernel, read: hat6 sam1, space: no }
+  zh-TW:
+    微核心:
+    - { term: 微,   correspond: small,  read: ㄨㄟˊ }
+    - { term: 核心, correspond: kernel, read: ㄏㄜˊ ㄒㄧㄣ, space: no }
+
+# Monolithic kernel
+- en:
+    monolithic kernel:
+    - term: monolithic
+    - term: kernel
+  ja:
+    monolithic kernel:
+    - { term: モノリシック, loan: monolithic }
+    - { term: カーネル,     loan: kernel }
+  ko:
+    monolithic kernel:
+    - { term: 모놀리식, loan: monolithic }
+    - { term: 커널,     loan: kernel }
+  zh-CN:
+    宏內核:
+    - { term: 宏, correspond: monolithic, read: hóng }
+    - { term: 内, correspond: inner,      read: nèi,  space: no }
+    - { term: 核, correspond: kernel,     read: hé,   space: no }
+  zh-HK:
+    單體式核心:
+    - { term: 單體, correspond: monolithic, read: daan1 tai2 }
+    - { term: 式,   correspond: type,       read: sik1,       space: no }
+    - { term: 核心, correspond: kernel,     read: hat6 sam1 }
+  zh-TW:
+    單體式核心:
+    - { term: 單體, correspond: monolithic, read: ㄉㄢ ㄊㄧˇ }
+    - { term: 式,   correspond: type,       read: ㄕˋ,        space: no }
+    - { term: 核心, correspond: kernel,     read: ㄏㄜˊ ㄒㄧㄣ }
+
+# Unikernel
+- en:
+    unikernel:
+    - { term: uni,    correspond: single }
+    - { term: kernel,                      space: no }
+  ja:
+    unikernel:
+    - { term: ユニ,     loan: uni, correspond: single }
+    - { term: カーネル, loan: kernel,                  space: no }
+  ko:
+    unikernel:
+    - { term: 유니, loan: uni, correspond: single }
+    - { term: 커널, loan: kernel,                  space: no }
+  zh-CN:
+    單內核:
+    - { term: 单, correspond: single, read: dān }
+    - { term: 内, correspond: inner,  read: nèi, space: no }
+    - { term: 核, correspond: kernel, read: hé,  space: no }
+  zh-HK:
+    單一核心:
+    - { term: 單一, correspond: single, read: daan1 jat1 }
+    - { term: 核心, correspond: kernel, read: hat6 sam1 }
+  zh-TW:
+    單一核心:
+    - { term: 單一, correspond: single, read: ㄉㄢ ㄧ }
+    - { term: 核心, correspond: kernel, read: ㄏㄜˊ ㄒㄧㄣ }
+
+# Scheduler
+- en:
+    scheduler:
+    - { term: schedul, correspond: schedule }
+    - { term: er,      correspond: agent,    space: no }
+  ja:
+    scheduler:
+    - { term: スケジューラ, loan: scheduler }
+  ko:
+    scheduler:
+    - { term: 스케줄러, loan: scheduler }
+  zh-CN:
+    調度器:
+    - { term: 调度, correspond: schedule, read: diào dù }
+    - { term: 器,   correspond: agent,    read: qì,      space: no }
+  zh-HK:
+    排程器:
+    - { term: 排程, correspond: schedule, read: paai4 cing4 }
+    - { term: 器,   correspond: agent,    read: hei3,        space: no }
+  zh-TW:
+    排程器:
+    - { term: 排程, correspond: schedule, read: ㄆㄞˊ ㄔㄥˊ }
+    - { term: 器,   correspond: agent,    read: ㄑㄧˋ,       space: no }
+
+# Device driver
+- en:
+    device driver:
+    - term: device
+    - term: driver
+  ja:
+    device driver:
+    - { term: デバイス, loan: device }
+    - { term: ドライバ, loan: driver }
+  ko:
+    裝置 driver:
+    - { term: 裝置,     correspond: device, read: 장 치 }
+    - { term: 드라이버, loan: driver }
+    device driver:
+    - { term: 디바이스, loan: device }
+    - { term: 드라이버, loan: driver }
+  zh-CN:
+    設備驅動程序:
+    - { term: 设备, correspond: device,  read: shè bèi }
+    - { term: 驱动, correspond: driver,  read: qū dòng }
+    - { term: 程序, correspond: program, read: chéng xù, space: no }
+  zh-HK:
+    裝置驅動程式:
+    - { term: 裝置, correspond: device,  read: zong1 zi3 }
+    - { term: 驅動, correspond: driver,  read: keoi1 dung6 }
+    - { term: 程式, correspond: program, read: cing4 sik1, space: no }
+  zh-TW:
+    裝置驅動程式:
+    - { term: 裝置, correspond: device,  read: ㄓㄨㄤ ㄓˋ }
+    - { term: 驅動, correspond: driver,  read: ㄑㄩ ㄉㄨㄥˋ }
+    - { term: 程式, correspond: program, read: ㄔㄥˊ ㄕˋ, space: no }
+
+# Multitasking
+- en:
+    multitasking:
+    - { term: multi,   correspond: multiple }
+    - { term: tasking, correspond: task,     space: no }
+  ja:
+    multitasking:
+    - { term: マルチ,       loan: multi, correspond: multiple }
+    - { term: タスキング,   loan: tasking, correspond: task,   space: no }
+  ko:
+    multitasking:
+    - { term: 멀티,     loan: multi, correspond: multiple }
+    - { term: 태스킹,   loan: tasking, correspond: task,   space: no }
+    多重作業:
+    - { term: 多重, correspond: multiple, read: 다 중 }
+    - { term: 作業, correspond: task,     read: 작 업 }
+  zh-CN:
+    多任務處理:
+    - { term: 多,   correspond: multiple, read: duō }
+    - { term: 任务, correspond: task,     read: rèn wù,   space: no }
+    - { term: 处理, correspond: process,  read: chǔ lǐ }
+  zh-HK:
+    多任務處理:
+    - { term: 多,   correspond: multiple, read: do1 }
+    - { term: 任務, correspond: task,     read: jam6 mou6, space: no }
+    - { term: 處理, correspond: process,  read: cyu2 lei5 }
+  zh-TW:
+    多工:
+    - { term: 多, correspond: multiple, read: ㄉㄨㄛ }
+    - { term: 工, correspond: task,     read: ㄍㄨㄥ,  space: no }
+
+# Process
+- en:
+    process:
+    - term: process
+  ja:
+    process:
+    - { term: プロセス, loan: process }
+  ko:
+    process:
+    - { term: 프로세스, loan: process }
+  zh-CN:
+    進程:
+    - { term: 进, correspond: proceed, read: jìn }
+    - { term: 程, correspond: course,  read: chéng, space: no }
+  zh-HK:
+    進程:
+    - { term: 進, correspond: proceed, read: zeon3 }
+    - { term: 程, correspond: course,  read: cing4, space: no }
+  zh-TW:
+    行程:
+    - { term: 行, correspond: proceed, read: ㄏㄤˊ }
+    - { term: 程, correspond: course,  read: ㄔㄥˊ, space: no }
+
+# File system
+- en:
+    file system:
+    - term: file
+    - term: system
+  ja:
+    file system:
+    - { term: ファイル,   loan: file }
+    - { term: システム,   loan: system }
+  ko:
+    file system:
+    - { term: 파일,   loan: file }
+    - { term: 시스템, loan: system }
+  zh-CN:
+    文件系統:
+    - { term: 文件, correspond: file,   read: wén jiàn }
+    - { term: 系统, correspond: system, read: xì tǒng }
+  zh-HK:
+    檔案系統:
+    - { term: 檔案, correspond: file,   read: dong2 on3 }
+    - { term: 系統, correspond: system, read: hai6 tung2 }
+  zh-TW:
+    檔案系統:
+    - { term: 檔案, correspond: file,   read: ㄉㄤˇ ㄢˋ }
+    - { term: 系統, correspond: system, read: ㄒㄧˋ ㄊㄨㄥˇ }
+
+# Virtual memory
+- en:
+    virtual memory:
+    - term: virtual
+    - term: memory
+  ja:
+    假想記憶:
+    - { term: 仮想,   correspond: virtual, read: か そう }
+    - { term: 記憶,   correspond: memory,  read: き おく }
+    virtual memory:
+    - { term: バーチャル, loan: virtual }
+    - { term: メモリ,     loan: memory }
+  ko:
+    假想記憶裝置:
+    - { term: 假想, correspond: virtual, read: 가 상 }
+    - { term: 記憶, correspond: memory,  read: 기 억 }
+    - { term: 裝置, correspond: device,  read: 장 치 }
+    virtual memory:
+    - { term: 가상,   correspond: virtual }
+    - { term: 메모리, loan: memory }
+  zh-CN:
+    虛擬內存:
+    - { term: 虚拟, correspond: virtual, read: xū nǐ }
+    - { term: 内存, correspond: memory,  read: nèi cún }
+  zh-HK:
+    虛擬記憶體:
+    - { term: 虛擬,   correspond: virtual, read: heoi1 ji5 }
+    - { term: 記憶體, correspond: memory,  read: gei3 jik1 tai2 }
+  zh-TW:
+    虛擬記憶體:
+    - { term: 虛擬,   correspond: virtual, read: ㄒㄩ ㄋㄧˇ }
+    - { term: 記憶體, correspond: memory,  read: ㄐㄧˋ ㄧˋ ㄊㄧˇ }
+
+# vim: set et sw=2 ts=2 sts=2 ft=yaml:

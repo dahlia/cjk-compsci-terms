@@ -153,6 +153,12 @@ Concurrent programming
 [Show table](tables/concurrency.yaml)
 
 
+Operating systems
+-----------------
+
+[Show table](tables/os.yaml)
+
+
 F/OSS
 -----
 

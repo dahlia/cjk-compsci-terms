@@ -148,6 +148,11 @@ lang="ja"><ruby>情<rt lang="ko">정</rt>報<rt lang="ko">보</rt></ruby></q>.
 [표 보기](tables/concurrency.yaml)
 
 
+운영 체제
+---------
+
+[표 보기](tables/os.yaml)
+
 
 자유·오픈 소스 소프트웨어
 -------------------------
