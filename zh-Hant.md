@@ -216,3 +216,9 @@
 --------
 
 [顯示表](tables/software-eng.yaml)
+
+
+設計模式
+--------
+
+[顯示表](tables/design-patterns.yaml)

@@ -233,3 +233,9 @@
 ----------------
 
 [表示](tables/software-eng.yaml)
+
+
+デザインパターン
+----------------
+
+[表示](tables/design-patterns.yaml)

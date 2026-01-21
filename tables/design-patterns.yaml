@@ -1,0 +1,231 @@
+# design pattern
+- en:
+    design pattern:
+    - term: design
+    - term: pattern
+  ja:
+    設計パターン:
+    - { term: 設計, read: せっ けい, correspond: design }
+    - { term: パターン, loan: pattern, correspond: pattern, space: no }
+    デザインパターン:
+    - { term: デザインパターン, loan: design pattern }
+  ko:
+    設計 pattern:
+    - { term: 설계, correspond: design }
+    - { term: 패턴, loan: pattern, correspond: pattern }
+    design pattern:
+    - { term: 디자인 패턴, loan: design pattern }
+  zh-CN:
+    設計模式:
+    - { term: 设计, read: shè jì, norm: 設計, correspond: design }
+    - { term: 模式, read: mó shì, correspond: pattern, space: no }
+  zh-HK:
+    設計模式:
+    - { term: 設計, read: cit3 gai3, correspond: design }
+    - { term: 模式, read: mou4 sik1, correspond: pattern, space: no }
+  zh-TW:
+    設計模式:
+    - { term: 設計, read: ㄕㄜˋ ㄐㄧˋ, correspond: design }
+    - { term: 模式, read: ㄇㄛˊ ㄕˋ, correspond: pattern, space: no }
+
+# singleton
+- en:
+    singleton:
+    - term: singleton
+  ja:
+    singleton:
+    - { term: シングルトン, loan: singleton }
+  ko:
+    singleton:
+    - { term: 싱글톤, loan: singleton }
+  zh-CN:
+    單例:
+    - { term: 单例, read: dān lì, norm: 單例 }
+  zh-HK:
+    單例:
+    - { term: 單例, read: daan1 lai6 }
+  zh-TW:
+    單例:
+    - { term: 單例, read: ㄉㄢ ㄌㄧˋ }
+
+# factory
+- en:
+    factory:
+    - term: factory
+  ja:
+    factory:
+    - { term: ファクトリー, loan: factory }
+  ko:
+    factory:
+    - { term: 팩토리, loan: factory }
+  zh-CN:
+    工廠:
+    - { term: 工厂, read: gōng chǎng, norm: 工廠 }
+  zh-HK:
+    工廠:
+    - { term: 工廠, read: gung1 cong2 }
+  zh-TW:
+    工廠:
+    - { term: 工廠, read: ㄍㄨㄥ ㄔㄤˇ }
+
+# observer
+- en:
+    observer:
+    - { term: observ, correspond: observe }
+    - { term: er, space: no }
+  ja:
+    observer:
+    - { term: オブザーバー, loan: observer }
+  ko:
+    observer:
+    - { term: 옵저버, loan: observer }
+  zh-CN:
+    觀察者:
+    - { term: 观察, read: guān chá, norm: 觀察, correspond: observe }
+    - { term: 者, read: zhě, correspond: "-er", space: no }
+  zh-HK:
+    觀察者:
+    - { term: 觀察, read: gun1 caat3, correspond: observe }
+    - { term: 者, read: ze2, correspond: "-er", space: no }
+  zh-TW:
+    觀察者:
+    - { term: 觀察, read: ㄍㄨㄢ ㄔㄚˊ, correspond: observe }
+    - { term: 者, read: ㄓㄜˇ, correspond: "-er", space: no }
+
+# adapter
+- en:
+    adapter:
+    - { term: adapt }
+    - { term: er, space: no }
+  ja:
+    adapter:
+    - { term: アダプター, loan: adapter }
+  ko:
+    adapter:
+    - { term: 어댑터, loan: adapter }
+  zh-CN:
+    適配器:
+    - { term: 适配, read: shì pèi, norm: 適配, correspond: adapt }
+    - { term: 器, read: qì, correspond: "-er", space: no }
+  zh-HK:
+    適配器:
+    - { term: 適配, read: sik1 pui3, correspond: adapt }
+    - { term: 器, read: hei3, correspond: "-er", space: no }
+  zh-TW:
+    轉接器:
+    - { term: 轉接, read: ㄓㄨㄢˇ ㄐㄧㄝ, correspond: adapt }
+    - { term: 器, read: ㄑㄧˋ, correspond: "-er", space: no }
+
+# decorator
+- en:
+    decorator:
+    - { term: decorat, correspond: decorate }
+    - { term: or, space: no }
+  ja:
+    decorator:
+    - { term: デコレータ, loan: decorator }
+  ko:
+    decorator:
+    - { term: 데코레이터, loan: decorator }
+  zh-CN:
+    裝飾器:
+    - { term: 装饰, read: zhuāng shì, norm: 裝飾, correspond: decorate }
+    - { term: 器, read: qì, correspond: "-or", space: no }
+  zh-HK:
+    裝飾器:
+    - { term: 裝飾, read: zong1 sik1, correspond: decorate }
+    - { term: 器, read: hei3, correspond: "-or", space: no }
+  zh-TW:
+    裝飾器:
+    - { term: 裝飾, read: ㄓㄨㄤ ㄕˋ, correspond: decorate }
+    - { term: 器, read: ㄑㄧˋ, correspond: "-or", space: no }
+
+# strategy
+- en:
+    strategy:
+    - term: strategy
+  ja:
+    strategy:
+    - { term: ストラテジー, loan: strategy }
+  ko:
+    strategy:
+    - { term: 전략, correspond: strategy }
+  zh-CN:
+    策略:
+    - { term: 策略, read: cè lüè }
+  zh-HK:
+    策略:
+    - { term: 策略, read: caak3 loek6 }
+  zh-TW:
+    策略:
+    - { term: 策略, read: ㄘㄜˋ ㄌㄩㄝˋ }
+
+# MVC
+- en:
+    MVC:
+    - term: MVC
+  ja:
+    MVC:
+    - term: MVC
+  ko:
+    MVC:
+    - term: MVC
+  zh-CN:
+    MVC:
+    - term: MVC
+  zh-HK:
+    MVC:
+    - term: MVC
+  zh-TW:
+    MVC:
+    - term: MVC
+
+# dependency injection
+- en:
+    dependency injection:
+    - term: dependency
+    - term: injection
+  ja:
+    依存性注入:
+    - { term: 依存, read: い ぞん, correspond: dependency }
+    - { term: 性, read: せい, space: no }
+    - { term: 注入, read: ちゅう にゅう, correspond: injection, space: no }
+  ko:
+    依存性 注入:
+    - { term: 의존성, correspond: dependency }
+    - { term: 주입, correspond: injection }
+  zh-CN:
+    依賴注入:
+    - { term: 依赖, read: yī lài, norm: 依賴, correspond: dependency }
+    - { term: 注入, read: zhù rù, correspond: injection, space: no }
+  zh-HK:
+    依賴注入:
+    - { term: 依賴, read: ji1 laai6, correspond: dependency }
+    - { term: 注入, read: zyu3 jap6, correspond: injection, space: no }
+  zh-TW:
+    依賴注入:
+    - { term: 依賴, read: ㄧ ㄌㄞˋ, correspond: dependency }
+    - { term: 注入, read: ㄓㄨˋ ㄖㄨˋ, correspond: injection, space: no }
+
+# interface
+- en:
+    interface:
+    - { term: inter, correspond: inter }
+    - { term: face, space: no }
+  ja:
+    interface:
+    - { term: インターフェース, loan: interface }
+  ko:
+    interface:
+    - { term: 인터페이스, loan: interface }
+  zh-CN:
+    介面:
+    - { term: 接口, read: jiē kǒu, norm: 介面 }
+  zh-HK:
+    介面:
+    - { term: 介面, read: gaai3 min2 }
+  zh-TW:
+    介面:
+    - { term: 介面, read: ㄐㄧㄝˋ ㄇㄧㄢˋ }
+
+# vim: set et sw=2 ts=2 sts=2 ft=yaml:

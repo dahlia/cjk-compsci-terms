@@ -243,5 +243,11 @@ Software engineering
 [Show table](tables/software-eng.yaml)
 
 
+Design patterns
+---------------
+
+[Show table](tables/design-patterns.yaml)
+
+
 *[CJK]: Chinese, Japanese, and Korean languages
 *[F/OSS]: Free and open-source software
