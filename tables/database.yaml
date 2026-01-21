@@ -189,8 +189,8 @@
     - { term: 主, read: しゅ, correspond: primary }
     - { term: キー, loan: key }
   ko:
-    primary key:
-    - { term: 기본, read: 기 본, correspond: primary }
+    基本 키:
+    - { term: 基本, read: 기 본, correspond: primary }
     - term: " "
     - { term: 키, loan: key }
   zh-CN:

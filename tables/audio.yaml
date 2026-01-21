@@ -11,7 +11,7 @@
     audio:
     - { term: 오디오, loan: audio }
     音聲:
-    - { term: 음성 }
+    - { term: 音聲, read: 음 성 }
   zh-CN:
     音頻:
     - { term: 音频, read: yīn pín, norm: 音頻 }
@@ -35,7 +35,8 @@
     sampling:
     - { term: 샘플링, loan: sampling }
     標本化:
-    - { term: 표본화 }
+    - { term: 標本, read: 표 본 }
+    - { term: 化, read: 화, space: no }
   zh-CN:
     採樣:
     - { term: 采样, read: cǎi yàng, norm: 採樣 }
@@ -106,7 +107,7 @@
     - { term: 周波数, read: しゅう は すう }
   ko:
     周波數:
-    - { term: 주파수 }
+    - { term: 周波數, read: 주 파 수 }
   zh-CN:
     頻率:
     - { term: 频率, read: pín lǜ, norm: 頻率 }
@@ -126,7 +127,7 @@
     - { term: 振幅, read: しん ぷく }
   ko:
     振幅:
-    - { term: 진폭 }
+    - { term: 振幅, read: 진 폭 }
   zh-CN:
     振幅:
     - { term: 振幅, read: zhèn fú }
@@ -148,7 +149,7 @@
     - { term: 形, read: けい, correspond: form, space: no }
   ko:
     波形:
-    - { term: 파형 }
+    - { term: 波形, read: 파 형 }
   zh-CN:
     波形:
     - { term: 波, read: bō, correspond: wave }
@@ -192,7 +193,7 @@
     - { term: 圧縮, read: あっ しゅく }
   ko:
     壓縮:
-    - { term: 압축 }
+    - { term: 壓縮, read: 압 축 }
   zh-CN:
     壓縮:
     - { term: 压缩, read: yā suō, norm: 壓縮 }

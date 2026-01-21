@@ -127,9 +127,9 @@
     password:
     - { term: パスワード, loan: password }
   ko:
-    password:
-    - { term: 비밀, read: 비 밀, correspond: secret }
-    - { term: 번호, read: 번 호, correspond: number, space: no }
+    秘密番號:
+    - { term: 秘密, read: 비 밀, correspond: secret }
+    - { term: 番號, read: 번 호, correspond: number, space: no }
   zh-CN:
     密碼:
     - { term: 密, read: mì, correspond: secret }

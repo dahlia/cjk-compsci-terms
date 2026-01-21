@@ -9,7 +9,7 @@
     font:
     - { term: 폰트, loan: font }
     書體:
-    - { term: 서체 }
+    - { term: 書體, read: 서 체 }
   zh-CN:
     字體:
     - { term: 字体, read: zì tǐ, norm: 字體 }
@@ -29,7 +29,7 @@
     - { term: 書体, read: しょ たい }
   ko:
     書體:
-    - { term: 서체 }
+    - { term: 書體, read: 서 체 }
   zh-CN:
     字體:
     - { term: 字体, read: zì tǐ, norm: 字體 }
@@ -53,7 +53,7 @@
     glyph:
     - { term: 글리프, loan: glyph }
     字形:
-    - { term: 자형 }
+    - { term: 字形, read: 자 형 }
   zh-CN:
     字形:
     - { term: 字形, read: zì xíng }
@@ -73,9 +73,10 @@
     - { term: 明朝体, read: みん ちょう たい }
   ko:
     明朝體:
-    - { term: 명조체 }
+    - { term: 明朝體, read: 명 조 체 }
     바탕體:
-    - { term: 바탕체 }
+    - { term: 바탕 }
+    - { term: 體, read: 체, space: no }
   zh-CN:
     宋體:
     - { term: 宋体, read: sòng tǐ, norm: 宋體 }
@@ -97,9 +98,11 @@
     - { term: ゴシック体, loan: gothic }
   ko:
     gothic體:
-    - { term: 고딕체, loan: gothic }
+    - { term: 고딕, loan: gothic }
+    - { term: 體, read: 체, space: no }
     돋움體:
-    - { term: 돋움체 }
+    - { term: 돋움 }
+    - { term: 體, read: 체, space: no }
   zh-CN:
     黑體:
     - { term: 黑体, read: hēi tǐ, norm: 黑體 }
@@ -119,7 +122,7 @@
     - { term: カーニング, loan: kerning }
   ko:
     字間:
-    - { term: 자간 }
+    - { term: 字間, read: 자 간 }
   zh-CN:
     字距:
     - { term: 字距, read: zì jù }
@@ -139,7 +142,7 @@
     - { term: 行送り, read: ぎょう おく り }
   ko:
     行間:
-    - { term: 행간 }
+    - { term: 行間, read: 행 간 }
   zh-CN:
     行距:
     - { term: 行距, read: háng jù }
@@ -182,7 +185,8 @@
     - { term: 符号化, read: ふ ごう か }
   ko:
     符號化:
-    - { term: 부호화 }
+    - { term: 符號, read: 부 호 }
+    - { term: 化, read: 화, space: no }
     encoding:
     - { term: 인코딩, loan: encoding }
   zh-CN:
@@ -206,8 +210,8 @@
     - { term: 集合, read: しゅう ごう, correspond: set, space: no }
   ko:
     文字集合:
-    - { term: 문자, correspond: character }
-    - { term: 집합, correspond: set }
+    - { term: 文字, read: 문 자, correspond: character }
+    - { term: 集合, read: 집 합, correspond: set }
   zh-CN:
     字符集:
     - { term: 字符, read: zì fú, correspond: character }

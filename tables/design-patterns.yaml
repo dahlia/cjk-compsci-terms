@@ -11,7 +11,7 @@
     - { term: デザインパターン, loan: design pattern }
   ko:
     設計 pattern:
-    - { term: 설계, correspond: design }
+    - { term: 設計, read: 설 계, correspond: design }
     - { term: 패턴, loan: pattern, correspond: pattern }
     design pattern:
     - { term: 디자인 패턴, loan: design pattern }
@@ -148,8 +148,8 @@
     strategy:
     - { term: ストラテジー, loan: strategy }
   ko:
-    strategy:
-    - { term: 전략, correspond: strategy }
+    戰略:
+    - { term: 戰略, read: 전 략, correspond: strategy }
   zh-CN:
     策略:
     - { term: 策略, read: cè lüè }
@@ -192,8 +192,8 @@
     - { term: 注入, read: ちゅう にゅう, correspond: injection, space: no }
   ko:
     依存性 注入:
-    - { term: 의존성, correspond: dependency }
-    - { term: 주입, correspond: injection }
+    - { term: 依存性, read: 의 존 성, correspond: dependency }
+    - { term: 注入, read: 주 입, correspond: injection }
   zh-CN:
     依賴注入:
     - { term: 依赖, read: yī lài, norm: 依賴, correspond: dependency }

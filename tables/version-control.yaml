@@ -10,7 +10,7 @@
   ko:
     version 管理:
     - { term: 버전, loan: version, correspond: version }
-    - { term: 관리, correspond: control }
+    - { term: 管理, read: 관 리, correspond: control }
   zh-CN:
     版本控制:
     - { term: 版本, read: bǎn běn, correspond: version }
@@ -32,8 +32,9 @@
     repository:
     - { term: リポジトリ, loan: repository }
   ko:
-    repository:
-    - { term: 저장소 }
+    貯藏所:
+    - { term: 貯藏, read: 저 장 }
+    - { term: 所, read: 소, space: no }
   zh-CN:
     倉庫:
     - { term: 仓库, read: cāng kù, norm: 倉庫 }
@@ -92,8 +93,8 @@
     merge:
     - { term: マージ, loan: merge }
   ko:
-    merge:
-    - { term: 병합 }
+    倂合:
+    - { term: 倂合, read: 병 합 }
   zh-CN:
     合併:
     - { term: 合并, read: hé bìng, norm: 合併 }
@@ -115,7 +116,7 @@
     - { term: 衝突, read: しょう とつ }
   ko:
     衝突:
-    - { term: 충돌 }
+    - { term: 衝突, read: 충 돌 }
   zh-CN:
     衝突:
     - { term: 冲突, read: chōng tū, norm: 衝突 }
@@ -195,7 +196,7 @@
     - { term: 差分, read: さ ぶん }
   ko:
     差異:
-    - { term: 차이 }
+    - { term: 差異, read: 차 이 }
   zh-CN:
     差異:
     - { term: 差异, read: chā yì, norm: 差異 }

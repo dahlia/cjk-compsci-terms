@@ -159,8 +159,9 @@
     rasterization:
     - { term: ラスタライズ, loan: rasterize }
   ko:
-    rasterization:
-    - { term: 래스터화, loan: raster }
+    래스터化:
+    - { term: 래스터, loan: raster }
+    - { term: 化, read: 화, correspond: "-ization", space: no }
   zh-CN:
     光柵化:
     - { term: 光栅, read: guāng shān, correspond: raster }

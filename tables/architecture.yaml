@@ -8,9 +8,9 @@
     - { term: 命令, read: めい れい, correspond: instruction }
     - { term: セット, loan: set, correspond: set, space: no }
   ko:
-    命令語 集合:
-    - { term: 명령어, correspond: instruction }
-    - { term: 집합, correspond: set }
+    命令語集合:
+    - { term: 命令語, read: 명 령 어, correspond: instruction }
+    - { term: 集合, read: 집 합, correspond: set }
   zh-CN:
     指令集:
     - { term: 指令, read: zhǐ lìng, correspond: instruction }
@@ -90,9 +90,9 @@
     ALU:
     - term: ALU
     算術論理裝置:
-    - { term: 산술, correspond: arithmetic }
-    - { term: 논리, correspond: logic }
-    - { term: 장치, correspond: unit }
+    - { term: 算術, read: 산 술, correspond: arithmetic }
+    - { term: 論理, read: 논 리, correspond: logic }
+    - { term: 裝置, read: 장 치, correspond: unit }
   zh-CN:
     ALU:
     - term: ALU
@@ -229,9 +229,9 @@
     - { term: メモリ, loan: memory, correspond: memory }
     - { term: 階層, read: かい そう, correspond: hierarchy, space: no }
   ko:
-    記憶 階層:
-    - { term: 기억, correspond: memory }
-    - { term: 계층, correspond: hierarchy }
+    記憶階層:
+    - { term: 記憶, read: 기 억, correspond: memory }
+    - { term: 階層, read: 계 층, correspond: hierarchy }
   zh-CN:
     記憶體階層:
     - { term: 内存, read: nèi cún, norm: 記憶體, correspond: memory }

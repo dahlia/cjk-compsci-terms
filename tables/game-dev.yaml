@@ -37,7 +37,7 @@
     - { term: エンジン, loan: engine, space: no }
   ko:
     物理 engine:
-    - { term: 물리, correspond: physics }
+    - { term: 物理, read: 물 리, correspond: physics }
     - { term: 엔진, loan: engine }
   zh-CN:
     物理引擎:
@@ -65,9 +65,9 @@
     - { term: 当たり, read: あたり, norm: 當たり, correspond: collision }
     - { term: 判定, read: はん てい, correspond: detection, space: no }
   ko:
-    衝突 檢出:
-    - { term: 충돌, correspond: collision }
-    - { term: 감지, correspond: detection }
+    衝突感知:
+    - { term: 衝突, read: 충 돌, correspond: collision }
+    - { term: 感知, read: 감 지, correspond: detection }
   zh-CN:
     碰撞檢測:
     - { term: 碰撞, read: pèng zhuàng, correspond: collision }
@@ -177,7 +177,7 @@
     hitbox:
     - { term: 히트박스, loan: hitbox }
     判定:
-    - { term: 판정, correspond: hitbox }
+    - { term: 判定, read: 판 정, correspond: hitbox }
   zh-CN:
     判定框:
     - { term: 判定, read: pàn dìng, correspond: hit }

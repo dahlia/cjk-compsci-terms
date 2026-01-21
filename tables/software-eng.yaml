@@ -52,8 +52,8 @@
     - { term: 単体, read: たん たい, norm: 單體, correspond: unit }
     - { term: テスト, loan: test, correspond: test, space: no }
   ko:
-    單位テスト:
-    - { term: 단위, correspond: unit }
+    單位 test:
+    - { term: 單位, read: 단 위, correspond: unit }
     - { term: 테스트, loan: test, correspond: test }
   zh-CN:
     單元測試:
@@ -78,8 +78,8 @@
     - { term: 結合, read: けつ ごう, correspond: integration }
     - { term: テスト, loan: test, correspond: test, space: no }
   ko:
-    統合テスト:
-    - { term: 통합, correspond: integration }
+    統合 test:
+    - { term: 統合, read: 통 합, correspond: integration }
     - { term: 테스트, loan: test, correspond: test }
   zh-CN:
     集成測試:
@@ -103,7 +103,7 @@
     - { term: デプロイ, loan: deploy }
   ko:
     配布:
-    - { term: 배포 }
+    - { term: 配布, read: 배 포 }
   zh-CN:
     部署:
     - { term: 部署, read: bù shǔ }
@@ -147,7 +147,8 @@
     - { term: ドキュメント, loan: document }
   ko:
     文書化:
-    - { term: 문서화 }
+    - { term: 文書, read: 문 서 }
+    - { term: 化, read: 화, space: no }
   zh-CN:
     文檔:
     - { term: 文档, read: wén dàng, norm: 文檔 }
@@ -169,8 +170,8 @@
     - { term: メンテナンス, loan: maintenance }
   ko:
     維持保守:
-    - { term: 유지, correspond: maintenance }
-    - { term: 보수, correspond: maintenance }
+    - { term: 維持, read: 유 지, correspond: maintenance }
+    - { term: 保守, read: 보 수, correspond: maintenance }
   zh-CN:
     維護:
     - { term: 维护, read: wéi hù, norm: 維護 }

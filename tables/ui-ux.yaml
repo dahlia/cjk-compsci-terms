@@ -9,7 +9,7 @@
     - { term: インターフェース, loan: interface, correspond: interface, space: no }
   ko:
     使用者 interface:
-    - { term: 사용자, correspond: user }
+    - { term: 使用者, read: 사 용 자, correspond: user }
     - { term: 인터페이스, loan: interface, correspond: interface }
   zh-CN:
     用戶界面:
@@ -72,9 +72,9 @@
     dialog:
     - { term: ダイアログ, loan: dialog }
   ko:
-    對話相子:
-    - { term: 대화 }
-    - { term: 상자 }
+    對話箱子:
+    - { term: 對話, read: 대 화 }
+    - { term: 箱子, read: 상 자 }
   zh-CN:
     對話框:
     - { term: 对话框, read: duì huà kuàng, norm: 對話框 }

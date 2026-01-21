@@ -17,9 +17,9 @@
     CPU:
     - term: CPU
     中央處理裝置:
-    - { term: 중앙, correspond: central }
-    - { term: 처리, correspond: processing }
-    - { term: 장치, correspond: unit }
+    - { term: 中央, read: 중 앙, correspond: central }
+    - { term: 處理, read: 처 리, correspond: processing }
+    - { term: 裝置, read: 장 치, correspond: unit }
   zh-CN:
     CPU:
     - term: CPU
@@ -59,10 +59,10 @@
   ko:
     GPU:
     - term: GPU
-    그래픽 處理 裝置:
+    graphic 處理裝置:
     - { term: 그래픽, loan: graphics, correspond: graphics }
-    - { term: 처리, correspond: processing }
-    - { term: 장치, correspond: unit }
+    - { term: 處理, read: 처 리, correspond: processing }
+    - { term: 裝置, read: 장 치, correspond: unit }
   zh-CN:
     GPU:
     - term: GPU
@@ -246,8 +246,8 @@
     - { term: 機器, read: き き, correspond: device, space: no }
   ko:
     周邊機器:
-    - { term: 주변, correspond: peripheral }
-    - { term: 기기, correspond: device }
+    - { term: 周邊, read: 주 변, correspond: peripheral }
+    - { term: 機器, read: 기 기, correspond: device }
   zh-CN:
     周邊設備:
     - { term: 外设, read: wài shè, norm: 周邊設備 }
