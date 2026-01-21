@@ -115,11 +115,13 @@ Deno.test("markdownToHtml converts footnotes", () => {
   assertEquals(html.includes("This is the footnote"), true);
 });
 
-Deno.test("insertToc replaces TOC placeholder", () => {
+Deno.test("insertToc replaces TOC placeholder with proper structure", () => {
   const html = "Header\n<!-- TOC: Contents -->\nBody";
-  const toc = '<nav class="toc">...</nav>';
+  const toc = '<nav class="toc"><ul><li>Item</li></ul></nav>';
   const result = insertToc(html, toc);
   assertEquals(result.includes("<!-- TOC: Contents -->"), false);
+  assertEquals(result.includes('<div id="toc">'), true);
+  assertEquals(result.includes("<h2>Contents</h2>"), true);
   assertEquals(result.includes('<nav class="toc">'), true);
 });
 

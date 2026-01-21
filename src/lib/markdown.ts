@@ -80,7 +80,7 @@ function generateId(text: string): string {
 }
 
 /**
- * Generate TOC HTML.
+ * Generate TOC HTML (just the nav element with ul).
  */
 export function renderToc(toc: { id: string; text: string; level: number }[]): string {
   if (toc.length === 0) return "";
@@ -95,9 +95,17 @@ export function renderToc(toc: { id: string; text: string; level: number }[]): s
 
 /**
  * Replace TOC placeholder with rendered TOC.
+ * Extracts the title from the placeholder comment and wraps TOC in proper structure.
+ * Format: <!-- TOC: Title --> becomes <div id="toc"><div><h2>Title</h2>...</div></div>
  */
 export function insertToc(html: string, toc: string): string {
-  return html.replace(/<!--\s*TOC:\s*[^>]+\s*-->/i, toc);
+  return html.replace(
+    /<!--\s*TOC:\s*(.+?)\s*-->/i,
+    (_, title: string) => {
+      if (!toc) return "";
+      return `<div id="toc"><div><h2>${title}</h2>${toc}</div></div>`;
+    }
+  );
 }
 
 /**
