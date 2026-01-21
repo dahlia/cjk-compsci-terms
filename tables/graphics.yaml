@@ -1,0 +1,219 @@
+# rendering
+- en:
+    rendering:
+    - term: rendering
+  ja:
+    rendering:
+    - { term: レンダリング, loan: rendering }
+  ko:
+    rendering:
+    - { term: 렌더링, loan: rendering }
+  zh-CN:
+    渲染:
+    - { term: 渲, read: xuàn, correspond: spread }
+    - { term: 染, read: rǎn, correspond: dye, space: no }
+  zh-HK:
+    渲染:
+    - { term: 渲, read: hyun3, correspond: spread }
+    - { term: 染, read: jim5, correspond: dye, space: no }
+  zh-TW:
+    算繪:
+    - { term: 算, read: ㄙㄨㄢˋ, correspond: calculate }
+    - { term: 繪, read: ㄏㄨㄟˋ, correspond: draw, space: no }
+
+# shader
+- en:
+    shader:
+    - { term: shad, correspond: shade }
+    - { term: er, space: no }
+  ja:
+    shader:
+    - { term: シェーダー, loan: shader }
+  ko:
+    shader:
+    - { term: 셰이더, loan: shader }
+  zh-CN:
+    著色器:
+    - { term: 着色, read: zhuó sè, correspond: shade }
+    - { term: 器, read: qì, correspond: device, space: no }
+  zh-HK:
+    著色器:
+    - { term: 著色, read: zoek6 sik1, correspond: shade }
+    - { term: 器, read: hei3, correspond: device, space: no }
+  zh-TW:
+    著色器:
+    - { term: 著色, read: ㄓㄨㄛˊ ㄙㄜˋ, correspond: shade }
+    - { term: 器, read: ㄑㄧˋ, correspond: device, space: no }
+
+# texture
+- en:
+    texture:
+    - term: texture
+  ja:
+    texture:
+    - { term: テクスチャ, loan: texture }
+  ko:
+    texture:
+    - { term: 텍스처, loan: texture }
+  zh-CN:
+    紋理:
+    - { term: 纹, read: wén, correspond: pattern }
+    - { term: 理, read: lǐ, correspond: texture, space: no }
+  zh-HK:
+    紋理:
+    - { term: 紋, read: man4, correspond: pattern }
+    - { term: 理, read: lei5, correspond: texture, space: no }
+  zh-TW:
+    紋理:
+    - { term: 紋, read: ㄨㄣˊ, correspond: pattern }
+    - { term: 理, read: ㄌㄧˇ, correspond: texture, space: no }
+
+# pixel
+- en:
+    pixel:
+    - { term: pix, correspond: picture }
+    - { term: el, correspond: element, space: no }
+  ja:
+    pixel:
+    - { term: ピクセル, loan: pixel }
+    畫素:
+    - { term: 画素, norm: 畫素, read: が そ, correspond: pixel }
+  ko:
+    pixel:
+    - { term: 픽셀, loan: pixel }
+    畫素:
+    - { term: 畫素, read: 화 소, correspond: pixel }
+  zh-CN:
+    像素:
+    - { term: 像, read: xiàng, correspond: image }
+    - { term: 素, read: sù, correspond: element, space: no }
+  zh-HK:
+    像素:
+    - { term: 像, read: zoeng6, correspond: image }
+    - { term: 素, read: sou3, correspond: element, space: no }
+  zh-TW:
+    像素:
+    - { term: 像, read: ㄒㄧㄤˋ, correspond: image }
+    - { term: 素, read: ㄙㄨˋ, correspond: element, space: no }
+
+# vertex
+- en:
+    vertex:
+    - term: vertex
+  ja:
+    頂點:
+    - { term: 頂点, norm: 頂點, read: ちょう てん, correspond: vertex }
+  ko:
+    頂點:
+    - { term: 頂點, read: 정 점, correspond: vertex }
+  zh-CN:
+    頂點:
+    - { term: 顶, read: dǐng, correspond: top }
+    - { term: 点, read: diǎn, correspond: point, space: no }
+  zh-HK:
+    頂點:
+    - { term: 頂, read: deng2, correspond: top }
+    - { term: 點, read: dim2, correspond: point, space: no }
+  zh-TW:
+    頂點:
+    - { term: 頂, read: ㄉㄧㄥˇ, correspond: top }
+    - { term: 點, read: ㄉㄧㄢˇ, correspond: point, space: no }
+
+# polygon
+- en:
+    polygon:
+    - term: polygon
+  ja:
+    polygon:
+    - { term: ポリゴン, loan: polygon }
+  ko:
+    polygon:
+    - { term: 폴리곤, loan: polygon }
+  zh-CN:
+    多邊形:
+    - { term: 多边, read: duō biān, correspond: many-sided }
+    - { term: 形, read: xíng, correspond: shape, space: no }
+  zh-HK:
+    多邊形:
+    - { term: 多邊, read: do1 bin1, correspond: many-sided }
+    - { term: 形, read: jing4, correspond: shape, space: no }
+  zh-TW:
+    多邊形:
+    - { term: 多邊, read: ㄉㄨㄛ ㄅㄧㄢ, correspond: many-sided }
+    - { term: 形, read: ㄒㄧㄥˊ, correspond: shape, space: no }
+
+# rasterization
+- en:
+    rasterization:
+    - term: rasterization
+  ja:
+    rasterization:
+    - { term: ラスタライズ, loan: rasterize }
+  ko:
+    rasterization:
+    - { term: 래스터화, loan: raster }
+  zh-CN:
+    光柵化:
+    - { term: 光栅, read: guāng shān, correspond: raster }
+    - { term: 化, read: huà, correspond: "-ization", space: no }
+  zh-HK:
+    光柵化:
+    - { term: 光柵, read: gwong1 caak3, correspond: raster }
+    - { term: 化, read: faa3, correspond: "-ization", space: no }
+  zh-TW:
+    光柵化:
+    - { term: 光柵, read: ㄍㄨㄤ ㄓㄚˋ, correspond: raster }
+    - { term: 化, read: ㄏㄨㄚˋ, correspond: "-ization", space: no }
+
+# ray tracing
+- en:
+    ray tracing:
+    - term: ray
+    - term: tracing
+  ja:
+    ray tracing:
+    - { term: レイトレーシング, loan: ray tracing }
+  ko:
+    ray tracing:
+    - { term: 레이 트레이싱, loan: ray tracing }
+    光線追跡:
+    - { term: 光線, read: 광 선, correspond: ray }
+    - { term: 追跡, read: 추 적, correspond: tracing, space: no }
+  zh-CN:
+    光線追蹤:
+    - { term: 光线, read: guāng xiàn, correspond: ray }
+    - { term: 追踪, read: zhuī zōng, correspond: tracing, space: no }
+  zh-HK:
+    光線追蹤:
+    - { term: 光線, read: gwong1 sin3, correspond: ray }
+    - { term: 追蹤, read: zeoi1 zung1, correspond: tracing, space: no }
+  zh-TW:
+    光線追蹤:
+    - { term: 光線, read: ㄍㄨㄤ ㄒㄧㄢˋ, correspond: ray }
+    - { term: 追蹤, read: ㄓㄨㄟ ㄗㄨㄥ, correspond: tracing, space: no }
+
+# frame buffer
+- en:
+    frame buffer:
+    - term: frame
+    - term: buffer
+  ja:
+    frame buffer:
+    - { term: フレームバッファ, loan: frame buffer }
+  ko:
+    frame buffer:
+    - { term: 프레임 버퍼, loan: frame buffer }
+  zh-CN:
+    幀緩衝:
+    - { term: 帧, read: zhèn, correspond: frame }
+    - { term: 缓冲, read: huǎn chōng, correspond: buffer, space: no }
+  zh-HK:
+    幀緩衝:
+    - { term: 幀, read: zing3, correspond: frame }
+    - { term: 緩衝, read: wun6 cung1, correspond: buffer, space: no }
+  zh-TW:
+    幀緩衝:
+    - { term: 幀, read: ㄓㄣ, correspond: frame }
+    - { term: 緩衝, read: ㄏㄨㄢˇ ㄔㄨㄥ, correspond: buffer, space: no }
+
+# vim: set et sw=2 ts=2 sts=2 ft=yaml:

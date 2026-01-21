@@ -201,5 +201,11 @@ Artificial intelligence and machine learning
 [Show table](tables/ai-ml.yaml)
 
 
+Computer graphics
+-----------------
+
+[Show table](tables/graphics.yaml)
+
+
 *[CJK]: Chinese, Japanese, and Korean languages
 *[F/OSS]: Free and open-source software
