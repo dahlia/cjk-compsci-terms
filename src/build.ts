@@ -52,6 +52,17 @@ const LOCALE_OUTPUT_FILES: Record<string, string> = {
   "zh-TW": "zh-Hant/index.html",
 };
 
+/** Page descriptions for each locale (for meta tags) */
+const LOCALE_DESCRIPTIONS: Record<string, string> = {
+  en: "Comparison of how computer science terms are translated in Chinese, Japanese, and Korean — featuring calques, loanwords, and cognates across the Sinosphere.",
+  ja: "中国語・日本語・韓国語におけるコンピュータ科学用語の翻訳比較 — 漢字文化圏における訳語・外来語・同根語の対照表",
+  ko: "중국어·일본어·한국어의 컴퓨터 과학 용어 번역 비교 — 한자문화권의 번역어·외래어·동근어 대조표",
+  "zh-TW": "中文、日文、韓文電腦科學術語翻譯比較 — 漢字文化圈的譯詞、外來語、同源詞對照表",
+};
+
+/** Open Graph image filename */
+const OG_IMAGE = "og-image.png";
+
 /**
  * Language hrefs for navigation.
  * @param cleanUrls If true, removes index.html from URLs (e.g., "ja/" instead of "ja/index.html")
@@ -314,12 +325,21 @@ async function buildPage(locale: LocaleCode): Promise<void> {
   const useAbsoluteUrls = urlBase !== null;
   const langHrefs = getLanguageHrefs(useAbsoluteUrls);
   const baseUrl = urlBase ?? (locale === "en" ? "." : "..");
+
+  // Build canonical URL and OG image URL if URL_BASE is set
+  const outputHref = LOCALE_OUTPUT_FILES[locale].replace(/index\.html$/, "");
+  const canonicalUrl = urlBase ? `${urlBase}/${outputHref}` : undefined;
+  const ogImage = urlBase ? `${urlBase}/${OG_IMAGE}` : undefined;
+
   const page = Layout({
     title,
+    description: LOCALE_DESCRIPTIONS[locale],
     locale,
     langHrefs,
     content: raw(contentHtml),
     baseUrl,
+    canonicalUrl,
+    ogImage,
   });
 
   // Write output
