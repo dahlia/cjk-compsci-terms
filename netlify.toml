@@ -1,0 +1,13 @@
+# Netlify configuration
+# Build is done via GitHub Actions, not Netlify's build system
+
+[build]
+  # No build command - GitHub Actions handles the build
+  command = "echo 'Build is handled by GitHub Actions'"
+  publish = "public_html"
+
+# Redirects for SPA-style routing (if needed in future)
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200
