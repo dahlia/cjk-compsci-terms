@@ -186,6 +186,8 @@
     流媒體:
     - { term: 流, read: liú, correspond: stream }
     - { term: 媒体, read: méi tǐ, correspond: media, space: no, norm: 媒體 }
+    串流:
+    - { term: 串流, read: chuàn liú }
   zh-HK:
     串流:
     - { term: 串流, read: cyun3 lau4 }
