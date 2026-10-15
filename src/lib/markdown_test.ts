@@ -4,8 +4,10 @@ import {
   findTablePlaceholders,
   insertToc,
   markdownToHtml,
+  processMarkdown,
   renderToc,
 } from "./markdown.ts";
+import { raw } from "../jsx-runtime/index.ts";
 
 Deno.test("markdownToHtml converts headers", () => {
   const md = "# Header 1\n\n## Header 2\n\n### Header 3";
@@ -18,6 +20,31 @@ Deno.test("markdownToHtml converts headers", () => {
   assertEquals(html.includes("Header 2"), true);
   assertEquals(html.includes("Header 3"), true);
 });
+
+for (const [file, heading] of [
+  ["en.md", "Basic terms"],
+  ["ja.md", "基本用語"],
+  ["ko.md", "기본 용어"],
+  ["zh-Hant.md", "基本術語"],
+]) {
+  Deno.test(`processMarkdown links the ${file} TOC to its headings`, async () => {
+    const source = await Deno.readTextFile(new URL(`../../${file}`, import.meta.url));
+    const html = processMarkdown(source, () => raw("")).__html;
+    const id = heading.toLowerCase().replace(/ /g, "-");
+    assertEquals(html.includes(`href="#${id}"`), true);
+    assertEquals(html.includes(`<h2 id="${id}"`), true);
+
+    const text = (value: string) => value.replace(/<[^>]+>/g, "").trim();
+    const headings = new Map(
+      [...html.matchAll(/<h[23] id="([^"]*)"[^>]*>([\s\S]*?)<\/h[23]>/g)]
+        .map((match) => [match[1], text(match[2])]),
+    );
+    const toc = html.match(/<nav class="toc">([\s\S]*?)<\/nav>/)![1];
+    for (const link of toc.matchAll(/<a href="#([^"]*)">([\s\S]*?)<\/a>/g)) {
+      assertEquals(headings.get(decodeURIComponent(link[1])), text(link[2]));
+    }
+  });
+}
 
 Deno.test("markdownToHtml converts bold and italic", () => {
   const md = "**bold** and *italic* text";
