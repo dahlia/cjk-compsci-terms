@@ -143,6 +143,37 @@ Deno.test("Layout includes canonical link when provided", () => {
   assertEquals(result.includes('href="https://example.com/"'), true);
 });
 
+for (const locale of ["en", "ja", "ko", "zh-TW"] as const) {
+  Deno.test(`Layout uses the site root for ${locale} alternate links`, () => {
+    const baseUrl = "https://cjk-compsci-terms.netlify.app";
+    const pagePath = locale === "en"
+      ? ""
+      : locale === "zh-TW" ? "zh-Hant/" : `${locale}/`;
+    const langHrefs = [
+      ["en", ""],
+      ["ja", "ja/"],
+      ["ko", "ko/"],
+      ["zh-TW", "zh-Hant/"],
+    ] as const;
+    const result = render(Layout({
+      title: "CJK terms",
+      description: "Comparison",
+      locale,
+      langHrefs: langHrefs.map(([language, path]) => [language, path]),
+      content: raw(""),
+      baseUrl,
+      canonicalUrl: `${baseUrl}/${pagePath}`,
+    }));
+
+    for (const [language, path] of langHrefs) {
+      assertEquals(
+        result.includes(`<link rel="alternate" hreflang="${language}" href="${baseUrl}/${path}">`),
+        true,
+      );
+    }
+  });
+}
+
 Deno.test("Layout includes alternate language links", () => {
   const result = render(
     Layout({

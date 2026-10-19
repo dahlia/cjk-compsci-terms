@@ -48,9 +48,7 @@ export function Layout(props: LayoutProps): HtmlString {
     return jsx("link", {
       rel: "alternate",
       hreflang: langCodeTag,
-      href: canonicalUrl
-        ? `${canonicalUrl.replace(/[^/]*$/, "")}${href}`
-        : `${baseUrl}/${href}`,
+      href: `${baseUrl}/${href}`,
     });
   });
 
