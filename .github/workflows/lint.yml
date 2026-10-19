@@ -6,11 +6,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+    - name: Check GitHub Actions workflows
+      uses: jdx/jactionlint@1027f0a131ab98bc7e191d995bfa15dbed5bbf8f # v2.2.0
     - uses: dahlia/actions/yajsv@master
       with:
         schema: table.schema.yaml
         documents: tables/*.yaml
-    - uses: zbeekman/EditorConfig-Action@master
+    - name: Set up EditorConfig checker
+      uses: editorconfig-checker/action-editorconfig-checker@v3.0.0
+      with:
+        version: v4.0.2
+    - name: Check EditorConfig compliance
+      run: editorconfig-checker
     - uses: ibiqlik/action-yamllint@v3
       with:
         strict: yes

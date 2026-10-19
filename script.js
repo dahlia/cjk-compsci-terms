@@ -1,14 +1,14 @@
 function getGroupRows(term) {
   const rows = [];
   for (let row = term.parentNode.parentNode;
-       row != null;
-       row = row.previousElementSibling) {
+    row != null;
+    row = row.previousElementSibling) {
     rows.push(row);
     if (row.classList.contains('group-head')) break;
   }
   for (let row = term.parentNode.parentNode.nextElementSibling;
-       row != null && !row.classList.contains('group-head');
-       row = row.nextElementSibling) {
+    row != null && !row.classList.contains('group-head');
+    row = row.nextElementSibling) {
     rows.push(row);
   }
   return rows;
