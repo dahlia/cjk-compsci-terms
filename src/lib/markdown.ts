@@ -18,7 +18,7 @@ import { raw } from "../jsx-runtime/index.ts";
 function slugify(text: string): string {
   return text
     .toLowerCase()
-    .replace(/[^\w\s-]/g, "")
+    .replace(/[^\p{L}\p{N}_\s-]/gu, "")
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-")
     .trim();
